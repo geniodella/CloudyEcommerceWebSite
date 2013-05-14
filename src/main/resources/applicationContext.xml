@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:context="http://www.springframework.org/schema/context"
+     xmlns:jms="http://www.springframework.org/schema/jms"
+     xmlns:p="http://www.springframework.org/schema/p"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/jms 
+                           http://www.springframework.org/schema/jms/spring-jms.xsd
+                           http://activemq.apache.org/schema/core 
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/jms/spring-jms-3.0.xsd
+                           http://activemq.apache.org/schema/core/activemq-core.xsd">
+
+
+
+
+
+
+
+<bean 
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+ 
+		<property name="locations">
+		  <list>
+			<value>application.properties</value>
+				<value>./js/resources/Application_en-EN_it-IT.properties</value>
+		 </list>
+		</property>
+	</bean>
+   
+
+	
+	<jms:listener-container container-type="default"
+	 connection-factory="topicConnectionFactoryBean"  
+	 cache ="session"
+	acknowledge="transacted"
+	     transaction-manager="transactionManager">
+     <jms:listener destination="PROCESS.ORDER" ref="jmsOrderListener" method="onMessage" />
+       <jms:listener destination="QUEUE.SUBSCRIPTION" ref="jmsSubscriptionListener" method="onMessage" />
+     
+   
+</jms:listener-container>
+
+    <bean id="topicConnectionFactoryBean"  
+          class="com.atomikos.jms.AtomikosConnectionFactoryBean"  
+          init-method="init" destroy-method="close"> 
+        <!--  
+             The unique resource name needed for recovery  
+             by the Atomikos core.  
+        --> 
+         
+             <property name="minPoolSize" value="5" />
+        <property name="maxPoolSize" value="50" />
+        <property name="uniqueResourceName"> 
+            <value>TOPIC_BROKER</value> 
+        </property> 
+        <property name="xaConnectionFactory"> 
+            <ref bean="activemqConnectionFactory"/> 
+        </property> 
+        
+    </bean> 
+    
+   <!-- A cached connection to wrap the ActiveMQ connection -->
+<bean id="cachedConnectionFactory"
+    class="org.springframework.jms.connection.CachingConnectionFactory"
+    p:targetConnectionFactory-ref="activemqConnectionFactory"
+    p:sessionCacheSize="10"
+    p:reconnectOnException="true"/> 
+ 
+
+	<!-- A JMS connection factory for ActiveMQ -->
+    <bean id="activemqConnectionFactory" class="org.apache.activemq.ActiveMQXAConnectionFactory">
+        <property name="brokerURL">
+            <value>tcp://151.1.156.215:61616?jms.watchTopicAdvisories=false</value>
+        </property>
+          <property name="redeliveryPolicy">
+                    <bean class="org.apache.activemq.RedeliveryPolicy">
+                        <property name="maximumRedeliveries" value="50" />
+                    </bean>
+                </property>
+    </bean>
+    <!-- A POJO that implements the JMS message listener -->
+  <bean id="jmsOrderListener" class="com.template.generic.JmsOrderListener" >
+  
+   <property name="orderServiceBean"> <ref bean="orderService" />
+		</property>	
+  </bean>
+  
+  
+      <!-- A POJO that implements the JMS message listener -->
+  <bean id="jmsSubscriptionListener" class="com.template.generic.JmsSubscriptionListener" >
+    <property name="emailServiceBean"> <ref bean="emailServiceBean" />
+		</property>	
+
+  </bean>
+  
+      <bean id="emailServiceBean" class="com.template.generic.EmailSender" >
+        	
+     </bean>  
+  
+    <bean id="destination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="PROCESS.ORDER"/>
+    </bean>
+    
+      <bean id="subScriptionDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="QUEUE.SUBSCRIPTION"/>
+    </bean>
+    
+     <bean id="constants" class="com.template.generic.Const">
+    </bean>
+    
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="cachedConnectionFactory" />
+        <property name="defaultDestination" ref="destination" />
+          <property name="receiveTimeout" value="1000"/> 
+           <!-- Value = javax.jms.DeliveryMode.PERSISTENT -->
+     <property name="deliveryMode" value="2" />
+      <property name="sessionTransacted" value="true"/>
+         </bean>
+         
+         
+           <bean id="jmsSubscriptionTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="cachedConnectionFactory" />
+        <property name="defaultDestination" ref="subScriptionDestination" />
+          <property name="receiveTimeout" value="1000"/> 
+           <!-- Value = javax.jms.DeliveryMode.PERSISTENT -->
+     <property name="deliveryMode" value="2" />
+      <property name="sessionTransacted" value="true"/>
+         </bean>
+         
+         <bean id="jmsOrderService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.jms.JmsOrderServiceImpl">
+				<property name="jmsTemplate">
+					<ref bean="jmsTemplate" />
+				</property>
+						<property name="orderDao">
+					<ref bean="orderDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	    <bean id="jmsSubscriptionService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.jms.JmsSubscriptionServiceImpl">
+				<property name="jmsSubscriptionTemplate">
+					<ref bean="jmsSubscriptionTemplate" />
+			</property>
+			</bean>
+		</property>
+	</bean>
+         
+      
+
+  <bean id="txProxyTemplate" abstract="true" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+    <property name="transactionManager"><ref bean="transactionManager"/></property>
+    <property name="transactionAttributes">
+      <props>
+        <prop key="insert*">PROPAGATION_REQUIRED</prop>
+        <prop key="update*">PROPAGATION_REQUIRED</prop>
+        <prop key="remove*">PROPAGATION_REQUIRED</prop>
+          <prop key="find*">PROPAGATION_REQUIRED</prop>
+              <prop key="activate*">PROPAGATION_REQUIRED</prop>
+                 <prop key="change*">PROPAGATION_REQUIRED</prop>
+                     <prop key="lock*">PROPAGATION_REQUIRED</prop>
+      </props>
+    </property>
+  </bean>
+
+  
+      <bean id="customerAction" class="com.template.action.CustomerAction" scope="request">
+        <property name="customerServiceBean"> <ref bean="customerService" />
+          </property>	
+          <property name="orderServiceBean"> <ref bean="orderService" />
+		</property>	
+     </bean>  
+     
+         <bean id="googleCrawlFilter" class="com.template.action.CrawlServlet" >
+        <property name="productServiceBean"> <ref bean="productService" />
+          </property>	
+   
+     </bean>  
+     
+     
+     
+      <bean id="invoiceAction" class="com.template.action.InvoiceAction" scope="request">
+          <property name="virtualCartServiceBean"> <ref bean="virtualCartService" />
+          </property>	
+             <property name="invoiceServiceBean"> <ref bean="invoiceService" />
+          </property>		
+     </bean>  
+     
+      <bean id="stampaAction" class="com.template.action.StampaAction" scope="request">
+          <property name="virtualCartServiceBean"> <ref bean="virtualCartService" />
+          </property>	
+             <property name="invoiceServiceBean"> <ref bean="invoiceService" />
+          </property>		
+             <property name="addressServiceBean"> <ref bean="addressService" />
+          </property>	
+          <property name="customerServiceBean"> <ref bean="customerService" />
+          </property>
+          <property name="orderServiceBean"> <ref bean="orderService" />
+          </property>		
+     </bean>  
+     
+       <bean id="globalSearchAction" class="com.template.action.GlobalSearchAction" scope="request">
+        <property name="globalSearchServiceBean"> <ref bean="globalSearchService" />
+          </property>		
+     </bean>  
+     
+       <bean id="addressAction" class="com.template.action.AddressAction" scope="request">
+        <property name="addressServiceBean"> <ref bean="addressService" />
+          </property>		
+           <property name="customerServiceBean"> <ref bean="customerService" />
+          </property>		 
+           <property name="locationServiceBean"> <ref bean="locationService" />
+          </property>	
+          
+           <property name="virtualCartServiceBean"> <ref bean="virtualCartService" />
+          </property>		 
+          
+     </bean>  
+     
+     
+      <bean id="deliveryStrategyAction" class="com.template.action.DeliveryStrategyAction" scope="request">
+        <property name="deliveryCompanyServiceBean"> <ref bean="deliveryCompanyService" />
+          </property>		
+        	 
+          
+     </bean>  
+     
+     
+       <bean id="orderAction" class="com.template.action.OrderAction" scope="request">
+        <property name="orderServiceBean"> <ref bean="orderService" />
+          </property>	
+          
+           <property name="customerServiceBean"> <ref bean="customerService" />
+          </property>	
+          
+               <property name="deliveryCompanyServiceBean"> <ref bean="deliveryCompanyService" />
+          </property>	
+          
+         	  
+          
+     </bean>  
+     
+     
+          <bean id="mainAction" class="com.template.action.MainAction" scope="request">
+      
+          
+         	  
+          
+     </bean>  
+     
+         <bean id="paypalAction" class="com.template.action.PaypalAction" scope="request">
+     
+               <property name="jmsOrderService"> <ref bean="jmsOrderService" />
+          </property>		
+         	  
+          
+     </bean>  
+     
+     
+      <bean id="tagAction" class="com.template.action.TagAction" scope="request">
+        <property name="tagServiceBean"> <ref bean="tagService" />
+          </property>		
+         	 
+          
+     </bean>  
+     
+     
+       <bean id="sessionCheckAction" class="com.template.action.SessionCheckAction" scope="request">
+      	  <property name="customerServiceBean"> <ref bean="customerService" />
+           </property>
+     </bean>  
+     
+       <bean id="virtualCartAction" class="com.template.action.VirtualCartAction" scope="request">
+        <property name="virtualCartServiceBean"> <ref bean="virtualCartService" />
+          </property>		
+          <property name="customerServiceBean"> <ref bean="customerService" />
+           </property>
+     </bean>  
+      <bean id="showItemsAction" class="com.template.action.ShowItemsAction" scope="request">
+        <property name="productServiceBean"> <ref bean="productService" />
+        </property>		
+        
+     </bean>      
+     <bean id="locationInfoAction" class="com.template.action.LocationInfoAction" scope="request">
+		<property name="locationServiceBean">
+			<ref bean="locationService" />
+		</property>
+	</bean>
+	
+	<bean id="locationService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.LocationServiceImpl">
+				<property name="locationDao">
+					<ref bean="locationDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+     
+     
+   
+    	
+	<bean id="categoryService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.CategoryServiceImpl">
+				<property name="categoryDao">
+					<ref bean="categoryDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="tagService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.tag.TagServiceImpl">
+				<property name="tagDao">
+					<ref bean="tagDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="invoiceService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.invoice.InvoiceServiceImpl">
+				<property name="orderDao">
+					<ref bean="orderDao" />
+				</property>
+				<property name="companyInformationDao">
+					<ref bean="companyInformationDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	
+	<bean id="globalSearchService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.globalSearch.GlobalSearchServiceImpl">
+			<property name="tagProductRelationsDao">
+					<ref bean="tagProductRelationsDao" />
+				</property>
+					<property name="tagDao">
+					<ref bean="tagDao" />
+				</property>
+					<property name="productDao">
+					<ref bean="productDao" />
+				</property>
+					<property name="charProductRelationsDao">
+					<ref bean="charProductRelationsDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="customerService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.customer.CustomerServiceImpl">
+				<property name="customerDao">
+					<ref bean="customerDao" />
+				</property>
+				<property name="credentialsDao">
+					<ref bean="credentialsDao" />
+				</property>
+					<property name="virtualCartServiceBean">
+					<ref bean="virtualCartService" />
+				</property>
+					<property name="jmsSubscriptionServiceBean">
+					<ref bean="jmsSubscriptionService" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="virtualCartService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.virtualCart.VirtualCartServiceImpl">
+				<property name="virtualCartDao">
+					<ref bean="virtualCartDao" />
+				</property>
+					<property name="productDao">
+					<ref bean="productDao" />
+			
+				</property>
+					<property name="virtualCartProductRelationsDao">
+					<ref bean="virtualCartProductRelationsDao" />
+				</property>
+				
+						<property name="orderDao">
+					<ref bean="orderDao" />
+				</property>
+					
+			
+					<property name="checkoutDao">
+					<ref bean="checkoutDao" />
+				</property>
+				
+			
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="subCategoryService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.subCategory.SubCategoryServiceImpl">
+				<property name="subCategoryDao">
+					<ref bean="subCategoryDao" />
+				</property>
+					<property name="characteristicDao">
+					<ref bean="characteristicDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="categoryAction" class="com.template.action.CategoryAction" scope="request">
+		<property name="categoryServiceBean">
+			<ref bean="categoryService" />
+		</property>
+	</bean>
+	
+	<bean id="subCategoryAction" class="com.template.action.SubCategoryAction" scope="request">
+		<property name="subCategoryServiceBean">
+			<ref bean="subCategoryService" />
+		</property>
+	</bean>
+	<bean id="characteristicAction" class="com.template.action.CharacteristicAction" scope="request">
+		<property name="subCategoryServiceBean">
+			<ref bean="subCategoryService" />
+		</property>
+	</bean>
+	
+	<bean id="productService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.ProductServiceImpl">
+				<property name="productDao">
+					<ref bean="productDao" />
+				</property>
+				<property name="orderProductRelationsDao">
+					<ref bean="orderProductRelationsDao" />
+				</property>
+				<property name="mostSoldProductsDao">
+					<ref bean="mostSoldProductsDao" />
+				</property>
+			</bean>
+			
+		</property>
+	</bean>
+	
+	<bean id="orderService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.order.OrderServiceImpl">
+				<property name="orderDao">
+					<ref bean="orderDao" />
+				</property>
+				<property name="addressDao">
+					<ref bean="addressDao" />
+				</property>
+					<property name="checkoutDao">
+					<ref bean="checkoutDao" />
+				</property>
+					<property name="virtualCartProductRelationsDao">
+					<ref bean="virtualCartProductRelationsDao" />
+				</property>
+					<property name="customerDao">
+					<ref bean="customerDao" />
+				</property>
+				<property name="deliveryCompanyDao">
+					<ref bean="deliveryCompanyDao" />
+				</property>
+				
+				<property name="shippingDao">
+					<ref bean="shippingDao" />
+				</property>
+					<property name="shippingProductRelationsDao">
+					<ref bean="shippingProductRelationsDao" />
+				</property>
+					<property name="orderProductRelationsDao">
+					<ref bean="orderProductRelationsDao" />
+				</property>
+				<property name="productDao">
+					<ref bean="productDao" />
+				</property>	
+				 <property name="invoiceServiceBean"> 
+				     <ref bean="invoiceService" />
+          		</property>			
+			</bean>
+		</property>
+	</bean>
+	
+	
+	<bean id="deliveryCompanyService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.deliveryCompany.DeliveryCompanyServiceImpl">
+				<property name="deliveryCompanyDao">
+					<ref bean="deliveryCompanyDao" />
+				</property>
+					<property name="priceRangeDao">
+					<ref bean="priceRangeDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	
+	<bean id="addressService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.address.AddressServiceImpl">
+				<property name="addressDao">
+					<ref bean="addressDao" />
+				</property>
+				<property name="customerDao">
+					<ref bean="customerDao" />
+				</property>
+			</bean>
+		
+		</property>
+	</bean>
+	
+	<bean id="productAction" class="com.template.action.ProductAction" scope="request">
+		<property name="productServiceBean">
+			<ref bean="productService" />			
+		</property>
+		
+	</bean>
+	
+	<bean id="companyInformationService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.template.bo.CompanyInformationServiceImpl">
+				<property name="companyInformationDao">
+					<ref bean="companyInformationDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="companyInformationAction" class="com.template.action.CompanyInformationAction" scope="request">
+		<property name="companyInformationServiceBean">
+			<ref bean="companyInformationService" />
+		</property>
+	</bean>
+	
+	 
+	
+	
+  </beans>
