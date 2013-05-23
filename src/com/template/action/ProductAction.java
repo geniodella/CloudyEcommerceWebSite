@@ -3,7 +3,7 @@ package com.template.action;
 import java.util.List;
 import java.util.Map;
 
-import org.hibernate.HibernateException;
+
 import org.springframework.dao.DataAccessException;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -183,7 +183,7 @@ public class ProductAction extends ActionSupport{
 		productVO.setWeight(weight);
 		productVO.setDescription(description);			
 
-		try{
+	
 
 			ProductImages image = new ProductImages();
 			image.setProductVo(productVO);
@@ -191,9 +191,7 @@ public class ProductAction extends ActionSupport{
 
 			productServiceBean.insertProductImage(image);
 
-		}catch(HibernateException e){
-
-		}
+		
 
 		return SUCCESS;
 	}		

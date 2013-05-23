@@ -39,8 +39,8 @@
 	 cache ="session"
 	acknowledge="transacted"
 	     transaction-manager="transactionManager">
-     <jms:listener destination="PROCESS.ORDER" ref="jmsOrderListener" method="onMessage" />
-       <jms:listener destination="QUEUE.SUBSCRIPTION" ref="jmsSubscriptionListener" method="onMessage" />
+     <jms:listener destination="${queue.order}" ref="jmsOrderListener" method="onMessage" />
+       <jms:listener destination="${queue.subscription}" ref="jmsSubscriptionListener" method="onMessage" />
      
    
 </jms:listener-container>
@@ -56,7 +56,7 @@
              <property name="minPoolSize" value="5" />
         <property name="maxPoolSize" value="50" />
         <property name="uniqueResourceName"> 
-            <value>TOPIC_BROKER</value> 
+            <value>WEBSITE_CONNECTIONFACTORY</value> 
         </property> 
         <property name="xaConnectionFactory"> 
             <ref bean="activemqConnectionFactory"/> 
@@ -103,11 +103,11 @@
      </bean>  
   
     <bean id="destination" class="org.apache.activemq.command.ActiveMQQueue">
-        <constructor-arg value="PROCESS.ORDER"/>
+        <constructor-arg value="${queue.order}"/>
     </bean>
     
       <bean id="subScriptionDestination" class="org.apache.activemq.command.ActiveMQQueue">
-        <constructor-arg value="QUEUE.SUBSCRIPTION"/>
+        <constructor-arg value="${queue.subscription}"/>
     </bean>
     
      <bean id="constants" class="com.template.generic.Const">

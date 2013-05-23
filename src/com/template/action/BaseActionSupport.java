@@ -20,7 +20,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
-import org.hibernate.Session;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -30,7 +29,7 @@ public class BaseActionSupport extends ActionSupport {
 	
 	private static Logger logger = Logger.getLogger(BaseActionSupport.class);
 	
-	protected Session hsession;
+	
 	protected final String SUCCESS = "success";
 	
 	// VARIABILI PER REPORTISTICA
@@ -104,9 +103,7 @@ public class BaseActionSupport extends ActionSupport {
 		if (logger.isInfoEnabled()) logger.info("log azione: "+logAction);
 	}/**/
 
-	public void setHibernateSession(Session hsession) {
-		this.hsession = hsession;
-	}
+
 	
 	//ACCESSORI
 	
@@ -164,13 +161,7 @@ public class BaseActionSupport extends ActionSupport {
 		this.xlsDynamicRecord = xlsDynamicRecord;
 	}
 
-	public Session getHsession() {
-		return hsession;
-	}
 
-	public void setHsession(Session hsession) {
-		this.hsession = hsession;
-	}
 
 	public HttpServletRequest getRequest() {
 		return request;

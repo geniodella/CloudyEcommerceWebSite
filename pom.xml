@@ -143,11 +143,13 @@
 			<groupId>lucene</groupId>
 			<artifactId>lucene-core</artifactId>
 			<version>3.1.0</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-analyzers</artifactId>
 			<version>3.6.1</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -155,6 +157,7 @@
 			<artifactId>activemq-all</artifactId>
 			<optional>false</optional>
 			<version>5.4.2</version>
+			<scope> provided </scope>
 			<exclusions>
 
 				<exclusion>
@@ -202,12 +205,14 @@
 			<groupId>solr</groupId>
 			<artifactId>apache-solr-solrj</artifactId>
 			<version>3.4.0</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>antlr</groupId>
 			<artifactId>antlr</artifactId>
 			<version>3.3</version>
 			<classifier>complete</classifier>
+			<scope>provided</scope>
 		</dependency>
 
 	
@@ -220,6 +225,7 @@
 			<groupId>solr</groupId>
 			<artifactId>apache-solr-core</artifactId>
 			<version>3.4.0</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>maven</groupId>
@@ -295,6 +301,7 @@
 			<groupId>general</groupId>
 			<artifactId>javassist</artifactId>
 			<version>3.7.ga</version>
+			<scope>provided</scope>
 		</dependency>
 	
 	
@@ -307,11 +314,6 @@
 
 		
 	
-		<dependency>
-			<groupId>j2ee</groupId>
-			<artifactId>jta</artifactId>
-			<version>1</version>
-		</dependency>
 		<dependency>
 			<groupId>common</groupId>
 			<artifactId>dom4j</artifactId>

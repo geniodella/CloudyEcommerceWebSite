@@ -57,7 +57,7 @@ public class CrawlServlet implements Filter {
 
 		String queryString = reqWrapper.getQueryString();
 
-System.out.println("user agent :"+reqWrapper.getHeader("user-agent"));
+//System.out.println("user agent :"+reqWrapper.getHeader("user-agent"));
 		
 	
 
