@@ -1,0 +1,114 @@
+
+
+.frontendVertMenu .x-menu-body {
+}
+/*BOX SUBCAT MENU*/
+
+.x-menu-body {
+    background: none repeat scroll 0 0 black !important;
+    /*border-radius: 5px 5px 5px 5px;*/
+    border-style: outset solid outset hidden !important;
+    border-width: 1px 2px 2px 1px !important;
+    border-color: grey !important; 
+}
+
+.frontendVertMenu .x-menu-item-link {
+	background: none repeat scroll 0 0 #000000;
+    padding: 0 !important;
+    margin:0px !important;
+}
+.x-menu-item-active .x-menu-item-link{
+	background-color:#272727 !important;
+	background-image:none !important;
+	border-width:0px !important;
+	border-radius:0px !important;
+	height: 30px !important;
+}
+.frontendVertMenu .x-menu-item-text {
+    color:#AFAFAF;
+    font-family: trebuchet MS,arial,sans-serif;
+    font-size: 12px !important;
+    margin: 0 23px !important;
+    
+}
+
+
+/*ICONE SUBCATEGORY MENU*/
+.frontendVertMenu .x-menu-item-icon {
+    background-color: black;
+    height: 16px;
+    width: 13px;
+    top: -3px !important;
+    background-image: url("../../resources/themes/images/default/products/arrow-right.png")!important;
+}
+
+.frontendVertPanel .x-toolbar-default{	
+	background: white;
+}
+
+.frontendVertPanel .x-toolbar-vertical {
+/*     background-color: #EDF7FF !important;   */
+    background-color: #000000 !important;  
+    border-width: 1px;
+    border-radius: 8px 8px 8px 8px;
+/*     border-color: #146EB4 !important;  */
+    border-color: white !important; 
+}
+
+.frontendVertPanel .x-panel-default {
+    /*background: -moz-linear-gradient(center top , #64AED4, #2190C5) repeat scroll 0 0 transparent;*/
+    border-style: outset;
+    border-width: 1px;
+    padding: 4px;
+}
+
+.frontendVertPanel .x-panel-body {
+	border-style: inset;
+	border-width:0 !important;
+}
+
+.frontendVertToolbar .x-btn-default-toolbar-small {
+    background-color: transparent !important;
+/*     border-color: #146EB4 !important; */
+    border-color: white !important;
+    border-radius: 0 0 0 0;
+    border-style: hidden hidden ridge;
+    border-width: 1px;
+    /*width:100% !important;*/
+    padding: 3px;
+}
+.frontendVertToolbar .x-btn-default-toolbar-small-over {
+	background-color:#272727 !important;
+}
+.frontendVertToolbar .x-btn-default-toolbar-small .x-btn-inner {
+    background-repeat: no-repeat;
+/*     color: #333333; */
+    color: #AFAFAF;
+    font-family: trebuchet MS,arial,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-align:left !important;   
+    overflow: hidden;
+}
+
+.frontendVertToolbar .x-btn-default-toolbar-small-menu-active, .x-btn-default-toolbar-small-pressed {
+    background: none repeat scroll 0 0 #272727; 
+    border-width:1px;/* 1px 1px 2px;*/
+    border-radius: 3px 0px 0px 3px;
+    /*width:100% !important;*/
+    border-color: black white black black !important;
+    border-style: outset hidden outset outset;   
+}
+
+.frontendVertToolbar .x-border-box .x-reset, .x-border-box .x-reset * {  
+    border-color: transparent;
+}
+
+.frontendVertButton .x-btn-arrow {
+    display: block;
+    background-image: none;
+}
+.frontendVertToolbar .x-btn button .x-btn-icon, .x-btn a .x-btn-icon {
+    background-image: url("../../resources/themes/images/default/products/arrow-right.png")!important;
+    background-position: -10px -7px !important;
+}
