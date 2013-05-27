@@ -1,0 +1,797 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.objectFactory" value="spring" />
+
+  <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.enable.SlashesInActionNames" value="true" />
+    <constant name="struts.action.extension" value="action" />
+	<constant name="struts.url.includeParams" value="none" />
+	<constant name="struts.custom.i18n.resources" value="languages_actions" />
+	<constant name="struts.i18n.encoding" value="ISO-8859-1" />
+
+	<package name="default" namespace="/" extends="struts-default">
+	
+	  <default-action-ref name="index" />
+        
+     <global-results>
+			<result name="error_page">/global/error.jsp</result>	
+			<result name="download_success_page">/global/downloadSuccess.jsp</result>	
+			<result name="download_forbidden_page">/global/downloadForbidden.jsp</result>	
+		</global-results>
+		<action name="main/*" method="{1}" class="mainAction">
+			<result>/main/{1}.jsp</result>
+			<result name="download">/main/download.jsp</result>
+			<result name="tryOnline">/main/tryOnline.jsp</result>
+		</action>
+		
+
+
+		<action name="*Upload" method="{1}" class="uploadAction">
+
+
+
+
+			<result name="form">/js/uploadFormTest.html</result>
+			<result name="success">/js/uploadFormTest.html</result>
+
+		</action>
+
+		<action name="*Invoice" method="{1}" class="invoiceAction">
+
+		
+
+			<result name="success"></result>
+
+		</action>
+		
+			<action name="*Paypal" method="{1}" class="paypalAction">
+
+		
+
+			<result name="receiveNotification"></result>
+
+		</action>
+		
+			<action name="*Stampa" method="{1}" class="stampaAction">
+				<result name="success">
+				    <param name="excludeProperties">
+					invoiceServiceBean,
+					virtualCartServiceBean,
+					addressServiceBean,
+					customerServiceBean,
+					orderServiceBean
+				</param>
+				</result>
+				
+			</action>
+
+	</package>
+
+
+	<package name="json" namespace="/" extends="json-default">
+	
+	<action name="*LocationInfo" method="{1}" class="locationInfoAction">
+
+			<result name="populate" type="json">
+				<param name="excludeProperties">
+					locationServiceBean,
+					state,
+					stateId,
+					region,
+					regionId,
+					city,
+					cityId,
+					listR,
+					listC
+				</param>
+			</result>
+
+			<result name="populateR" type="json">
+				<param name="excludeProperties">
+					locationServiceBean,
+					state,
+					stateId,
+					region,
+					regionId,
+					city,
+					cityId,
+					listS,
+					listC
+				</param>
+			</result>
+
+			<result name="populateC" type="json">
+				<param name="excludeProperties">
+					locationServiceBean,
+					state,
+					stateId,
+					region,
+					regionId,
+					city,
+					cityId,
+					listR,
+					listS
+				</param>
+			</result>
+
+			<result name="success" type="json">
+				<param name="excludeProperties">
+					locationServiceBean
+				</param>
+			</result>
+
+		</action>
+	
+		
+		<action name="*Category" method="{1}" class="categoryAction">
+
+			<result name="populate" type="json">
+				<param name="excludeProperties">
+					categoryServiceBean,
+					descriptionCategory,
+					nameCategory,
+					subCategory,
+					categoryId				
+  				</param>
+			</result>
+
+			<result name="success" type="json">
+				
+				<param name="excludeProperties">
+					categoryServiceBean		
+  				</param>
+
+				
+			</result>
+
+		</action>
+		
+		
+			<action name="*DeliveryStrategy" method="{1}" class="deliveryStrategyAction">
+
+				<result name="add" type="json">
+				
+				<param name="excludeProperties">
+						deliveryCompanyServiceBean	
+  				</param>
+
+				
+			</result>
+			
+			
+				<result name="checkSplit" type="json">
+				
+				<param name="excludeProperties">
+				deliveryStrategyCompanies,
+						deliveryCompanyServiceBean	
+  				</param>
+
+				
+			</result>
+
+			<result name="success" type="json">
+				
+				<param name="excludeProperties">
+						deliveryCompanyServiceBean	
+  				</param>
+
+				
+			</result>
+
+		</action>
+		
+		
+			<action name="*GlobalSearch" method="{1}" class="globalSearchAction">
+
+			
+			
+				<result name="filter" type="json">
+				
+				<param name="excludeProperties">
+						globalSearchServiceBean	
+  				</param>
+
+				
+			</result>
+			
+
+			<result name="success" type="json">
+				
+				<param name="excludeProperties">
+						globalSearchServiceBean	
+  				</param>
+
+				
+			</result>
+			
+			
+				<result name="retrieveResults" type="json">
+				
+				<param name="excludeProperties">
+						globalSearchServiceBean	
+  				</param>
+
+				
+			</result>
+			
+			
+				
+				<result name="reindexManually" type="json">
+				
+				<param name="excludeProperties">
+						globalSearchServiceBean	
+  				</param>
+
+				
+			</result>
+			
+				<result name="filterByCat" type="json">
+				
+				<param name="excludeProperties">
+						globalSearchServiceBean	
+  				</param>
+
+				
+			</result>
+			
+			
+			
+
+		</action>
+		
+			<action name="*Order" method="{1}" class="orderAction">
+
+	<result name="addAddr" type="json">
+				
+				<param name="excludeProperties">
+						orderServiceBean,
+						deliveryCompanyServiceBean,
+						customerServiceBean
+  				</param>
+
+				
+			</result>	
+			
+			<result name="addShipping" type="json">
+				
+				<param name="excludeProperties">
+						orderServiceBean,
+						deliveryCompanyServiceBean,
+						customerServiceBean	
+  				</param>
+
+				
+			</result>	
+			
+				
+			<result name="cancel" type="json">
+				
+				<param name="excludeProperties">
+						orderServiceBean,
+						deliveryCompanyServiceBean,
+						customerServiceBean	
+  				</param>
+
+				
+			</result>	
+			
+				<result name="prepareReview" type="json">
+				
+				<param name="excludeProperties">
+						orderServiceBean,
+						deliveryCompanyServiceBean,
+						customerServiceBean	
+  				</param>
+
+				
+			</result>	
+			
+			
+				<result name="create" type="json">
+				
+				<param name="excludeProperties">
+						orderServiceBean,
+						deliveryCompanyServiceBean,
+						customerServiceBean	
+  				</param>
+
+				
+			</result>	
+			
+				
+		
+
+			
+
+			<result name="success" type="json">
+				
+				<param name="excludeProperties">
+						orderServiceBean,
+						deliveryCompanyServiceBean	
+  				</param>
+
+				
+			</result>
+
+		</action>
+		
+		
+		<action name="*Customer" method="{1}" class="customerAction">
+		
+			<result name="retrieveId" type="json">
+				
+				<param name="excludeProperties">
+					customerServiceBean,
+						orderServiceBean,
+						customerVO,
+					virtualCartVO,
+					street,
+					firstNameCustomer,
+					lastNameCustomer,
+					nameCity,								
+					nameRegion,								
+					nameState	
+  				</param>
+
+				
+			</result>
+			
+				<result name="checkInSession" type="json">
+				
+				<param name="excludeProperties">
+					customerServiceBean,
+						orderServiceBean,
+						customerVO,
+					virtualCartVO,
+					street,
+					firstNameCustomer,
+					lastNameCustomer,
+					nameCity,								
+					nameRegion,								
+					nameState	
+  				</param>
+
+				
+			</result>
+			
+			
+					<result name="activate" type="json">
+				
+				<param name="excludeProperties">
+					customerServiceBean,
+						orderServiceBean,
+						customerVO,
+					virtualCartVO,
+					street,
+					firstNameCustomer,
+					lastNameCustomer,
+					nameCity,								
+					nameRegion,								
+					nameState	
+  				</param>
+
+				
+			</result>
+
+			
+
+			<result name="success" type="json">
+				
+				<param name="excludeProperties">
+					customerServiceBean,
+					orderServiceBean,
+					listaOrdini
+  				</param>
+
+				
+			</result>
+			
+			
+			
+				<result name="checkCaptcha" type="json">
+				
+				<param name="excludeProperties">
+					customerServiceBean,
+					orderServiceBean,
+					customerVO,
+					virtualCartVO,
+					listaOrdini
+	
+  				</param>
+
+				
+			</result>
+			
+				<result name="makeLogin" type="json">
+				
+				<param name="excludeProperties">
+					customerServiceBean,
+					orderServiceBean,
+					customerVO,
+					virtualCartVO,
+					listaOrdini
+	
+  				</param>
+
+				
+			</result>
+
+				<result name="showOrdInfo" type="json">				
+					<param name="excludeProperties">
+						customerServiceBean,
+						orderServiceBean,
+						customerVO,
+					virtualCartVO,
+					street,
+					firstNameCustomer,
+					lastNameCustomer,
+					nameCity,								
+					nameRegion,								
+					nameState								
+	  				</param>
+				</result>
+
+				<result name="shippingOrd" type="json">				
+					<param name="excludeProperties">
+					customerServiceBean,
+					orderServiceBean,
+					customerVO,
+					customerId,
+					virtualCartVO,
+					phoneNumber,
+					mail,
+					activationCode,
+					firstName,
+					insDate, 
+					lastName								
+	  				</param>
+				</result>
+				
+				<result name="filterByDate" type="json">				
+					<param name="excludeProperties">
+					customerServiceBean,
+					orderServiceBean,
+					customerVO,
+					virtualCartVO,
+					listDate,
+					phoneNumber,
+					mail,
+					activationCode,
+					firstName,
+					insDate, 
+					lastName,
+					listaShippings								
+	  				</param>
+				</result>
+				
+				<result name="filterByShipping" type="json">				
+					<param name="excludeProperties">
+					customerServiceBean,
+					orderServiceBean,
+					customerVO,
+					virtualCartVO,
+					listDate,
+					phoneNumber,
+					mail,
+					activationCode,
+					firstName,
+					insDate, 
+					lastName								
+	  				</param>
+				</result>
+		</action>
+		
+		
+		<action name="*VirtualCart" method="{1}" class="virtualCartAction">
+
+		
+			
+			<result name="checkAvailability" type="json">
+				
+				<param name="excludeProperties">
+					customerServiceBean,
+					virtualCartServiceBean
+  				</param>
+
+				
+			</result>
+			
+			<result name="changeQuantity" type="json">
+				
+				<param name="excludeProperties">
+					customerServiceBean,
+					virtualCartServiceBean,
+					productDetails
+  				</param>
+
+				
+			</result>
+
+			<result name="success" type="json">
+				
+				<param name="excludeProperties">
+					customerServiceBean,
+					virtualCartServiceBean	
+  				</param>
+
+				
+			</result>
+			
+				<result name="retrieveProducts" type="json">
+				
+				<param name="excludeProperties">
+					customerServiceBean,
+					virtualCartServiceBean	
+  				</param>
+
+				
+			</result>
+			
+			
+				<result name="addProd" type="json">
+				
+				<param name="excludeProperties">
+					customerServiceBean,
+					virtualCartServiceBean	
+  				</param>
+
+				
+			</result>
+			
+				<result name="removeProd" type="json">
+				
+				<param name="excludeProperties">
+					customerServiceBean,
+					virtualCartServiceBean	
+  				</param>
+
+				
+			</result>
+
+				<result name="priceResume" type="json">
+				
+				<param name="excludeProperties">
+					customerServiceBean,
+					virtualCartServiceBean,
+					productDetails	
+  				</param>
+
+				
+			</result>
+		</action>
+		
+		
+		<action name="*SubCategor" method="{1}" class="subCategoryAction">
+
+			<result name="populate" type="json">
+				<param name="excludeProperties">
+					categoryServiceBean,
+					descriptionCategory,
+					nameCategory,
+					subCategory,
+					categoryId				
+  				</param>
+			</result>
+
+			<result name="success" type="json">
+				<param name="excludeProperties">
+
+				</param>
+			</result>
+
+		</action>
+		
+		
+		<action name="*Characteristic" method="{1}" class="characteristicAction">
+
+			
+
+			<result name="success" type="json">
+				<param name="excludeProperties">
+				categoryServiceBean
+
+				</param>
+			</result>
+
+		</action>
+
+		<action name="*Product" method="{1}" class="productAction">
+
+			<result type="json" />
+			
+			
+			<result name="populate" type="json">
+				<param name="excludeProperties">
+					productServiceBean,
+					price,
+					name,
+					code,
+					weight,
+					description,
+					categoryId								
+  				</param>
+			</result>
+			
+				<result name="retrieveDetail" type="json">
+				<param name="excludeProperties">
+					productServiceBean,
+					price,
+					name,
+					code,
+					weight,
+					description,
+					categoryId								
+  				</param>
+			</result>
+			
+			
+					<result name="loadImages" type="json">
+				<param name="excludeProperties">
+				    prodDetails,
+					productServiceBean,
+					price,
+					name,
+					code,
+					weight,
+					description,
+					categoryId								
+  				</param>
+			</result>
+			
+						<result name="retrieveRelated" type="json">
+				<param name="excludeProperties">
+				    prodDetails,
+					productServiceBean,
+					price,
+					images,
+					productId,
+					lista,
+					name,
+					code,
+					productVO,
+					weight,
+					description,
+					categoryId								
+  				</param>
+			</result>
+			
+						<result name="retrieveMostSold" type="json">
+				<param name="excludeProperties">
+				    prodDetails,
+					productServiceBean,
+					price,
+					images,
+					productId,
+					lista,
+					name,
+					code,
+					productVO,
+					weight,
+					description,
+					categoryId								
+  				</param>
+			</result>
+			
+						<result name="retrieveWithDiscount" type="json">
+				<param name="excludeProperties">
+				    prodDetails,
+					productServiceBean,
+					price,
+					images,
+					productId,
+					lista,
+					name,
+					code,
+					productVO,
+					weight,
+					description,
+					categoryId								
+  				</param>
+			</result>
+
+			<result name="success" type="json">
+			</result>
+		</action>
+
+		<action name="*Address" method="{1}" class="addressAction">
+			<result name="success" type="json">	
+			<param name="excludeProperties">
+					addressServiceBean,
+					customerServiceBean,
+					locationServiceBean,
+					virtualCartServiceBean
+				</param>			
+			</result>
+			<result name="retrieveByCustomer" type="json">	
+			<param name="excludeProperties">
+					addressServiceBean,
+					customerServiceBean,
+					locationServiceBean,
+					virtualCartServiceBean
+				</param>			
+			</result>
+			<result name="remove" type="json">	
+			<param name="excludeProperties">
+					addressServiceBean,
+					customerServiceBean,
+					locationServiceBean,
+					virtualCartServiceBean
+				</param>			
+			</result>
+					
+		</action>
+		
+		<action name="*SessionCheck" method="{1}" class="sessionCheckAction">
+			<result name="success" type="json">	
+				<param name="excludeProperties">
+					customerServiceBean
+				</param>			
+		</result>
+					
+		</action>
+		
+		<action name="*CompanyInformation" method="{1}" class="companyInformationAction">
+
+			<result name="populate" type="json">
+				<param name="excludeProperties">
+					companyInformationServiceBean,
+					name,
+					address,
+					piva,
+					phone,
+					email,
+					city,
+					postalCode,
+					idCompanyInformation				
+  				</param>
+			</result>
+
+				
+			<result name="dareNome" type="json">
+				<param name="excludeProperties">
+					companyInformationServiceBean,
+					name,
+					address,
+					piva,
+					phone,
+					email,
+					city,
+					postalCode,
+					idCompanyInformation				
+				</param>
+			</result>
+
+		</action>
+
+
+	
+		<action name="*MenuAction" method="{1}" class="menuAction">
+			<result type="json" />
+			<result name="menuBeanResult">/js/layout-browser.html</result>
+		</action>
+	
+		<action name="*ShowItems" method="{1}" class="showItemsAction">
+
+			<result name="success" type="json">
+	<param name="excludeProperties">
+					productServiceBean
+				</param>
+			</result>
+
+ 
+		</action>
+		
+
+	</package>
+
+
+
+
+
+</struts>
+

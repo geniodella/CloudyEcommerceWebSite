@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context antiJARLocking="true">
+
+	<!-- Default set of monitored resources -->
+	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+<!-- 	<Manager className="org.apache.catalina.session.PersistentManager"
+		saveOnRestart="false" minIdleSwap="0" maxIdleSwap="0"  maxIdleBackup="1" >
+		<Store  className="org.apache.catalina.session.JDBCStore"
+			driverName="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/ecommerce"
+			connectionName="root" connectionPassword="freenet" sessionTable="sessions"
+			sessionIdCol="session_id" sessionDataCol="session_data"
+			sessionValidCol="valid_session" sessionMaxInactiveCol="max_inactive"
+			sessionLastAccessedCol="last_access" sessionAppCol="app_name"
+			/>
+	</Manager>-->
+	
+	
+
+	
+	
+  <ResourceLink global="jms/ConnectionFactory" name="jms/ConnectionFactory" type="javax.jms.ConnectionFactory"/>
+	<ResourceLink global="jms/topic/MyTopic" name="jms/topic/MyTopic" type="javax.jms.Topic"/>
+	<!-- Uncomment this to enable Comet connection tacking (provides events 
+		on session expiration as well as webapp lifecycle) -->
+	<!-- <Valve className="org.apache.catalina.valves.CometConnectionManagerValve" 
+		/> -->
+
+</Context>
+

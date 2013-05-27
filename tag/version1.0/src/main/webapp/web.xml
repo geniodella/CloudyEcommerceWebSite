@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>EcommerceFrontEnd</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>invoice</display-name>
+    <servlet-name>invoice</servlet-name>
+    <servlet-class>com.template.action.InvoiceServlet</servlet-class>
+    
+
+   
+  </servlet>
+  
+  <servlet>
+        <servlet-name>SimpleCaptchaServlet</servlet-name>
+        <servlet-class>nl.captcha.servlet.SimpleCaptchaServlet</servlet-class>
+      
+        <init-param>
+            <param-name>captcha-width</param-name>
+            <param-value>250</param-value>
+        </init-param>
+        <init-param>
+            <param-name>captcha-height</param-name>
+            <param-value>75</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SimpleCaptchaServlet</servlet-name>
+        <url-pattern>/stickyImg</url-pattern>
+    </servlet-mapping>
+  
+  
+  
+  
+  <servlet-mapping>
+    <servlet-name>invoice</servlet-name>
+    <url-pattern>/invoice</url-pattern>
+  </servlet-mapping>
+  <filter>
+  <filter-name>struts2</filter-name>
+  <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+</filter>
+
+  <listener>
+		<listener-class>com.template.action.SessionCounterListener</listener-class>
+	</listener>
+
+<listener>
+      <listener-class>
+        org.springframework.web.context.ContextLoaderListener
+      </listener-class>
+</listener>
+
+<listener>
+<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+</listener>
+
+<context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+      classpath:applicationContext.xml classpath:applicationContext-jdbc.xml classpath:applicationContext-dao.xml classpath:applicationContext-security.xml
+    </param-value>
+  </context-param>
+  
+    <session-config>
+      <session-timeout>-1</session-timeout> 
+    </session-config>
+
+  <filter>
+        <filter-name>hibernateFilter</filter-name>
+        <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+        <init-param>
+            <param-name>singleSession</param-name>
+            <param-value>true</param-value>
+            <param-name>flushMode</param-name>
+  			<param-value>AUTO</param-value>
+        </init-param>
+    </filter>
+    
+     <filter>
+        <filter-name>googleCrawlFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+     </filter>
+    <filter-mapping>
+        <filter-name>hibernateFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+  <filter-mapping>
+        <filter-name>googleCrawlFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping> 
+
+<filter-mapping>
+  <filter-name>struts2</filter-name>
+   <url-pattern>*.action</url-pattern>
+</filter-mapping>
+
+<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>
+                  org.springframework.web.filter.DelegatingFilterProxy
+                </filter-class>
+	</filter>
+ 
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+<resource-ref>
+	<res-ref-name>jms/ConnectionFactory</res-ref-name>
+	<res-type>javax.jms.ConnectionFactory</res-type>
+	<res-auth>Container</res-auth>
+	<res-sharing-scope>Shareable</res-sharing-scope>
+</resource-ref>	
+<resource-ref>
+	<res-ref-name>jms/topic/MyTopic</res-ref-name>
+	<res-type>javax.jms.Topic</res-type>
+	<res-auth>Container</res-auth>
+	<res-sharing-scope>Shareable</res-sharing-scope>
+</resource-ref>
+  
+</web-app>
