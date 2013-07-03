@@ -23,6 +23,7 @@
 			</div>
 			
 			<div id="content-body">
+			
 					<div class="subcolumn1-2" id="content-text" style="height:100px;">
 						<h2><s:text name="it.ecomweb.page.tryOnline.text1"/></h2>
 						<p><s:text name="it.ecomweb.page.tryOnline.text2"/></p>
@@ -34,7 +35,7 @@
 						<s:if test="%{secondAccess}">
 							<h2><s:text name="it.ecomweb.page.tryOnline.text4"/></h2>
 							<p><s:text name="it.ecomweb.page.tryOnline.text5"/></p>	
-							<p><a href="<s:url action="main/tryOnlineRedirect"><s:param name="secondAccess" value="true"/></s:url>">BOTTONE ACCESSO ONLINE</a></p>						
+							<p><a href="./../form" onclick="window.open(this.href,'form','toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=505,height=560')">BOTTONE ACCESSO ONLINE</a></p>						
 							<p><s:text name="it.ecomweb.page.tryOnline.text6"/></p>
 						</s:if>
 						<s:else>

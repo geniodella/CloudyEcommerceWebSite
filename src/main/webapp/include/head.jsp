@@ -47,7 +47,7 @@
 	<s:set name="cssPath" value="%{#pageRoot + '/res_css'}" />
 	<s:set name="jsPath" value="%{#pageRoot + '/res_js'}" />
 
-
+	
 	<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery-1.3.1.min.js"></script>
 	<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery.ui.all.js"></script>
 	<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery.tooltip.js"></script>
@@ -56,5 +56,7 @@
 	
 	<script type="text/javascript" src="<s:property value="#jsPath"/>/ecommerce/jquery/admin.jquery.js"></script>
 
+<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/customForm.js"></script>
+<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery.simplemodal.js"></script>
 
 </head>
