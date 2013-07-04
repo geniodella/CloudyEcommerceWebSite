@@ -195,6 +195,8 @@ IE8 AND OLDER STYLING
 	display: block;
 	overflow: visible !important;
 	position: relative;
+	height: 350px !important;
+	width: 400px !important;
 }
 /* anythingSlider viewport window */
 .anythingSlider .anythingWindow {
@@ -213,6 +215,7 @@ IE8 AND OLDER STYLING
 	left: 0;
 	margin: 0;
 	padding: 0;
+	height:350px !important
 }
 
 /* Navigation arrow text; indent moved to span inside "a", for IE7;
