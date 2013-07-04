@@ -19,11 +19,7 @@
 <!-- jQuery (required) -->
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-<script>
-	window.jQuery
-			|| document
-					.write('<script src="../res_js/jquery.min.js"><\/script>')
-</script>
+<script>window.jQuery|| document.write('<script src="../res_js/jquery.min.js"><\/script>')</script>
 
 <!-- Anything Slider optional plugins -->
 <script src="../res_js/jquery/jquery.easing.1.2.js"></script>
@@ -70,7 +66,7 @@
 								enableKeyboard : false, // if false, keyboard arrow keys will not work for this slider.
 								stopAtEnd : false, // If true & the slideshow is active, the slideshow will stop on the last page. This also stops the rewind effect when infiniteSlides is false.
 								delay : 10000, // How long between slideshow transitions in AutoPlay mode (in milliseconds)
-								animationTime : 1000, // How long the slideshow transition takes (in milliseconds)
+								animationTime : 1500, // How long the slideshow transition takes (in milliseconds)
 								navigationFormatter : function(index, panel) {
 									return [ 'Slab', 'Parking Lot', 'Drive',
 											'Glorius Dawn', 'Bjork?',
@@ -104,8 +100,8 @@
 
 
 			<div id="content-body">
-			
-				<div id="page-wrap">
+  
+  			<div id="page-wrap">
 					<ul id="slider1">
 
 						<!--     <li><img src="demos/images/logoWorld.jpg" alt=""></li>  -->
@@ -113,49 +109,51 @@
 
 						<li>
 							<div class="textSlide">
+              <img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:100px; height:100px; margin: 10px 20px 10px 0;position:relative;">
 								<h3>FUNZIONALIT&Agrave; COMPLETE DELLA NAVIGAZIONE PRODOTTI</h3>
 								<br>
 								<ul>
-									<li>Immagini multiple per prodotto.</li>
-									<li>Possibilit&agrave; di zoommare sull'immagine del
-										prodotto.</li>
-									<li>Prodotti correlati.</li>
-									<li>Disponibilit&agrave; di stock.</li>
-									<li>Prezzi multistrato per grandi vendite.</li>
-									<li>Selezione delle opzioni del prodotto.</li>
+									Immagini multiple per prodotto.
+									Possibilit&agrave; di zoommare sull'immagine del
+										prodotto.</br>
+									Prodotti correlati.</br>
+									Disponibilit&agrave; di stock.</br>
+									Prezzi multistrato per grandi vendite.</br>
+									Selezione delle opzioni del prodotto.</br>
 								</ul>
 							</div>
 							<div class="textSlide">
+							<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:100px; height:100px; margin: 50px 20px 60px 0;position:relative;">
 								<h3>FUNZIONALIT&Agrave; COMPLETE DEL CARRELLO</h3>
 								<br>
 								<ul>
-									<li>Checkout in una pagina.</li>
-									<li>Utilizzo degli SSL per la sicurezza degli ordini, sia
-										sul frontend che sul backend.</li>
-									<li>Spedizioni ad indirizzi diversi in un solo ordine.</li>
-									<li>Checkout senza account, in modalit&agrave; Guest
-										Checkout.</li>
-									<li>Carrello con stima di spese fiscali e di spese di
-										spedizione.</li>
-									<li>Opzione per creare un account all'inizio del checkout.</li>
-									<li>Buoni Regalo accettati per ordini e per articoli.</li>
-									<li>Salvataggio dei carrelli con tempo di scadenza
-										configurabile.</li>
+									Checkout in una pagina.
+									Utilizzo degli SSL per la sicurezza degli ordini, sia
+										sul frontend che sul backend.</br>
+									Spedizioni ad indirizzi diversi in un solo ordine.</br>
+									Checkout senza account, in modalit&agrave; Guest
+										Checkout.</br>
+									Carrello con stima di spese fiscali e di spese di
+										spedizione.</br>
+									Opzione per creare un account all'inizio del checkout.</br>
+									Buoni Regalo accettati per ordini e per articoli.</br>
+								<br>Salvataggio dei carrelli con tempo di scadenza
+										configurabile.</br>
 								</ul>
 							</div>
 							<div class="textSlide">
 								<h3>FUNZIONALIT&Agrave; DI RICERCA PER TAG</h3>
 								<br>
 								<ul>
-									<li>Possibilit&agrave; di etichettare i prodotti con un
+									Possibilit&agrave; di etichettare i prodotti con un
 										numero illimitato di etichette cosi da potenziare la
-										funzionalita di ricerca che non viene fatta solo per nome.</li>
-									<li>Un algoritmo ricalcola periodicamente il punteggio dei
+										funzionalita di ricerca che non viene fatta solo per nome.
+									Un algoritmo ricalcola periodicamente il punteggio dei
 										tag per mettere in risalto nella barra di ricerca i risultati
-										relativi a etichette con punteggio piu alto.</li>
-									<li>Possibilit&agrave; di scremare la ricerca per
+										relativi a etichette con punteggio piu alto.
+									Possibilit&agrave; di scremare la ricerca per
 										categoria o per un numero illimitato di caratteritische
-										relative a un prodotto.</li>
+										relative a un prodotto.</br>
 								</ul>
 							</div>
 						</li>
@@ -166,37 +164,37 @@
 								<h3>FUNZIONALIT&Agrave; DI ACQUISTO</h3>
 								<br>
 								<ul>
-									<li>Permetter&agrave; ai tuoi clienti di acquistare anche
+									Permetter&agrave; ai tuoi clienti di acquistare anche
 										senza essere preventivamente registrati.Questa infatti
 										&egrave; una delle caratteristiche pi&ugrave; importanti di un
 										ecommerce. Non bloccando il flusso di acquisto al checkout il
 										cliente potr&agrave; decidere se acquistare senza registrarsi
 										oppure registrarsi durante l'acquisto semplicemente scegliendo
-										la propria password.</li>
+										la propria password.
 								</ul>
 							</div>
 							<div class="textSlide">
 								<h3>GESTIONE CLIENTI</h3>
 								<br>
 								<ul>
-									<li>Ogni cliente ha la possibilit&agrave; di rivedere gli
+									Ogni cliente ha la possibilit&agrave; di rivedere gli
 										ordini fatti e scendere fino al dettaglio della singola
-										spedizione analizzandone lo stato in qualsiasi momento.</li>
+										spedizione analizzandone lo stato in qualsiasi momento.
 								</ul>
 							</div>
 							<div class="textSlide">
 								<h3>UTILIZZO DELLA TECNOLOGIA AJAX</h3>
 								<br>
 								<ul>
-									<li>CloudyEcommerce f&agrave; molto uso della nuovissima
+									CloudyEcommerce f&agrave; molto uso della nuovissima
 										tecnologia Ajax, per velocizzare e migliorare alcune delle
 										funzionalit&agrave; pi&ugrave; usate come l'aggiunta al
 										carrello. Invece che aggiornare la pagina e farne attendere il
 										caricamento, il prodotto viene aggiunto al carrello
 										istantaneamente. Lo stesso procedimento avviene per
 										l'ordinamento dei prodotti in base ad un particolare
-										attributo.</li>
-									<li>Inoltre la tecnologia ajax viene utilizzata anche
+										attributo.
+									Inoltre la tecnologia ajax viene utilizzata anche
 										nella gestione del magazzino, offrendo una esperienza desktop
 										like, questo porta grandi vantaggi, soprattutto se ci si trova
 										a dover inserire molti prodotti e con periodicit&agrave;
@@ -204,7 +202,7 @@
 										aspettare il caricamento di tutta la pagina per
 										l&grave;utilizzo di ogni funzionalit&agrave;, un difetto che
 										hanno attualmente quasi tutti gli applicativi di ecommerce in
-										mercato.</li>
+										mercato.</br>
 								</ul>
 							</div>
 						</li>
@@ -215,21 +213,21 @@
 								<h3>JAVA ENTERPRISE</h3>
 								<br>
 								<ul>
-									<li>Il cuore dell&acute;applicativo &egrave; sviluppato
+									Il cuore dell&acute;applicativo &egrave; sviluppato
 										con tecnologia Java enterprise questo garantisce che il sito
 										di ecommerce sia scalabile a tutti i livelli e fino a volumi
 										di utenza molto alti, in contrapposizione ad architetture php
 										che incontrano dei colli di bottiglia consistenti riguardo
 										alla scalabilit&agrave;, l&acute;utilizzo di tecnologia java
 										fa si che CloudyEcommerce si integri perfettamente con
-										l&acute;infrastruttura SAAS.</li>
+										l&acute;infrastruttura SAAS.
 								</ul>
 							</div>
 							<div class="textSlide">
 								<h3>FLESSIBILIT&Agrave;</h3>
 								<br>
 								<ul>
-									<li>CloudyEcommerce &egrave; completamente sviluppato da
+									CloudyEcommerce &egrave; completamente sviluppato da
 										noi, non &egrave; una personalizzazione di un altro prodotto,
 										ci&ograve; implica che qualsiasi modifica di qualsiasi genere
 										&egrave; possibile, basta mettersi in contatto con noi e
@@ -237,21 +235,21 @@
 										oltre alle modifiche che di volta in volta vengono apportate,
 										parliamo di una serie di funzionalit&agrave; aggiuntive che
 										vengono installate nell&acute;ecommerce mano mano che vengono
-										sviluppate.</li>
+										sviluppate.
 								</ul>
 							</div>
 							<div class="textSlide">
 								<h3>SUPPORTO 24h</h3>
 								<br>
 								<ul>
-									<li>Tutte le installazioni dell&acute;ecommerce vengono
+									Tutte le installazioni dell&acute;ecommerce vengono
 										monitorate 24h da software di Application performance
 
 										management, cosi da individuare eventuali problemi o cali
 										delle prestazioni prima che vengano individuate dai clienti,
 										questa forma di prevenzione limita i danni enormemente,
 										inoltre per qualsiasi domanda o richiesta di aiuto &egrave;
-										attivo un servizio tutti i giorni per aiutare i clienti.</li>
+										attivo un servizio tutti i giorni per aiutare i clienti.
 								</ul>
 							</div>
 						</li>
