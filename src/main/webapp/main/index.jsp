@@ -104,6 +104,7 @@
 
 
 			<div id="content-body">
+			
 				<div id="page-wrap">
 					<ul id="slider1">
 
@@ -259,7 +260,7 @@
 
 					</ul>
 					<!-- END AnythingSlider #1 -->
-				</div>
+				
 			</div>
 
 			<div class="subcolumn1-3" id="content-text">
