@@ -137,7 +137,7 @@ public class GlobalSearchServiceImpl implements GlobalSearchService{
 	public SearchForm screeningByCategory(long tagId){
 		
 	SearchForm searchForm  = new SearchForm();
-	
+	/*
 	List<ProductDetails> prodDetailsList = new ArrayList<ProductDetails>();
 	
 	HashMap<Long,CategoryForm> categories = new 	HashMap<Long,CategoryForm>();
@@ -208,7 +208,7 @@ public class GlobalSearchServiceImpl implements GlobalSearchService{
 		searchForm.setCategories(categories);
 		
 	
-		
+		*/
 		return searchForm;
 		
 	}
@@ -274,7 +274,7 @@ public class GlobalSearchServiceImpl implements GlobalSearchService{
 	public SearchForm liveSearch(long tagId,int subCategoryId){
 		
 		SearchForm searchForm  = new SearchForm();
-		
+	/*	
 		List<TagProductRelationVO> relations = tagProductRelationsDao.findTagProductRelationVOByTagId(tagId);
 		
 		
@@ -343,7 +343,7 @@ public class GlobalSearchServiceImpl implements GlobalSearchService{
 		searchForm.setManufacturers(manufacturers);
 		
 		searchForm.setPriceRanges(createPriceFilter(prodDetailsList));
-		
+		*/
 		return searchForm;
 		
 		
