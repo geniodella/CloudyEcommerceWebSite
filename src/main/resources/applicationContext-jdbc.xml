@@ -1,0 +1,31 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
+
+<bean id="dataSource"
+	 class="com.atomikos.jdbc.AtomikosDataSourceBean" init-method="init" destroy-method="close">
+	 <property name="uniqueResourceName">
+	 	<value>${jdbc.uniqueResourceName.frontend}</value>
+	 	</property>
+	 <property name="xaDataSourceClassName">
+	 	<value>${jdbc.driverClassName}</value>
+	 </property>
+	<property name="xaProperties">
+		<props>
+			  <prop key="user">${jdbc.username}</prop> 
+                        <prop key="password">${jdbc.password}</prop> 
+                        <prop key="URL">${jdbc.url}</prop> 
+			<prop key="databaseName">${jdbc.databaseName}</prop>
+				<prop key="pinGlobalTxToPhysicalConnection">true</prop>
+		</props>
+	</property>
+	<property name="poolSize"><value>10</value></property>
+</bean>
+
+
+
+
+</beans>
