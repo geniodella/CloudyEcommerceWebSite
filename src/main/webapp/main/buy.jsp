@@ -28,35 +28,49 @@
 					
 					<table border="0" bordercolor="#D9DEE1" style="background-color:#FFFFFF" width="100%" cellpadding="10" cellspacing="0">
 					
-						<tr>
-							<th style="border-radius:5px 5px 0 0; border-top:1px solid #D9DEE1;border-left:1px solid #D9DEE1;color:#479CCF;background:#ECF2F6;font-size: 20px;">30&#128;/Mese</th>
-							<th style="border-radius:5px 5px 0 0;border-top:1px solid #D9DEE1;border-left:1px solid #D9DEE1;color:#479CCF;background:white;font-size: 20px;">60&#128;/Mese</th>
-							<th style="border-radius:5px 5px 0 0; border-top:1px solid #D9DEE1;border-right:1px solid #D9DEE1;border-left:1px solid #D9DEE1;color:#479CCF;background:#ECF2F6;font-size: 20px;">90&#128;/Mese</th>
+						<tr >
+							<th width="30%" style="border-radius:5px 5px 0 0; border-top:1px solid #D9DEE1;border-left:1px solid #D9DEE1;color:#479CCF;background:#ECF2F6;font-size: 20px;">30&#128;/Mese</th>
+							<th width="30%" style="border-radius:5px 5px 0 0;border-top:1px solid #D9DEE1;border-left:1px solid #D9DEE1;color:#479CCF;background:white;font-size: 20px;">80&#128;/Mese</th>
+							<th width="30%" style="border-radius:5px 0px 0 0; border-top:1px solid #D9DEE1;border-left:1px solid #D9DEE1;color:#479CCF;background:#ECF2F6;font-size: 20px;">120&#128;/Mese</th>
+							<th width="10%" style="border-radius:0px 5px 0 0; border-top:1px solid #D9DEE1;border-right:1px solid #D9DEE1;border-left:1px solid #D9DEE1;color:#56ce1a;background: #ECF2F6;font-size: 16px;">Pagamento annuale</th>
 						</tr>
 						<tr>
-							<td style="text-align: center;background:#ECF2F6; border-color: #D9DEE1; border-style: solid none solid solid;   border-width:0 0 1px">BASIC</td>
-							<td style="text-align: center;border-color: #D9DEE1; border-style: solid none solid solid;   border-width:0 0 1px">PROFESSIONAL</td>
-							<td style="text-align: center;background:#ECF2F6; border-color: #D9DEE1; border-style: solid none solid solid;   border-width:0 0 1px">UNLIMITED</td>
+							<td style="font-size: 16px!important;text-align: center;background:#ECF2F6;border-left:1px solid #D9DEE1;border-right:1px solid #D9DEE1; border-color: #D9DEE1; border-style: solid solid solid solid;   border-width:0 0 1px 1px">BASE</td>
+							<td style="font-size: 16px!important;text-align: center;border-color: #D9DEE1; border-style: solid solid solid solid;border-left:1px solid #D9DEE1;border-right:1px solid #D9DEE1;   border-width:0 0 1px 1px">PROFESSIONALE</td>
+							<td style="font-size: 16px!important;text-align: center;background:#ECF2F6; border-color: #D9DEE1; border-style: solid solid solid solid; border-right:1px solid #D9DEE1;  border-width:0 0 1px 1px">ILLIMITATO</td>
+							<td style="font-size: 12px!important;text-align: center;background: #ECF2F6; border-color: #D9DEE1; border-style: solid solid solid solid; border-right:1px solid #D9DEE1;  border-width:0 1px 1px;color:#56ce1a">17% di sconto</td>
 						</tr>
 						<tr>
-							<td style="border-left:1px solid #D9DEE1;background:#ECF2F6">Table Cell</td>
-							<td>Table Cell</td>
-							<td style="border-left:1px solid #D9DEE1;background:#ECF2F6">Table Cell</td>
+							<td style="text-align: center;border-left:1px solid #D9DEE1;background:#ECF2F6">500 Prodotti</td>
+							<td style="text-align: center;border-left:1px solid #D9DEE1;">3000 Prodotti</td>
+							<td style="padding: 0 0 0 0px;text-align: right;border-left:1px solid #D9DEE1;background:#ECF2F6">Prodotti illimitati</td>
+							<td style="padding: 0 3px;text-align: left;border-right:1px solid #D9DEE1;background: #ECF2F6;"></td>		
 						</tr>
 						<tr>
-							<td style="border-left:1px solid #D9DEE1;background:#ECF2F6">Table Cell</td>
-							<td>Table Cell</td>
-							<td style="border-left:1px solid #D9DEE1;background:#ECF2F6">Table Cell</td>
+							<td style="text-align: center;border-left:1px solid #D9DEE1;background:#ECF2F6">Spazio d'archiviazione 1GB</td>
+							<td style="text-align: center;border-left:1px solid #D9DEE1;">Spazio d'archiviazione 5GB</td>
+							<td style="padding: 0;text-align: right;border-left:1px solid #D9DEE1;background:#ECF2F6">Spazio d'archiviazione il</td>
+							<td style="padding: 0;text-align: left;border-right:1px solid #D9DEE1;background: #ECF2F6;">limitato</td>
 						</tr>
 						<tr>
-							<td style="border-left:1px solid #D9DEE1;background:#ECF2F6">Table Cell</td>
-							<td>Table Cell</td>
-							<td style="border-left:1px solid #D9DEE1;background:#ECF2F6">Table Cell</td>
+							<td style="text-align: center;border-left:1px solid #D9DEE1;background:#ECF2F6">Larghezza di banda illimitata</td>
+							<td style="text-align: center;border-left:1px solid #D9DEE1;">Larghezza di banda illimitata</td>
+							<td style="padding: 0;text-align: right;border-left:1px solid #D9DEE1;background:#ECF2F6">Larghezza di banda illi</td>
+							<td style="padding: 0;text-align: left;border-right:1px solid #D9DEE1;background: #ECF2F6;">mitata</td>
 						</tr>
 						<tr>
-							<td style="border-left:1px solid #D9DEE1;background:#ECF2F6">Table Cell</td>
-							<td>Table Cell</td>
-							<td style="border-left:1px solid #D9DEE1;background:#ECF2F6">Table Cell</td>
+							<td style="padding: 0 0 0 55px;border-radius: 0 0 5px 5px;border-bottom: 1px solid #D9DEE1;border-left:1px solid #D9DEE1;background:#ECF2F6">
+							<img style="cursor:pointer" src="../res_img/bottoneAcquistaConTesto.png"></img>
+							</td>
+							<td style="padding: 0 0 0 55px;border-radius: 0 0 5px 5px;border-bottom: 1px solid #D9DEE1;border-left:1px solid #D9DEE1;background:white">
+							<img style="cursor:pointer" src="../res_img/bottoneAcquistaConTesto.png"></img>
+							</td>
+							<td style="padding: 0 0 0 55px;border-radius: 0 0 0px 5px;border-bottom: 1px solid #D9DEE1;border-left:1px solid #D9DEE1;background:#ECF2F6">
+							<img style="cursor:pointer" src="../res_img/bottoneAcquistaConTesto.png"></img>
+							</td>
+							<td style="padding: 0 3px 0 4px;border-radius: 0 0 5px 0px;border-bottom: 1px solid #D9DEE1;border-right:1px solid #D9DEE1;background: #ECF2F6;">
+							<img style="cursor:pointer" src="../res_img/bottoneAcquistaConTesto.png"></img>
+							</td>
 						</tr>
 					</table>
 
