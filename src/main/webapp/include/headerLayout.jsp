@@ -11,7 +11,7 @@
  %>
 <div id="header">
 	<div id="header-logo">
-  		<a href="<s:property value="#pagePath" />/main/index.action"><h1><img height="80" width="198" src="<s:property value="#imagePath" />/logo.jpg"></h1></a>
+  		<a href="<s:property value="#pagePath" />/main/index.action"><h1><img height="150" width="815" src="<s:property value="#imagePath" />/cloudyLogo.png"></h1></a>
   	</div>
   	
     <div id="header-menu">
@@ -21,6 +21,6 @@
 	  <div id="header-menu-box"><a href="<s:property value="#pagePath" />/main/buy.action"><s:text name="it.ecomweb.page.menu.buy"/><br><br><img height="50" width="50" style="margin-top:5px" class="rollover" src="<s:property value="#imagePath"/>/buy_off.png"></a></div>
 		<div id="header-menu-box"><a href="<s:property value="#pagePath" />/main/support.action"><s:text name="it.ecomweb.page.menu.support"/><br><br><img height="50" width="50" style="margin-top:5px" class="rollover" src="<s:property value="#imagePath"/>/support_off.png"></a></div>
 	    <div id="header-menu-box"><a href="<s:property value="#pagePath" />/main/docs.action"><s:text name="it.ecomweb.page.menu.docs"/><br><br><img height="50" width="50" style="margin-top:5px" class="rollover" src="<s:property value="#imagePath"/>/docs_off.png"></a></div>
-		<div id="contact-form"><s:text name="it.ecomweb.page.menu.tryOnline"/><br><img height="50" width="50" style="margin-top:5px" class="rollover" src="<s:property value="#imagePath"/>/try_off.png"></div>
+		<div id="contact-form"><s:text name="it.ecomweb.page.menu.tryOnline"/><br><img height="50" width="50" style="margin-top:15px" class="rollover" src="<s:property value="#imagePath"/>/try_off.png"></div>
   	</div>
 </div>

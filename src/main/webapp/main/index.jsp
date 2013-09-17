@@ -35,6 +35,44 @@
 <link rel="stylesheet" href="../res_css/anythingslider.css">
 <script src="../res_js/jquery/jquery.anythingslider.js"></script>
 
+ <!-- ColorBox -->
+ <link href="../res_css/colorbox/colorbox.css" rel="stylesheet">
+ <script src="../res_js/jquery/jquery.colorbox-min.js"></script>
+
+                                                                          
+<!-- highslide --> 
+<script type="text/javascript" src="../res_js/highslide/highslide-with-gallery.js"></script>
+<link rel="stylesheet" type="text/css" href="../res_js/highslide/highslide.css" />
+
+
+<script type="text/javascript">
+
+
+    // override Highslide settings here
+    // instead of editing the highslide.js file
+    hs.graphicsDir = '../res_js/highslide/graphics/';
+    hs.align = 'center';
+    hs.transitions = ['expand', 'crossfade'];
+    hs.outlineType = 'rounded-white';
+    hs.fadeInOut = true;
+   
+	// Add the controlbar
+	hs.addSlideshow({
+		//slideshowGroup: 'group1',
+		interval: 5000,
+		repeat: false,
+		useControls: true,
+		fixedControls: 'fit',
+		overlayOptions: {
+			opacity: 0.75,
+			position: 'bottom center',
+			hideOnMouseOut: true
+		}
+	});
+             
+</script>
+         
+
 <!-- Ideally, add the stylesheet(s) you are going to use here,
 	 otherwise they are loaded and appended to the <head> automatically and will over-ride the IE stylesheet below -->
 	<link rel="stylesheet" href="../res_css/theme-metallic.css">
@@ -82,6 +120,31 @@
 
 		});
 	</script>
+	
+	<script>
+	$(function(){
+	 $('#slider2')
+	  .anythingSlider({
+	   toggleControls : true,
+	   theme          : 'metallic',
+	   navigationFormatter : function(i, panel){ // add thumbnails as navigation links
+	    return '<img src="<s:property value="#imagePath"/>' + ['/shotCart', '/shotMostSoldProducts', '/shotOrderResume', '/shotOrderResumeCheckout','shotProdottiInEsaurimento','shotSearch','shotStrategieDiTrasporto'][i - 1] + '.png">';
+	   }
+	  })
+	  // target all images inside the current slider
+	  // replace with 'img.someclass' to target specific images
+	  .find('.panel:not(.cloned) img') // ignore the cloned panels
+	   .attr('rel','group')            // add all slider images to a colorbox group
+	   .colorbox({
+	     width: '90%',
+	     height: '90%',
+	     href: function(){ return $(this).attr('src'); },
+	     // use $(this).attr('title') for specific image captions
+	     title: 'Press escape to close',
+	     rel: 'group'
+   });
+});
+	</script>	   
 
 	<div id="content-container">
 		<%@ include file="/include/headerLayout.jsp"%>
@@ -109,7 +172,7 @@
 
 						<li>
 							<div class="textSlide">
-              <img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:100px; height:100px; margin: 10px 20px 10px 0;position:relative;">
+              				<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:100px; height:100px; margin: 0px 20px 0px 0;position:relative;">
 								<h3>FUNZIONALIT&Agrave; COMPLETE DELLA NAVIGAZIONE PRODOTTI</h3>
 								<br>
 								<ul>
@@ -123,7 +186,7 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:100px; height:100px; margin: 50px 20px 60px 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/cart.png" style="float:left;width:100px; height:100px; margin: 15px 20px 35px 0;position:relative;">
 								<h3>FUNZIONALIT&Agrave; COMPLETE DEL CARRELLO</h3>
 								<br>
 								<ul>
@@ -137,11 +200,12 @@
 										spedizione.</br>
 									Opzione per creare un account all'inizio del checkout.</br>
 									Buoni Regalo accettati per ordini e per articoli.</br>
-								<br>Salvataggio dei carrelli con tempo di scadenza
+									Salvataggio dei carrelli con tempo di scadenza
 										configurabile.</br>
 								</ul>
 							</div>
 							<div class="textSlide">
+							<img src="<s:property value="#imagePath"/>/tag.jpg" style="float:left;width:100px; height:100px; margin: 0px 20px 0px 0;position:relative;">
 								<h3>FUNZIONALIT&Agrave; DI RICERCA PER TAG</h3>
 								<br>
 								<ul>
@@ -174,6 +238,7 @@
 								</ul>
 							</div>
 							<div class="textSlide">
+							<img src="<s:property value="#imagePath"/>/customers.jpg" style="float:left;width:100px; height:100px; margin: 0px 20px 0px 0;position:relative;">
 								<h3>GESTIONE CLIENTI</h3>
 								<br>
 								<ul>
@@ -183,6 +248,7 @@
 								</ul>
 							</div>
 							<div class="textSlide">
+							<img src="<s:property value="#imagePath"/>/ajax.jpg" style="float:left;width:100px; height:100px; margin:30px 20px 0px 0;position:relative;">
 								<h3>UTILIZZO DELLA TECNOLOGIA AJAX</h3>
 								<br>
 								<ul>
@@ -210,6 +276,7 @@
 
 						<li>
 							<div class="textSlide">
+							<img src="<s:property value="#imagePath"/>/java.png" style="float:left;width:100px; height:100px; margin: 0px 20px 0px 0;position:relative;">
 								<h3>JAVA ENTERPRISE</h3>
 								<br>
 								<ul>
@@ -224,6 +291,7 @@
 								</ul>
 							</div>
 							<div class="textSlide">
+							<img src="<s:property value="#imagePath"/>/customizerIcon.png" style="float:left;width:100px; height:100px; margin: 0px 20px 0px 0;position:relative;">
 								<h3>FLESSIBILIT&Agrave;</h3>
 								<br>
 								<ul>
@@ -239,6 +307,7 @@
 								</ul>
 							</div>
 							<div class="textSlide">
+							<img src="<s:property value="#imagePath"/>/24hours.jpg" style="float:left;width:100px; height:100px; margin: 0px 20px 0px 0;position:relative;">
 								<h3>SUPPORTO 24h</h3>
 								<br>
 								<ul>
@@ -260,45 +329,90 @@
 					<!-- END AnythingSlider #1 -->
 				
 			</div>
+			
+			
+		   <a class="highslide" href="<s:property value="#imagePath"/>/shotCart.png" onclick="return hs.expand(this)">
+		        <img src="<s:property value="#imagePath"/>/shotCart2.png" style="padding: 0 5px;border: none;margin-left: 70px;cursor: pointer;width:100px;height:100px" alt=""/>
+		      </a>
+		      <a class="highslide" href="<s:property value="#imagePath"/>/shotMostSold.PNG" onclick="return hs.expand(this)">
+		         <img src="<s:property value="#imagePath"/>/shotMostSold2.PNG" style="padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
+		      </a>
+		      <a class="highslide" href="<s:property value="#imagePath"/>/shotOrderResume.PNG" onclick="return hs.expand(this)">
+		         <img src="<s:property value="#imagePath"/>/shotOrderResume2.PNG" style="padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
+		      </a>
+		      <a class="highslide" href="<s:property value="#imagePath"/>/shotOrder.PNG" onclick="return hs.expand(this)">
+		         <img src="<s:property value="#imagePath"/>/shotOrder2.PNG" style="padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
+		      </a>
+		      <a class="highslide" href="<s:property value="#imagePath"/>/shotSearch.PNG" onclick="return hs.expand(this)">
+		         <img src="<s:property value="#imagePath"/>/shotSearch2.PNG" style="padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
+		      </a>
+		      <a class="highslide" href="<s:property value="#imagePath"/>/shotProdottiInEsaurimento.PNG" onclick="return hs.expand(this)">
+		         <img src="<s:property value="#imagePath"/>/shotProdottiInEsaurimento2.PNG" style="padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
+		      </a>
+		      <a class="highslide" href="<s:property value="#imagePath"/>/shotDelivery.png" onclick="return hs.expand(this)">
+		         <img src="<s:property value="#imagePath"/>/shotDelivery2.png" style="padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
+		      </a>
+     
+     
+      <span style="display: inline-block;padding-left: 99px; width: 63px;"> carrello</span>
+      <span style="margin-left: 35px;display: inline-block;height: 40px;width: 95px;vertical-align: top;"> prodotti più venduti</span>
+      <span style="display: inline-block;width: 90px;vertical-align: top;margin-left: 20px;"> riassunto ordini</span> 
+      <span style="display: inline-block;width: 74px;vertical-align: top;margin-left: 25px;">ordini nel checkout</span> 
+      <span style="display: inline-block;width: 70px;vertical-align: top;margin-left: 45px;"> ricerca</span> 
+      <span style="display: inline-block;width: 86px;vertical-align: top;margin-left: 28px;"> prodotti in esaurimento</span> 
+      <span style="display: inline-block;width: 80px;vertical-align: top;margin-left: 23px;"> strategia di spedizione</span>       
+       
 
-			<div class="subcolumn1-3" id="content-text">
-				<div id="download-text">
-					<p>
-						<s:text name="it.ecomweb.page.index.text1" />
-					</p>
-				</div>
-				<div id="download-link">
-					<p>
-						<a href="<s:url action="main/download"/>">BOTTONE DOWNLOAD</a>
-					</p>
-				</div>
+<!--			<div class="customeSlider2">
+			<ul id="slider2" >
+			  <li><img src="<s:property value="#imagePath"/>/shotCart.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
+			  <li><img src="<s:property value="#imagePath"/>/shotMostSoldProducts.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
+			  <li><img src="<s:property value="#imagePath"/>/shotOrderResume.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
+			  <li><img src="<s:property value="#imagePath"/>/shotOrderResumeCheckout.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
+			  <li><img src="<s:property value="#imagePath"/>/shotProdottiInEsaurimento.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
+			  <li><img src="<s:property value="#imagePath"/>/shotSearch.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
+			  <li><img src="<s:property value="#imagePath"/>/shotStrategieDiTrasporto.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
+			</ul>
 			</div>
 
-			<div class="subcolumn2-3" id="content-text">
-				<div id="download-text">
-					<p>
-						<s:text name="it.ecomweb.page.index.text2" />
-					</p>
-				</div>
-				<div id="download-link">
-					<p>
-						<a href="<s:url action="main/download"/>">BOTTONE DOWNLOAD</a>
-					</p>
-				</div>
-			</div>
+<!-- 			<div class="subcolumn1-3" id="content-text"> -->
+<!-- 				<div id="download-text"> -->
+<!-- 					<p> -->
+<%-- 						<s:text name="it.ecomweb.page.index.text1" /> <!-- testo i18n path "main->resources->languages_actions.properties" --> --%>
+<!-- 					</p> -->
+<!-- 				</div> -->
+<!-- 				<div id="download-link"> -->
+<!-- 					<p> -->
+<%-- 						<a href="<s:url action="main/download"/>">BOTTONE DOWNLOAD</a> --%>
+<!-- 					</p> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
 
-			<div class="subcolumn3-3" id="content-text">
-				<div id="download-text">
-					<p>
-						<s:text name="it.ecomweb.page.index.text3" />
-					</p>
-				</div>
-				<div id="download-link">
-					<p>
-						<a href="<s:url action="main/buy"/>">BOTTONE ACQUISTA</a>
-					</p>
-				</div>
-			</div>
+<!-- 			<div class="subcolumn2-3" id="content-text"> -->
+<!-- 				<div id="download-text"> -->
+<!-- 					<p> -->
+<%-- 						<s:text name="it.ecomweb.page.index.text2" /> --%>
+<!-- 					</p> -->
+<!-- 				</div> -->
+<!-- 				<div id="download-link"> -->
+<!-- 					<p> -->
+<%-- 						<a href="<s:url action="main/download"/>">BOTTONE DOWNLOAD</a> --%>
+<!-- 					</p> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+
+<!-- 			<div class="subcolumn3-3" id="content-text"> -->
+<!-- 				<div id="download-text"> -->
+<!-- 					<p> -->
+<%-- 						<s:text name="it.ecomweb.page.index.text3" /> --%>
+<!-- 					</p> -->
+<!-- 				</div> -->
+<!-- 				<div id="download-link"> -->
+<!-- 					<p> -->
+<%-- 						<a href="<s:url action="main/buy"/>">BOTTONE ACQUISTA</a> --%>
+<!-- 					</p> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
 
 			<div id="home-message-text" class="subcolumn1-1">
 				<h1 style="font-size: 30px; line-height: 30px; margin-top: 15px;">
