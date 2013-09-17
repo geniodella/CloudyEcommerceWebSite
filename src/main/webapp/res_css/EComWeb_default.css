@@ -59,7 +59,7 @@ img {
 /* Header
 ----------------------------------------*/
 #header {
-	width:850px;
+	width:978px;
 	margin:20px auto 0px;
 	padding-top:12px;
 	position:relative;
@@ -69,23 +69,16 @@ img {
 
 #header-logo{
 	float:left;
-	width:818px;
+	width:978px;
 	background-color: #FFFFFF;
 	text-align: center;
-	padding-top:10px;
-	padding-left:10px;
-	padding-bottom:10px;
-	padding-right:10px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 5px;
-	margin-right: 5px;
+	border-radius: 5px;
 }
 
 #header-menu{
 	float:left;
-	width:788px;
-	background-color: #FFFFFF;
+	width:960px;
+	background-color: transparent;
 	text-align: center;
 	padding-top:10px;
 	padding-left:10px;
@@ -93,21 +86,16 @@ img {
 	padding-right:10px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	margin-left: 20px;
-	margin-right: 20px;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	border: 1px solid #94B3BF;
 }
 
 #header-menu-box{
 	float:left;
 	width:80px;
-	background-color: #ffffff;
+	background-color: transparent;
 	text-align: center;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	margin-left: 5px;
+	margin-left: 65px;
 	margin-right: 5px;
 	cursor: pointer;
 	}
@@ -117,18 +105,19 @@ img {
 	font-size: 13px;
 	font-family:Verdana, Arial, Helvetica, sans-serif; 
 	line-height:15px;
-	color:#000000;
+	color:white;
 	}
 #header-menu-box a:hover{color:#0A3D56;}
 
 
 #contact-form {
-    background-color: #FFFFFF;
+    background-color: transparent;
     float: left;
-    margin: 5px;
+    margin: 5px 0 0 60px;
     text-align: center;
     width: 80px;
     cursor: pointer;
+    color:white;
 }
 
 #rollover{}
@@ -138,20 +127,19 @@ img {
 #content-container {
 	margin:0 auto;
 	margin-top: 30px;
-	width:850px;
+	width:980px;
 	overflow: hidden;
-	background-color: #FFFFFF;
+	background-color: transparent;
 	-moz-border-radius: 30px;
 	-webkit-border-radius: 30px;
-	border: 1px solid #4C4C4C;
 	}
 
 #content {
 	position:relative;
 	float:left;
-	width:848px;
+	width:980px;
 	background-color:#FFFFFF;
-
+border-radius: 5px;
 	padding-top:10px;
 	padding-bottom:10px;
 
@@ -172,7 +160,8 @@ img {
 	float:left;
 	width:818px;
 	background-color: #FFFFFF;
-
+	height: 20px;
+	width: 950px;
 	padding-top:10px;
 	padding-left:10px;
 	padding-bottom:10px;
@@ -183,11 +172,11 @@ img {
 	margin-left: 5px;
 	margin-right: 5px;
 	}
-#content-header h1{ color:#94B3BF; }
+#content-header h1{ color:#94B3BF;margin: 0; }
 
 #content-body{
 	float:left;
-	width:838px;
+	width:880px;
 	background-color: #FFFFFF;
 
 	margin-top: 5px;
