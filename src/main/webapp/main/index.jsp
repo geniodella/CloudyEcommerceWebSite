@@ -121,31 +121,7 @@
 		});
 	</script>
 	
-	<script>
-	$(function(){
-	 $('#slider2')
-	  .anythingSlider({
-	   toggleControls : true,
-	   theme          : 'metallic',
-	   navigationFormatter : function(i, panel){ // add thumbnails as navigation links
-	    return '<img src="<s:property value="#imagePath"/>' + ['/shotCart', '/shotMostSoldProducts', '/shotOrderResume', '/shotOrderResumeCheckout','shotProdottiInEsaurimento','shotSearch','shotStrategieDiTrasporto'][i - 1] + '.png">';
-	   }
-	  })
-	  // target all images inside the current slider
-	  // replace with 'img.someclass' to target specific images
-	  .find('.panel:not(.cloned) img') // ignore the cloned panels
-	   .attr('rel','group')            // add all slider images to a colorbox group
-	   .colorbox({
-	     width: '90%',
-	     height: '90%',
-	     href: function(){ return $(this).attr('src'); },
-	     // use $(this).attr('title') for specific image captions
-	     title: 'Press escape to close',
-	     rel: 'group'
-   });
-});
-	</script>	   
-
+	
 	<div id="content-container">
 		<%@ include file="/include/headerLayout.jsp"%>
 
@@ -363,56 +339,6 @@
       <span style="display: inline-block;width: 80px;vertical-align: top;margin-left: 23px;"> strategia di spedizione</span>       
        
 
-<!--			<div class="customeSlider2">
-			<ul id="slider2" >
-			  <li><img src="<s:property value="#imagePath"/>/shotCart.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
-			  <li><img src="<s:property value="#imagePath"/>/shotMostSoldProducts.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
-			  <li><img src="<s:property value="#imagePath"/>/shotOrderResume.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
-			  <li><img src="<s:property value="#imagePath"/>/shotOrderResumeCheckout.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
-			  <li><img src="<s:property value="#imagePath"/>/shotProdottiInEsaurimento.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
-			  <li><img src="<s:property value="#imagePath"/>/shotSearch.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
-			  <li><img src="<s:property value="#imagePath"/>/shotStrategieDiTrasporto.PNG" style="float:left;width:150px; height:150px; margin: 0px 20px 0px 0;position:relative;"></li>
-			</ul>
-			</div>
-
-<!-- 			<div class="subcolumn1-3" id="content-text"> -->
-<!-- 				<div id="download-text"> -->
-<!-- 					<p> -->
-<%-- 						<s:text name="it.ecomweb.page.index.text1" /> <!-- testo i18n path "main->resources->languages_actions.properties" --> --%>
-<!-- 					</p> -->
-<!-- 				</div> -->
-<!-- 				<div id="download-link"> -->
-<!-- 					<p> -->
-<%-- 						<a href="<s:url action="main/download"/>">BOTTONE DOWNLOAD</a> --%>
-<!-- 					</p> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-
-<!-- 			<div class="subcolumn2-3" id="content-text"> -->
-<!-- 				<div id="download-text"> -->
-<!-- 					<p> -->
-<%-- 						<s:text name="it.ecomweb.page.index.text2" /> --%>
-<!-- 					</p> -->
-<!-- 				</div> -->
-<!-- 				<div id="download-link"> -->
-<!-- 					<p> -->
-<%-- 						<a href="<s:url action="main/download"/>">BOTTONE DOWNLOAD</a> --%>
-<!-- 					</p> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-
-<!-- 			<div class="subcolumn3-3" id="content-text"> -->
-<!-- 				<div id="download-text"> -->
-<!-- 					<p> -->
-<%-- 						<s:text name="it.ecomweb.page.index.text3" /> --%>
-<!-- 					</p> -->
-<!-- 				</div> -->
-<!-- 				<div id="download-link"> -->
-<!-- 					<p> -->
-<%-- 						<a href="<s:url action="main/buy"/>">BOTTONE ACQUISTA</a> --%>
-<!-- 					</p> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
 
 			<div id="home-message-text" class="subcolumn1-1">
 				<h1 style="font-size: 30px; line-height: 30px; margin-top: 15px;">
