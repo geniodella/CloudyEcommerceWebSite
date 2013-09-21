@@ -24,7 +24,7 @@
 }
 .highslide-gallery .highslide-active-anchor img {
 	border-color: black;
-	visibility: visible;
+	visibility: hidden;
 	cursor: default;
 }
 .highslide-image {
@@ -89,6 +89,7 @@ a.highslide-credits i {
 	color: silver;
 	text-decoration: none;
 	font-size: 10px;
+	visibility: hidden;
 }
 a.highslide-credits:hover,
 a.highslide-credits:hover i {

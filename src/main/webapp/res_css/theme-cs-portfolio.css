@@ -210,8 +210,9 @@ IE8 AND OLDER STYLING
 .anythingSlider .anythingWindow {
 	overflow: hidden;
 	position: relative;
-	width: 100%;
-	height: 100%;
+	width: 60%;
+	height: 530px;
+	margin-left: 190px;
 }
 /* anythingSlider base (original element) */
 .anythingSlider .anythingBase {
@@ -223,7 +224,7 @@ IE8 AND OLDER STYLING
 	left: 0;
 	margin: 0;
 	padding: 0;
-	height:350px !important
+	height:530px !important
 }
 
 /* Navigation arrow text; indent moved to span inside "a", for IE7;

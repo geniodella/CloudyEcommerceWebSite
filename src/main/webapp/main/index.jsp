@@ -61,7 +61,7 @@
 		//slideshowGroup: 'group1',
 		interval: 5000,
 		repeat: false,
-		useControls: true,
+		useControls: false,
 		fixedControls: 'fit',
 		overlayOptions: {
 			opacity: 0.75,
@@ -96,11 +96,11 @@
 								theme : 'metallic',
 								easing : 'easeInOutBack',//tipo d'animazione
 								startPanel : randomSlide,
-								buildArrows : false, // If true, builds the forwards and backwards buttons
+								buildArrows : true, // If true, builds the forwards and backwards buttons
 								autoPlay : true, // If true, the slideshow will start running; replaces "startStopped" option
 								buildNavigation : false, // If true, builds a list of anchor links to link to each panel
 								buildStartStop : false, // If true, builds the start/stop button
-								mode : "vertical", // Set mode to "horizontal", "vertical" or "fade" (only first letter needed); replaces vertical option
+								mode : "orizzontal", // Set mode to "horizontal", "vertical" or "fade" (only first letter needed); replaces vertical option
 								enableKeyboard : false, // if false, keyboard arrow keys will not work for this slider.
 								stopAtEnd : false, // If true & the slideshow is active, the slideshow will stop on the last page. This also stops the rewind effect when infiniteSlides is false.
 								delay : 10000, // How long between slideshow transitions in AutoPlay mode (in milliseconds)
@@ -148,8 +148,8 @@
 
 						<li>
 							<div class="textSlide">
-              				<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:100px; height:100px; margin: 0px 20px 0px 0;position:relative;">
-								<h3>FUNZIONALIT&Agrave; COMPLETE DELLA NAVIGAZIONE PRODOTTI</h3>
+              				<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:130px; height:130px;padding: 10px 0; margin: 0px 20px 0px 0;position:relative;">
+								<h3>Funzionalit&agrave; complete della navigazione prodotti</h3>
 								<br>
 								<ul>
 									Immagini multiple per prodotto.
@@ -162,8 +162,8 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/cart.png" style="float:left;width:100px; height:100px; margin: 15px 20px 35px 0;position:relative;">
-								<h3>FUNZIONALIT&Agrave; COMPLETE DEL CARRELLO</h3>
+							<img src="<s:property value="#imagePath"/>/cart.png" style="float:left;width:130px; height:130px; margin: 0px 20px 0px 0;padding: 25px 0 0;position:relative;">
+								<h3>Funzionalit&agrave; complete del carrello</h3>
 								<br>
 								<ul>
 									Checkout in una pagina.
@@ -181,8 +181,8 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/tag.jpg" style="float:left;width:100px; height:100px; margin: 0px 20px 0px 0;position:relative;">
-								<h3>FUNZIONALIT&Agrave; DI RICERCA PER TAG</h3>
+							<img src="<s:property value="#imagePath"/>/tag.jpg" style="float:left;width:130px; height:130px; margin: 0px 20px 0px 0;position:relative;">
+								<h3>Funzionalit&agrave; di ricerca per tag</h3>
 								<br>
 								<ul>
 									Possibilit&agrave; di etichettare i prodotti con un
@@ -200,8 +200,9 @@
 
 
 						<li>
-							<div class="textSlide">
-								<h3>FUNZIONALIT&Agrave; DI ACQUISTO</h3>
+							<div style="padding:20px 0" class="textSlide">
+							<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:130px; height:130px;margin: -10px 20px 0px 0;position:relative;">
+								<h3>Funzionalit&agrave; di acquisto</h3>
 								<br>
 								<ul>
 									Permetter&agrave; ai tuoi clienti di acquistare anche
@@ -214,8 +215,8 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/customers.jpg" style="float:left;width:100px; height:100px; margin: 0px 20px 0px 0;position:relative;">
-								<h3>GESTIONE CLIENTI</h3>
+							<img src="<s:property value="#imagePath"/>/customers.jpg" style="float:left;width:130px; height:130px; margin: -20px 20px 0px 0;position:relative;">
+								<h3>Gestione clienti</h3>
 								<br>
 								<ul>
 									Ogni cliente ha la possibilit&agrave; di rivedere gli
@@ -224,8 +225,8 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/ajax.jpg" style="float:left;width:100px; height:100px; margin:30px 20px 0px 0;position:relative;">
-								<h3>UTILIZZO DELLA TECNOLOGIA AJAX</h3>
+							<img src="<s:property value="#imagePath"/>/ajax.jpg" style="float:left;width:130px; height:130px; margin:30px 20px 20px 0;padding: 15px 0;position:relative;">
+								<h3>Utilizzo della tecnologia Ajax</h3>
 								<br>
 								<ul>
 									CloudyEcommerce f&agrave; molto uso della nuovissima
@@ -252,8 +253,8 @@
 
 						<li>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/java.png" style="float:left;width:100px; height:100px; margin: 0px 20px 0px 0;position:relative;">
-								<h3>JAVA ENTERPRISE</h3>
+							<img src="<s:property value="#imagePath"/>/java.png" style="float:left;width:130px; height:130px; margin: 10px 20px 0px 0;position:relative;">
+								<h3>Java Enterprise</h3>
 								<br>
 								<ul>
 									Il cuore dell&acute;applicativo &egrave; sviluppato
@@ -267,8 +268,8 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/customizerIcon.png" style="float:left;width:100px; height:100px; margin: 0px 20px 0px 0;position:relative;">
-								<h3>FLESSIBILIT&Agrave;</h3>
+							<img src="<s:property value="#imagePath"/>/customizerIcon.png" style="padding: 10px 0;float:left;width:130px; height:130px; margin: 0px 20px 0px 0;position:relative;">
+								<h3>Flessibilit&agrave;</h3>
 								<br>
 								<ul>
 									CloudyEcommerce &egrave; completamente sviluppato da
@@ -283,8 +284,8 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/24hours.jpg" style="float:left;width:100px; height:100px; margin: 0px 20px 0px 0;position:relative;">
-								<h3>SUPPORTO 24h</h3>
+							<img src="<s:property value="#imagePath"/>/24hours.jpg" style="float:left;width:130px; height:130px; margin: 0px 20px 0px 0;position:relative;">
+								<h3>Supporto 24h</h3>
 								<br>
 								<ul>
 									Tutte le installazioni dell&acute;ecommerce vengono
@@ -308,25 +309,25 @@
 			
 			
 		   <a class="highslide" href="<s:property value="#imagePath"/>/shotCart.png" onclick="return hs.expand(this)">
-		        <img src="<s:property value="#imagePath"/>/shotCart2.png" style="padding: 0 5px;border: none;margin-left: 70px;cursor: pointer;width:100px;height:100px" alt=""/>
+		        <img src="<s:property value="#imagePath"/>/shotCart2.png" style="visibility: visible;padding: 0 5px;border: none;margin-left: 70px;cursor: pointer;width:100px;height:100px" alt=""/>
 		      </a>
 		      <a class="highslide" href="<s:property value="#imagePath"/>/shotMostSold.PNG" onclick="return hs.expand(this)">
-		         <img src="<s:property value="#imagePath"/>/shotMostSold2.PNG" style="padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
+		         <img src="<s:property value="#imagePath"/>/shotMostSold2.PNG" style="visibility: visible;padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
 		      </a>
 		      <a class="highslide" href="<s:property value="#imagePath"/>/shotOrderResume.PNG" onclick="return hs.expand(this)">
-		         <img src="<s:property value="#imagePath"/>/shotOrderResume2.PNG" style="padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
+		         <img src="<s:property value="#imagePath"/>/shotOrderResume2.PNG" style="visibility: visible;padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
 		      </a>
 		      <a class="highslide" href="<s:property value="#imagePath"/>/shotOrder.PNG" onclick="return hs.expand(this)">
-		         <img src="<s:property value="#imagePath"/>/shotOrder2.PNG" style="padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
+		         <img src="<s:property value="#imagePath"/>/shotOrder2.PNG" style="visibility: visible;padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
 		      </a>
 		      <a class="highslide" href="<s:property value="#imagePath"/>/shotSearch.PNG" onclick="return hs.expand(this)">
-		         <img src="<s:property value="#imagePath"/>/shotSearch2.PNG" style="padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
+		         <img src="<s:property value="#imagePath"/>/shotSearch2.PNG" style="visibility: visible;padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
 		      </a>
 		      <a class="highslide" href="<s:property value="#imagePath"/>/shotProdottiInEsaurimento.PNG" onclick="return hs.expand(this)">
-		         <img src="<s:property value="#imagePath"/>/shotProdottiInEsaurimento2.PNG" style="padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
+		         <img src="<s:property value="#imagePath"/>/shotProdottiInEsaurimento2.PNG" style="visibility: visible;padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
 		      </a>
 		      <a class="highslide" href="<s:property value="#imagePath"/>/shotDelivery.png" onclick="return hs.expand(this)">
-		         <img src="<s:property value="#imagePath"/>/shotDelivery2.png" style="padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
+		         <img src="<s:property value="#imagePath"/>/shotDelivery2.png" style="visibility: visible;padding: 0 5px;border: none;cursor: pointer;width:100px;height:100px" alt=""/>
 		      </a>
      
      
