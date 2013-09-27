@@ -19,13 +19,12 @@
 		<p><br></p>
 		<div id="content">
 			<div id="content-header">
-				<h1><s:text name="it.ecomweb.page.title.company"/></h1>
+<%-- 				<h1><s:text name="it.ecomweb.page.title.company"/></h1> --%>
 			</div>
 			<div id="content-body">
 					<div class="subcolumn1-1" id="content-text">
-						<h2><s:text name="it.ecomweb.page.company.text1"/></h2><br>
-						<p><s:text name="it.ecomweb.page.company.text2"/></p>
-						<br><img src="<s:property value="#imagePath"/>/Under-construction.png">
+						
+						<br><img src="<s:property value="#imagePath"/>/diagramma.png">
 					</div>
 					
 				</div>
