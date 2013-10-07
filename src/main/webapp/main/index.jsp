@@ -120,25 +120,33 @@
 
 		});
 	</script>
-	
-	
+
+		<%@ include file="/include/headerLayout.jsp"%>	
+  			
 	<div id="content-container">
-		<%@ include file="/include/headerLayout.jsp"%>
 
 
-		<p>
-			<br>
-		</p>
 		<div id="content">
 
-			<div id="content-header">
-				<h1>
-					<s:text name="it.ecomweb.page.title.index" />
+<!-- 			<div id="content-header"> -->
+<!-- 				<h1> -->
+<%-- 					<s:text name="it.ecomweb.page.title.index" /> --%>
+<!-- 				</h1> -->
+<!-- 			</div> -->
+
+    <table style="background: transparent;border-spacing: 0;">
+      <tr>
+     <td style="width:50%;background:transparent"></td>
+
+     <td style="border-radius: 5px;background:transparent">
+     
+			<div id="content-body">
+			
+			<div id="home-message-text" class="subcolumn1-1">
+				<h1 style="font-size: 30px; line-height: 30px; margin-top: 15px;">
+					<s:text name="it.ecomweb.page.index.text4" />
 				</h1>
 			</div>
-
-
-			<div id="content-body">
   
   			<div id="page-wrap">
 					<ul id="slider1">
@@ -201,7 +209,7 @@
 
 						<li>
 							<div style="padding:20px 0" class="textSlide">
-							<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:130px; height:130px;margin: -10px 20px 0px 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:130px; height:130px;margin: 0px 20px 0px 0;position:relative;">
 								<h3>Funzionalit&agrave; di acquisto</h3>
 								<br>
 								<ul>
@@ -215,7 +223,7 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/customers.jpg" style="float:left;width:130px; height:130px; margin: -20px 20px 0px 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/customers.jpg" style="float:left;width:130px; height:130px; margin: -30px 20px 0px 0;position:relative;">
 								<h3>Gestione clienti</h3>
 								<br>
 								<ul>
@@ -225,7 +233,7 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/ajax.jpg" style="float:left;width:130px; height:130px; margin:30px 20px 20px 0;padding: 15px 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/ajax.jpg" style="float:left;width:130px; height:130px; margin:0px 20px 20px 0;padding: 5px 0;position:relative;">
 								<h3>Utilizzo della tecnologia Ajax</h3>
 								<br>
 								<ul>
@@ -253,7 +261,7 @@
 
 						<li>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/java.png" style="float:left;width:130px; height:130px; margin: 10px 20px 0px 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/java.png" style="float:left;width:130px; height:130px; margin: 0px 20px 0px 0;position:relative;">
 								<h3>Java Enterprise</h3>
 								<br>
 								<ul>
@@ -341,23 +349,30 @@
        
 
 
-			<div id="home-message-text" class="subcolumn1-1">
-				<h1 style="font-size: 30px; line-height: 30px; margin-top: 15px;">
-					<s:text name="it.ecomweb.page.index.text4" />
-				</h1>
-			</div>
+			
 
 		</div>
-
-		<div id="content-footer">
+    
+    <div id="content-footer">
 			<a href="https://www.paypal.com/it/mrb/pal=9GUSU3SCTGKWU"
 				target="_blank"><img
 				src="<s:property value="#imagePath"/>/bnr_paypal_mrb_banner_468wx60h.gif"
 				alt="%{getText('it.ecomweb.global.paypal.subscription')}" border="0"></a>
 		</div>
-	</div>
-	</div>
-
+		
+	
 	<%@ include file="/include/footerLayout.jsp"%>
+
+    </td>
+    
+    <td style="width:100%;background:transparent"></td>
+
+      </tr>      
+    </table> 
+		
+	</div>
+	
+	
+
 
 </body>

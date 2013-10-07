@@ -1,16 +1,6 @@
-<%
-/**
-* Title: E-Commerce CMS 
-* Description: E-Commerce CMS 
-* Copyright: Copyright (c) 2008
-* Company: 
-* 
-* @author Enrico Cesaretti
-* @version 1.0
-*/
- %>
-<%@ include file="/include/head.jsp" %>
-<%@ include file="/include/header.jsp" %>
+
+<%@ include file="/include/head.jsp"%>
+<%@ include file="/include/header.jsp"%>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -18,7 +8,11 @@
 <!-- jQuery (required) -->
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-<script>window.jQuery|| document.write('<script src="../res_js/jquery.min.js"><\/script>')</script>
+<script>
+	window.jQuery
+			|| document
+					.write('<script src="../res_js/jquery.min.js"><\/script>')
+</script>
 
 <!-- Anything Slider optional plugins -->
 <script src="../res_js/jquery/jquery.easing.1.2.js"></script>
@@ -34,25 +28,25 @@
 <link rel="stylesheet" href="../res_css/anythingslider.css">
 <script src="../res_js/jquery/jquery.anythingslider.js"></script>
 
- <!-- ColorBox -->
- <link href="../res_css/colorbox/colorbox.css" rel="stylesheet">
- <script src="../res_js/jquery/jquery.colorbox-min.js"></script>
+<!-- ColorBox -->
+<link href="../res_css/colorbox/colorbox.css" rel="stylesheet">
+<script src="../res_js/jquery/jquery.colorbox-min.js"></script>
 
-         
+
 
 <!-- Ideally, add the stylesheet(s) you are going to use here,
 	 otherwise they are loaded and appended to the <head> automatically and will over-ride the IE stylesheet below -->
-	<link rel="stylesheet" href="../res_css/theme-metallic.css">
-	<link rel="stylesheet" href="../res_css/theme-minimalist-round.css">
-	<link rel="stylesheet" href="../res_css/theme-minimalist-square.css">
-	<link rel="stylesheet" href="../res_css/theme-construction.css">
-	<link rel="stylesheet" href="../res_css/theme-cs-portfolio.css">
-	
+<link rel="stylesheet" href="../res_css/theme-metallic.css">
+<link rel="stylesheet" href="../res_css/theme-minimalist-round.css">
+<link rel="stylesheet" href="../res_css/theme-minimalist-square.css">
+<link rel="stylesheet" href="../res_css/theme-construction.css">
+<link rel="stylesheet" href="../res_css/theme-cs-portfolio.css">
+
 </head>
 
 <body>
 
-<script>
+	<script>
 		$(function() {
 
 			var randomSlide = Math.floor(Math.random() * 7);
@@ -87,136 +81,161 @@
 
 		});
 	</script>
-	
-	
+
+<%@ include file="/include/headerLayout.jsp"%>
 
 	<div id="content-container">
-		<%@ include file="/include/headerLayout.jsp"%>
+		
 
-
-		<p>
-			<br>
-		</p>
 		<div id="content">
 
-			<div id="content-header">
-				<h1>
-					<s:text name="it.ecomweb.page.title.index" />
-				</h1>
-			</div>
+			<table style="background: transparent; border-spacing: 0;">
+				<tr>
+					<td style="width: 50%; background: transparent"></td>
+
+					<td style="border-radius: 5px; background: transparent">
 
 
-			<div id="content-body">
-  
-  			<div id="page-wrap">
-					<ul id="slider1">
+						<div id="content-body">
 
-						<!--     <li><img src="demos/images/logoWorld.jpg" alt=""></li>  -->
+							<div id="page-wrap">
+								<ul id="slider1">
+
+									<!--     <li><img src="demos/images/logoWorld.jpg" alt=""></li>  -->
 
 
-						<li>
-							<div class="textSlide">
-              				<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:130px; height:130px;padding: 10px 0; margin: 0px 20px 0px 0;position:relative;">
-								<h3>Template grafici personalizzati</h3>
-								<br>
-								<ul>
-									Una serie di template grafici personalizzati verranno creati  
-									per permettervi di scegliere che veste grafica dare al sito,
-									ci siamo presi un p&ograve; di tempo per agire su questa caratteristica 
-									perch&egrave; vogliamo offrire una reale differenza tra una veste grafica e 
-									l'altra e non solo un mero cambiamento di immagini e di colori come 
-									spesso succede nelle altre soluzioni in commercio.
-									</br>
+									<li>
+										<div class="textSlide">
+											<img
+												src="<s:property value="#imagePath"/>/Under-construction.png"
+												style="float: left; width: 130px; height: 130px; padding: 10px 0; margin: 0px 20px 0px 0; position: relative;">
+											<h3>Template grafici personalizzati</h3>
+											<br>
+											<ul>
+												Una serie di template grafici personalizzati verranno creati
+												per permettervi di scegliere che veste grafica dare al sito,
+												ci siamo presi un p&ograve; di tempo per agire su questa
+												caratteristica perch&egrave; vogliamo offrire una reale
+												differenza tra una veste grafica e l'altra e non solo un
+												mero cambiamento di immagini e di colori come spesso succede
+												nelle altre soluzioni in commercio.
+												</br>
+											</ul>
+										</div>
+										<div class="textSlide">
+											<img src="<s:property value="#imagePath"/>/cart.png"
+												style="float: left; width: 130px; height: 130px; margin: 0px 20px 0px 0; padding: 25px 0 0; position: relative;">
+											<h3>Client per cellulari</h3>
+											<br>
+											<ul>
+												&Egrave; attualmente in sviluppo una versione ridotta del
+												backoffice per cellulari android e iphone che permette di
+												controllare le informazioni principali relative
+												all'attivit&agrave; commerciale, inoltre tramite il
+												meccanismo di notifica push, il gestore del negozio viene
+												avvisato qualora ci siano prodotti in scadenza o ordini che
+												aspettano di essere processati con una certa urgenza.
+												</br>
+											</ul>
+										</div>
+										<div class="textSlide">
+											<img src="<s:property value="#imagePath"/>/tag.jpg"
+												style="float: left; width: 130px; height: 130px; margin: 0px 20px 0px 0; position: relative;">
+											<h3>Integrazione con CDN</h3>
+											<br>
+											<ul>
+												A breve implementeremo l'integrazione con una infrattura di
+												CDN (content delivery network) dove verranno immagazzinate
+												tutte le immagini dei prodotti cosi da garantire una
+												maggiore velocit&agrave; nella visualizzazione delle pagine
+												in maniera trasparente alla locazione degli utenti del sito.
+												</br>
+											</ul>
+										</div>
+									</li>
+
+
+									<li>
+										<div style="padding: 20px 0" class="textSlide">
+											<img
+												src="<s:property value="#imagePath"/>/Under-construction.png"
+												style="float: left; width: 130px; height: 130px; margin: -10px 20px 0px 0; position: relative;">
+											<h3>Funzionalit&agrave; di acquisto</h3>
+											<br>
+											<ul>Permetter&agrave; ai tuoi clienti di acquistare
+												anche senza essere preventivamente registrati.Questa infatti
+												&egrave; una delle caratteristiche pi&ugrave; importanti di
+												un ecommerce. Non bloccando il flusso di acquisto al
+												checkout il cliente potr&agrave; decidere se acquistare
+												senza registrarsi oppure registrarsi durante l'acquisto
+												semplicemente scegliendo la propria password.
+											</ul>
+										</div>
+										<div class="textSlide">
+											<img src="<s:property value="#imagePath"/>/customers.jpg"
+												style="float: left; width: 130px; height: 130px; margin: -20px 20px 0px 0; position: relative;">
+											<h3>Grafici e statistiche</h3>
+											<br>
+											<ul>un set di grafici personalizzabili verr&agrave; reso
+												disponibile per monitorare tutte le attivit&agrave;, i
+												grafici saranno altamente personalizzabili scegliendo le
+												variabili da monitorare, inoltre un sistema di notifiche
+												aiuter&agrave; il gestore del magazzino a monitorare in
+												maniera proattiva le urgenze come la scadenza di prodotti o
+												gli ordini che attendono di essere processati.
+											</ul>
+										</div>
+										<div class="textSlide">
+											<img src="<s:property value="#imagePath"/>/ajax.jpg"
+												style="float: left; width: 130px; height: 130px; margin: 30px 20px 20px 0; padding: 15px 0; position: relative;">
+											<h3>Campagne e newsletter</h3>
+											<br>
+											<ul>
+												Verr&agrave; potenziata la funzionalit&agrave; di sconto gia
+												esistente, con la possibilit&agrave; di creare delle vere e
+												proprie campagne pubblicitarie che raggruppino una serie di
+												prodotti e la possibilit&agrave; di creare una serie di
+												sconti con scadenza o relativi a una fascia particolare di
+												clientela, modulando gli sconti per quantit&agrave; di
+												prodotti per tempistiche particolari (saldi natalizi o
+												estivi). Inoltre verr&agrave; resa disponibile la
+												funzionalit&agrave; di newsletter per cui sar&agrave;
+												possibile inviare ai clienti delle newsletter a scadenza
+												prefissata o in qualsivoglia momento decidendone la
+												tipologia di contenuti.
+												</br>
+											</ul>
+										</div>
+									</li>
+
 								</ul>
-							</div>
-							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/cart.png" style="float:left;width:130px; height:130px; margin: 0px 20px 0px 0;padding: 25px 0 0;position:relative;">
-								<h3>Client per cellulari</h3>
-								<br>
-								<ul>
-									&Egrave;  attualmente in sviluppo una versione ridotta del backoffice per cellulari android e iphone
-									che permette di controllare le informazioni principali relative all'attivit&agrave; commerciale,
-									inoltre tramite il meccanismo di notifica push, il gestore del negozio viene avvisato
-									qualora ci siano prodotti in scadenza o ordini che aspettano di essere processati
-									con una certa urgenza.</br>
-								</ul>
-							</div>
-							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/tag.jpg" style="float:left;width:130px; height:130px; margin: 0px 20px 0px 0;position:relative;">
-								<h3>Integrazione con CDN</h3>
-								<br>
-								<ul>
-									A breve  implementeremo l'integrazione con una infrattura di CDN (content delivery network)
-									dove verranno immagazzinate tutte le immagini dei prodotti cosi da garantire una maggiore
-									 velocit&agrave; nella visualizzazione delle pagine in maniera trasparente alla locazione 
-									 degli utenti del sito.</br>
-								</ul>
-							</div>
-						</li>
+								<!-- END AnythingSlider #1 -->
 
+							</div>
 
-						<li>
-							<div style="padding:20px 0" class="textSlide">
-							<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:130px; height:130px;margin: -10px 20px 0px 0;position:relative;">
-								<h3>Funzionalit&agrave; di acquisto</h3>
-								<br>
-								<ul>
-									Permetter&agrave; ai tuoi clienti di acquistare anche
-										senza essere preventivamente registrati.Questa infatti
-										&egrave; una delle caratteristiche pi&ugrave; importanti di un
-										ecommerce. Non bloccando il flusso di acquisto al checkout il
-										cliente potr&agrave; decidere se acquistare senza registrarsi
-										oppure registrarsi durante l'acquisto semplicemente scegliendo
-										la propria password.
-								</ul>
+							<div id="home-message-text" class="subcolumn1-1">
+								<h1
+									style="font-size: 30px; line-height: 30px; margin-top: 15px;">
+									<s:text name="it.ecomweb.page.index.text4" />
+								</h1>
 							</div>
-							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/customers.jpg" style="float:left;width:130px; height:130px; margin: -20px 20px 0px 0;position:relative;">
-								<h3>Grafici e statistiche</h3>
-								<br>
-								<ul>
-									un set di grafici personalizzabili verr&agrave; reso disponibile per monitorare tutte le attivit&agrave;,
-									i grafici saranno altamente personalizzabili scegliendo le variabili da monitorare, inoltre 
-									un sistema di notifiche aiuter&agrave; il gestore del magazzino a monitorare in maniera proattiva le urgenze 
-									come la scadenza di prodotti o gli ordini che attendono di essere processati.
-								</ul>
-							</div>
-							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/ajax.jpg" style="float:left;width:130px; height:130px; margin:30px 20px 20px 0;padding: 15px 0;position:relative;">
-								<h3>Campagne e newsletter</h3>
-								<br>
-								<ul>
-									Verr&agrave; potenziata la funzionalit&agrave; di sconto gia esistente, con la possibilit&agrave; di creare 
-									delle vere e proprie campagne pubblicitarie che raggruppino una serie di prodotti e la 
-									possibilit&agrave; di creare una serie di sconti con scadenza o relativi a una fascia particolare 
-									di clientela, modulando gli sconti per quantit&agrave; di prodotti per tempistiche particolari  
-									(saldi natalizi o estivi). Inoltre verr&agrave; resa disponibile la funzionalit&agrave; di newsletter 
-									per cui sar&agrave; possibile inviare ai clienti delle newsletter a scadenza prefissata o 
-									in qualsivoglia momento decidendone la tipologia di contenuti.</br>
-								</ul>
-							</div>
-						</li>
 
-					</ul>
-					<!-- END AnythingSlider #1 -->
-				
-			</div>
-		
-			<div id="home-message-text" class="subcolumn1-1">
-				<h1 style="font-size: 30px; line-height: 30px; margin-top: 15px;">
-					<s:text name="it.ecomweb.page.index.text4" />
-				</h1>
-			</div>
+						</div>
+
+						<div id="content-footer">
+							<a href="https://www.paypal.com/it/mrb/pal=9GUSU3SCTGKWU"
+								target="_blank"><img
+								src="<s:property value="#imagePath"/>/bnr_paypal_mrb_banner_468wx60h.gif"
+								alt="%{getText('it.ecomweb.global.paypal.subscription')}"
+								border="0"></a>
+						</div> <%@ include file="/include/footerLayout.jsp"%>
+
+					</td>
+
+					<td style="width: 100%; background: transparent"></td>
+
+				</tr>
+			</table>
 
 		</div>
-
-		<div id="content-footer">
-			<a href="https://www.paypal.com/it/mrb/pal=9GUSU3SCTGKWU"
-				target="_blank"><img
-				src="<s:property value="#imagePath"/>/bnr_paypal_mrb_banner_468wx60h.gif"
-				alt="%{getText('it.ecomweb.global.paypal.subscription')}" border="0"></a>
-		</div>
-	</div>
-	</div>
-	<%@ include file="/include/footerLayout.jsp" %>
 </body>

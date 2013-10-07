@@ -210,9 +210,9 @@ IE8 AND OLDER STYLING
 .anythingSlider .anythingWindow {
 	overflow: hidden;
 	position: relative;
-	width: 60%;
+	width: 85%;
 	height: 530px;
-	margin-left: 190px;
+	margin-left: 70px;
 }
 /* anythingSlider base (original element) */
 .anythingSlider .anythingBase {

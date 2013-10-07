@@ -8,6 +8,8 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import com.template.dao.ProductDao;
 import com.template.dao.mostSoldProducts.MostSoldProductsDao;
 import com.template.dao.order.OrderProductRelationsDao;
@@ -27,6 +29,9 @@ import com.template.vo.ProductVO;
 public class ProductServiceImpl implements ProductService{
 
 	ProductDao productDao;
+	
+	 @Value("${application.code}")
+	 private String applicationCode;
 
 	public MostSoldProductsDao getMostSoldProductsDao() {
 		return mostSoldProductsDao;
@@ -138,8 +143,8 @@ public class ProductServiceImpl implements ProductService{
 		for (ProductImages productImages : images) {
 			ImageForm imageForm = new ImageForm();
 
-			imageForm.setValue("/images/"+productImages.getImageName());
-			imageForm.setValuehref("/images/"+productImages.getImageName());
+			imageForm.setValue("/EcommerceRoot/"+applicationCode+"/images/"+productImages.getImageName());
+			imageForm.setValuehref("/EcommerceRoot/"+applicationCode+"/images/"+productImages.getImageName());
 			imagesForm.add(imageForm);
 		}
 

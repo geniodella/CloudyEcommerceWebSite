@@ -63,16 +63,17 @@ img {
 	margin:20px auto 0px;
 	padding-top:12px;
 	position:relative;
-	height:165px;
+/* 	height:165px; */
 	float:none;
 	}
 
 #header-logo{
 	float:left;
-	width:978px;
+	width:620px;
 	background-color: #FFFFFF;
 	text-align: center;
-	border-radius: 5px;
+	height: 205px;
+	display: inline-table;
 }
 
 #header-menu{
@@ -93,10 +94,10 @@ img {
 	width:80px;
 	background-color: transparent;
 	text-align: center;
-	margin-top: 5px;
+	margin-top: 46px;
 	margin-bottom: 5px;
-	margin-left: 65px;
-	margin-right: 5px;
+	margin-left: 0px;
+	margin-right: 20px;
 	cursor: pointer;
 	}
 
@@ -105,7 +106,7 @@ img {
 	font-size: 13px;
 	font-family:Verdana, Arial, Helvetica, sans-serif; 
 	line-height:15px;
-	color:white;
+	color: black;
 	}
 #header-menu-box a:hover{color:#0A3D56;}
 
@@ -113,11 +114,11 @@ img {
 #contact-form {
     background-color: transparent;
     float: left;
-    margin: 5px 0 0 60px;
+    margin: 46px 0 0 10px;
     text-align: center;
     width: 80px;
     cursor: pointer;
-    color:white;
+    color:  black;
 }
 
 #rollover{}
@@ -132,18 +133,18 @@ img {
 	background-color: transparent;
 	-moz-border-radius: 30px;
 	-webkit-border-radius: 30px;
+	display: inline;
 	}
 
 #content {
 	position:relative;
 	float:left;
-	width:980px;
-	background-color:#FFFFFF;
-border-radius: 5px;
+	width:100%;
+	background-color:transparent;
 	padding-top:10px;
 	padding-bottom:10px;
 
-	margin-top: 10px;
+	margin-top: 40px;
 	margin-bottom: 30px;
 
 	font-size:11px;
@@ -176,32 +177,26 @@ border-radius: 5px;
 
 #content-body{
 	float:left;
-	width:880px;
+	width:1000px;
 	background-color: #FFFFFF;
-
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-bottom: 30px;
+	border-radius: 5px;
 	}
 
 #content-footer{
-	float:left;
-	width:818px;
+	float: left;
+	width: 1000px;
 	background-color: #FFFFFF;
-
-	padding-top:10px;
-	padding-left:10px;
-	padding-bottom:10px;
-	padding-right:10px;
-
+	padding-top: 10px;
+	padding-bottom: 10px;
 	margin-top: 5px;
 	margin-bottom: 30px;
-	margin-left: 5px;
+	margin-left: auto;
 	margin-right: 5px;
+	border-radius: 5px;
 	}
 
-#content-body .subcolumn1-1 { float:left; width:805px;}
+#content-body .subcolumn1-1 { width:805px;}
 
 #content-body .subcolumn1-2 { float:left; width:387px;}
 #content-body .subcolumn2-2 { float:left; width:387px;}
@@ -298,7 +293,7 @@ border-radius: 5px;
 
 	margin-top: 5px;
 	margin-bottom: 5px;
-	margin-left: 5px;
+	margin-left: 85px;
 	margin-right: 5px;
 
 	text-align: center;
@@ -407,6 +402,7 @@ input {
 	position: relative;
 	margin: 0 auto 0;
 	margin-bottom: 30px;
+	display: inline-block;
 	}
 #footer .buyWineDetail {
 	padding:20px 0 0 155px;
