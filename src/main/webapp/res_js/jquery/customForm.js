@@ -44,7 +44,7 @@ $(document).ready(function(){
 										'<label>Captcha</label><INPUT TYPE="hidden" NAME="id" value="2Hehu4i2dh4KU6">'+
 									'</p>'+
 									'<p class="signin button">'+
-										'<input type="submit" value="Registrati" />'+
+										'<input type="submit" value="Registrati" onclick="alert("pipolott");"/>'+
 									'</p>'+
 									'<p class="change_link">Sei già registrato ?<a href="#tologin" class="to_register"> Vai alla login </a>'+
 									'</p>'+
