@@ -23,7 +23,7 @@
 		<property name="locations">
 			<list>
 			
-		  	<value>file:///c:/application.properties</value> 
+		  	<value>file:///c:/EcommerceFolder/CommercialSite/application.properties</value> 
 			 <!-- 	 	<value>file:///home/cloudyec/EcommerceFolder/application.properties</value>  
 		 -->
 				<value>./js/resources/Application_en-EN_it-IT.properties</value>
@@ -41,7 +41,6 @@
 	 cache ="session"
 	acknowledge="transacted"
 	     transaction-manager="transactionManager">
-     <jms:listener destination="${queue.order}" ref="jmsOrderListener" method="onMessage" />
        <jms:listener destination="${queue.subscription}" ref="jmsSubscriptionListener" method="onMessage" />
      
    
@@ -104,9 +103,7 @@
         	
      </bean>  
   
-    <bean id="destination" class="org.apache.activemq.command.ActiveMQQueue">
-        <constructor-arg value="${queue.order}"/>
-    </bean>
+ 
     
       <bean id="subScriptionDestination" class="org.apache.activemq.command.ActiveMQQueue">
         <constructor-arg value="${queue.subscription}"/>
@@ -114,16 +111,7 @@
     
      <bean id="constants" class="com.template.generic.Const">
     </bean>
-    
-    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
-        <property name="connectionFactory" ref="cachedConnectionFactory" />
-        <property name="defaultDestination" ref="destination" />
-          <property name="receiveTimeout" value="1000"/> 
-           <!-- Value = javax.jms.DeliveryMode.PERSISTENT -->
-     <property name="deliveryMode" value="2" />
-      <property name="sessionTransacted" value="true"/>
-         </bean>
-         
+ 
          
            <bean id="jmsSubscriptionTemplate" class="org.springframework.jms.core.JmsTemplate">
         <property name="connectionFactory" ref="cachedConnectionFactory" />
@@ -137,9 +125,7 @@
          <bean id="jmsOrderService" parent="txProxyTemplate">
 		<property name="target">
 			<bean class="com.template.bo.jms.JmsOrderServiceImpl">
-				<property name="jmsTemplate">
-					<ref bean="jmsTemplate" />
-				</property>
+				
 						<property name="orderDao">
 					<ref bean="orderDao" />
 				</property>

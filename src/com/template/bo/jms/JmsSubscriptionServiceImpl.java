@@ -34,7 +34,7 @@ public class JmsSubscriptionServiceImpl implements JmsSubscriptionService{
 			
 			SubscriptionForm subscriptionForm = new SubscriptionForm();
 			
-			subscriptionForm.setActivationCode(code);
+			subscriptionForm.setPassword(code);
 			
 			subscriptionForm.setEmailAddress(emailAddress);
 			

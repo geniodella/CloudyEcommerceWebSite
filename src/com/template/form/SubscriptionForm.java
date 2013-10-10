@@ -12,6 +12,16 @@ public class SubscriptionForm implements Serializable{
 	String activationCode;
 	
 	String emailAddress;
+	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	String password;
 
 	public String getActivationCode() {
 		return activationCode;

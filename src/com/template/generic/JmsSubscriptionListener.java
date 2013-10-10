@@ -35,7 +35,7 @@ public class JmsSubscriptionListener implements SessionAwareMessageListener{
 		 SubscriptionForm subscriptionForm = (SubscriptionForm)((ObjectMessage)message).getObject();
 		 
 		
-		// emailServiceBean.sendSubscriptionEmail(subscriptionForm.getEmailAddress() ,subscriptionForm.getActivationCode());
+		 emailServiceBean.sendSubscriptionEmail(subscriptionForm.getEmailAddress() ,subscriptionForm.getPassword());
 	
 	      // LOG.info("Consumed message: " + msg.getJMSMessageID());
 	      throw new JMSException("..exception");
