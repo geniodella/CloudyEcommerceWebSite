@@ -6,7 +6,7 @@ a, a img               { border: 0; text-decoration: none; }
 
 #page-wrap, #demo2     { width: 960px; padding: 0 20px; margin: 0px 0px 50px 0px; position: relative;height: 530px; }
 
-h1                     { letter-spacing: -2px; margin: 20px 0; text-align: center; }
+h1                     { letter-spacing: -2px; margin: 0px; text-align: center; }
 h2                     { font: bold 30px Helvetica, Sans-Serif; letter-spacing: -1px; margin: 0 0 10px 0; color: #002266; }
 h2.title               { text-align: center; }
 h3                     { font: bold 20px Georgia, Serif; margin: 0; color: #003388; }

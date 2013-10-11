@@ -96,7 +96,7 @@
 								theme : 'metallic',
 								easing : 'easeInOutBack',//tipo d'animazione
 								startPanel : randomSlide,
-								buildArrows : true, // If true, builds the forwards and backwards buttons
+								buildArrows : false, // If true, builds the forwards and backwards buttons
 								autoPlay : true, // If true, the slideshow will start running; replaces "startStopped" option
 								buildNavigation : false, // If true, builds a list of anchor links to link to each panel
 								buildStartStop : false, // If true, builds the start/stop button
@@ -122,6 +122,24 @@
 	</script>
 
 		<%@ include file="/include/headerLayout.jsp"%>	
+
+	<div>
+ 	<table style="background: transparent;border-spacing: 0;">
+      <tr>
+    	 <td style="width:50%;background:transparent"></td>
+
+	     <td style="border-radius: 5px;background:transparent">
+				<div style="background: white;border: 1px solid black;border-radius: 5px;margin: 20px 0px;width: 980px;" id="home-message-text" class="subcolumn1-1">
+					<h1 style="font-size: 30px; line-height: 30px; margin-top: 15px;">
+						<s:text name="it.ecomweb.page.index.text4" />
+					</h1>
+				</div>
+		</td>
+	
+		 <td style="width:50%;background:transparent"></td>
+	 </tr>
+	 </table>
+	 </div>
   			
 	<div id="content-container">
 
@@ -142,11 +160,6 @@
      
 			<div id="content-body">
 			
-			<div id="home-message-text" class="subcolumn1-1">
-				<h1 style="font-size: 30px; line-height: 30px; margin-top: 15px;">
-					<s:text name="it.ecomweb.page.index.text4" />
-				</h1>
-			</div>
   
   			<div id="page-wrap">
 					<ul id="slider1">
@@ -160,13 +173,13 @@
 								<h3>Funzionalit&agrave; complete della navigazione prodotti</h3>
 								<br>
 								<ul>
-									Immagini multiple per prodotto.
+										<li style="list-style: disc outside none;font-size: 13px;">Immagini multiple per prodotto.
 									Possibilit&agrave; di zoommare sull'immagine del
-										prodotto.</br>
-									Prodotti correlati.</br>
-									Disponibilit&agrave; di stock.</br>
-									Prezzi multistrato per grandi vendite.</br>
-									Selezione delle opzioni del prodotto.</br>
+										prodotto.</li>
+									<li style="list-style: disc outside none;font-size: 13px;">Prodotti correlati.</li>
+									<li style="list-style: disc outside none;font-size: 13px;">Disponibilit&agrave; di stock.</li>
+									<li style="list-style: disc outside none;font-size: 13px;">Prezzi multistrato per grandi vendite.</li>
+									<li style="list-style: disc outside none;font-size: 13px;">Selezione delle opzioni del prodotto.</li>
 								</ul>
 							</div>
 							<div class="textSlide">
@@ -183,7 +196,6 @@
 									Carrello con stima di spese fiscali e di spese di
 										spedizione.</br>
 									Opzione per creare un account all'inizio del checkout.</br>
-									Buoni Regalo accettati per ordini e per articoli.</br>
 									Salvataggio dei carrelli con tempo di scadenza
 										configurabile.</br>
 								</ul>

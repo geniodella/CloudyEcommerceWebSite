@@ -82,7 +82,7 @@
 */
 /* slider window - top & bottom borders, active state */
 .anythingSlider-metallic.activeSlider .anythingWindow {
-	border-color: #0355a3;
+	border: medium none;
 }
 
 /* Navigation buttons, active state */
