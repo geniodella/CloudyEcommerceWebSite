@@ -326,9 +326,18 @@
 					<!-- END AnythingSlider #1 -->
 				
 			</div>
-			
-			
-		   <a class="highslide" href="<s:property value="#imagePath"/>/shotCart.png" onclick="return hs.expand(this)">
+      
+
+		</div>
+    
+    	<div>
+ 	<table style="background: transparent;border-spacing: 0;">
+      <tr>
+    	 <td style="width:50%;background:transparent"></td>
+
+	     <td style="border-radius: 5px;background:transparent">
+				<div style="background: white;border: 1px solid black;border-radius: 5px;margin: 20px -3px;padding: 20px 0 10px 0;width: 1000px;">
+					 <a class="highslide" style="margin-left: 30px;" href="<s:property value="#imagePath"/>/shotCart.png" onclick="return hs.expand(this)">
 		        <img src="<s:property value="#imagePath"/>/shotCart2.png" style="visibility: visible;padding: 0 5px;border: none;margin-left: 70px;cursor: pointer;width:100px;height:100px" alt=""/>
 		      </a>
 		      <a class="highslide" href="<s:property value="#imagePath"/>/shotMostSold.PNG" onclick="return hs.expand(this)">
@@ -351,7 +360,7 @@
 		      </a>
      
      
-      <span style="display: inline-block;padding-left: 99px; width: 63px;"> carrello</span>
+      <span style="display: inline-block;padding-left: 130px; width: 63px;"> carrello</span>
       <span style="margin-left: 35px;display: inline-block;height: 40px;width: 95px;vertical-align: top;"> prodotti più venduti</span>
       <span style="display: inline-block;width: 90px;vertical-align: top;margin-left: 20px;"> riassunto ordini</span> 
       <span style="display: inline-block;width: 74px;vertical-align: top;margin-left: 25px;">ordini nel checkout</span> 
@@ -360,10 +369,14 @@
       <span style="display: inline-block;width: 80px;vertical-align: top;margin-left: 23px;"> strategia di spedizione</span>       
        
 
-
-			
-
-		</div>
+				</div>
+		</td>
+	
+		 <td style="width:50%;background:transparent"></td>
+	 </tr>
+	 </table>
+	 </div>
+    
     
     <div id="content-footer">
 			<a href="https://www.paypal.com/it/mrb/pal=9GUSU3SCTGKWU"

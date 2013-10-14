@@ -57,7 +57,7 @@
 								theme : 'metallic',
 								easing : 'easeInOutBack',//tipo d'animazione
 								startPanel : randomSlide,
-								buildArrows : true, // If true, builds the forwards and backwards buttons
+								buildArrows : false, // If true, builds the forwards and backwards buttons
 								autoPlay : true, // If true, the slideshow will start running; replaces "startStopped" option
 								buildNavigation : false, // If true, builds a list of anchor links to link to each panel
 								buildStartStop : false, // If true, builds the start/stop button
@@ -108,7 +108,7 @@
 										<div class="textSlide">
 											<img
 												src="<s:property value="#imagePath"/>/Under-construction.png"
-												style="float: left; width: 130px; height: 130px; padding: 10px 0; margin: 0px 20px 0px 0; position: relative;">
+												style="float: left; width: 200px; height: 200px; padding: 10px 0; margin: 0px 100px 0px 0; position: relative;">
 											<h3>Template grafici personalizzati</h3>
 											<br>
 											<ul>
@@ -124,7 +124,7 @@
 										</div>
 										<div class="textSlide">
 											<img src="<s:property value="#imagePath"/>/cart.png"
-												style="float: left; width: 130px; height: 130px; margin: 0px 20px 0px 0; padding: 25px 0 0; position: relative;">
+												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; padding: 25px 0 0; position: relative;">
 											<h3>Client per cellulari</h3>
 											<br>
 											<ul>
@@ -138,9 +138,14 @@
 												</br>
 											</ul>
 										</div>
+										
+									</li>
+
+
+									<li>
 										<div class="textSlide">
 											<img src="<s:property value="#imagePath"/>/tag.jpg"
-												style="float: left; width: 130px; height: 130px; margin: 0px 20px 0px 0; position: relative;">
+												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
 											<h3>Integrazione con CDN</h3>
 											<br>
 											<ul>
@@ -152,14 +157,10 @@
 												</br>
 											</ul>
 										</div>
-									</li>
-
-
-									<li>
 										<div style="padding: 20px 0" class="textSlide">
 											<img
 												src="<s:property value="#imagePath"/>/Under-construction.png"
-												style="float: left; width: 130px; height: 130px; margin: -10px 20px 0px 0; position: relative;">
+												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
 											<h3>Funzionalit&agrave; di acquisto</h3>
 											<br>
 											<ul>Permetter&agrave; ai tuoi clienti di acquistare
@@ -171,9 +172,12 @@
 												semplicemente scegliendo la propria password.
 											</ul>
 										</div>
+									</li>
+									
+									<li>										
 										<div class="textSlide">
 											<img src="<s:property value="#imagePath"/>/customers.jpg"
-												style="float: left; width: 130px; height: 130px; margin: -20px 20px 0px 0; position: relative;">
+												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
 											<h3>Grafici e statistiche</h3>
 											<br>
 											<ul>un set di grafici personalizzabili verr&agrave; reso
@@ -187,7 +191,7 @@
 										</div>
 										<div class="textSlide">
 											<img src="<s:property value="#imagePath"/>/ajax.jpg"
-												style="float: left; width: 130px; height: 130px; margin: 30px 20px 20px 0; padding: 15px 0; position: relative;">
+												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; padding: 15px 0; position: relative;">
 											<h3>Campagne e newsletter</h3>
 											<br>
 											<ul>
