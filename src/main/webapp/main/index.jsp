@@ -180,7 +180,7 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/cart.png" style="float:left;width:200px; height:200px; margin: 0px 100px 0px 0;padding: 25px 0 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/cart.png" style="float:left;width:200px; height:200px; margin: 30px 100px 0px 0;padding: 25px 0 0;position:relative;">
 								<h3 style="margin-top: 30px;">Funzionalit&agrave; complete del carrello</h3>
 								<br>
 								<ul>
@@ -215,7 +215,7 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/tag.jpg" style="float:left;width:200px; height:200px; margin: 0px 100px 0px 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/tag.jpg" style="float:left;width:200px; height:200px; margin: 30px 100px 0px 0;position:relative;">
 								<h3 style="margin-top: 30px;">Funzionalit&agrave; di ricerca per tag</h3>
 								<br>
 								<ul>
@@ -236,7 +236,7 @@
 						<li>
 							
 							<div class="textSlide" style="height: 190px;">
-							<img src="<s:property value="#imagePath"/>/customers.jpg" style="float:left;width:200px; height:200px; margin: -20px 100px 0px 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/customers.jpg" style="float:left;width:200px; height:200px; margin: 0px 100px 0px 0;position:relative;">
 								<h3>Gestione clienti</h3>
 								<br>
 								<ul>
@@ -246,7 +246,7 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/ajax.jpg" style="float:left;width:200px; height:200px; margin:-30px 100px 20px 0;padding: 5px 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/ajax.jpg" style="float:left;width:200px; height:200px; margin:-20px 100px 20px 0;padding: 35px 0;position:relative;">
 								<h3 style="margin-top: 20px;">Utilizzo della tecnologia Ajax</h3>
 								<br>
 								<ul>
@@ -270,7 +270,7 @@
 
 						<li>
 							<div class="textSlide" style="height: 190px;">
-							<img src="<s:property value="#imagePath"/>/java.png" style="float:left;width:200px; height:200px; margin: 0px 100px 0px 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/java.png" style="float:left;width:200px; height:200px; margin: 10px 100px 0px 0;position:relative;">
 								<h3>Java Enterprise</h3>
 								<br>
 								<ul>
@@ -285,7 +285,7 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/customizerIcon.png" style="padding: 10px 0;float:left;width:200px; height:200px; margin: 0px 100px 0px 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/customizerIcon.png" style="padding: 10px 0;float:left;width:200px; height:200px; margin: 20px 100px 0px 0;position:relative;">
 								<h3 style="margin-top: 30px;">Flessibilit&agrave;</h3>
 								<br>
 								<ul>
@@ -304,7 +304,7 @@
 						
 						<li>
 							<div class="textSlide" style="height: 190px;">
-							<img src="<s:property value="#imagePath"/>/24hours.jpg" style="float:left;width:200px; height:200px; margin: 0px 100px 0px 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/24hours.jpg" style="float:left;width:200px; height:200px; margin: 20px 100px 0px 0;position:relative;">
 								<h3 style="margin-top: 30px;">Supporto 24h</h3>
 								<br>
 								<ul>
