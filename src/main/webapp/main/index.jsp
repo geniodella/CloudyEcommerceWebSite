@@ -250,12 +250,10 @@
 								<h3 style="margin-top: 20px;">Utilizzo della tecnologia Ajax</h3>
 								<br>
 								<ul>
-									CloudyEcommerce f&agrave; molto uso della nuovissima
-										tecnologia Ajax, per velocizzare e migliorare alcune delle
+									CloudyEcommerce f&agrave; uso della nuovissima
+										tecnologia Ajax per velocizzare e migliorare alcune delle
 										funzionalit&agrave; pi&ugrave; usate come l'aggiunta al
-										carrello. Invece che aggiornare la pagina e farne attendere il
-										caricamento, il prodotto viene aggiunto al carrello
-										istantaneamente. Lo stesso procedimento avviene per
+										carrello. Lo stesso procedimento avviene per
 										l'ordinamento dei prodotti in base ad un particolare
 										attributo.
 									Inoltre la tecnologia ajax viene utilizzata anche
@@ -264,9 +262,7 @@
 										a dover inserire molti prodotti e con periodicit&agrave;
 										stringenti perch&egrave; non si &egrave; costretti ad
 										aspettare il caricamento di tutta la pagina per
-										l&grave;utilizzo di ogni funzionalit&agrave;, un difetto che
-										hanno attualmente quasi tutti gli applicativi di ecommerce in
-										mercato.</br>
+										l&grave;utilizzo di ogni funzionalit&agrave;.
 								</ul>
 							</div>
 						</li>
