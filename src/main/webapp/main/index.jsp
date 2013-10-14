@@ -164,13 +164,10 @@
   			<div id="page-wrap">
 					<ul id="slider1">
 
-						<!--     <li><img src="demos/images/logoWorld.jpg" alt=""></li>  -->
-
-
 						<li>
-							<div class="textSlide">
-              				<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:130px; height:130px;padding: 10px 0; margin: 0px 20px 0px 0;position:relative;">
-								<h3>Funzionalit&agrave; complete della navigazione prodotti</h3>
+							<div class="textSlide" style="height: 190px;">
+              				<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:200px; height:200px;padding: 10px 0; margin: 0px 100px 0px 0;position:relative;">
+								<h3 style="margin-top: 30px;">Funzionalit&agrave; complete della navigazione prodotti</h3>
 								<br>
 								<ul>
 										<li style="list-style: disc outside none;font-size: 13px;">Immagini multiple per prodotto.
@@ -183,8 +180,8 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/cart.png" style="float:left;width:130px; height:130px; margin: 0px 20px 0px 0;padding: 25px 0 0;position:relative;">
-								<h3>Funzionalit&agrave; complete del carrello</h3>
+							<img src="<s:property value="#imagePath"/>/cart.png" style="float:left;width:200px; height:200px; margin: 0px 100px 0px 0;padding: 25px 0 0;position:relative;">
+								<h3 style="margin-top: 30px;">Funzionalit&agrave; complete del carrello</h3>
 								<br>
 								<ul>
 									Checkout in una pagina.
@@ -199,10 +196,27 @@
 									Salvataggio dei carrelli con tempo di scadenza
 										configurabile.</br>
 								</ul>
+							</div>							
+						</li>
+						
+						<li>
+							<div style="padding:20px 0;height:190px" class="textSlide">
+							<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:200px; height:200px;margin: -30px 100px 0px 0;position:relative;">
+								<h3 style="margin-top: 10px;">Funzionalit&agrave; di acquisto</h3>
+								<br>
+								<ul>
+									Permetter&agrave; ai tuoi clienti di acquistare anche
+										senza essere preventivamente registrati.Questa infatti
+										&egrave; una delle caratteristiche pi&ugrave; importanti di un
+										ecommerce. Non bloccando il flusso di acquisto al checkout il
+										cliente potr&agrave; decidere se acquistare senza registrarsi
+										oppure registrarsi durante l'acquisto semplicemente scegliendo
+										la propria password.
+								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/tag.jpg" style="float:left;width:130px; height:130px; margin: 0px 20px 0px 0;position:relative;">
-								<h3>Funzionalit&agrave; di ricerca per tag</h3>
+							<img src="<s:property value="#imagePath"/>/tag.jpg" style="float:left;width:200px; height:200px; margin: 0px 100px 0px 0;position:relative;">
+								<h3 style="margin-top: 30px;">Funzionalit&agrave; di ricerca per tag</h3>
 								<br>
 								<ul>
 									Possibilit&agrave; di etichettare i prodotti con un
@@ -220,22 +234,9 @@
 
 
 						<li>
-							<div style="padding:20px 0" class="textSlide">
-							<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:130px; height:130px;margin: 0px 20px 0px 0;position:relative;">
-								<h3>Funzionalit&agrave; di acquisto</h3>
-								<br>
-								<ul>
-									Permetter&agrave; ai tuoi clienti di acquistare anche
-										senza essere preventivamente registrati.Questa infatti
-										&egrave; una delle caratteristiche pi&ugrave; importanti di un
-										ecommerce. Non bloccando il flusso di acquisto al checkout il
-										cliente potr&agrave; decidere se acquistare senza registrarsi
-										oppure registrarsi durante l'acquisto semplicemente scegliendo
-										la propria password.
-								</ul>
-							</div>
-							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/customers.jpg" style="float:left;width:130px; height:130px; margin: -30px 20px 0px 0;position:relative;">
+							
+							<div class="textSlide" style="height: 190px;">
+							<img src="<s:property value="#imagePath"/>/customers.jpg" style="float:left;width:200px; height:200px; margin: -20px 100px 0px 0;position:relative;">
 								<h3>Gestione clienti</h3>
 								<br>
 								<ul>
@@ -245,8 +246,8 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/ajax.jpg" style="float:left;width:130px; height:130px; margin:0px 20px 20px 0;padding: 5px 0;position:relative;">
-								<h3>Utilizzo della tecnologia Ajax</h3>
+							<img src="<s:property value="#imagePath"/>/ajax.jpg" style="float:left;width:200px; height:200px; margin:-30px 100px 20px 0;padding: 5px 0;position:relative;">
+								<h3 style="margin-top: 20px;">Utilizzo della tecnologia Ajax</h3>
 								<br>
 								<ul>
 									CloudyEcommerce f&agrave; molto uso della nuovissima
@@ -272,8 +273,8 @@
 
 
 						<li>
-							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/java.png" style="float:left;width:130px; height:130px; margin: 0px 20px 0px 0;position:relative;">
+							<div class="textSlide" style="height: 190px;">
+							<img src="<s:property value="#imagePath"/>/java.png" style="float:left;width:200px; height:200px; margin: 0px 100px 0px 0;position:relative;">
 								<h3>Java Enterprise</h3>
 								<br>
 								<ul>
@@ -288,8 +289,8 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/customizerIcon.png" style="padding: 10px 0;float:left;width:130px; height:130px; margin: 0px 20px 0px 0;position:relative;">
-								<h3>Flessibilit&agrave;</h3>
+							<img src="<s:property value="#imagePath"/>/customizerIcon.png" style="padding: 10px 0;float:left;width:200px; height:200px; margin: 0px 100px 0px 0;position:relative;">
+								<h3 style="margin-top: 30px;">Flessibilit&agrave;</h3>
 								<br>
 								<ul>
 									CloudyEcommerce &egrave; completamente sviluppato da
@@ -303,9 +304,12 @@
 										sviluppate.
 								</ul>
 							</div>
-							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/24hours.jpg" style="float:left;width:130px; height:130px; margin: 0px 20px 0px 0;position:relative;">
-								<h3>Supporto 24h</h3>
+						</li>
+						
+						<li>
+							<div class="textSlide" style="height: 190px;">
+							<img src="<s:property value="#imagePath"/>/24hours.jpg" style="float:left;width:200px; height:200px; margin: 0px 100px 0px 0;position:relative;">
+								<h3 style="margin-top: 30px;">Supporto 24h</h3>
 								<br>
 								<ul>
 									Tutte le installazioni dell&acute;ecommerce vengono
