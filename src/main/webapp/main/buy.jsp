@@ -29,11 +29,11 @@
 
 									<tr>
 										<th width="30%"
-											style="border-radius: 5px 5px 0 0; border-top: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: #ECF2F6; font-size: 20px;">30&#128;/Mese</th>
+											style="border-radius: 5px 0px 0 0; border-top: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: #ECF2F6; font-size: 20px;">30&#128;/Mese</th>
 										<th width="30%"
-											style="border-radius: 5px 5px 0 0; border-top: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: white; font-size: 20px;">80&#128;/Mese</th>
+											style="border-top: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: white; font-size: 20px;">80&#128;/Mese</th>
 										<th width="30%"
-											style="border-radius: 5px 5px 0 0; border-top: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: #ECF2F6; font-size: 20px;">120&#128;/Mese</th>
+											style="border-radius: 0px 5px 0 0; border-top: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: #ECF2F6; font-size: 20px;">120&#128;/Mese</th>
 									</tr>
 									<tr>
 										<td
@@ -109,11 +109,11 @@
 								
 									</tr>
 									<tr>
-										<td style="background:#ECF2F6;border-radius: 0 0 5px 5px; border-bottom: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1;">											
+										<td style="background:#ECF2F6;border-radius: 0 0 0 5px; border-bottom: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1;">											
 										</td>
-										<td style="background: white;border-radius: 0 0 5px 5px; border-bottom: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1;">											
+										<td style="background: white;border-bottom: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1;">											
 										</td>
-										<td style="background:#ECF2F6;border-radius: 0 0 5px 5px; border-bottom: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1;">											
+										<td style="background:#ECF2F6;border-radius: 0 0 5px 0; border-bottom: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1;">											
 										</td>
 									
 									</tr>

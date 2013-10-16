@@ -1,14 +1,19 @@
-<%
-/**
-* Title: E-Commerce CMS 
-* Description: E-Commerce CMS 
-* Copyright: Copyright (c) 2008
-* Company: 
-* 
-* @author Enrico Cesaretti
-* @version 1.0
-*/
- %>
+
 <div id="footer">
-	<p>Enterprise Commerce è un prodotto <a href="http://www.test.com/">company manager suite </a>| pta iva 000000000000</p>
+	<table align="center";width="480">
+           <tr>
+         <td style="color:black;width:300px; text-align:center; font-size:11px">
+						CloudyEcommerce<br/> 
+						via marconi<br/>
+						88046<br/> 
+						5612348648<br/>  
+         </td>
+         
+         <td style="color:black;width:180px; text-align:center; font-size:11px;line-height: 2;">
+						geniodella@gmail.com<br/> 
+						Lamezia Terme<br/>
+						0968255684   
+         </td>
+         </tr>
+         </table>
 </div>
