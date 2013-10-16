@@ -69,9 +69,25 @@
 					</div>
 				</div>
 			</div>
-			<div id="content-footer">
-				<a href="https://www.paypal.com/it/mrb/pal=9GUSU3SCTGKWU" target="_blank"><img src="<s:property value="#imagePath"/>/bnr_paypal_mrb_banner_468wx60h.gif" alt="%{getText('it.ecomweb.global.paypal.subscription')}" border="0"></a>
-			</div>
+			  <div id="content-footer">
+			<a style="float: left;" href="https://www.paypal.com/it/mrb/pal=9GUSU3SCTGKWU"
+				target="_blank"><img
+				src="<s:property value="#imagePath"/>/bnr_paypal_mrb_banner_468wx60h.gif"
+				alt="%{getText('it.ecomweb.global.paypal.subscription')}" border="0"></a>
+				
+								<!-- AddThis Button BEGIN -->
+				<div style="float: right;margin-right: 30px;margin-top: 15px;" class="addthis_toolbox addthis_default_style addthis_32x32_style">
+				 <a class="addthis_button_facebook"></a>
+	    					   <a class="addthis_button_twitter"></a>
+	    					   <a class="addthis_button_pinterest_share"></a>
+	    					   <a class="addthis_button_linkedin"></a>
+	    					   <a class="addthis_button_google_plusone_share"></a>
+				</div>
+				<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-525d1d5f0490962c"></script>
+				<!-- AddThis Button END -->
+				
+			  </div>
 		</div>
 		<%@ include file="/include/footerLayout.jsp" %>
 	</div>
