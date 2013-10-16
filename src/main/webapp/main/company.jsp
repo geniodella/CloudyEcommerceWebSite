@@ -76,8 +76,8 @@ CloudyEcommerce è il primo dei nostri progetti ma abbiamo in cantiere un gioco s
 
 							  <div id="content-footer">
 			<a style="float: left;" href="https://www.paypal.com/it/mrb/pal=9GUSU3SCTGKWU"
-				target="_blank"><img
-				src="<s:property value="#imagePath"/>/bnr_paypal_mrb_banner_468wx60h.gif"
+				target="_blank"><img style="margin: 10px;"
+				src="<s:property value="#imagePath"/>/creditCards.png"
 				alt="%{getText('it.ecomweb.global.paypal.subscription')}" border="0"></a>
 				
 								<!-- AddThis Button BEGIN -->

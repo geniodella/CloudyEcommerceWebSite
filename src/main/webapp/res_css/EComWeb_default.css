@@ -142,10 +142,10 @@ img {
 	width:100%;
 	background-color:transparent;
 	padding-top:10px;
-	padding-bottom:10px;
+	padding-bottom:0px;
 
 	margin-top: 10px;
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 
 	font-size:11px;
 	line-height:16px;
@@ -401,7 +401,7 @@ input {
 	float: none;
 	position: relative;
 	margin: 0 auto 0;
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 	display: inline-block;
 	}
 #footer .buyWineDetail {
