@@ -59,10 +59,7 @@
 			</div>
 			
 			  <div id="content-footer">
-			<a style="float: left;" href="https://www.paypal.com/it/mrb/pal=9GUSU3SCTGKWU"
-				target="_blank"><img style="margin: 10px;"
-				src="<s:property value="#imagePath"/>/creditCards.png"
-				alt="%{getText('it.ecomweb.global.paypal.subscription')}" border="0"></a>
+			<a style="float: left;"><img style="margin: 10px;"src="<s:property value="#imagePath"/>/creditCards.png"
 				
 								<!-- AddThis Button BEGIN -->
 				<div style="float: right;margin-right: 30px;margin-top: 15px;" class="addthis_toolbox addthis_default_style addthis_32x32_style">
