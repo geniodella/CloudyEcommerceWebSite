@@ -4,7 +4,6 @@
            <tr>
          <td style="color:black;width:300px; text-align:center; font-size:11px">
 						CloudyEcommerce<br/> 
-						via marconi<br/>
 						88046<br/> 
 						5612348648<br/>  
          </td>
