@@ -175,8 +175,8 @@
 					<ul id="slider1">
 
 						<li>
-							<div class="textSlide" style="height: 190px;">
-              				<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:200px; height:200px;padding: 10px 0; margin: 0px 100px 0px 0;position:relative;">
+							<div class="textSlide" style="height: 190px;padding:10px 0">
+              				<img src="<s:property value="#imagePath"/>/productsNavigation.jpg" style="float:left;width:200px; height:230px;padding: 0px 0; margin: 0px 100px 0px 0;position:relative;">
 								<h3 style="margin-top: 30px;">Funzionalit&agrave; complete della navigazione prodotti</h3>
 								<br>
 								<ul>
@@ -189,29 +189,25 @@
 									<li style="list-style: disc outside none;font-size: 13px;">Selezione delle opzioni del prodotto.</li>
 								</ul>
 							</div>
-							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/cart.png" style="float:left;width:200px; height:200px; margin: 30px 100px 0px 0;padding: 25px 0 0;position:relative;">
+							<div class="textSlide" style="padding: 30px 0;">
+							<img src="<s:property value="#imagePath"/>/cart.png" style="float:left;width:200px; height:200px; margin: 30px 100px 0px 0;padding: 25px 0 10px;position:relative;">
 								<h3 style="margin-top: 30px;">Funzionalit&agrave; complete del carrello</h3>
 								<br>
-								<ul>
-									Checkout in una pagina.
-									Utilizzo degli SSL per la sicurezza degli ordini, sia
-										sul frontend che sul backend.</br>
-									Spedizioni ad indirizzi diversi in un solo ordine.</br>
-									Checkout senza account, in modalit&agrave; Guest
-										Checkout.</br>
-									Carrello con stima di spese fiscali e di spese di
-										spedizione.</br>
-									Opzione per creare un account all'inizio del checkout.</br>
-									Salvataggio dei carrelli con tempo di scadenza
-										configurabile.</br>
+								<ul style="padding: 0 130px;">
+									<li style="list-style: disc outside none;font-size: 13px;">Checkout in una pagina.</li>
+									<li style="list-style: disc outside none;font-size: 13px;">Utilizzo degli SSL per la sicurezza degli ordini, sia sul frontend che sul backend.</li>
+									<li style="list-style: disc outside none;font-size: 13px;">Spedizioni ad indirizzi diversi in un solo ordine.</li>
+									<li style="list-style: disc outside none;font-size: 13px;">Checkout senza account, in modalit&agrave; Guest	Checkout.</li>
+									<li style="list-style: disc outside none;font-size: 13px;">Carrello con stima di spese fiscali e di spese di spedizione.</li>
+									<li style="list-style: disc outside none;font-size: 13px;">Opzione per creare un account all'inizio del checkout.</li>
+									<li style="list-style: disc outside none;font-size: 13px;">Salvataggio dei carrelli con tempo di scadenza configurabile.</li>
 								</ul>
 							</div>							
 						</li>
 						
 						<li>
 							<div style="padding:20px 0;height:190px" class="textSlide">
-							<img src="<s:property value="#imagePath"/>/Under-construction.png" style="float:left;width:200px; height:200px;margin: -30px 100px 0px 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/funzionalitaAcquisto.jpg" style="float:left;width:250px; height:200px;margin: 0px 50px 0px 0;position:relative;">
 								<h3 style="margin-top: 10px;">Funzionalit&agrave; di acquisto</h3>
 								<br>
 								<ul>
@@ -236,7 +232,7 @@
 										tag per mettere in risalto nella barra di ricerca i risultati
 										relativi a etichette con punteggio piu alto.
 									Possibilit&agrave; di scremare la ricerca per
-										categoria o per un numero illimitato di caratteritische
+										categoria o per un numero illimitato di caratteristiche
 										relative a un prodotto.</br>
 								</ul>
 							</div>
@@ -256,7 +252,7 @@
 								</ul>
 							</div>
 							<div class="textSlide">
-							<img src="<s:property value="#imagePath"/>/ajax.jpg" style="float:left;width:200px; height:200px; margin:-20px 100px 20px 0;padding: 35px 0;position:relative;">
+							<img src="<s:property value="#imagePath"/>/ajax.jpg" style="float:left;width:200px; height:250px; margin:-40px 100px 20px 0;padding: 35px 0;position:relative;">
 								<h3 style="margin-top: 20px;">Utilizzo della tecnologia Ajax</h3>
 								<br>
 								<ul>
@@ -294,7 +290,7 @@
 										l&acute;infrastruttura SAAS.
 								</ul>
 							</div>
-							<div class="textSlide">
+							<div class="textSlide" style="padding: 0 170px;">
 							<img src="<s:property value="#imagePath"/>/customizerIcon.png" style="padding: 10px 0;float:left;width:200px; height:200px; margin: 20px 100px 0px 0;position:relative;">
 								<h3 style="margin-top: 30px;">Flessibilit&agrave;</h3>
 								<br>
@@ -306,7 +302,7 @@
 										implementeremo le modifiche desiderate dal cliente, questo
 										oltre alle modifiche che di volta in volta vengono apportate,
 										parliamo di una serie di funzionalit&agrave; aggiuntive che
-										vengono installate nell&acute;ecommerce mano mano che vengono
+										vengono installate nell&acute;ecommerce man mano che vengono
 										sviluppate.
 								</ul>
 							</div>

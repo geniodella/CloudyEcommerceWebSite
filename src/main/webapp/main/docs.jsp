@@ -107,7 +107,7 @@
 									<li>
 										<div class="textSlide">
 											<img
-												src="<s:property value="#imagePath"/>/Under-construction.png"
+												src="<s:property value="#imagePath"/>/template.jpg"
 												style="float: left; width: 200px; height: 200px; padding: 10px 0; margin: 0px 100px 0px 0; position: relative;">
 											<h3>Template grafici personalizzati</h3>
 											<br>
@@ -123,7 +123,7 @@
 											</ul>
 										</div>
 										<div class="textSlide">
-											<img src="<s:property value="#imagePath"/>/cart.png"
+											<img src="<s:property value="#imagePath"/>/clientMobile.jpg"
 												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; padding: 25px 0 0; position: relative;">
 											<h3>Client per cellulari</h3>
 											<br>
@@ -140,47 +140,14 @@
 										</div>
 										
 									</li>
-
-
-									<li>
-										<div class="textSlide">
-											<img src="<s:property value="#imagePath"/>/tag.jpg"
-												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
-											<h3>Integrazione con CDN</h3>
-											<br>
-											<ul>
-												A breve implementeremo l'integrazione con una infrattura di
-												CDN (content delivery network) dove verranno immagazzinate
-												tutte le immagini dei prodotti cosi da garantire una
-												maggiore velocit&agrave; nella visualizzazione delle pagine
-												in maniera trasparente alla locazione degli utenti del sito.
-												</br>
-											</ul>
-										</div>
-										<div style="padding: 20px 0" class="textSlide">
-											<img
-												src="<s:property value="#imagePath"/>/Under-construction.png"
-												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
-											<h3>Funzionalit&agrave; di acquisto</h3>
-											<br>
-											<ul>Permetter&agrave; ai tuoi clienti di acquistare
-												anche senza essere preventivamente registrati.Questa infatti
-												&egrave; una delle caratteristiche pi&ugrave; importanti di
-												un ecommerce. Non bloccando il flusso di acquisto al
-												checkout il cliente potr&agrave; decidere se acquistare
-												senza registrarsi oppure registrarsi durante l'acquisto
-												semplicemente scegliendo la propria password.
-											</ul>
-										</div>
-									</li>
 									
 									<li>										
 										<div class="textSlide">
-											<img src="<s:property value="#imagePath"/>/customers.jpg"
+											<img src="<s:property value="#imagePath"/>/graph&stats.jpg"
 												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
 											<h3>Grafici e statistiche</h3>
 											<br>
-											<ul>un set di grafici personalizzabili verr&agrave; reso
+											<ul>Un set di grafici personalizzabili verr&agrave; reso
 												disponibile per monitorare tutte le attivit&agrave;, i
 												grafici saranno altamente personalizzabili scegliendo le
 												variabili da monitorare, inoltre un sistema di notifiche
@@ -190,8 +157,8 @@
 											</ul>
 										</div>
 										<div class="textSlide">
-											<img src="<s:property value="#imagePath"/>/ajax.jpg"
-												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; padding: 15px 0; position: relative;">
+											<img src="<s:property value="#imagePath"/>/newsletter.jpg"
+												style="float: left; width: 200px; height: 200px; margin: 35px 100px 0px 0; padding: 15px 0; position: relative;">
 											<h3>Campagne e newsletter</h3>
 											<br>
 											<ul>
@@ -211,17 +178,27 @@
 											</ul>
 										</div>
 									</li>
+									
+									<li>
+										<div class="textSlide">
+											<img src="<s:property value="#imagePath"/>/cdn.png"
+												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
+											<h3>Integrazione con CDN</h3>
+											<br>
+											<ul>
+												A breve implementeremo l'integrazione con una infrattura di
+												CDN (content delivery network) dove verranno immagazzinate
+												tutte le immagini dei prodotti cosi da garantire una
+												maggiore velocit&agrave; nella visualizzazione delle pagine
+												in maniera trasparente alla locazione degli utenti del sito.
+												</br>
+											</ul>
+										</div>										
+									</li>
 
 								</ul>
 								<!-- END AnythingSlider #1 -->
 
-							</div>
-
-							<div id="home-message-text" class="subcolumn1-1">
-								<h1
-									style="font-size: 30px; line-height: 30px; margin-top: 15px;">
-									<s:text name="it.ecomweb.page.index.text4" />
-								</h1>
 							</div>
 
 						</div>

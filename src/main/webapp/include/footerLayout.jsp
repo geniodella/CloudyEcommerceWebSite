@@ -2,7 +2,7 @@
 <div id="footer">
 	<table align="center";width="480">
            <tr>
-         <td style="color:black;width:300px; text-align:center; font-size:11px">
+         <td style="color:black;width:300px; text-align:center; font-size:11px;line-height: 2;">
 						CloudyEcommerce<br/> 
 						88046<br/> 
 						5612348648<br/>  
