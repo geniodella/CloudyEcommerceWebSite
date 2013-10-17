@@ -90,7 +90,7 @@ CloudyEcommerce è il primo dei nostri progetti ma abbiamo in cantiere un gioco s
 				<!-- AddThis Button END -->
 				
 		</div>
-		 <%@ include file="/include/footerLayout.jsp"%>
+		 
             
             </div>
 
@@ -100,6 +100,7 @@ CloudyEcommerce è il primo dei nostri progetti ma abbiamo in cantiere un gioco s
 					<td style="width: 100%; background: transparent"></td>
 
 				</tr>
+				<%@ include file="/include/footerLayout.jsp"%>
 			</table>
 
 		</div>

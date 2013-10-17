@@ -106,15 +106,16 @@
 								theme : 'metallic',
 								easing : 'easeInOutBack',//tipo d'animazione
 								startPanel : randomSlide,
-								buildArrows : false, // If true, builds the forwards and backwards buttons
+								buildArrows : true, // If true, builds the forwards and backwards buttons
 								autoPlay : true, // If true, the slideshow will start running; replaces "startStopped" option
 								buildNavigation : false, // If true, builds a list of anchor links to link to each panel
 								buildStartStop : false, // If true, builds the start/stop button
 								mode : "orizzontal", // Set mode to "horizontal", "vertical" or "fade" (only first letter needed); replaces vertical option
 								enableKeyboard : false, // if false, keyboard arrow keys will not work for this slider.
 								stopAtEnd : false, // If true & the slideshow is active, the slideshow will stop on the last page. This also stops the rewind effect when infiniteSlides is false.
-								delay : 10000, // How long between slideshow transitions in AutoPlay mode (in milliseconds)
+								delay : 6000, // How long between slideshow transitions in AutoPlay mode (in milliseconds)
 								animationTime : 1500, // How long the slideshow transition takes (in milliseconds)
+								pauseOnHover: false,
 								navigationFormatter : function(index, panel) {
 									return [ 'Slab', 'Parking Lot', 'Drive',
 											'Glorius Dawn', 'Bjork?',
@@ -196,8 +197,8 @@
 								<ul style="padding: 0 130px;">
 									<li style="list-style: disc outside none;font-size: 13px;">Checkout in una pagina.</li>
 									<li style="list-style: disc outside none;font-size: 13px;">Utilizzo degli SSL per la sicurezza degli ordini, sia sul frontend che sul backend.</li>
-									<li style="list-style: disc outside none;font-size: 13px;">Spedizioni ad indirizzi diversi in un solo ordine.</li>
-									<li style="list-style: disc outside none;font-size: 13px;">Checkout senza account, in modalit&agrave; Guest	Checkout.</li>
+									<li style="list-style: disc outside none;font-size: 13px;">Spedizioni a indirizzi diversi in un solo ordine.</li>
+									<li style="list-style: disc outside none;font-size: 13px;">Checkout senza account in modalit&agrave; Guest	Checkout.</li>
 									<li style="list-style: disc outside none;font-size: 13px;">Carrello con stima di spese fiscali e di spese di spedizione.</li>
 									<li style="list-style: disc outside none;font-size: 13px;">Opzione per creare un account all'inizio del checkout.</li>
 									<li style="list-style: disc outside none;font-size: 13px;">Salvataggio dei carrelli con tempo di scadenza configurabile.</li>
@@ -290,11 +291,11 @@
 										l&acute;infrastruttura SAAS.
 								</ul>
 							</div>
-							<div class="textSlide" style="padding: 0 170px;">
+							<div class="textSlide">
 							<img src="<s:property value="#imagePath"/>/customizerIcon.png" style="padding: 10px 0;float:left;width:200px; height:200px; margin: 20px 100px 0px 0;position:relative;">
 								<h3 style="margin-top: 30px;">Flessibilit&agrave;</h3>
 								<br>
-								<ul>
+								<ul  style="padding: 0 170px;">
 									CloudyEcommerce &egrave; completamente sviluppato da
 										noi, non &egrave; una personalizzazione di un altro prodotto,
 										ci&ograve; implica che qualsiasi modifica di qualsiasi genere
@@ -333,16 +334,9 @@
 				
 			</div>
       
-
-		</div>
-    
-    	<div>
- 	<table style="background: transparent;border-spacing: 0;">
-      <tr>
-    	 <td style="width:50%;background:transparent"></td>
-
-	     <td style="border-radius: 5px;background:transparent">
-				<div style="background: white;border: 1px solid black;border-radius: 5px;margin: 20px -3px;padding: 20px 0 10px 0;width: 1000px;">
+      <p style="font-size:20px;color:#36aad8;font-family: arial;font-weight: normal;margin-left: 10px;line-height: 3;">ANTEPRIMA DI ALCUNE FUNZIONALITA'</p>
+      
+				<div style="background: white;width: 900px;margin-bottom: 10px;">
 					 <a class="highslide" style="margin-left: 30px;" href="<s:property value="#imagePath"/>/shotCart.png" onclick="return hs.expand(this)">
 		        <img src="<s:property value="#imagePath"/>/shotCart2.png" style="visibility: visible;padding: 0 5px;border: none;margin-left: 70px;cursor: pointer;width:100px;height:100px" alt=""/>
 		      </a>
@@ -376,12 +370,10 @@
        
 
 				</div>
-		</td>
-	
-		 <td style="width:50%;background:transparent"></td>
-	 </tr>
-	 </table>
-	 </div>
+
+		</div>
+    
+    	
     
     
     <div id="content-footer">

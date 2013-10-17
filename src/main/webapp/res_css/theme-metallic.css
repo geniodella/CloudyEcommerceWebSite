@@ -135,12 +135,12 @@
 }
 
 /* back arrow */
-.anythingSlider-metallic .back { left: -5px; background:#99D3EF url(../res_img/arrow-back.png) no-repeat 5px 10px;}
+.anythingSlider-metallic .back { left: -5px; background:white url(../res_img/arrow-back.png) no-repeat 5px 10px;}
 .anythingSlider-metallic .back a { background-position: left bottom; }
 .anythingSlider-metallic .back a:hover,
 .anythingSlider-metallic .back a.hover { background-position: left top; }
 /* forward arrow */
-.anythingSlider-metallic .forward { top: -250px;right: -895px; background:#99D3EF url(../res_img/arrow-front.png) no-repeat 5px 10px;}
+.anythingSlider-metallic .forward { top: -250px;right: -895px; background:white url(../res_img/arrow-front.png) no-repeat 5px 10px;}
 .anythingSlider-metallic .forward a { background-position: right bottom; }
 .anythingSlider-metallic .forward a:hover,
 .anythingSlider-metallic .forward a.hover { background-position: right top; }
