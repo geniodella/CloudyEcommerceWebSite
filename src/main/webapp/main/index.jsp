@@ -326,6 +326,22 @@
 								</ul>
 							</div>
 						</li>
+						
+						<li>
+							<div class="textSlide" style="height: 190px;">
+							<img src="<s:property value="#imagePath"/>/24hours.jpg" style="float:left;width:200px; height:200px; margin: 20px 100px 0px 0;position:relative;">
+								<h3 style="margin-top: 30px;">Infrastructure as a Service</h3>
+								<br>
+								<ul>
+									CloudyEcommerce &egrave; un servizio, i vantaggi di questa scelta sono evidenti,
+									chi usufruisce di questo servizio non ha bisogno di installare una architettura hardware
+									nei propri uffici, comprensiva di uno o piu server, gruppi di continuit&agrave; 
+									abbonamenti luce e internet
+									aziendali, sistemi di sicurezza , sistemi di ridondanza e salvataggio dei dati,
+									viene gestito tutto da noi.
+								</ul>
+							</div>
+						</li>
 
 
 
