@@ -57,8 +57,10 @@
 								theme : 'metallic',
 								easing : 'easeInOutBack',//tipo d'animazione
 								startPanel : randomSlide,
-								buildArrows : false, // If true, builds the forwards and backwards buttons
+								buildArrows : true, // If true, builds the forwards and backwards buttons
 								autoPlay : true, // If true, the slideshow will start running; replaces "startStopped" option
+								autoPlayLocked      : true, // If true, user changing slides will not stop the slideshow
+								resumeDelay         : 6000,     // Resume slideshow after user interaction, only if autoplayLocked is true (in milliseconds). 
 								buildNavigation : false, // If true, builds a list of anchor links to link to each panel
 								buildStartStop : false, // If true, builds the start/stop button
 								mode : "orizzontal", // Set mode to "horizontal", "vertical" or "fade" (only first letter needed); replaces vertical option

@@ -108,6 +108,8 @@
 								startPanel : randomSlide,
 								buildArrows : true, // If true, builds the forwards and backwards buttons
 								autoPlay : true, // If true, the slideshow will start running; replaces "startStopped" option
+								autoPlayLocked      : true, // If true, user changing slides will not stop the slideshow
+								resumeDelay         : 6000,     // Resume slideshow after user interaction, only if autoplayLocked is true (in milliseconds). 
 								buildNavigation : false, // If true, builds a list of anchor links to link to each panel
 								buildStartStop : false, // If true, builds the start/stop button
 								mode : "orizzontal", // Set mode to "horizontal", "vertical" or "fade" (only first letter needed); replaces vertical option
@@ -134,23 +136,6 @@
 
 		<%@ include file="/include/headerLayout.jsp"%>	
 
-	<div>
- 	<table style="background: transparent;border-spacing: 0;">
-      <tr>
-    	 <td style="width:50%;background:transparent"></td>
-
-	     <td style="border-radius: 5px;background:transparent">
-				<div style="background: white;border: 1px solid black;border-radius: 5px;margin: 20px 0px;width: 980px;" id="home-message-text" class="subcolumn1-1">
-					<h1 style="font-size: 30px; line-height: 30px; margin-top: 15px;">
-						<s:text name="it.ecomweb.page.index.text4" />
-					</h1>
-				</div>
-		</td>
-	
-		 <td style="width:50%;background:transparent"></td>
-	 </tr>
-	 </table>
-	 </div>
   			
 	<div id="content-container">
 
@@ -170,6 +155,12 @@
      <td style="border-radius: 5px;background:transparent">
      
 			<div id="content-body">
+			
+			<div style="background: white;margin: 0px 60px;" id="home-message-text" class="subcolumn1-1">
+					<h1 style="font-size: 30px; line-height: 30px; margin-top: 15px;">
+						<s:text name="it.ecomweb.page.index.text4" />
+					</h1>
+				</div>
 			
   
   			<div id="page-wrap">
@@ -383,18 +374,16 @@
        
 
 				</div>
-
-		</div>
-    
-    	
-    
-    
-    <div id="content-footer">
+				
+				 <div id="content-footer">
 			<a style="float: left;"><img style="margin: 10px;"src="<s:property value="#imagePath"/>/creditCards.png"
 				
 								<!-- AddThis Button BEGIN -->
 				<div style="float: right;margin-right: 30px;margin-top: 15px;" class="addthis_toolbox addthis_default_style addthis_32x32_style">
-				 <a class="addthis_button_facebook"></a>
+				 
+         <p style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;">Condividi</p>
+         
+         <a class="addthis_button_facebook"></a>
 	    					   <a class="addthis_button_twitter"></a>
 	    					   <a class="addthis_button_pinterest_share"></a>
 	    					   <a class="addthis_button_linkedin"></a>
@@ -405,6 +394,13 @@
 				<!-- AddThis Button END -->
 				
 		</div>
+
+		</div>
+    
+    	
+    
+    
+   
 		
 		</div>
 		
