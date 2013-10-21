@@ -220,7 +220,6 @@
 				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-525d1d5f0490962c"></script>
 				<!-- AddThis Button END -->
 				
-		</div> <%@ include file="/include/footerLayout.jsp"%>
 
 					</td>
 
@@ -228,6 +227,7 @@
 
 				</tr>
 			</table>
+		</div> <%@ include file="/include/footerLayout.jsp"%>
 
 		</div>
 </body>

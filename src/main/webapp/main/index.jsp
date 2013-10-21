@@ -171,7 +171,7 @@
               				<img src="<s:property value="#imagePath"/>/productsNavigation.jpg" style="float:left;width:200px; height:230px;padding: 0px 0; margin: 0px 100px 0px 0;position:relative;">
 								<h3 style="margin-top: 30px;">Funzionalit&agrave; complete della navigazione prodotti</h3>
 								<br>
-								<ul>
+								<ul style="margin-left:157px">
 										<li style="list-style: disc outside none;font-size: 13px;">Immagini multiple per prodotto.
 									Possibilit&agrave; di zoommare sull'immagine del
 										prodotto.</li>
@@ -185,7 +185,7 @@
 							<img src="<s:property value="#imagePath"/>/cart.png" style="float:left;width:200px; height:200px; margin: 30px 100px 0px 0;padding: 25px 0 10px;position:relative;">
 								<h3 style="margin-top: 30px;">Funzionalit&agrave; complete del carrello</h3>
 								<br>
-								<ul style="padding: 0 130px;">
+								<ul style="padding: 0 110px;margin-left:206px">
 									<li style="list-style: disc outside none;font-size: 13px;">Checkout in una pagina.</li>
 									<li style="list-style: disc outside none;font-size: 13px;">Utilizzo degli SSL per la sicurezza degli ordini, sia sul frontend che sul backend.</li>
 									<li style="list-style: disc outside none;font-size: 13px;">Spedizioni a indirizzi diversi in un solo ordine.</li>
@@ -405,7 +405,6 @@
 		</div>
 		
 	
-	<%@ include file="/include/footerLayout.jsp"%>
 
     </td>
     
@@ -413,6 +412,7 @@
 
       </tr>      
     </table> 
+	<%@ include file="/include/footerLayout.jsp"%>
 		
 	</div>
 	

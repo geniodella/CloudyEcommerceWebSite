@@ -2,17 +2,12 @@
 <div id="footer">
 	<table align="center";width="480">
            <tr>
-         <td style="color:black;width:300px; text-align:center; font-size:12px;line-height: 2;font-family: arial;">
-						CloudyEcommerce<br/> 
-						88046<br/> 
-						5612348648<br/>  
+         <td style="color:black; text-align:center; font-size:12px;line-height: 2;font-family: arial;">
+			 			
+			© 2013 - CloudyEcommerce.it - P.iva G5153154654 - Tutti i diritti sono riservati 
+					
          </td>
-         
-         <td style="color:black;width:180px; text-align:center; font-size:12px;line-height: 2;font-family: arial;">
-						geniodella@gmail.com<br/> 
-						Lamezia Terme<br/>
-						0968255684   
-         </td>
+    
          </tr>
          </table>
 </div>
