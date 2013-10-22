@@ -41,6 +41,9 @@ public class EmailSender {
 	 @Value( "${account.password}" )
 	 public   String ACCOUNT_PASSWORD;
 	 
+	 @Value("${org.ecom.emailSender.requestSubscription}")
+	 public   String REQUEST_SUBSCRIPTION;
+	 
 	 private Properties props;
 	 
 	 private  Authenticator authenticator;
@@ -157,7 +160,7 @@ public class EmailSender {
 			    msg.setRecipients(Message.RecipientType.TO, address);
 			  
 			    // Set the message subject and date we sent it.
-			    msg.setSubject("Email from JavaMail test");
+			    msg.setSubject(REQUEST_SUBSCRIPTION);
 			    msg.setSentDate(new Date());
 			    
 
