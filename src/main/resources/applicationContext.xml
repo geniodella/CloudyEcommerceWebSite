@@ -32,7 +32,7 @@
 	</bean>
 
 
-
+ <context:component-scan base-package="com.template.*"/>
    
 
 	
@@ -78,9 +78,11 @@
         <property name="brokerURL">
             <value>tcp://151.1.156.215:61616?jms.watchTopicAdvisories=false</value>
         </property>
-          <property name="redeliveryPolicy">
+        <property name="redeliveryPolicy">
                     <bean class="org.apache.activemq.RedeliveryPolicy">
                         <property name="maximumRedeliveries" value="50" />
+                       <property name="queue" value="*" />
+                               <property name="useExponentialBackOff" value="true" />
                     </bean>
                 </property>
     </bean>
@@ -355,6 +357,9 @@
 			<bean class="com.template.bo.customer.CustomerServiceImpl">
 				<property name="customerDao">
 					<ref bean="customerDao" />
+				</property>
+					<property name="utenteDao">
+					<ref bean="utenteDao" />
 				</property>
 				<property name="credentialsDao">
 					<ref bean="credentialsDao" />

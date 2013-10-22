@@ -264,33 +264,21 @@ public class CustomerAction extends ActionSupport {
 
 		CustomerVO customerVO = null;
 
-		HttpSession session = ServletActionContext.getRequest().getSession(false);
-
-		Integer customerId = (Integer)session.getAttribute("customerVO");
 
 
 		
 			customerVO = new CustomerVO();
 
-		customerVO.setFirstName(firstName);
-		customerVO.setLastName(lastName);
 		customerVO.setInsDate(new Date());
 		customerVO.setMail(mail);
-		customerVO.setPhoneNumber(phoneNumber);
-		if (customerId !=null)
-			customerVO.setCustomerId(customerId);
-
+	
 		success = true;
 
-		if(checkCustomerExistence(mail) == 1){
-			success = false;
-			return "success";
-
-		}else {
+		
 			customerServiceBean.insertCustomerVO(customerVO, username, password);
 
-			return "success";
-		}
+			return ActionSupport.NONE;
+	
 
 
 	}

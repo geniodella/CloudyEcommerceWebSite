@@ -4,21 +4,45 @@ import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.List;
+import java.util.Random;
 
 import com.template.bo.jms.JmsSubscriptionService;
 import com.template.bo.virtualCart.VirtualCartService;
+import com.template.dao.UtenteDao;
 import com.template.dao.credentials.CredentialsDao;
 import com.template.dao.customer.CustomerDao;
 import com.template.form.LoginFormVO;
-import com.template.generic.EmailSender;
+import com.template.vo.CityVO;
 import com.template.vo.CredentialsVO;
 import com.template.vo.CustomerVO;
+import com.template.vo.RegionVO;
+import com.template.vo.RolesVO;
+import com.template.vo.StateVO;
+import com.template.vo.UtenteVO;
 import com.template.vo.VirtualCartVO;
 
 public class CustomerServiceImpl implements CustomerService {
 	
 	CustomerDao customerDao;
+	
+	
+
+
+
+	public UtenteDao getUtenteDao() {
+		return utenteDao;
+	}
+
+	public void setUtenteDao(UtenteDao utenteDao) {
+		this.utenteDao = utenteDao;
+	}
+
+
+
+
+	UtenteDao utenteDao;
 	
 	CredentialsDao credentialsDao;
 	
@@ -105,48 +129,68 @@ public class CustomerServiceImpl implements CustomerService {
 	 *            CustomerVO
 	 * @todo Implement this org.annotationmvc.service.CustomerService method
 	 */
-	public String insertCustomerVO(final CustomerVO customerVO, String username,String password) {
+	public void insertCustomerVO(final CustomerVO customerVO, String username,String password) {
 		
-	MessageDigest messageDigest;
+		   int PASSWORD_LENGTH = 8;
+		 
+		  Random RANDOM = new SecureRandom();
 		
-		byte[] hashedPassword = null;
-		
-		byte[] hashedActivationCode;
-		try {
-			messageDigest = MessageDigest.getInstance("SHA-256");
-			
-			hashedPassword = password.getBytes("UTF-8");
-			
-			
-			hashedPassword =messageDigest.digest(hashedPassword);
-			
-			hashedActivationCode = messageDigest.digest(String.valueOf(Math.random()).getBytes());
-		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		 // Pick from some letters that won't be easily mistaken for each
+	      // other. So, for example, omit o O and 0, 1 l and L.
+	      String letters = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789+@";
+
+	      String pw = "";
+	      for (int i=0; i<PASSWORD_LENGTH; i++)
+	      {
+	          int index = (int)(RANDOM.nextDouble()*letters.length());
+	          pw += letters.substring(index, index+1);
+	      }
 		
 	
 		
-		BigInteger bigInt = new BigInteger(1,hashedPassword);
-		String hashtext = bigInt.toString(16);
+		UtenteVO utenteVO = new UtenteVO();
 		
-		BigInteger bigIntActivation = new BigInteger(1,hashedPassword);
-		String hashtextActivation = bigIntActivation.toString(16);
+		utenteVO.setAddress("xxxxxxxxxxxxxxxxxxx");
 		
-		CredentialsVO credentialsVO = new CredentialsVO();
+		StateVO stateVO=new StateVO();
+		RegionVO regionVO=new RegionVO();
+		CityVO cityVO=new CityVO();
+		
+		
+		stateVO.setStateId(9);
+ 		regionVO.setRegionId(39);
+ 		cityVO.setCityId(1855);
+ 		
+ 		utenteVO.setStateVO(stateVO);
+ 		utenteVO.setRegionVO(regionVO);
+ 		utenteVO.setCityVO(cityVO);
+ 		
+
+		
+	
+		
+		RolesVO roleVO = new RolesVO();
+		
+		roleVO.setAuthority("ROLE_USER");
+		
+	CredentialsVO credentialsVO = new CredentialsVO();
 		
 		credentialsVO.setUsername(username);
 		
-		credentialsVO.setPassword(hashtext);
+		credentialsVO.setPassword(pw);
 		
+		
+		credentialsVO.setEnabled(true);
 		
 		credentialsDao.insertCredentialsVO(credentialsVO);
 		
+		utenteDao.insertUtenteVO(utenteVO);
+		
 	
+		
+		roleVO.setCredentialsVO(credentialsVO);
+		
+		credentialsDao.insertRoleVO(roleVO);
 		
 		
 		
@@ -154,7 +198,6 @@ public class CustomerServiceImpl implements CustomerService {
 		
 		customerVO.setActivation(false);
 		
-		customerVO.setActivationCode(hashtextActivation);
 		
 		VirtualCartVO virtualCartVO = new VirtualCartVO();
 		
@@ -171,13 +214,13 @@ public class CustomerServiceImpl implements CustomerService {
 		}
 	
 		
-		jmsSubscriptionServiceBean.sendSubscriptionEmail(hashtextActivation, customerVO.getMail());
+		jmsSubscriptionServiceBean.sendSubscriptionEmail(pw, customerVO.getMail());
 		
 
 		
 	
 		
-		return hashtextActivation;
+		
 		
 		
 	}

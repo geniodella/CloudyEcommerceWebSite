@@ -52,6 +52,7 @@
 	<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery.ui.all.js"></script>
 	<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery.tooltip.js"></script>
 	<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery.autocomplete.js"></script>
+	<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery.ajaxform.js"></script>
 	<script type="text/javascript" src="<s:property value="#jsPath"/>/ecommerce/global/windowOnload.js"></script>
 	
 	<script type="text/javascript" src="<s:property value="#jsPath"/>/ecommerce/jquery/admin.jquery.js"></script>

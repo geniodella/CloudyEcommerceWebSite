@@ -9,7 +9,7 @@ public interface CustomerService {
 	
 	CustomerVO findCustomerById(int id);
 
-	public String insertCustomerVO(final CustomerVO customerVO, String username,String password);
+	public void insertCustomerVO(final CustomerVO customerVO, String username,String password);
 
 	void updateCustomerVO(CustomerVO customerVO);
 
