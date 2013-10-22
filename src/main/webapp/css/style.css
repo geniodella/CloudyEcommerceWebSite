@@ -295,7 +295,7 @@ p.change_link{
 	position: absolute;
 	top: 0px;
 	width: 88%;	
-	height: 385px !important;
+/* 	height: 385px !important; */
 	padding: 18px 6% 60px 6%;
 	margin: 0 -5px 35px;
 	background: rgb(247, 247, 247);
