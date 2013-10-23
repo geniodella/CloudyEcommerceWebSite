@@ -27,35 +27,52 @@ $(document).ready(function(){
 
 							'<div id="wrapper">'+
 
-
+							'<form action="./../Customer.action" id="roleForm">'+  
 								'<div id="register" class="animate form">'+
 
 									'<h1>Registrati</h1>'+
 									'<p>'+
 										'<label for="usernamesignup" class="uname" data-icon="u">Nome Utente</label>'+ 
-										'<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />'+
+										'<input id="usernamesignup" name="username" required="required" type="text" placeholder="mysuperusername690" />'+
 									'</p>'+
 									'<p>'+
 										'<label for="emailsignup" class="youmail" data-icon="e">Indirizzo email</label>'+ 
-										'<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com" />'+
+										'<input id="emailsignup" name="mail" required="required" type="email" placeholder="mysupermail@mail.com" />'+
 									'</p>'+
 									'<p>'+
-										'<IMG SRC="file/to/generate/captcha" ><P><INPUT TYPE="text" NAME="captcha" VALUE="">'+
-										'<label>Captcha</label><INPUT TYPE="hidden" NAME="id" value="2Hehu4i2dh4KU6">'+
+										'<IMG SRC="./../stickyImg" ><P><INPUT TYPE="text" NAME="captchaValue" VALUE="">'+
+										'<label>Captcha</label><INPUT TYPE="hidden" NAME="lafessadimammata" value="2Hehu4i2dh4KU6">'+
 									'</p>'+
 									'<p class="signin button">'+
-										'<input type="submit" value="Registrati" onclick="alert("pipolott");"/>'+
+										'<input id="submitForm" type="submit" value="Registrati" />'+
 									'</p>'+
 									'<p class="change_link">Sei già registrato ?<a href="#tologin" class="to_register"> Vai alla login </a>'+
 									'</p>'+
 								'</div>'+
 
 							'</div>'+
+							'</form>'+ 
 						'</div>'+
 					'</section>'+
 				'</div>'+
 			'</body>'+
 			'</html>';
+		
+		$('#submitForm').click(function() {//the button of saveRole  
+		    $('#roleForm').submit(function(ret){//send the form with Ajax From plugins  
+		        var object = getObjectFromStr(ret);//change the String to json Object 
+		        //'errmsg',which the flag of operation result, is a property of the json setted in server side 
+		        var message = object.errmsg;
+		            
+		        if (message) {  
+		            alert(message);//you can show the message in your own way,just use alert now. 
+		            //in my server side when operate failed,'error' will be added to the property of errmsg 
+		            if (message.indexOf('error') == -1) { 
+		               //show success here
+		            }  
+		        }  
+		    },null,'json');  
+		});  
 			
 		$(html).modal( {
 			closeHTML:"",
