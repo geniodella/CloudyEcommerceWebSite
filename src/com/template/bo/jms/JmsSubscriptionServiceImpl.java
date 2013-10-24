@@ -30,9 +30,11 @@ public class JmsSubscriptionServiceImpl implements JmsSubscriptionService{
 		this.jmsSubscriptionTemplate = jmsSubscriptionTemplate;
 	}
 
-		public void sendSubscriptionEmail(String code,String emailAddress){
+		public void sendSubscriptionEmail(String code,String emailAddress,String username){
 			
 			SubscriptionForm subscriptionForm = new SubscriptionForm();
+			
+			subscriptionForm.setUsername(username);
 			
 			subscriptionForm.setPassword(code);
 			

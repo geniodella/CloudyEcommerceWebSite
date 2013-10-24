@@ -45,6 +45,7 @@
 <link rel="stylesheet" href="../res_css/anythingslider.css">
 <script src="../res_js/jquery/jquery.anythingslider.js"></script>
 
+<script type="text/javascript" src="../res_js/jquery/jquery.ajaxform.js"></script>
 <script type="text/javascript" src="../res_js/jquery/jquery.simplemodal.js"></script>
 
  <!-- ColorBox -->
@@ -172,14 +173,27 @@
 					            if (message.indexOf('error') == -1) { 
 					               //show success here
 					            }  
-					        }  
-					    },null,'json');  
-					});  
+					        } else{
+					        	 $('register').animate({
+										height: '80px'
+										});
+
+										var msg = $('#register');
+										msg.fadeOut(200, function () {	
+										$('register').html('Thank you!');
+
+										msg.html("deded").fadeIn(200);
+										});
+					        } 
+					    },null,'json'); 
+					   
+					});
+					
 						
 					$(html).modal( {
 						closeHTML:"",
 						containerCss:{
-							backgroundColor:"#fff", 
+							backgroundColor:"transparent", 
 							borderColor:"#fff", 
 							height:460, 
 							padding:0, 
@@ -187,6 +201,8 @@
 						},
 						overlayClose:false
 					});
+					
+					
 				});
 		
 

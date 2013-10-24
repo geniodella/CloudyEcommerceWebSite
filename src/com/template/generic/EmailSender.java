@@ -133,7 +133,7 @@ public class EmailSender {
 	}
 	
 	
-	public void sendSubscriptionEmail(String sender, String activationCode){
+	public void sendSubscriptionEmail(String sender, String activationCode,String username){
 		
 	
 	
@@ -164,7 +164,7 @@ public class EmailSender {
 			    msg.setSentDate(new Date());
 			    
 
-			    msg.setText(SUBSCRIPTION_MESSAGE + "   "+ DOMAIN_URL+"#/subscription?code="+activationCode);
+			    msg.setText(SUBSCRIPTION_MESSAGE + "username: "+username+" e  password: "+activationCode);
 		 
 
 

@@ -36,7 +36,7 @@ public class CustomerAction extends ActionSupport {
 	}
 
 	Integer customerId;
-	
+
 	private Boolean captchaCheck;
 
 	public Boolean getCaptchaCheck() {
@@ -48,7 +48,7 @@ public class CustomerAction extends ActionSupport {
 	}
 
 	int msg;
-	
+
 	private String captchaValue;
 
 	public String getCaptchaValue() {
@@ -266,19 +266,19 @@ public class CustomerAction extends ActionSupport {
 
 
 
-		
-			customerVO = new CustomerVO();
+
+		customerVO = new CustomerVO();
 
 		customerVO.setInsDate(new Date());
 		customerVO.setMail(mail);
-	
+
 		success = true;
 
-		
-			customerServiceBean.insertCustomerVO(customerVO, username, password);
 
-			return ActionSupport.NONE;
-	
+		customerServiceBean.insertCustomerVO(mail, username, password);
+
+		return ActionSupport.NONE;
+
 
 
 	}
@@ -329,26 +329,26 @@ public class CustomerAction extends ActionSupport {
 		}
 		return "makeLogin";
 	}
-	
-	
+
+
 	public String checkInSession(){
-		
-	HttpSession  session = ServletActionContext.getRequest().getSession(true);
-		
+
+		HttpSession  session = ServletActionContext.getRequest().getSession(true);
+
 		VirtualCartVO virtualCartVO = (VirtualCartVO)session.getAttribute("virtualCartVO");
-		
-		
+
+
 		// manage the case of anonymous user
 		// in this case it is created an anonymous customer
 		if (virtualCartVO == null){
-		customerVO = customerServiceBean.insertAnonymousCustomer();
-		session.setAttribute("customerVO", customerVO.getCustomerId());
-		session.setAttribute("virtualCartVO", customerVO.getVirtualCartVO());
-		
-	
-			
+			customerVO = customerServiceBean.insertAnonymousCustomer();
+			session.setAttribute("customerVO", customerVO.getCustomerId());
+			session.setAttribute("virtualCartVO", customerVO.getVirtualCartVO());
+
+
+
 		}
-		
+
 		return "checkInSession";
 	}
 
@@ -401,13 +401,13 @@ public class CustomerAction extends ActionSupport {
 
 		return "retrieveId";	
 	}
-	
+
 	public String checkCaptcha(){
 		HttpSession  session = ServletActionContext.getRequest().getSession(false);	
-		 Captcha captcha = (Captcha) session.getAttribute(Captcha.NAME);
-			success = true;
+		Captcha captcha = (Captcha) session.getAttribute(Captcha.NAME);
+		success = true;
 		captchaCheck = captcha.isCorrect(captchaValue);
 		return "checkCaptcha";
 	}
-	
+
 }

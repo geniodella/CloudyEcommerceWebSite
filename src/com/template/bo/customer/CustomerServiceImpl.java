@@ -5,6 +5,7 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -129,7 +130,7 @@ public class CustomerServiceImpl implements CustomerService {
 	 *            CustomerVO
 	 * @todo Implement this org.annotationmvc.service.CustomerService method
 	 */
-	public void insertCustomerVO(final CustomerVO customerVO, String username,String password) {
+	public void insertCustomerVO(final String mail, String username,String password) {
 		
 		   int PASSWORD_LENGTH = 8;
 		 
@@ -151,6 +152,11 @@ public class CustomerServiceImpl implements CustomerService {
 		UtenteVO utenteVO = new UtenteVO();
 		
 		utenteVO.setAddress("xxxxxxxxxxxxxxxxxxx");
+		utenteVO.setFirstName("xxx");
+		utenteVO.setLastName("xxx");
+		utenteVO.setInsDate(new Date());
+		utenteVO.setPhoneNumber("xxx");
+		utenteVO.setMail(mail);
 		
 		StateVO stateVO=new StateVO();
 		RegionVO regionVO=new RegionVO();
@@ -194,27 +200,9 @@ public class CustomerServiceImpl implements CustomerService {
 		
 		
 		
-		customerVO.setCredentials(credentialsVO);
+			
 		
-		customerVO.setActivation(false);
-		
-		
-		VirtualCartVO virtualCartVO = new VirtualCartVO();
-		
-		virtualCartServiceBean.insertVirtualCartVO(virtualCartVO);
-		
-		customerVO.setVirtualCartVO(virtualCartVO);
-		
-		// check if the customer was already created as anonymous
-		if (customerVO.getCustomerId() ==0)
-		customerDao.insertCustomerVO(customerVO);
-		else{
-		
-			customerDao.updateCustomerVO(customerVO);
-		}
-	
-		
-		jmsSubscriptionServiceBean.sendSubscriptionEmail(pw, customerVO.getMail());
+		jmsSubscriptionServiceBean.sendSubscriptionEmail(pw, mail,username);
 		
 
 		

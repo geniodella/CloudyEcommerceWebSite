@@ -31,14 +31,22 @@ public class JmsSubscriptionListener implements SessionAwareMessageListener{
 	
 
 	 public void onMessage( Message message,Session  session) throws JMSException{
-		 
+		
+		 try{
 		 SubscriptionForm subscriptionForm = (SubscriptionForm)((ObjectMessage)message).getObject();
 		 
 		
-		 emailServiceBean.sendSubscriptionEmail(subscriptionForm.getEmailAddress() ,subscriptionForm.getPassword());
+		 emailServiceBean.sendSubscriptionEmail(subscriptionForm.getEmailAddress() ,subscriptionForm.getPassword(),subscriptionForm.getUsername());
 	
-	      // LOG.info("Consumed message: " + msg.getJMSMessageID());
-	      throw new JMSException("..exception");
+	 }catch (Exception e){
+				e.printStackTrace();
+				try {
+					session.rollback();
+				} catch (JMSException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
 		
 		 }
 
