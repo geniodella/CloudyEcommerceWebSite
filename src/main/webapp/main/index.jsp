@@ -131,7 +131,7 @@
 										'<div id="wrapper">'+
 
 										'<form action="./../Customer.action" id="roleForm">'+  
-											'<div id="register" class="animate form">'+
+											'<div id="register" class="animate form" style="height:420px">'+
 
 												'<h1>Registrati</h1>'+
 												'<p>'+
@@ -161,37 +161,33 @@
 						'</body>'+
 						'</html>';
 					
-					$('#submitForm').click(function() {//the button of saveRole  
-					    $('#roleForm').submit(function(ret){//send the form with Ajax From plugins  
-					        var object = getObjectFromStr(ret);//change the String to json Object 
-					        //'errmsg',which the flag of operation result, is a property of the json setted in server side 
-					        var message = object.errmsg;
-					            
-					        if (message) {  
-					            alert(message);//you can show the message in your own way,just use alert now. 
-					            //in my server side when operate failed,'error' will be added to the property of errmsg 
-					            if (message.indexOf('error') == -1) { 
-					               //show success here
-					            }  
-					        } else{
-					        	 $('register').animate({
-										height: '80px'
-										});
-
-										var msg = $('#register');
-										msg.fadeOut(200, function () {	
-										$('register').html('Thank you!');
-
-										msg.html("deded").fadeIn(200);
-										});
-					        } 
-					    },null,'json'); 
-					   
-					});
+					
+						$('#roleForm').live('submit', function(){				            
+  	                          
+					    	$.ajax({
+					            type: 'POST',
+					            url: './../Customer.action',
+                      
+					            success: function(){    
+              	                          								                                    
+									var msg = $('#register');                
+                					$('#register').html('Caricamento...');
+					         	    $('#register').animate({
+										height: '50px'
+								    }); 
+					         	    
+					         	    $('#register').append("<img id='theImg' src='../res_img/loading.gif' style='margin: 0 200px;display: block;'/>").delay(1000).queue(function (next) {
+										$('#register').html('Grazie!').append(' Ti arriverà un\'email coi dati di accesso.').css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif").css("line-height","5");
+					                	next();
+					          	    });                    
+					             }
+					       });
+            			   return false;
+						});   
 					
 						
 					$(html).modal( {
-						closeHTML:"",
+						closeHTML:"<a class='modal-close'></a>", 
 						containerCss:{
 							backgroundColor:"transparent", 
 							borderColor:"#fff", 
