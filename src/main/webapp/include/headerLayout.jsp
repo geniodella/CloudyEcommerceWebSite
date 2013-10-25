@@ -4,9 +4,9 @@
 		<td
 			style="margin-bottom: 30px; margin-top: 20px; width: 50%; background: white">
 			<a style="float: left; margin-left: 20px;"
-			href="<s:property value="#pagePath" />/main/index.action"><h1>
+			href="./main/index.action"><h1>
 					<img height="150" width="350"
-						src="<s:property value="#imagePath" />/cloudyLogo.png">
+						src="./res_img/cloudyLogo.png">
 				</h1></a>
 		</td>
 
@@ -17,49 +17,46 @@
 
 			<div>
 				<div id="header-menu-box">
-					<a href="<s:property value="#pagePath" />/main/index.action"><s:text
-							name="it.ecomweb.page.menu.index" /><br>
+					<a href="./index.jsp">index<br>
 					<img height="50" width="50" style="margin-top: 23px"
 						class="rollover"
-						src="<s:property value="#imagePath"/>/home_off.png"></a>
+						src="./res_img/home_off.png"></a>
 				</div>
 				<div id="header-menu-box">
-					<a href="<s:property value="#pagePath" />/main/company.action"><s:text
-							name="it.ecomweb.page.menu.company" /><br>
+					<a href="./company.jsp">
+									company<br>
 					<br>
 					<img height="50" width="50" style="margin-top: 6px"
 						class="rollover"
-						src="<s:property value="#imagePath"/>/company_off.png"></a>
+						src="./res_img/company_off.png"></a>
 				</div>
 				<div id="header-menu-box">
-					<a href="<s:property value="#pagePath" />/main/buy.action"><s:text
-							name="it.ecomweb.page.menu.buy" /><br>
+					<a href="./buy.jsp">buy<br>
 					<br>
 					<img height="60" width="60" style="margin-top: 6px"
-						class="rollover" src="<s:property value="#imagePath"/>/pig.png"></a>
+						class="rollover" src="./res_img/pig.png"></a>
 				</div>
 				<div id="header-menu-box">
-					<a href="<s:property value="#pagePath" />/main/support.action"><s:text
-							name="it.ecomweb.page.menu.support" /><br>
+					<a href="./docs.jsp">
+supporto<br>
 					<br>
 					<img height="50" width="50" style="margin-top: 6px"
 						class="rollover"
-						src="<s:property value="#imagePath"/>/support_off.png"></a>
+						src="./res_img/support_off.png"></a>
 				</div>
 				<div id="header-menu-box">
-					<a href="<s:property value="#pagePath" />/main/docs.action"><s:text
-							name="it.ecomweb.page.menu.docs" /><br>
+					<a href="./support.jsp">docs<br>
 					<br>
 					<img height="50" width="50" style="margin-top: 6px"
 						class="rollover"
-						src="<s:property value="#imagePath"/>/docs_off.png"></a>
+						src="./res_img/docs_off.png"></a>
 				</div>
 				<div id="contact-form">
-					<s:text name="it.ecomweb.page.menu.tryOnline" />
+				prova
 					<br>
 					<img height="67" width="90" style="margin-top: 18px"
 						class="rollover"
-						src="<s:property value="#imagePath"/>/registrazioneIcona.png">
+						src="./res_img/registrazioneIcona.png">
 				</div>
 			</div>
 		</td>

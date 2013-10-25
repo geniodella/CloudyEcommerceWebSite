@@ -6,34 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
 <!-- jQuery (required) -->
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-<script>
-	window.jQuery
-			|| document
-					.write('<script src="../res_js/jquery.min.js"><\/script>')
-</script>
-
-<!-- Anything Slider optional plugins -->
-<script src="../res_js/jquery/jquery.easing.1.2.js"></script>
-
-<!-- http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js -->
-<script src="../res_js/jquery/swfobject.js"></script>
-
-<script type="text/javascript" src="../res_js/jquery/jquery.simplemodal.js"></script>
-
-<!-- Demo stuff -->
-<link rel="stylesheet" href="../res_css/page.css" media="screen">
-<script src="../res_js/jquery/jquery.jatt.min.js"></script>
-
-<!-- AnythingSlider -->
-<link rel="stylesheet" href="../res_css/anythingslider.css">
-<script src="../res_js/jquery/jquery.anythingslider.js"></script>
-
-<!-- ColorBox -->
-<link href="../res_css/colorbox/colorbox.css" rel="stylesheet">
-<script src="../res_js/jquery/jquery.colorbox-min.js"></script>
-
+<
 
 
 <!-- Ideally, add the stylesheet(s) you are going to use here,
@@ -200,7 +173,7 @@
 									<li>
 										<div class="textSlide">
 											<img
-												src="<s:property value="#imagePath"/>/template.jpg"
+												src="./res_img/template.jpg"
 												style="float: left; width: 200px; height: 200px; padding: 10px 0; margin: 0px 100px 0px 0; position: relative;">
 											<h3>Template grafici personalizzati</h3>
 											<br>
@@ -216,7 +189,7 @@
 											</ul>
 										</div>
 										<div class="textSlide">
-											<img src="<s:property value="#imagePath"/>/clientMobile.jpg"
+											<img src="./res_img/clientMobile.jpg"
 												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; padding: 25px 0 0; position: relative;">
 											<h3>Client per cellulari</h3>
 											<br>
@@ -236,7 +209,7 @@
 									
 									<li>										
 										<div class="textSlide">
-											<img src="<s:property value="#imagePath"/>/graph&stats.jpg"
+											<img src="./res_img/graph&stats.jpg"
 												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
 											<h3>Grafici e statistiche</h3>
 											<br>
@@ -250,7 +223,7 @@
 											</ul>
 										</div>
 										<div class="textSlide">
-											<img src="<s:property value="#imagePath"/>/newsletter.jpg"
+											<img src="./res_img/newsletter.jpg"
 												style="float: left; width: 200px; height: 200px; margin: 35px 100px 0px 0; padding: 15px 0; position: relative;">
 											<h3>Campagne e newsletter</h3>
 											<br>
@@ -274,7 +247,7 @@
 									
 									<li>
 										<div class="textSlide">
-											<img src="<s:property value="#imagePath"/>/cdn.png"
+											<img src="./res_img/cdn.png"
 												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
 											<h3>Integrazione con CDN</h3>
 											<br>
@@ -297,7 +270,7 @@
 						</div>
 
 						  <div id="content-footer">
-			<a style="float: left;"><img style="margin: 10px;"src="<s:property value="#imagePath"/>/creditCards.png"
+			<a style="float: left;"><img style="margin: 10px;"src="./res_img/creditCards.png"
 				
 								<!-- AddThis Button BEGIN -->
 				<div style="float: right;margin-right: 30px;margin-top: 15px;" class="addthis_toolbox addthis_default_style addthis_32x32_style">

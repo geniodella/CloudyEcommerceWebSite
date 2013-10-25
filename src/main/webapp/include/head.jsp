@@ -17,47 +17,48 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Enterprise Commerce</title>
-	<%
-		String pageRoot = request.getContextPath();
-		String locale = request.getLocale().toString();
-		pageContext.setAttribute("pageRoot", pageRoot);
-		ActionContext.getContext().put("pageRoot", pageRoot);
-		pageContext.setAttribute("locale", locale);
-		ActionContext.getContext().put("locale", locale);
-	%>
-	<s:set name="pagePath" value="%{#pageRoot}" />
-	<s:set name="imagePath" value="%{#pageRoot + '/res_img'}" />
-	<s:set name="buttonImagePath" value="%{#pageRoot + '/res_img/' + #locale}" />
 
-	<s:set name="uploadPath" value="%{#pageRoot + '/res_upload'}" />
-	<s:set name="downloadPath" value="%{#pageRoot + '/res_download'}" />
-
-	<s:set name="profileUploadPath" value="%{#pageRoot + '/res_upload/profile/images'}" />
-
-	<s:set name="imagesNewsLetterUploadPath" value="%{#pageRoot + '/res_upload/newsletter/images'}" />
-
-	<s:set name="imagesMediaUploadPath" value="%{#pageRoot + '/res_upload/multimedia/images'}" />
-	<s:set name="videoMediaUploadPath" value="%{#pageRoot + '/res_upload/multimedia/videos'}" />
-	<s:set name="miscellaneusMediaUploadPath" value="%{#pageRoot + '/res_upload/multimedia/miscellaneus'}" />
-
-	<s:set name="imagesEcomUploadPath" value="%{#pageRoot + '/res_upload/ecommerce/images'}" />
-	<s:set name="videoEcomUploadPath" value="%{#pageRoot + '/res_upload/ecommerce/videos'}" />
-	<s:set name="miscellaneusEcomUploadPath" value="%{#pageRoot + '/res_upload/ecommerce/miscellaneus'}" />
-
-	<s:set name="cssPath" value="%{#pageRoot + '/res_css'}" />
-	<s:set name="jsPath" value="%{#pageRoot + '/res_js'}" />
 
 	
-	<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery-1.3.1.min.js"></script>
-	<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery.ui.all.js"></script>
-	<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery.tooltip.js"></script>
-	<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery.autocomplete.js"></script>
-	<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery.ajaxform.js"></script>
-	<script type="text/javascript" src="<s:property value="#jsPath"/>/ecommerce/global/windowOnload.js"></script>
+	<script type="text/javascript" src="./res_js/jquery/jquery-1.3.1.min.js"></script>
+	<script type="text/javascript" src="./res_js/jquery/jquery.ui.all.js"></script>
+	<script type="text/javascript" src="./res_js/jquery/jquery.tooltip.js"></script>
+	<script type="text/javascript" src="./res_js/jquery/jquery.autocomplete.js"></script>
+	<script type="text/javascript" src="./res_js/jquery/jquery.ajaxform.js"></script>
+	<script type="text/javascript" src="./res_js/ecommerce/global/windowOnload.js"></script>
 	
-	<script type="text/javascript" src="<s:property value="#jsPath"/>/ecommerce/jquery/admin.jquery.js"></script>
+	<script type="text/javascript" src="./res_js/ecommerce/jquery/admin.jquery.js"></script>
 
-<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/customForm.js"></script>
-<script type="text/javascript" src="<s:property value="#jsPath"/>/jquery/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="./res_js/jquery/customForm.js"></script>
+<script type="text/javascript" src="./res_js/jquery/jquery.simplemodal.js"></script>
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script>window.jQuery|| document.write('<script src="../res_js/jquery.min.js"><\/script>')</script>
+
+<!-- Anything Slider optional plugins -->
+<script src="./res_js/jquery/jquery.easing.1.2.js"></script>
+
+<!-- http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js -->
+<script src="./res_js/jquery/swfobject.js"></script>
+
+<!-- Demo stuff -->
+<link rel="stylesheet" href="./res_css/page.css" media="screen">
+<script src="./res_js/jquery/jquery.jatt.min.js"></script>
+
+<!-- AnythingSlider -->
+<link rel="stylesheet" href="./res_css/anythingslider.css">
+<script src="./res_js/jquery/jquery.anythingslider.js"></script>
+
+<script type="text/javascript" src="./res_js/jquery/jquery.simplemodal.js"></script>
+
+ <!-- ColorBox -->
+ <link href="./res_css/colorbox/colorbox.css" rel="stylesheet">
+ <script src="./res_js/jquery/jquery.colorbox-min.js"></script>
+
+                                                                          
+<!-- highslide --> 
+<script type="text/javascript" src="./res_js/highslide/highslide-with-gallery.js"></script>
+<link rel="stylesheet" type="text/css" href="./res_js/highslide/highslide.css" />
 
 </head>
