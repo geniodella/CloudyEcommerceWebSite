@@ -98,6 +98,17 @@
 
 <body>
 
+<style type="text/css"> 
+	#simplemodal-container a.modalCloseImg {
+	    display:inline;
+	    z-index:3200;
+	    position:absolute;
+	    top:5px;
+	    right:-98px;
+	    cursor:pointer;
+	}
+</style>
+
 	<script>
 		$(function() {
 			
@@ -187,7 +198,7 @@
 					
 						
 					$(html).modal( {
-						closeHTML:"<a class='modal-close'></a>", 
+						closeHTML:"<a class='modalCloseImg'>X</a>", 
 						containerCss:{
 							backgroundColor:"transparent", 
 							borderColor:"#fff", 
