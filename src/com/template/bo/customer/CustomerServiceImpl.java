@@ -251,8 +251,8 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 	
 	
-	public CustomerVO findCustomerVObyEmail(String mail){
-		return customerDao.findCustomerVObyEmail(mail);
+	public UtenteVO findUtenteVObyEmail(String mail){
+		return utenteDao.findUtenteVObyEmail(mail);
 	}
 
 	/**

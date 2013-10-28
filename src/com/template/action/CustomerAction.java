@@ -12,11 +12,13 @@ import org.apache.struts2.ServletActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.template.bo.customer.CustomerService;
 import com.template.bo.order.OrderService;
+import com.template.dao.UtenteDao;
 import com.template.form.LoginFormVO;
 import com.template.form.OrderForm;
 import com.template.form.ShippingForm;
 import com.template.vo.CustomerVO;
 import com.template.vo.Status;
+import com.template.vo.UtenteVO;
 import com.template.vo.VirtualCartVO;
 
 public class CustomerAction extends ActionSupport {
@@ -26,6 +28,8 @@ public class CustomerAction extends ActionSupport {
 	OrderService orderServiceBean;
 
 	CustomerVO customerVO;
+	
+	
 
 	public Integer getCustomerId() {
 		return customerId;
@@ -264,7 +268,15 @@ public class CustomerAction extends ActionSupport {
 
 		CustomerVO customerVO = null;
 
+		HttpSession session = ServletActionContext.getRequest().getSession(false);
 
+		Captcha captcha = (Captcha) session.getAttribute(Captcha.NAME);
+		
+		if(!captcha.isCorrect(captchaValue)){
+			msg=1;
+			success = false;
+			return "success";
+		}
 
 
 		customerVO = new CustomerVO();
@@ -272,14 +284,16 @@ public class CustomerAction extends ActionSupport {
 		customerVO.setInsDate(new Date());
 		customerVO.setMail(mail);
 
-		success = true;
+		if(checkCustomerExistence(mail) == 1){
+			success = false;
+			return "success";
 
+		}else{
 
-		customerServiceBean.insertCustomerVO(mail, username, password);
-
-		return ActionSupport.NONE;
-
-
+			customerServiceBean.insertCustomerVO(mail, username, password);
+			success = true;
+			return "success";
+		}
 
 	}
 
@@ -353,9 +367,9 @@ public class CustomerAction extends ActionSupport {
 	}
 
 	private int checkCustomerExistence(String email) {
-		CustomerVO customerVO = customerServiceBean.findCustomerVObyEmail(email);
-
-		if(null!= customerVO) 
+		UtenteVO utenteVO = customerServiceBean.findUtenteVObyEmail(email);
+ 
+		if(null!= utenteVO) 
 			return 1;
 		else
 			return 0;

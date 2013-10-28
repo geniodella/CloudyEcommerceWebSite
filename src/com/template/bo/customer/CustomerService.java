@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.template.form.LoginFormVO;
 import com.template.vo.CustomerVO;
+import com.template.vo.UtenteVO;
 
 public interface CustomerService {
 	
@@ -24,11 +25,10 @@ public interface CustomerService {
 	
 	public LoginFormVO makeLogin(String username, String password);
 	
-	public CustomerVO findCustomerVObyEmail(String mail);
 	
 	public void refreshCustomerVO(CustomerVO customerVO);
 	
 	public void activateCustomer(String activationCode);
 	
-
+	public UtenteVO findUtenteVObyEmail(String mail); 
 }
