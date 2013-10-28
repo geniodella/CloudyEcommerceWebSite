@@ -5,8 +5,8 @@
 			style="margin-bottom: 30px; margin-top: 20px; width: 50%; background: white">
 			<a style="float: left; margin-left: 20px;"
 			href="./main/index.action"><h1>
-					<img height="150" width="350"
-						src="./res_img/cloudyLogo.png">
+					<img height="110" width="380"
+						src="./res_img/logo.jpg">
 				</h1></a>
 		</td>
 
