@@ -145,7 +145,7 @@
 											'<div id="register" class="animate form" style="height:390px">'+
                         
 												'<h1 style="padding: 10px;">Registrati</h1>'+
-                        '<div id="error-container"></div>'+
+                        						'<div id="error-container"></div>'+
 												'<p>'+
 													'<label for="usernamesignup" class="uname" data-icon="u">Nome Utente</label>'+ 
 													'<input id="usernamesignup" name="username" required="required" type="text" placeholder="mysuperusername690" />'+

@@ -108,19 +108,19 @@
 										<td
 											style="padding: 0 0 0 95px;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; background: #ECF2F6">
 											<img style="border-radius: 5px;cursor: pointer"
-											src="../res_img/bottoneAcquistaBlu.png"></img>
+											src="res_img/bottoneAcquistaBlu.png"></img>
 										</td>
                     <td></td>
 										<td
 											style="padding: 0 0 0 95px;border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: white">
 											<img style="border-radius: 5px;cursor: pointer"
-											src="../res_img/bottoneAcquistaBlu.png"></img>
+											src="res_img/bottoneAcquistaBlu.png"></img>
 										</td>
                     <td></td>
 										<td
 											style="padding: 0 0 0 95px;border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">
 											<img style="border-radius: 5px;cursor: pointer"
-											src="../res_img/bottoneAcquistaBlu.png"></img>
+											src="res_img/bottoneAcquistaBlu.png"></img>
 										</td>
 								
 									</tr>
@@ -152,17 +152,17 @@
 										<td
 											style="border-radius: 5px 0 0 0;padding: 0 0 0 85px;  background: white">
 											<img style="border-radius: 5px;"
-											src="../res_img/sconto1.png"></img>
+											src="res_img/sconto1.png"></img>
 										</td> 										
 										<td
 											style="padding: 0 0 0 85px; background: white">
 											<img style="border-radius: 5px;"
-											src="../res_img/sconto3.png"></img>
+											src="res_img/sconto3.png"></img>
 										</td>
 										<td
 											style="border-radius: 0 5px 0 0;padding: 0 0 0 85px; background: white">
 											<img style="border-radius: 5px;"
-											src="../res_img/sconto4.png"></img>
+											src="res_img/sconto4.png"></img>
 										</td>
 									</tr>
 									<tr>
@@ -178,17 +178,17 @@
 										<td
 											style="border-radius: 0 0 0 5px;padding: 0 0 0 105px;background: white">
 											<img style="padding-top: 5px;border-radius: 5px;cursor: pointer"
-											src="../res_img/Seleziona1.png"></img>
+											src="res_img/Seleziona1.png"></img>
 										</td>										
 										<td
 											style="padding: 0 0 0 105px;background: white">
 											<img style="padding-top: 5px;border-radius: 5px;cursor: pointer"
-											src="../res_img/Seleziona3.png"></img>
+											src="res_img/Seleziona3.png"></img>
 										</td>
 										<td
 											style="border-radius:0 0 5px 0;padding: 0 0 0 105px;background: white">
 											<img style="padding-top: 5px;border-radius: 5px;cursor: pointer"
-											src="../res_img/Seleziona4.png"></img>
+											src="res_img/Seleziona4.png"></img>
 										</td>
 									
 									</tr>

@@ -11,11 +11,11 @@
 
 <!-- Ideally, add the stylesheet(s) you are going to use here,
 	 otherwise they are loaded and appended to the <head> automatically and will over-ride the IE stylesheet below -->
-<link rel="stylesheet" href="../res_css/theme-metallic.css">
-<link rel="stylesheet" href="../res_css/theme-minimalist-round.css">
-<link rel="stylesheet" href="../res_css/theme-minimalist-square.css">
-<link rel="stylesheet" href="../res_css/theme-construction.css">
-<link rel="stylesheet" href="../res_css/theme-cs-portfolio.css">
+<link rel="stylesheet" href="res_css/theme-metallic.css">
+<link rel="stylesheet" href="res_css/theme-minimalist-round.css">
+<link rel="stylesheet" href="res_css/theme-minimalist-square.css">
+<link rel="stylesheet" href="res_css/theme-construction.css">
+<link rel="stylesheet" href="res_css/theme-cs-portfolio.css">
 
 </head>
 
