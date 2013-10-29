@@ -19,10 +19,19 @@
 >
 
 <head>
-<meta property="og:title" content="TITOLO" />
+<meta property="og:title" content="Il primo ecommerce SaaS completamente personalizzabile" />
 <meta property="og:description" content="PIPELLA DESCRIPTION" />
-<meta property="og:url" content="http://127.0.0.1:8080/CloudyEcommerceWebSite/main/index.action#&panel1-3"/>
-<meta property="og:img" content="" />
+<meta property="og:url" content="http://www.cloudyecommerce.com"/>
+<meta property="og:img" content="./res_img/logoSito.jpg" />
+
+
+<!-- Twitter card -->
+  	<meta property="twitter:card" content="summary">
+  	<meta property="twitter:title" content="Il primo ecommerce SaaS completamente personalizzabile">
+  	<meta property="twitter:description" content="Shopify is a powerful ecommerce platform that includes everything you need to create an online store and sell online. Try it free for 14 days.">
+  	<meta property="twitter:image" content="./res_img/logoSito.jpg">
+  	<meta property="twitter:site" content="@Shopify">
+  	
 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
@@ -65,6 +74,7 @@
 	<link rel="stylesheet" href="./res_css/theme-minimalist-square.css">
 	<link rel="stylesheet" href="./res_css/theme-construction.css">
 	<link rel="stylesheet" href="./res_css/theme-cs-portfolio.css">
+	<link rel="shortcut icon" href="./res_img/favicon.ico">
 	
 </head>
 
@@ -98,7 +108,6 @@
 						'<meta name="keywords"'+
 							'content="html5, css3, form, switch, animation, :target, pseudo-class" />'+
 						'<meta name="author" content="Codrops" />'+
-						'<link rel="shortcut icon" href="../favicon.ico">'+
 						'<link rel="stylesheet" type="text/css" href="./css/demo.css" />'+
 						'<link rel="stylesheet" type="text/css" href="./css/style.css" />'+
 						'<link rel="stylesheet" type="text/css" href="./css/animate-custom.css" />'+
@@ -127,7 +136,9 @@
 													'<input id="emailsignup" name="mail" required="required" type="email" placeholder="mysupermail@mail.com" />'+
 												'</p>'+
 												'<p style="margin-top: 30px;">'+
-													'<IMG SRC="./stickyImg" style="width: 250px;height: 60px;"><span style="float: right;"> Qual\'è il codice dell\'immagine?</span><INPUT TYPE="text" NAME="captchaValue" VALUE="" placeholder="Captcha" style="width: 150px;float: right;margin-top: -40px;">'+
+													'<IMG SRC="./stickyImg" style="width: 250px;height: 60px;">'+
+													'<span style="float: right;" src="res_img/captchaLogo.png"> Qual\'è il codice dell\'immagine?</span>'+
+													'<INPUT TYPE="text" NAME="captchaValue" VALUE="" placeholder="Captcha" class="customCaptcha" style="width: 175px;float: right;margin-top: -40px;padding: 10px 5px;">'+
 												
 												'</p>'+
 												'<p class="signin button">'+
@@ -146,38 +157,42 @@
 						'</html>';
 					
 					
-						$('#roleForm').live('submit', function(){				            
-							var formData = $("#roleForm").serializeArray();	   
-					    	$.ajax({
-					            type: 'POST',
-					            url: 'Customer.action',
-					            data:formData,
-					            dataType: 'json', 
-					            success: function(data){    
-              	      			  if(data.success==true){                  								                                    
-									var msg = $('#register');                
-                					$('#register').html('Caricamento...');
-					         	    $('#register').animate({
-										height: '50px'
-								    }); 
-					         	    
-					         	    $('#register').append("<img id='theImg' src='../res_img/loading.gif' style='margin: 0 200px;display: block;'/>").delay(1000).queue(function (next) {
-										$('#register').html('Grazie!').append(' Ti arriverà un\'email coi dati di accesso.').css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif").css("line-height","5");
-					                	next();
-					          	    });
-			                      }
-              	      			  else if(data.success==false){
-                                    if(data.msg==1){
-        			                    	  $('#error-container').html('Il captcha che hai inserito è errato!').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
-              						}
-                                    else{
-              			                 $('#error-container').html('Email esistente!').append(' Inserire una nuova email.').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
-              						}
-                                  }
-			                    }
-					       });
-            			   return false;
-						});   
+						$('#roleForm').live('submit', function(){		          
+							var formData = $("#roleForm").serializeArray();	
+               				if(event.handled !== true){   
+						    	$.ajax({
+						            type: 'POST',
+						            url: 'Customer.action',
+						            data:formData,
+						            dataType: 'json', 
+						            success: function(data){  
+	                      
+	              	      			  if(data.success==true){                  								                                    
+										var msg = $('#register');                
+	                					$('#register').html('Caricamento...');
+						         	    $('#register').animate({
+											height: '50px'
+									    }); 
+						         	    
+						         	    $('#register').append("<img id='theImg' src='res_img/loading.gif' style='margin: 0 200px;display: block;'/>").delay(1000).queue(function (next) {
+											$('#register').html('Grazie!').append(' Ti arriverà un\'email coi dati di accesso.').css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif").css("line-height","5");
+						                	next();
+						          	    });
+				                      }
+	              	      			  else if(data.success==false){
+	                                    if(data.msg==1){
+	        			                    	  $('#error-container').html('Il captcha che hai inserito è errato!').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
+	              						}
+	                                    else{
+	              			                 $('#error-container').html('Email esistente!').append(' Inserire una nuova email.').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
+	              						}
+	                                  }
+	                                  event.handled = true;
+				                    }	                          
+						       });
+                 			  }
+               				return false;
+						});    
 					
 						
 					$(html).modal( {

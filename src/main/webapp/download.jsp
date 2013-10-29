@@ -84,6 +84,8 @@
 				
 								<!-- AddThis Button BEGIN -->
 				<div style="float: right;margin-right: 30px;margin-top: 15px;" class="addthis_toolbox addthis_default_style addthis_32x32_style">
+				
+				<p style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;">Condividi</p>
 				 <a class="addthis_button_facebook"></a>
 	    					   <a class="addthis_button_twitter"></a>
 	    					   <a class="addthis_button_pinterest_share"></a>
