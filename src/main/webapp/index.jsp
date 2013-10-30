@@ -28,9 +28,10 @@
 <!-- Twitter card -->
   	<meta property="twitter:card" content="summary">
   	<meta property="twitter:title" content="Il primo ecommerce SaaS completamente personalizzabile">
-  	<meta property="twitter:description" content="Shopify is a powerful ecommerce platform that includes everything you need to create an online store and sell online. Try it free for 14 days.">
+  	<meta property="twitter:description" content="PIPELLA DESCRIPTION">
   	<meta property="twitter:image" content="./res_img/logoSito.jpg">
-  	<meta property="twitter:site" content="@Shopify">
+  	<meta property="twitter:url" content="http://www.cloudyecommerce.com">
+  	<meta property="twitter:site" content="@Geniodella">
   	
 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
