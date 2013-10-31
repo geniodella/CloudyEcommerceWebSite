@@ -74,7 +74,8 @@
 	<link rel="stylesheet" href="./res_css/theme-minimalist-square.css">
 	<link rel="stylesheet" href="./res_css/theme-construction.css">
 	<link rel="stylesheet" href="./res_css/theme-cs-portfolio.css">
-	<link rel="shortcut icon" href="./res_img/favicon.ico">
+	<link rel="shortcut icon" type="image/x-iconn" href="./res_img/favicon.ico">
+	<link rel="shortcut icon" type="image/png" href="./res_img/favicon.png"/>
 
 
 <!-- Twitter card -->
