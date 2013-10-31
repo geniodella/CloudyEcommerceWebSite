@@ -1,18 +1,14 @@
-<%
-/**
-* Title: E-Commerce CMS 
-* Description: E-Commerce CMS 
-* Copyright: Copyright (c) 2008
-* Company: 
-* 
-* @author Enrico Cesaretti
-* @version 1.0
-*/
- %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="/struts-tags" prefix="s" %>
-<%@page import="com.opensymphony.xwork2.*"%>
+
+
+<html  
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml"
+>
+
+
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -46,6 +42,11 @@
 <link rel="stylesheet" href="./res_css/page.css" media="screen">
 <script src="./res_js/jquery/jquery.jatt.min.js"></script>
 
+
+	
+
+
+
 <!-- AnythingSlider -->
 <link rel="stylesheet" href="./res_css/anythingslider.css">
 <script src="./res_js/jquery/jquery.anythingslider.js"></script>
@@ -60,5 +61,31 @@
 <!-- highslide --> 
 <script type="text/javascript" src="./res_js/highslide/highslide-with-gallery.js"></script>
 <link rel="stylesheet" type="text/css" href="./res_js/highslide/highslide.css" />
+
+<meta property="og:title" content="Il primo ecommerce SaaS completamente personalizzabile" />
+<meta property="og:description" content="PIPELLA DESCRIPTION" />
+<meta property="og:url" content="http://www.cloudyecommerce.com"/>
+<meta property="og:img" content="./res_img/logoSito.jpg" />
+
+<link rel="stylesheet" type="text/css" href="./res_css/EComWeb_default.css" title="default" media="screen" />
+
+	<link rel="stylesheet" href="./res_css/theme-metallic.css">
+	<link rel="stylesheet" href="./res_css/theme-minimalist-round.css">
+	<link rel="stylesheet" href="./res_css/theme-minimalist-square.css">
+	<link rel="stylesheet" href="./res_css/theme-construction.css">
+	<link rel="stylesheet" href="./res_css/theme-cs-portfolio.css">
+	<link rel="shortcut icon" href="./res_img/favicon.ico">
+
+
+<!-- Twitter card -->
+  	<meta property="twitter:card" content="summary">
+  	<meta property="twitter:title" content="Il primo ecommerce SaaS completamente personalizzabile">
+  	<meta property="twitter:description" content="PIPELLA DESCRIPTION">
+  	<meta property="twitter:image" content="./res_img/logoSito.jpg">
+  	<meta property="twitter:url" content="http://www.cloudyecommerce.com">
+  	<meta property="twitter:site" content="@Geniodella">
+  	
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
 </head>

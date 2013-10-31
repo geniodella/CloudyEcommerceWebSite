@@ -216,13 +216,13 @@
 				<!-- AddThis Button END -->
 				
 		</div>
-    <%@ include file="/include/footerLayout.jsp"%>
+   
 					</td>
 
 					<td style="width: 100%; background: transparent"></td>
 
 				</tr>
 			</table>
-
+ <%@ include file="/include/footerLayout.jsp"%>
 		</div>
 </body>

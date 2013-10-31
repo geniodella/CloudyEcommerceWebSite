@@ -1,44 +1,36 @@
 
-<%
-	/**
-	 * Title: E-Commerce CMS 
-	 * Description: E-Commerce CMS 
-	 * Copyright: Copyright (c) 2008
-	 * Company: 
-	 * 
-	 * @author Enrico Cesaretti
-	 * @version 1.0
-	 */
-%>
+
 <%@ include file="./include/head.jsp"%>
 <%@ include file="./include/header.jsp"%>
 
-<html  
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml"
->
 
 <head>
-<meta property="og:title" content="Il primo ecommerce SaaS completamente personalizzabile" />
-<meta property="og:description" content="PIPELLA DESCRIPTION" />
-<meta property="og:url" content="http://www.cloudyecommerce.com"/>
-<meta property="og:img" content="./res_img/logoSito.jpg" />
 
-
-<!-- Twitter card -->
-  	<meta property="twitter:card" content="summary">
-  	<meta property="twitter:title" content="Il primo ecommerce SaaS completamente personalizzabile">
-  	<meta property="twitter:description" content="PIPELLA DESCRIPTION">
-  	<meta property="twitter:image" content="./res_img/logoSito.jpg">
-  	<meta property="twitter:url" content="http://www.cloudyecommerce.com">
-  	<meta property="twitter:site" content="@Geniodella">
-  	
-
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
 <!-- jQuery (required) -->
 
 
+
+
+         
+
+<!-- Ideally, add the stylesheet(s) you are going to use here,
+	 otherwise they are loaded and appended to the <head> automatically and will over-ride the IE stylesheet below -->
+
+</head>
+
+<body>
+
+<style type="text/css"> 
+	#simplemodal-container a.modalCloseImg {
+	    display:inline;
+	    z-index:3200;
+	    position:absolute;
+	    top:5px;
+	    right:-98px;
+	    cursor:pointer;
+	}
+</style>
 
 <script type="text/javascript">
 
@@ -66,31 +58,7 @@
 	});
              
 </script>
-         
 
-<!-- Ideally, add the stylesheet(s) you are going to use here,
-	 otherwise they are loaded and appended to the <head> automatically and will over-ride the IE stylesheet below -->
-	<link rel="stylesheet" href="./res_css/theme-metallic.css">
-	<link rel="stylesheet" href="./res_css/theme-minimalist-round.css">
-	<link rel="stylesheet" href="./res_css/theme-minimalist-square.css">
-	<link rel="stylesheet" href="./res_css/theme-construction.css">
-	<link rel="stylesheet" href="./res_css/theme-cs-portfolio.css">
-	<link rel="shortcut icon" href="./res_img/favicon.ico">
-	
-</head>
-
-<body>
-
-<style type="text/css"> 
-	#simplemodal-container a.modalCloseImg {
-	    display:inline;
-	    z-index:3200;
-	    position:absolute;
-	    top:5px;
-	    right:-98px;
-	    cursor:pointer;
-	}
-</style>
 
 	<script>
 		$(function() {
@@ -272,7 +240,7 @@
 			
 			<div style="background: white;margin: 0px 60px;" id="home-message-text" class="subcolumn1-1">
 					<h1 style="font-size: 30px; line-height: 30px; margin-top: 15px;">
-						provaaaaaaa
+					Il software è <b>completamente personalizzabile</b> in base alle tue esigenze!
 					</h1>
 				</div>
 			

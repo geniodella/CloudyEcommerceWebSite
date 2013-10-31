@@ -2,22 +2,7 @@
 <%@ include file="/include/head.jsp"%>
 <%@ include file="/include/header.jsp"%>
 
-<head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
-<!-- jQuery (required) -->
-<
-
-
-<!-- Ideally, add the stylesheet(s) you are going to use here,
-	 otherwise they are loaded and appended to the <head> automatically and will over-ride the IE stylesheet below -->
-<link rel="stylesheet" href="res_css/theme-metallic.css">
-<link rel="stylesheet" href="res_css/theme-minimalist-round.css">
-<link rel="stylesheet" href="res_css/theme-minimalist-square.css">
-<link rel="stylesheet" href="res_css/theme-construction.css">
-<link rel="stylesheet" href="res_css/theme-cs-portfolio.css">
-
-</head>
 
 <body>
 
