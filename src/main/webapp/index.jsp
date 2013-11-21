@@ -235,9 +235,9 @@
 <!-- 				</h1> -->
 <!-- 			</div> -->
 
-    <table style="background: transparent;border-spacing: 0;">
+    <table align="center" style="background: transparent;border-spacing: 0;">
       <tr>
-     <td style="width:50%;background:transparent"></td>
+    
 
      <td style="border-radius: 5px;background:transparent">
      
@@ -495,8 +495,6 @@
 
     </td>
     
-    <td style="width:100%;background:transparent"></td>
-
       </tr>      
     </table> 
 	<%@ include file="/include/footerLayout.jsp"%>
