@@ -46,7 +46,7 @@ $(document).ready(function(){
 									'<p class="signin button">'+
 										'<input id="submitForm" type="submit" value="Registrati" />'+
 									'</p>'+
-									'<p class="change_link">Sei già registrato ?<a href="#tologin" class="to_register"> Vai alla login </a>'+
+									'<p class="change_link">Sei già registrato ?<a href="#tologin" id="registerButton" class="to_register"> Vai alla login </a>'+
 									'</p>'+
 								'</div>'+
 
@@ -57,6 +57,11 @@ $(document).ready(function(){
 				'</div>'+
 			'</body>'+
 			'</html>';
+		
+		
+		$('#registerButton').live('click', function(){	
+			window.location.href="/24777_BackSite";
+		});
 		
 		$('#submitForm').click(function() {//the button of saveRole  
 		    $('#roleForm').submit(function(ret){//send the form with Ajax From plugins  
