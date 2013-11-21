@@ -8,7 +8,7 @@ http://www.springframework.org/schema/jee http://www.springframework.org/schema/
 <bean id="dataSource"
 	 class="com.atomikos.jdbc.AtomikosDataSourceBean" init-method="init" destroy-method="close">
 	 <property name="uniqueResourceName">
-	 	<value>${jdbc.uniqueResourceName.frontend}</value>
+	 	<value>${jdbc.uniqueResourceName.commercialsite}</value>
 	 	</property>
 	 <property name="xaDataSourceClassName">
 	 	<value>${jdbc.driverClassName}</value>

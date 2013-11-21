@@ -23,7 +23,7 @@
 		<property name="locations">
 			<list>
 			
-		  	<value>file:${user.home}/EcommerceFolder/CommercialSite/applicationCom.properties</value> 
+		  	<value>file:${user.home}/EcommerceFolder/24777/application.properties</value> 
 			 <!-- 	 	<value>file:///home/cloudyec/EcommerceFolder/application.properties</value>  
 		 -->
 				<value>./js/resources/Application_en-EN_it-IT.properties</value>
@@ -57,7 +57,7 @@
              <property name="minPoolSize" value="5" />
         <property name="maxPoolSize" value="50" />
         <property name="uniqueResourceName"> 
-            <value>${activemq.connectionfactory}</value> 
+            <value>COMMERCIALSITE_CONNECTIONFATORY</value> 
         </property> 
         <property name="xaConnectionFactory"> 
             <ref bean="activemqConnectionFactory"/> 

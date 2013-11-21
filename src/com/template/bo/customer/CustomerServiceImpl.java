@@ -135,10 +135,14 @@ public class CustomerServiceImpl implements CustomerService {
 		   int PASSWORD_LENGTH = 8;
 		 
 		  Random RANDOM = new SecureRandom();
+		  
+		  MessageDigest messageDigest = null;
+		  
+		  byte[] hashedPassword =null;
 		
 		 // Pick from some letters that won't be easily mistaken for each
 	      // other. So, for example, omit o O and 0, 1 l and L.
-	      String letters = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789+@";
+	      String letters = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789";
 
 	      String pw = "";
 	      for (int i=0; i<PASSWORD_LENGTH; i++)
@@ -146,8 +150,28 @@ public class CustomerServiceImpl implements CustomerService {
 	          int index = (int)(RANDOM.nextDouble()*letters.length());
 	          pw += letters.substring(index, index+1);
 	      }
+	      
+	      
+	      try {
+				messageDigest = MessageDigest.getInstance("SHA-256");
+				
+				hashedPassword = pw.getBytes("UTF-8");
+				
+				
+				hashedPassword =messageDigest.digest(hashedPassword);
+				
+			
+			} catch (NoSuchAlgorithmException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 		
-	
+	  	BigInteger bigInt = new BigInteger(1,hashedPassword);
+		String hashtext = bigInt.toString(16);
 		
 		UtenteVO utenteVO = new UtenteVO();
 		
@@ -183,7 +207,7 @@ public class CustomerServiceImpl implements CustomerService {
 		
 		credentialsVO.setUsername(username);
 		
-		credentialsVO.setPassword(pw);
+		credentialsVO.setPassword(hashtext);
 		
 		
 		credentialsVO.setEnabled(true);
