@@ -205,6 +205,7 @@
 								delay : 6000, // How long between slideshow transitions in AutoPlay mode (in milliseconds)
 								animationTime : 1500, // How long the slideshow transition takes (in milliseconds)
 								pauseOnHover: false,
+								hashTags:false,
 								navigationFormatter : function(index, panel) {
 									return [ 'Slab', 'Parking Lot', 'Drive',
 											'Glorius Dawn', 'Bjork?',
@@ -478,6 +479,11 @@
 				</div>
 				<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
 				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-525d1d5f0490962c"></script>
+				<!-- per rimuovere hash dall'url -->
+				<script type="text/javascript">
+		          var addthis_config = addthis_config||{};
+		          addthis_config.data_track_addressbar = false;
+		        </script>
 				<!-- AddThis Button END -->
 				
 		</div>
