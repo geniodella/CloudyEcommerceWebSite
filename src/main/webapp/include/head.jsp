@@ -28,6 +28,7 @@
 <script type="text/javascript" src="./res_js/jquery/customForm.js"></script>
 <script type="text/javascript" src="./res_js/jquery/jquery.simplemodal.js"></script>
 
+
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script>window.jQuery|| document.write('<script src="../res_js/jquery.min.js"><\/script>')</script>
@@ -44,7 +45,7 @@
 
 
 	
-
+<link href='http://fonts.googleapis.com/css?family=Della+Respira' rel='stylesheet' type='text/css'>
 
 
 <!-- AnythingSlider -->
@@ -65,7 +66,7 @@
 <meta property="og:title" content="Il primo ecommerce SaaS completamente personalizzabile" />
 <meta property="og:description" content="PIPELLA DESCRIPTION" />
 <meta property="og:url" content="http://www.cloudyecommerce.com"/>
-<meta property="og:img" content="./res_img/logoSito.jpg" />
+<meta property="og:image" content="./res_img/logoSito.jpg" />
 
 <link rel="stylesheet" type="text/css" href="./res_css/EComWeb_default.css" title="default" media="screen" />
 

@@ -155,7 +155,7 @@
 
 						<div id="content-body" style="border:none; margin:0px;background: white;">
             
-            <p style="font-size:30px;color:#36aad8;font-family: arial;font-weight: normal;margin-left: 10px;line-height: 2;margin-top: 0px;">Le nostre offerte</p>
+            <p style="font-size:35px;color:black;font-family: 'Della Respira',serif;font-weight: normal;line-height: 2;margin:30px 150px 40px;text-align: center;">Scegli la soluzione migliore per le tue esigenze e i tuoi volumi d'affari.</p>
 
 							<div class="pricing-tabel" id="content-text" style="background: transparent;margin: 0px;padding: 0px">
 
@@ -163,16 +163,30 @@
 								<table border="0" bordercolor="#D9DEE1"
 									style="padding: 0 20px;background-color: transparent" width="100%" cellpadding="10"
 									cellspacing="0">
+									
+									 <tr>
+                  	<th width="30%"
+											style="border-top: 1px solid #D9DEE1;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1;background: #ECF2F6;">
+                      </th>
+                      <th width="2%"></th>
+                      <th width="30%"
+											style="border-top: 1px solid #D9DEE1;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1;background: white;">
+                      </th>
+                      <th width="2%"></th>
+                      <th width="30%"
+											style="border-top: 1px solid #D9DEE1;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1;background: #ECF2F6;">
+                      </th>
+                  </tr>
 
 									<tr>
 										<th width="30%"
-											style="border-top: 1px solid #D9DEE1;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: #ECF2F6; font-size: 20px;">30&#128;/Mese</th>
+											style="border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: #ECF2F6; font-size: 20px;"><span style="font-size: 40px;">30</span>&#128;/Mese</th>
 										<th width="2%"></th>
                     <th width="30%"
-											style="border-top: 1px solid #D9DEE1;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: white; font-size: 20px;">80&#128;/Mese</th>
+											style="border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: white; font-size: 20px;"><span style="font-size: 40px;">80</span>&#128;/Mese</th>
 										<th width="2%"></th>
                     <th width="30%"
-											style="border-top: 1px solid #D9DEE1;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: #ECF2F6; font-size: 20px;">120&#128;/Mese</th>
+											style="border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: #ECF2F6; font-size: 20px;"><span style="font-size: 40px;">120</span>&#128;/Mese</th>
 									</tr>
 									<tr>
 										<td
@@ -184,45 +198,58 @@
                     <td
 											style="font-size: 16px !important; text-align: center; background: #ECF2F6; border-color: #D9DEE1; border-style: solid solid solid solid; border-right: 1px solid #D9DEE1; border-width: 0 1px 1px 1px">ILLIMITATO</td>
 										</tr>
+                    
+                    	<tr>
+										<td
+											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6"></td>
+                      <td></td>
+										<td
+											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1;background: white;"></td>
+                      <td></td>
+										<td
+											style="font-weight: normal;font-size: 14px;padding: 0 0 0 0px; text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6"></td>
+									
+									</tr>
+                  
 									<tr>
 										<td
-											style="text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">500
+											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">500
 											Prodotti</td>
                       <td></td>
 										<td
-											style="text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1;background: white;">3000
+											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1;background: white;">3000
 											Prodotti</td>
                       <td></td>
 										<td
-											style="padding: 0 0 0 0px; text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">Prodotti
+											style="font-weight: normal;font-size: 14px;padding: 0 0 0 0px; text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">Prodotti
 											illimitati</td>
 									
 									</tr>
 									<tr>
 										<td
-											style="text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">Spazio
+											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">Spazio
 											d'archiviazione 1GB</td>
                       <td></td>
 										<td
-											style="text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1;background: white;">Spazio
+											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1;background: white;">Spazio
 											d'archiviazione 5GB</td>
                       <td></td>
 										<td
-											style="padding: 0; text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">Spazio
+											style="font-weight: normal;font-size: 14px;padding: 0; text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">Spazio
 											d'archiviazione illimitato</td>
 									
 									</tr>
 									<tr>
 										<td
-											style="text-align: center;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; background: #ECF2F6">Larghezza
+											style="font-weight: normal;font-size: 14px;text-align: center;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; background: #ECF2F6">Larghezza
 											di banda illimitata</td>
                       <td></td>
 										<td
-											style="text-align: center;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1;background: white;">Larghezza
+											style="font-weight: normal;font-size: 14px;text-align: center;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1;background: white;">Larghezza
 											di banda illimitata</td>
                       <td></td>
 										<td
-											style="padding: 0; text-align: center;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; background: #ECF2F6">Larghezza
+											style="font-weight: normal;font-size: 14px;padding: 0; text-align: center;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; background: #ECF2F6">Larghezza
 											di banda illimitata</td>
 									
 									</tr>
@@ -274,7 +301,7 @@
 
 							</div>
               
-              <p style="font-size:20px;color:#36aad8;font-family: arial;font-weight: normal;margin-left: 10px;line-height: 3;">Offerta speciale</p>
+              <p style="font-size:35px;color:black;font-family: 'Della Respira',serif;font-weight: normal;text-align:center;margin-left: 10px;line-height: 3;">Offerta speciale</p>
               
               <div class="discount-tabel" id="content-text" style="background: transparent;margin: 20px 0 20px 0;padding: 0px">
 

@@ -17,46 +17,47 @@
 
 			<div>
 				<div id="header-menu-box">
-					<a href="./index.jsp">index<br>
-					<img height="50" width="50" style="margin-top: 23px"
+					<a href="./index.jsp">
+					<img height="50" width="50" style="margin-bottom: 5px;margin-top: 23px"
 						class="rollover"
-						src="./res_img/home_off.png"></a>
+						src="./res_img/home_off.png">
+            <br>home</a>
 				</div>
 				<div id="header-menu-box">
 					<a href="./company.jsp">
-									company<br>
+									
 					<br>
-					<img height="50" width="50" style="margin-top: 6px"
+					<img height="50" width="50" style="margin-bottom: 5px;margin-top: 3px"
 						class="rollover"
-						src="./res_img/company_off.png"></a>
+						src="./res_img/company_off.png"><br>chi siamo</a>
 				</div>
 				<div id="header-menu-box">
-					<a href="./buy.jsp">buy<br>
+					<a href="./buy.jsp">
 					<br>
-					<img height="60" width="60" style="margin-top: 6px"
-						class="rollover" src="./res_img/pig.png"></a>
+					<img height="60" width="60" style="margin-bottom: 5px;margin-top: -7px"
+						class="rollover" src="./res_img/pig.png"><br>acquista</a>
 				</div>
 				<div id="header-menu-box">
 					<a href="./docs.jsp">
-supporto<br>
+				
 					<br>
-					<img height="50" width="50" style="margin-top: 6px"
+					<img height="50" width="50" style="margin-bottom: 5px;margin-top: 4px"
 						class="rollover"
-						src="./res_img/support_off.png"></a>
+						src="./res_img/megafono.jpg"><br>in arrivo</a>
 				</div>
 				<div id="header-menu-box">
-					<a href="./support.jsp">docs<br>
+					<a href="./support.jsp">
 					<br>
-					<img height="50" width="50" style="margin-top: 6px"
+					<img height="50" width="50" style="margin-bottom: 5px;margin-top: 5px"
 						class="rollover"
-						src="./res_img/docs_off.png"></a>
+						src="./res_img/support_off.png"><br>supporto</a>
 				</div>
 				<div id="contact-form">
-				prova
-					<br>
-					<img height="67" width="90" style="margin-top: 18px"
+				
+					<img height="67" width="90" style="margin-bottom: 5px;margin-top: 14px"
 						class="rollover"
-						src="./res_img/registrazioneIcona.png">
+						src="./res_img/registrazioneIcona.png"><br> registrati
+					
 				</div>
 			</div>
 		</td>
