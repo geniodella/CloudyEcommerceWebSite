@@ -6,8 +6,8 @@ import java.util.List;
 import com.template.form.OrderForm;
 import com.template.form.ReviewPriceForm;
 import com.template.form.ShippingForm;
+import com.template.vo.OrderStatus;
 import com.template.vo.OrderVO;
-import com.template.vo.Status;
 import com.template.vo.VirtualCartProductRelationVO;
 
 /**
@@ -22,7 +22,7 @@ public interface OrderService {
 
 	void updateOrderVO(OrderVO orderVO);
 
-	List<OrderVO> getAllOrderVOs(int size, int page);
+	List<OrderVO> getAllOrderVOs(int size, int page); 
 		
 	List<OrderVO> getAllOrderVOs();
 	
@@ -49,5 +49,5 @@ public interface OrderService {
 
 	public List<OrderForm> getOrderByDate(Date insData,int customerId);
 	
-	public List<OrderForm> getOrderByShipping(Status shippingStatus,int customerId);
+	public List<OrderForm> getOrderByShipping(OrderStatus shippingStatus,int customerId);
 }

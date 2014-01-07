@@ -12,12 +12,11 @@ import org.apache.struts2.ServletActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.template.bo.customer.CustomerService;
 import com.template.bo.order.OrderService;
-import com.template.dao.UtenteDao;
 import com.template.form.LoginFormVO;
 import com.template.form.OrderForm;
 import com.template.form.ShippingForm;
 import com.template.vo.CustomerVO;
-import com.template.vo.Status;
+import com.template.vo.OrderStatus;
 import com.template.vo.UtenteVO;
 import com.template.vo.VirtualCartVO;
 
@@ -253,14 +252,16 @@ public class CustomerAction extends ActionSupport {
 
 
 
-	private Status shippingStatus;
+	private OrderStatus shippingStatus;
 
 
-	public Status getShippingStatus() {
+	
+
+	public OrderStatus getShippingStatus() {
 		return shippingStatus;
 	}
 
-	public void setShippingStatus(Status shippingStatus) {
+	public void setShippingStatus(OrderStatus shippingStatus) {
 		this.shippingStatus = shippingStatus;
 	}
 

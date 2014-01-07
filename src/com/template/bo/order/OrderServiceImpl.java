@@ -36,7 +36,6 @@ import com.template.vo.ProductImages;
 import com.template.vo.ProductVO;
 import com.template.vo.ShippingProductRelationVO;
 import com.template.vo.ShippingVO;
-import com.template.vo.Status;
 import com.template.vo.VirtualCartProductRelationVO;
 import com.template.vo.VirtualCartVO;
 
@@ -441,7 +440,7 @@ public class OrderServiceImpl implements OrderService {
 			shippingVO
 			.setMaximumDeliveryDate(shippingForm.getEndDeliveryTime());
 
-			shippingVO.setStatus(Status.HANDLING);
+			shippingVO.setOrderStatus(OrderStatus.HANDLING);
 
 			shippingVO.setAddressVO(addressVO);
 
@@ -707,7 +706,7 @@ public class OrderServiceImpl implements OrderService {
 		return listaOrdini;
 	}
 
-	public List<OrderForm> getOrderByShipping(Status shippingStatus,int customerId) {
+	public List<OrderForm> getOrderByShipping(OrderStatus shippingStatus,int customerId) {
 
 		List<OrderVO> orderVOs = orderDao.getAllOrderByCustomer(customerId);
 		List<OrderForm>listOrderByShipping=new ArrayList<OrderForm>();
@@ -721,7 +720,7 @@ public class OrderServiceImpl implements OrderService {
 
 			for (ShippingVO shippingVO : listShipping) {
 				
-				if ((shippingVO.getStatus().name()).compareTo(shippingStatus.name())==0){
+				if ((shippingVO.getOrderStatus().name()).compareTo(shippingStatus.name())==0){
 					
 					orderForm.setMinimumDeliveryDate(shippingVO.getMinimumDeliveryDate());
 					orderForm.setMaximumDeliveryDate(shippingVO.getMaximumDeliveryDate());
