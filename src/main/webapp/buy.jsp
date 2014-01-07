@@ -146,9 +146,8 @@
 		</p>
 		<div id="content">
 
-			<table style="background: transparent; border-spacing: 0;padding:0 5px">
+			<table align="center" style="background: transparent; border-spacing: 0;padding:0 5px">
 				<tr>
-					<td style="width: 50%; background: transparent"></td>
 
 					<td style="border-radius: 5px; background: transparent">
 
@@ -385,8 +384,6 @@
 		</div>
    
 					</td>
-
-					<td style="width: 100%; background: transparent"></td>
 
 				</tr>
 			</table>

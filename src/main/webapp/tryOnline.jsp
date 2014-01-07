@@ -61,14 +61,14 @@
 												'</p>'+
 												'<p style="margin-top: 30px;">'+
 													'<IMG SRC="./stickyImg" style="width: 250px;height: 60px;">'+
-													'<span style="float: right;" src="res_img/captchaLogo.png"> Qual\'è il codice dell\'immagine?</span>'+
+													'<span style="float: right;" src="res_img/captchaLogo.png"> Qual\'&egrave; il codice dell\'immagine?</span>'+
 													'<INPUT TYPE="text" NAME="captchaValue" VALUE="" placeholder="Captcha" class="customCaptcha" style="width: 175px;float: right;margin-top: -40px;padding: 10px 5px;">'+
 												
 												'</p>'+
 												'<p class="signin button">'+
 													'<input id="submitForm" style="margin-top: 20px;" type="submit" value="Registrati" />'+
 												'</p>'+
-												'<p class="change_link" style="margin-top: 30px;">Sei già registrato ?<a href="#tologin" id="registerButton" class="to_register"> Vai alla login </a>'+
+												'<p class="change_link" style="margin-top: 30px;">Sei gi&agrave; registrato ?<a href="#tologin" id="registerButton" class="to_register"> Vai alla login </a>'+
 												'</p>'+
 											'</div>'+
 
