@@ -268,20 +268,60 @@
 									<tr>
 										<td
 											style="padding: 0 0 0 95px;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; background: #ECF2F6">
-											<img style="border-radius: 5px;cursor: pointer"
-											src="res_img/bottoneAcquistaBlu.png"></img>
+										
+											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+								<input type="hidden" name="cmd" value="_xclick">
+								<input type="hidden" name="currency_code" value="EUR">
+								<input type="hidden" name="business" value="geniodella@gmail.com">  										
+<!-- 								<input type="hidden" name="cancel_return" id="cancel_return" value="'+summaryData.DOMAIN+summaryData.PAYPAL_CANCELRETURN_URL+'?orderId='+summaryData.orderId+'"> -->
+<!-- 								<input type="hidden" name="item_name" value="order number : '+summaryData.orderId+'"> -->
+<!-- 								<input type="hidden" name="custom" value="'+summaryData.orderId+'"> -->
+								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
+								 <input type="hidden" name="amount" value="30">
+								<input type="hidden" name="rm" value="2">
+<!-- 								<input type="hidden" name="notify_url" value="'+summaryData.DOMAIN+summaryData.PAYPAL_IPN_URL+'"> -->
+								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaBaseBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								
+								</form>
+											
 										</td>
                     <td></td>
 										<td
 											style="padding: 0 0 0 95px;border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: white">
-											<img style="border-radius: 5px;cursor: pointer"
-											src="res_img/bottoneAcquistaBlu.png"></img>
+											
+												<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+								<input type="hidden" name="cmd" value="_xclick">
+								<input type="hidden" name="currency_code" value="EUR">
+								<input type="hidden" name="business" value="geniodella@gmail.com">  										
+<!-- 								<input type="hidden" name="cancel_return" id="cancel_return" value="'+summaryData.DOMAIN+summaryData.PAYPAL_CANCELRETURN_URL+'?orderId='+summaryData.orderId+'"> -->
+<!-- 								<input type="hidden" name="item_name" value="order number : '+summaryData.orderId+'"> -->
+<!-- 								<input type="hidden" name="custom" value="'+summaryData.orderId+'"> -->
+								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
+								 <input type="hidden" name="amount" value="80">
+								<input type="hidden" name="rm" value="2">
+<!-- 								<input type="hidden" name="notify_url" value="'+summaryData.DOMAIN+summaryData.PAYPAL_IPN_URL+'"> -->
+								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaProfessionalBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								
+								</form>
 										</td>
                     <td></td>
 										<td
 											style="padding: 0 0 0 95px;border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">
-											<img style="border-radius: 5px;cursor: pointer"
-											src="res_img/bottoneAcquistaBlu.png"></img>
+											
+											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+								<input type="hidden" name="cmd" value="_xclick">
+								<input type="hidden" name="currency_code" value="EUR">
+								<input type="hidden" name="business" value="geniodella@gmail.com">  										
+<!-- 								<input type="hidden" name="cancel_return" id="cancel_return" value="'+summaryData.DOMAIN+summaryData.PAYPAL_CANCELRETURN_URL+'?orderId='+summaryData.orderId+'"> -->
+<!-- 								<input type="hidden" name="item_name" value="order number : '+summaryData.orderId+'"> -->
+<!-- 								<input type="hidden" name="custom" value="'+summaryData.orderId+'"> -->
+								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
+								 <input type="hidden" name="amount" value="120">
+								<input type="hidden" name="rm" value="2">
+<!-- 								<input type="hidden" name="notify_url" value="'+summaryData.DOMAIN+summaryData.PAYPAL_IPN_URL+'"> -->
+								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								
+								</form>
 										</td>
 								
 									</tr>
@@ -338,18 +378,57 @@
 									<tr>
 										<td
 											style="border-radius: 0 0 0 5px;padding: 0 0 0 105px;background: white">
-											<img style="padding-top: 5px;border-radius: 5px;cursor: pointer"
-											src="res_img/Seleziona1.png"></img>
+											
+											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+								<input type="hidden" name="cmd" value="_xclick">
+								<input type="hidden" name="currency_code" value="EUR">
+								<input type="hidden" name="business" value="geniodella@gmail.com">  										
+<!-- 								<input type="hidden" name="cancel_return" id="cancel_return" value="'+summaryData.DOMAIN+summaryData.PAYPAL_CANCELRETURN_URL+'?orderId='+summaryData.orderId+'"> -->
+<!-- 								<input type="hidden" name="item_name" value="order number : '+summaryData.orderId+'"> -->
+<!-- 								<input type="hidden" name="custom" value="'+summaryData.orderId+'"> -->
+								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
+								 <input type="hidden" name="amount" value="324">
+								<input type="hidden" name="rm" value="2">
+<!-- 								<input type="hidden" name="notify_url" value="'+summaryData.DOMAIN+summaryData.PAYPAL_IPN_URL+'"> -->
+								<input type="image" style="height:44;width:160" src="res_img/Seleziona1.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								
+								</form>
 										</td>										
 										<td
 											style="padding: 0 0 0 105px;background: white">
-											<img style="padding-top: 5px;border-radius: 5px;cursor: pointer"
-											src="res_img/Seleziona3.png"></img>
+											
+											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+								<input type="hidden" name="cmd" value="_xclick">
+								<input type="hidden" name="currency_code" value="EUR">
+								<input type="hidden" name="business" value="geniodella@gmail.com">  										
+<!-- 								<input type="hidden" name="cancel_return" id="cancel_return" value="'+summaryData.DOMAIN+summaryData.PAYPAL_CANCELRETURN_URL+'?orderId='+summaryData.orderId+'"> -->
+<!-- 								<input type="hidden" name="item_name" value="order number : '+summaryData.orderId+'"> -->
+<!-- 								<input type="hidden" name="custom" value="'+summaryData.orderId+'"> -->
+								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
+								 <input type="hidden" name="amount" value="612">
+								<input type="hidden" name="rm" value="2">
+<!-- 								<input type="hidden" name="notify_url" value="'+summaryData.DOMAIN+summaryData.PAYPAL_IPN_URL+'"> -->
+								<input type="image" style="height:44;width:160" src="res_img/Seleziona3.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								
+								</form>
 										</td>
 										<td
 											style="border-radius:0 0 5px 0;padding: 0 0 0 105px;background: white">
-											<img style="padding-top: 5px;border-radius: 5px;cursor: pointer"
-											src="res_img/Seleziona4.png"></img>
+											
+											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+								<input type="hidden" name="cmd" value="_xclick">
+								<input type="hidden" name="currency_code" value="EUR">
+								<input type="hidden" name="business" value="geniodella@gmail.com">  										
+<!-- 								<input type="hidden" name="cancel_return" id="cancel_return" value="'+summaryData.DOMAIN+summaryData.PAYPAL_CANCELRETURN_URL+'?orderId='+summaryData.orderId+'"> -->
+<!-- 								<input type="hidden" name="item_name" value="order number : '+summaryData.orderId+'"> -->
+<!-- 								<input type="hidden" name="custom" value="'+summaryData.orderId+'"> -->
+								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
+								 <input type="hidden" name="amount" value="1152">
+								<input type="hidden" name="rm" value="2">
+<!-- 								<input type="hidden" name="notify_url" value="'+summaryData.DOMAIN+summaryData.PAYPAL_IPN_URL+'"> -->
+								<input type="image" style="height:44;width:160" src="res_img/Seleziona4.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								
+								</form>
 										</td>
 									
 									</tr>
