@@ -74,7 +74,7 @@ public class InvoiceServiceImpl implements InvoiceService{
 
 
 	public void createInvoice(List<ProductDetails> prodDetails, long transactionId,List<ShippingForm> shippings,CustomerVO customerVO){
-		
+		/*
 		OrderVO orderVO = orderDao.findOrderVOById(transactionId);
 				
 		CompanyInformationVO companyInformationVO = companyInformationDao.findCompanyInformationById(1);
@@ -96,7 +96,7 @@ public class InvoiceServiceImpl implements InvoiceService{
 	                *  now render the template into a Writer, here 
 	                *  a StringWriter 
 	                */
-
+/*
 	               StringWriter writer = new StringWriter();
 	               context.put("prodDetails", prodDetails);
 	               context.put("companyInfo", companyInformationVO);
@@ -149,7 +149,7 @@ public class InvoiceServiceImpl implements InvoiceService{
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+			}*/
 	}
 
 }
