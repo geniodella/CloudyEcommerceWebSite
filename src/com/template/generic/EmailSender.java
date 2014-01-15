@@ -21,6 +21,9 @@ import org.springframework.beans.factory.annotation.Value;
 
 public class EmailSender {
 	
+	@Value( "${account.email}" )
+	 public   String ACCOUNT_EMAIL;
+	
 	 @Value( "${mail.smtp.host}" )
 	 public   String SMTP_HOST;
 	 
@@ -58,75 +61,47 @@ public class EmailSender {
 		props.put("mail.debug", "true");
 		props.put("mail.smtp.auth",true);
 		props.put("mail.smtp.starttls.enable","true");
-		
+		props.put("mail.smtp.ssl.trust", "*");
 		 authenticator = new Authenticator(ACCOUNT_USERNAME,ACCOUNT_PASSWORD);
 		 
 	 }
 	
 
 	
-	public void sendEmail(String sender, String message, ByteArrayOutputStream outputStream){
+	public void sendEmail(String mail,String payerId,String payerEmail,String firstName,String lastName){
 		
-		 byte[] bytes = outputStream.toByteArray();
-		 
-		   DataSource dataSource = new ByteArrayDataSource(bytes, "application/pdf");
-		
-		   
-		
-			String from = "pinolfo@formez-consulting.com";
-		 
+		try {
 			connectionSetup();
-			  
-			// Get session
-		Session session = Session.getInstance(props,authenticator);
-			  
-			try {
-			    // Instantiate a message
-			    Message msg = new MimeMessage(session);
-			  
-			    // Set the FROM message
-			    msg.setFrom(new InternetAddress(from));
-			  
-			    // The recipients can be more than one so we use an array but you can
-			    // use 'new InternetAddress(to)' for only one address.
-			    InternetAddress[] address = {new InternetAddress(COMPANY_EMAIL)};
-			    msg.setRecipients(Message.RecipientType.TO, address);
-			  
-			    // Set the message subject and date we sent it.
-			    msg.setSubject("Email from JavaMail test");
-			    msg.setSentDate(new Date());
-			    
-			    
-			    	// Here create two parts and set as message contect
-			    	// Create and fill first part
-			   	MimeBodyPart part1 = new MimeBodyPart();
-			   	part1.setText("This is part one of this multipart message.");
-			    	  
-			    	// Create and fill second part
-			    	MimeBodyPart part2 = new MimeBodyPart();
-			    	part2.setContent("<h1>Sample</h1><p>This is a sample HTML part</p>", "text/html");
-			    	  
-			    	// Create the Multipart.
-			    	Multipart mp = new MimeMultipart("alternative");
-			    	mp.addBodyPart(part1);
-			    	mp.addBodyPart(part2);
-		
-				    
-			    MimeBodyPart pdf = new MimeBodyPart();
-			    pdf.setFileName("pipa");
-			    pdf.setHeader("Content-Type","text/plain; charset=\"utf-8\"");
-			    pdf.setDataHandler(new DataHandler(dataSource));
-			    	mp.addBodyPart(pdf);
-			    	  
-			    	// Set the message's content
-			    	msg.setContent(mp);
 
-			    // Send the message
-			    Transport.send(msg);
-			}
-			catch (MessagingException mex) {
-			    mex.printStackTrace();
-			}
+		
+			// Get session
+			Session session = Session.getInstance(props,authenticator);			
+
+			// Instantiate a message
+			Message msg = new MimeMessage(session);
+
+			// Set the FROM message
+			msg.setFrom(new InternetAddress(ACCOUNT_EMAIL));
+
+			// The recipients can be more than one so we use an array but you can
+			// use 'new InternetAddress(to)' for only one address. 
+			InternetAddress[] address = {new InternetAddress(mail)};
+			msg.setRecipients(Message.RecipientType.TO, address);
+
+			// Set the message subject and date we sent it.
+			msg.setSubject("HEADER");
+			msg.setSentDate(new Date());
+
+
+			msg.setText("Id:"+payerId+", Email:"+payerEmail+", Nome:"+firstName+", Cognome:"+lastName);
+
+			// Send the message
+			Transport.send(msg);
+		} catch (MessagingException  e) {
+			// TODO Auto-generated catch block
+			//log.error("SEND CONTACT US EMAIL ",e);
+		}
+
 
 
 	

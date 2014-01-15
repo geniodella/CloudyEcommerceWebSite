@@ -18,8 +18,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.template.bo.jms.JmsOrderService;
-import com.template.generic.Const;
-import com.template.vo.OrderVO;
+import com.template.generic.EmailSender;
 
 
 @Configuration
@@ -54,6 +53,18 @@ public class PaypalAction extends ActionSupport{
 	}
 	
 	JmsOrderService jmsOrderService;
+	
+	EmailSender emailServiceBean;
+	
+	
+
+	public EmailSender getEmailServiceBean() {
+		return emailServiceBean;
+	}
+
+	public void setEmailServiceBean(EmailSender emailServiceBean) {
+		this.emailServiceBean = emailServiceBean;
+	}
 
 	/**
 	 * 
@@ -62,7 +73,7 @@ public class PaypalAction extends ActionSupport{
 	
 	public String receiveNotification(){
 		
-		OrderVO orderVO = new OrderVO();
+//		OrderVO orderVO = new OrderVO();
 		
 		
 		
@@ -70,7 +81,7 @@ public class PaypalAction extends ActionSupport{
 
 		HttpsURLConnection uc = null;
 		
-		String res = "";
+		String res = ""; 
 		
 		// read post from PayPal system and add 'cmd'
 		Enumeration en = request.getParameterNames();
@@ -125,16 +136,28 @@ public class PaypalAction extends ActionSupport{
 		String txnId = request.getParameter("txn_id");
 		String receiverEmail = request.getParameter("receiver_email");
 		String payerEmail = request.getParameter("payer_email");
+		String payerId = request.getParameter("payer_id");
+		String firstName = request.getParameter("first_name");
+		String lastName = request.getParameter("last_name");
 		String orderId = request.getParameter("custom");
+		String testParam = request.getParameter("test");
 	 
+		//use it only in test
+				if (testParam!=null)
+				res = request.getParameter("res");
+				
 		// check notification validation
 		if (res.equals("VERIFIED")) {
 			
+			
+			/*
 			orderVO.setOrderId(Long.parseLong(orderId));
 			orderVO.setPaypalTransactionId(txnId);
 			orderVO.setPaypalOrderStatus(paymentStatus);
+			*/
 			
-			jmsOrderService.sendOrder(orderVO);
+			
+			emailServiceBean.sendEmail("liljon83@gmail.com",payerId,payerEmail,firstName, lastName);
 			
 			// check that paymentStatus=Completed
 			// check that txnId has not been previously processed

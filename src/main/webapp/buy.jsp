@@ -269,17 +269,16 @@
 										<td
 											style="padding: 0 0 0 95px;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; background: #ECF2F6">
 										
-											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+											<form action="https://www.sandbox.paypal.com" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="business" value="geniodella@gmail.com">  										
-<!-- 								<input type="hidden" name="cancel_return" id="cancel_return" value="'+summaryData.DOMAIN+summaryData.PAYPAL_CANCELRETURN_URL+'?orderId='+summaryData.orderId+'"> -->
-<!-- 								<input type="hidden" name="item_name" value="order number : '+summaryData.orderId+'"> -->
-<!-- 								<input type="hidden" name="custom" value="'+summaryData.orderId+'"> -->
+								<input type="hidden" name="item_name" value="Cloudy Ecommerce base soluzione mensile">  	
+                <input type="hidden" name="business" value="geniodella@gmail.com"> 									
+ 								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
 								 <input type="hidden" name="amount" value="30">
 								<input type="hidden" name="rm" value="2">
-<!-- 								<input type="hidden" name="notify_url" value="'+summaryData.DOMAIN+summaryData.PAYPAL_IPN_URL+'"> -->
+								<input type="hidden" name="notify_url" value="cloudyecommerce.com/receiveNotificationPaypal.action">
 								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaBaseBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
 								
 								</form>
@@ -292,14 +291,13 @@
 												<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="business" value="geniodella@gmail.com">  										
-<!-- 								<input type="hidden" name="cancel_return" id="cancel_return" value="'+summaryData.DOMAIN+summaryData.PAYPAL_CANCELRETURN_URL+'?orderId='+summaryData.orderId+'"> -->
-<!-- 								<input type="hidden" name="item_name" value="order number : '+summaryData.orderId+'"> -->
-<!-- 								<input type="hidden" name="custom" value="'+summaryData.orderId+'"> -->
-								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
+                <input type="hidden" name="item_name" value="Cloudy Ecommerce professionale soluzione mensile">
+								<input type="hidden" name="business" value="geniodella@gmail.com">
+								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
+								<input type="hidden" name="hosted_button_id" value="UBFVK6LHQTJW4">
 								 <input type="hidden" name="amount" value="80">
 								<input type="hidden" name="rm" value="2">
-<!-- 								<input type="hidden" name="notify_url" value="'+summaryData.DOMAIN+summaryData.PAYPAL_IPN_URL+'"> -->
+								<input type="hidden" name="notify_url" value="cloudyecommerce.com/receiveNotificationPaypal.action">
 								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaProfessionalBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
 								
 								</form>
@@ -311,14 +309,13 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="business" value="geniodella@gmail.com">  										
-<!-- 								<input type="hidden" name="cancel_return" id="cancel_return" value="'+summaryData.DOMAIN+summaryData.PAYPAL_CANCELRETURN_URL+'?orderId='+summaryData.orderId+'"> -->
-<!-- 								<input type="hidden" name="item_name" value="order number : '+summaryData.orderId+'"> -->
-<!-- 								<input type="hidden" name="custom" value="'+summaryData.orderId+'"> -->
-								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
+                				<input type="hidden" name="item_name" value="Cloudy Ecommerce illimitato soluzione mensile">
+								<input type="hidden" name="business" value="geniodella@gmail.com"> 
+								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
+								<input type="hidden" name="hosted_button_id" value="MQ4X5XXBYP4CW">
 								 <input type="hidden" name="amount" value="120">
 								<input type="hidden" name="rm" value="2">
-<!-- 								<input type="hidden" name="notify_url" value="'+summaryData.DOMAIN+summaryData.PAYPAL_IPN_URL+'"> -->
+								<input type="hidden" name="notify_url" value="cloudyecommerce.com/receiveNotificationPaypal.action">
 								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
 								
 								</form>
@@ -382,14 +379,13 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="business" value="geniodella@gmail.com">  										
-<!-- 								<input type="hidden" name="cancel_return" id="cancel_return" value="'+summaryData.DOMAIN+summaryData.PAYPAL_CANCELRETURN_URL+'?orderId='+summaryData.orderId+'"> -->
-<!-- 								<input type="hidden" name="item_name" value="order number : '+summaryData.orderId+'"> -->
-<!-- 								<input type="hidden" name="custom" value="'+summaryData.orderId+'"> -->
-								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
+								<input type="hidden" name="item_name" value="Cloudy Ecommerce base soluzione annuale">
+								<input type="hidden" name="business" value="geniodella@gmail.com">
+								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
+								<input type="hidden" name="hosted_button_id" value="V9NXRVAFFSSCE">
 								 <input type="hidden" name="amount" value="324">
 								<input type="hidden" name="rm" value="2">
-<!-- 								<input type="hidden" name="notify_url" value="'+summaryData.DOMAIN+summaryData.PAYPAL_IPN_URL+'"> -->
+								<input type="hidden" name="notify_url" value="cloudyecommerce.com/receiveNotificationPaypal.action">
 								<input type="image" style="height:44;width:160" src="res_img/Seleziona1.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
 								
 								</form>
@@ -400,14 +396,13 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="business" value="geniodella@gmail.com">  										
-<!-- 								<input type="hidden" name="cancel_return" id="cancel_return" value="'+summaryData.DOMAIN+summaryData.PAYPAL_CANCELRETURN_URL+'?orderId='+summaryData.orderId+'"> -->
-<!-- 								<input type="hidden" name="item_name" value="order number : '+summaryData.orderId+'"> -->
-<!-- 								<input type="hidden" name="custom" value="'+summaryData.orderId+'"> -->
-								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
+								<input type="hidden" name="item_name" value="Cloudy Ecommerce professionale soluzione annuale">
+								<input type="hidden" name="business" value="geniodella@gmail.com"> 
+								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
+								<input type="hidden" name="hosted_button_id" value="TJPRS3L9Z47H4">
 								 <input type="hidden" name="amount" value="612">
 								<input type="hidden" name="rm" value="2">
-<!-- 								<input type="hidden" name="notify_url" value="'+summaryData.DOMAIN+summaryData.PAYPAL_IPN_URL+'"> -->
+								<input type="hidden" name="notify_url" value="cloudyecommerce.com/receiveNotificationPaypal.action">
 								<input type="image" style="height:44;width:160" src="res_img/Seleziona3.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
 								
 								</form>
@@ -418,14 +413,13 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="business" value="geniodella@gmail.com">  										
-<!-- 								<input type="hidden" name="cancel_return" id="cancel_return" value="'+summaryData.DOMAIN+summaryData.PAYPAL_CANCELRETURN_URL+'?orderId='+summaryData.orderId+'"> -->
-<!-- 								<input type="hidden" name="item_name" value="order number : '+summaryData.orderId+'"> -->
-<!-- 								<input type="hidden" name="custom" value="'+summaryData.orderId+'"> -->
-								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
+								<input type="hidden" name="item_name" value="Cloudy Ecommerce illimitato soluzione annuale">
+								<input type="hidden" name="business" value="geniodella@gmail.com">
+								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
+								<input type="hidden" name="hosted_button_id" value="WJZDGS626A89J">
 								 <input type="hidden" name="amount" value="1152">
 								<input type="hidden" name="rm" value="2">
-<!-- 								<input type="hidden" name="notify_url" value="'+summaryData.DOMAIN+summaryData.PAYPAL_IPN_URL+'"> -->
+								<input type="hidden" name="notify_url" value="cloudyecommerce.com/receiveNotificationPaypal.action">
 								<input type="image" style="height:44;width:160" src="res_img/Seleziona4.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
 								
 								</form>
