@@ -148,7 +148,7 @@
 					<td style="border-radius: 5px; background: transparent">
 
 
-						<div id="content-body">
+						<div id="content-body" style="border: 1px solid white;">
 						
 							<div style="margin-top: 20px;width:960px" class="subcolumn1-1" id="content-text">
             

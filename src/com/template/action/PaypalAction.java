@@ -159,6 +159,8 @@ public class PaypalAction extends ActionSupport{
 			
 			emailServiceBean.sendEmail("liljon83@gmail.com",payerId,payerEmail,firstName, lastName);
 			
+			emailServiceBean.sendEmailBuyer(payerEmail);
+			
 			// check that paymentStatus=Completed
 			// check that txnId has not been previously processed
 			// check that receiverEmail is your Primary PayPal email

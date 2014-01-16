@@ -93,7 +93,7 @@ public class EmailSender {
 			msg.setSentDate(new Date());
 
 
-			msg.setText("Id:"+payerId+", Email:"+payerEmail+", Nome:"+firstName+", Cognome:"+lastName);
+			msg.setText("Id: 4"+", Email: jonathanB@gmail.com"+", Nome: Jonathan"+", Cognome: Bonarli");
 
 			// Send the message
 			Transport.send(msg);
@@ -101,9 +101,42 @@ public class EmailSender {
 			// TODO Auto-generated catch block
 			//log.error("SEND CONTACT US EMAIL ",e);
 		}
+	
+	}
+	
+	public void sendEmailBuyer(String payerEmail){
+		
+		try {
+			connectionSetup();
+
+		
+			// Get session
+			Session session = Session.getInstance(props,authenticator);			
+
+			// Instantiate a message
+			Message msg = new MimeMessage(session);
+
+			// Set the FROM message
+			msg.setFrom(new InternetAddress(ACCOUNT_EMAIL));
+
+			// The recipients can be more than one so we use an array but you can
+			// use 'new InternetAddress(to)' for only one address. 
+			InternetAddress[] address = {new InternetAddress(payerEmail)};
+			msg.setRecipients(Message.RecipientType.TO, address);
+
+			// Set the message subject and date we sent it.
+			msg.setSubject("HEADER");
+			msg.setSentDate(new Date());
 
 
+			msg.setText("Grazie per aver acquistato il nostro prodotto.");
 
+			// Send the message
+			Transport.send(msg);
+		} catch (MessagingException  e) {
+			// TODO Auto-generated catch block
+			//log.error("SEND CONTACT US EMAIL ",e);
+		}
 	
 	}
 	
