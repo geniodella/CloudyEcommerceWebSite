@@ -172,7 +172,7 @@ Le spiccate capacita di problem solving in seguito a svariati anni di lavoro su 
                   
                    <p style="color:black;text-align: left;font-size: 12px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 50px;">
  tecnica all'avanguardia e all'utilizzo di tecniche di continous integration fanno si che la gestione di progetti complessi in tutte le sue fasi diventi un percorso fattibile e non come in molti casi un incubo. 
-CloudyEcommerce è il primo dei nostri progetti ma abbiamo in cantiere un gioco su facebook oltre a tutta una serie du funzionalitá aggiuntive per CloudyEcommerce che sono illustrate nell'apposito link e volta per volta viene aggiornato quando le funzionalita vengono ultimate o quando ne stanno arrivando di nuove.
+CloudyEcommerce è il primo dei nostri progetti ma abbiamo in cantiere un gioco su facebook oltre a tutta una serie di funzionalitá aggiuntive per CloudyEcommerce che sono illustrate nell'apposito link e volta per volta viene aggiornato quando le funzionalita vengono ultimate o quando ne stanno arrivando di nuove.
 </p> 
                   
                     </div>
