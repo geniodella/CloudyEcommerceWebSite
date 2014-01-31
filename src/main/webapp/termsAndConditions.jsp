@@ -210,17 +210,16 @@
 				              3.Modalit&agrave; d'acquisto
 				              </h1>
 				              <p style="color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 13px;">
-							3.1 Per poter utilizzare la piattaforma CloudyEcommerce, il Cliente deve selezionare un profilo mensile o annuale tra quelli disponibili sul Sito, creare un account Cliente mediante compilazione del modulo di registrazione disponibile sul Sito e indicare il nome a dominio su cui installare la piattaforma CloudyEcommerce. Il Cliente pu&ograve; decidere di installare la piattaforma CloudyEcommerce su un nome a dominio gi&agrave; in suo possesso.
-</br>3.2 Ai fini della creazione di un account Cliente, il Cliente, come richiesto nel modulo di registrazione, deve fornire un indirizzo email e una password. Il Cliente &egrave; responsabile della sicurezza del proprio account Cliente e della password prescelta, dei propri file, di tutti gli usi del proprio account Cliente e dei Servizi. CloudyEcommerce si riserva il diritto di rifiutare o cancellare la registrazione degli account Cliente che ritenga non adeguati.
-</br>3.3 Dopo aver creato un account Cliente e indicato il nome a dominio su cui installare la piattaforma CloudyEcommerce, oppure scelto di installare la piattaforma su un nome a dominio gi&agrave; in suo possesso, il Cliente dovr&agrave; selezionare la modalit&agrave; di pagamento desiderata, in conformit&agrave; a quanto disposto nel paragrafo 4. Una volta presa visione delle Condizioni Generali, il Cliente dovr&agrave; selezionare l'opzione "Invia Ordine"
+							3.1 Per poter utilizzare la piattaforma CloudyEcommerce, il Cliente deve selezionare un profilo mensile o annuale tra quelli disponibili sul Sito, successivamente ricever‡ una email dove risponder‡ a una email dove indicher‡ il nome a dominio su cui installare la piattaforma CloudyEcommerce. Il Cliente pu&ograve; decidere di installare la piattaforma CloudyEcommerce su un nome a dominio gi&agrave; in suo possesso.
+
 								 </p>
                  
                  	<h1 style="margin-top: 20px;color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 24px; line-height: 25px; padding: 0 13px;text-align:left">
 				              4. Prezzo e modalit&agrave; di pagamento
 				              </h1>
 				              <p style="color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 13px;">
-						4.1 I prezzi dei Servizi sono espressi nel Sito in Euro e non includono le tasse, ove applicabili. Il pagamento dei Servizi potr&agrave; essere effettuato con carta di credito, secondo le opzioni indicate sul Sito, oppure con PayPal
-</br>4.2 CloudyEcommerce si impegna a fornire la piattaforma entro e non oltre quarantotto ore dall'accettazione dell'ordine da parte di CloudyEcommerce.
+						4.1 I prezzi dei Servizi sono espressi nel Sito in Euro e includono le tasse, ove applicabili. Il pagamento dei Servizi potr&agrave; essere effettuato con carta di credito, secondo le opzioni indicate sul Sito, oppure con PayPal
+</br>4.2 CloudyEcommerce si impegna a fornire la piattaforma entro e non oltre settantadue ore dall'accettazione dell'ordine da parte di CloudyEcommerce.
 								 </p>
                  
                  	<h1 style="margin-top: 20px;color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 24px; line-height: 25px; padding: 0 13px;text-align:left">
@@ -279,9 +278,7 @@
 							11.1 CloudyEcommerce potr&agrave; procedere, a sua insindacabile discrezione, alla disattivazione di un account Cliente qualora ritenga che il medesimo violi diritti di terzi o sia in altro modo contrario alla legge, o qualora richiesto dalle autorit&agrave; competenti.
 </br>11.2 CloudyEcommerce potr&agrave; disattivare l'account Cliente anche nel caso in cui il Cliente non provveda al saldo delle ultime due o pi√π fatture.
 </br>11.3 Il Cliente potr&agrave; recedere dal contratto in qualunque momento secondo le seguenti modalit&agrave;:
-</br>invio di una email a info@CloudyEcommerce.com;
-</br> invio di una comunicazione scritta all'indirizzo S.C. CloudyEcommerce S.r.l., Strada Gheorghe Lazar Nr.1 Ap. 2 - Zip Code: 300078 - Timisoara - Romania;
-</br> richiesta di disattivazione dell'account direttamente dalla sua area Cliente.
+</br>invio di una email a admin@CloudyEcommerce.com
 </br>11.4 In caso di recesso, il Cliente non ha diritto alla restituzione del prezzo corrisposto ad CloudyEcommerce n&egrave; ad alcun rimborso.
 </br>11.5 In caso di disattivazione di un account cliente o di recesso, CloudyEcommerce potr&agrave; cancellare tutti i dati archiviati dei Clienti entro 30 giorni dalla data di disattivazione o recesso. In caso di disattivazione dell'account cliente per le ragioni indicate nel paragrafo 11.2 che precede, CloudyEcommerce provveder&agrave; alla cancellazione immediata di tutti i dati del Cliente.
 								 </p>
@@ -325,9 +322,7 @@
 				              16.Contatti
 				              </h1>
 				              <p style="color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 13px;">
-							16.1 Per ulteriori informazioni ed assistenza sul Sito o sulle modalit&agrave; di acquisto dei Servizi on-line il Cliente pu&ograve; contattare CloudyEcommerce al seguente indirizzo e-mail: info@CloudyEcommerce.com, oppure scrivere al seguente indirizzo:
-</br>S.C. CloudyEcommerce S.r.l.
-</br>Str Cosminului nr. 3, et. P, Ap. CAM. 5A
+							16.1 Per ulteriori informazioni ed assistenza sul Sito o sulle modalit&agrave; di acquisto dei Servizi on-line il Cliente pu&ograve; contattare CloudyEcommerce al seguente indirizzo e-mail: admin@CloudyEcommerce.com
 								 </p>
 						
                     </div>
