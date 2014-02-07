@@ -56,7 +56,7 @@
 				
 					<img height="67" width="90" style="margin-bottom: 5px;margin-top: 14px"
 						class="rollover"
-						src="./res_img/registrazioneIcona.png"><br> registrati
+						src="./res_img/registrazioneIcona.png"><br> prova
 					
 				</div>
 			</div>
