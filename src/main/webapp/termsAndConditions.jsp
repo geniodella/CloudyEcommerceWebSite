@@ -68,7 +68,7 @@
 												'<p class="signin button">'+
 													'<input id="submitForm" style="margin-top: 20px;" type="submit" value="Registrati" />'+
 												'</p>'+
-												'<p class="change_link" style="margin-top: 30px;">Sei gi&agrave; registrato ?<a href="#tologin" class="to_register"> Vai alla login </a>'+
+												'<p class="change_link" style="margin-top: 30px;">Sei gi&agrave; registrato ?<a href="#tologin" id="registerButton" class="to_register"> Vai alla login </a>'+
 												'</p>'+
 											'</div>'+
 
@@ -79,6 +79,10 @@
 							'</div>'+
 						'</body>'+
 						'</html>';
+						
+						$('#registerButton').live('click', function(){	
+							window.location.href="/24777_BackSite";
+						});
 					
 					
 						$('#roleForm').live('submit', function(){		          
@@ -210,7 +214,7 @@
 				              3.Modalit&agrave; d'acquisto
 				              </h1>
 				              <p style="color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 13px;">
-							3.1 Per poter utilizzare la piattaforma CloudyEcommerce, il Cliente deve selezionare un profilo mensile o annuale tra quelli disponibili sul Sito, successivamente riceverà una email dove risponderà a una email dove indicherà il nome a dominio su cui installare la piattaforma CloudyEcommerce. Il Cliente pu&ograve; decidere di installare la piattaforma CloudyEcommerce su un nome a dominio gi&agrave; in suo possesso.
+							3.1 Per poter utilizzare la piattaforma CloudyEcommerce, il Cliente deve selezionare un profilo mensile o annuale tra quelli disponibili sul Sito, successivamente riceverï¿½ una email dove risponderï¿½ a una email dove indicherï¿½ il nome a dominio su cui installare la piattaforma CloudyEcommerce. Il Cliente pu&ograve; decidere di installare la piattaforma CloudyEcommerce su un nome a dominio gi&agrave; in suo possesso.
 
 								 </p>
                  
