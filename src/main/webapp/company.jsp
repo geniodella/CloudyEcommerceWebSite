@@ -68,7 +68,7 @@
 												'<p class="signin button">'+
 													'<input id="submitForm" style="margin-top: 20px;" type="submit" value="Registrati" />'+
 												'</p>'+
-												'<p class="change_link" style="margin-top: 30px;">Sei già registrato ?<a href="#tologin" class="to_register"> Vai alla login </a>'+
+												'<p class="change_link" style="margin-top: 30px;">Sei già registrato ?<a href="#tologin" id="registerButton" class="to_register"> Vai alla login </a>'+
 												'</p>'+
 											'</div>'+
 
@@ -79,6 +79,10 @@
 							'</div>'+
 						'</body>'+
 						'</html>';
+						
+						$('#registerButton').live('click', function(){	
+							window.location.href="/24777_BackSite";
+						});
 					
 					
 						$('#roleForm').live('submit', function(){		          
@@ -152,17 +156,17 @@
 						
 							<div style="margin-top: 20px;" class="subcolumn1-1" id="content-text">
 
-             				 <h1 style="color:#46565F;font-weight:bold;font-size: 20px; line-height: 25px; padding: 0 50px;text-align:left">
+             				 <h1 style="color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 24px; line-height: 25px; padding: 0 50px;text-align:left">
 				              LA NOSTRA OFFERTA
 				              </h1>
-				              <p style="color:black;text-align: left;font-size: 12px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 50px;">
-								Il settore dell'Information technology è in continua evoluzione a una velocità sempre piu rapida nuove tecnologie e nuovi dispoisitivi si affacciano sul mercato ogni giorno ed è sempre piu difficile tenersi al passo.
+				              <p style="width: 870px;font-weight:normal;color:black;text-align: left;font-family:Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 50px;">
+								Il settore dell'Information technology è in continua evoluzione a una velocità sempre piu rapida nuove tecnologie e nuovi dispositivi si affacciano sul mercato ogni giorno ed è sempre piu difficile tenersi al passo.
                 Noi siamo una realta giovane sul mercato ma con molti anni di esperienza tecnica. Ci occupiamo di costruire architetture enterprise, mobile e distribuite.
 							</p>
 
 								<br>
                 <div style="width: 980px;">
-                <p style="color:black;text-align: left;font-size: 12px; line-height: 25px;margin-bottom: 0px; margin-top: 0px;padding: 0 0px 0 50px;width: 350px;float: left;">                                                                                                                        
+                <p style="font-weight:normal;color:black;text-align: left;font-family:Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px;margin-bottom: -1px; margin-top: 0px;padding: 0 0px 0 50px;width: 350px;float: left;">                                                                                                                        
                 Attualmente abbiamo già disponibile una architettura enterprise che è quella su cui è basato CloudyEcommerce e inoltre una architettura mobile che ci permette di creare applicativi deploiabili su piu dispositivi differenti in totale trasparenza. Lavoriamo principalmente con tecnologie java , javascript, html css. I servizi che offriamo vanno dalla consulenza in analisi o sviluppo di sofware alla vendita di architetture e componenti software. 
 Le spiccate capacita di problem solving in seguito a svariati anni di lavoro su differenti progetti enterprise per realtà informatiche medio grandi uniti all'utilizzo di metodologie di analisi funzionale e 
  </p>
@@ -170,7 +174,7 @@ Le spiccate capacita di problem solving in seguito a svariati anni di lavoro su 
  <img style="width: 550px;float: right;margin-right: 10px;" 
 									src="./res_img/diagramma.png">
                   
-                   <p style="color:black;text-align: left;font-size: 12px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 50px;">
+                   <p style="width: 875px;font-weight:normal;color:black;text-align: left;font-family:Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 50px;">
  tecnica all'avanguardia e all'utilizzo di tecniche di continous integration fanno si che la gestione di progetti complessi in tutte le sue fasi diventi un percorso fattibile e non come in molti casi un incubo. 
 CloudyEcommerce è il primo dei nostri progetti ma abbiamo in cantiere un gioco su facebook oltre a tutta una serie di funzionalitá aggiuntive per CloudyEcommerce che sono illustrate nell'apposito link e volta per volta viene aggiornato quando le funzionalita vengono ultimate o quando ne stanno arrivando di nuove.
 </p> 
@@ -178,8 +182,8 @@ CloudyEcommerce è il primo dei nostri progetti ma abbiamo in cantiere un gioco s
                     </div>
 							</div>
               
-              	<ul style="display: inline-block;">
-                    <p>TECNOLOGIE LATO SERVER</p>
+              	     <ul style="padding: 0 0px 0 80px;font-family:Verdana, Arial, Helvetica, sans-serif;font-weight:normal;display: inline-block;">
+                    <p style="font-family: 'Della Respira',serif;font-weight:bold;">TECNOLOGIE LATO SERVER</p>
                          <li style="list-style: disc outside none;font-size: 13px;">J2EE</li>
                          <li style="list-style: disc outside none;font-size: 13px;">JMS</li>
                          <li style="list-style: disc outside none;font-size: 13px;">Hibernate</li>
@@ -189,16 +193,16 @@ CloudyEcommerce è il primo dei nostri progetti ma abbiamo in cantiere un gioco s
                          <li style="list-style: disc outside none;font-size: 13px;">Quartz scheduling framework</li>
                          <li style="list-style: disc outside none;font-size: 13px;">OSGI</li>
                       </ul>
-                      <ul style="display: inline-block;padding: 0 140px;line-height: 2;">   
-                         <p>TECNOLOGIE CLIENT E MOBILE</p>
+                      <ul style="font-weight:normal;display: inline-block;padding:0 90px 0 120px;line-height: 2.39;">   
+                         <p style="font-family: 'Della Respira',serif;font-weight:bold;">TECNOLOGIE CLIENT E MOBILE</p>
                          <li style="list-style: disc outside none;font-size: 13px;">Ext JS</li>
                          <li style="list-style: disc outside none;font-size: 13px;">Sencha Touch</li>
                          <li style="list-style: disc outside none;font-size: 13px;">jQuery</li>
                          <li style="list-style: disc outside none;font-size: 13px;">Android</li>
                          <li style="list-style: disc outside none;font-size: 13px;">Javascript</li>
                      </ul>    
-                    <ul style="display: inline-block;line-height: 1.7;">     
-                         <p>CONTINUOUS INTEGRATION</p>
+                    <ul style="font-weight:normal;display: inline-block;line-height: 1.9;">     
+                         <p style="font-family: 'Della Respira',serif;font-weight:bold;">CONTINUOUS INTEGRATION</p>
                          <li style="list-style: disc outside none;font-size: 13px;">Maven</li>
                          <li style="list-style: disc outside none;font-size: 13px;">Ant</li>
                          <li style="list-style: disc outside none;font-size: 13px;">Hudson</li>

@@ -56,6 +56,8 @@
 			hideOnMouseOut: true
 		}
 	});
+	
+	 hs.allowMultipleInstances = false;
              
 </script>
 

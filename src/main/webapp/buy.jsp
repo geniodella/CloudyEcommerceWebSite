@@ -69,7 +69,7 @@
 												'<p class="signin button">'+
 													'<input id="submitForm" style="margin-top: 20px;" type="submit" value="Registrati" />'+
 												'</p>'+
-												'<p class="change_link" style="margin-top: 30px;">Sei già registrato ?<a href="#tologin" class="to_register"> Vai alla login </a>'+
+												'<p class="change_link" style="margin-top: 30px;">Sei già registrato ?<a href="#tologin" id="registerButton" class="to_register"> Vai alla login </a>'+
 												'</p>'+
 											'</div>'+
 
@@ -80,6 +80,10 @@
 							'</div>'+
 						'</body>'+
 						'</html>';
+						
+						$('#registerButton').live('click', function(){	
+							window.location.href="/24777_BackSite";
+						});
 					
 					
 						$('#roleForm').live('submit', function(){		          
