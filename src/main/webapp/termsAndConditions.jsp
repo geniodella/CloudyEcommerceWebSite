@@ -287,46 +287,35 @@
 </br>11.5 In caso di disattivazione di un account cliente o di recesso, CloudyEcommerce potr&agrave; cancellare tutti i dati archiviati dei Clienti entro 30 giorni dalla data di disattivazione o recesso. In caso di disattivazione dell'account cliente per le ragioni indicate nel paragrafo 11.2 che precede, CloudyEcommerce provveder&agrave; alla cancellazione immediata di tutti i dati del Cliente.
 								 </p>
                  
+                 
+                 
                  	<h1 style="margin-top: 20px;color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 24px; line-height: 25px; padding: 0 13px;text-align:left">
-				              12. Esportazione dei dati.
+				              12.Garanzia
 				              </h1>
 				              <p style="color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 13px;">
-							12.1 A seguito della cessazione dei Servizi o in qualunque altra circostanza, il Cliente sar&agrave; abilitato ad esportare i seguenti tipi di dati:
-</br> lista clienti in formato csv/xml;
-</br>lista prodotti in formato csv/xml;
-</br> cartella immagini dei prodotti;
-</br> cartella immagini del template;
-</br> files della piattaforma Magento community edition alla base della propria installazione CloudyEcommerce.
-</br> 12.2 Al Cliente non sar&agrave; in nessun caso consentita l'esportazione dei moduli CloudyEcommerce contenuti nella cartella /app e delle sue sottocartelle. Qualora il cliente volesse cambiare le modalit&agrave; di utilizzo della piattaforma o comunque continuare ad usarla attraverso modalit&agrave; diverse da quelle normalmente incluse nei Servizi, potr&agrave; accordarsi con CloudyEcommerce sul costo e le modalit&agrave; di cessione della stessa.
+						12.1 Il Cliente utilizza i Servizi a proprio rischio. CloudyEcommerce si impegna a fornire in modo continuativo i Servizi, senza, tuttavia, assumere alcun obbligo al riguardo. In particolare, CloudyEcommerce non fornisce alcuna garanzia in merito alla funzionalit&agrave; del Sito, dei moduli, codici e grafiche di propriet&agrave; di CloudyEcommerce e dei Servizi, o all'assenza di errori nel Sito.
 								 </p>
                  
                  	<h1 style="margin-top: 20px;color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 24px; line-height: 25px; padding: 0 13px;text-align:left">
-				              13.Garanzia
+				              13.Disposizioni finali
 				              </h1>
 				              <p style="color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 13px;">
-						13.1 Il Cliente utilizza i Servizi a proprio rischio. CloudyEcommerce si impegna a fornire in modo continuativo i Servizi, senza, tuttavia, assumere alcun obbligo al riguardo. In particolare, CloudyEcommerce non fornisce alcuna garanzia in merito alla funzionalit&agrave; del Sito, dei moduli, codici e grafiche di propriet&agrave; di CloudyEcommerce e dei Servizi, o all'assenza di errori nel Sito.
+							13.1 Qualora una parte delle Condizioni Generali dovesse essere inapplicabile, tutte le altre parti rimarranno valide ed efficaci tra le parti.
 								 </p>
                  
                  	<h1 style="margin-top: 20px;color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 24px; line-height: 25px; padding: 0 13px;text-align:left">
-				              14.Disposizioni finali
+				               14.Legge applicabile e foro competente
 				              </h1>
 				              <p style="color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 13px;">
-							14.1 Qualora una parte delle Condizioni Generali dovesse essere inapplicabile, tutte le altre parti rimarranno valide ed efficaci tra le parti.
+							14.1 Le presenti Condizioni Generali sono regolate dalla legge italiana e devono essere interpretate in conformit&agrave; con le leggi italiane.
+  </br>14.2 Per le controversie derivanti dall'interpretazione, validit&agrave; e/o esecuzione, delle presenti Condizioni Generali sar&agrave; competente il foro di Roma.
 								 </p>
                  
                  	<h1 style="margin-top: 20px;color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 24px; line-height: 25px; padding: 0 13px;text-align:left">
-				               15.Legge applicabile e foro competente
+				              15.Contatti
 				              </h1>
 				              <p style="color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 13px;">
-							15.1 Le presenti Condizioni Generali sono regolate dalla legge italiana e devono essere interpretate in conformit&agrave; con le leggi italiane.
-  </br>15.2 Per le controversie derivanti dall'interpretazione, validit&agrave; e/o esecuzione, delle presenti Condizioni Generali sar&agrave; competente il foro di Roma.
-								 </p>
-                 
-                 	<h1 style="margin-top: 20px;color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 24px; line-height: 25px; padding: 0 13px;text-align:left">
-				              16.Contatti
-				              </h1>
-				              <p style="color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 13px;">
-							16.1 Per ulteriori informazioni ed assistenza sul Sito o sulle modalit&agrave; di acquisto dei Servizi on-line il Cliente pu&ograve; contattare CloudyEcommerce al seguente indirizzo e-mail: admin@CloudyEcommerce.com
+							15.1 Per ulteriori informazioni ed assistenza sul Sito o sulle modalit&agrave; di acquisto dei Servizi on-line il Cliente pu&ograve; contattare CloudyEcommerce al seguente indirizzo e-mail: admin@CloudyEcommerce.com
 								 </p>
 						
                     </div>
