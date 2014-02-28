@@ -54,11 +54,11 @@
                         						'<div id="error-container"></div>'+
 												'<p>'+
 													'<label for="usernamesignup" class="uname" data-icon="u">Nome Utente</label>'+ 
-													'<input id="usernamesignup" name="username" required="required" type="text" placeholder="mysuperusername690" />'+
+													'<input id="usernamesignup" name="username" required="required" type="text" placeholder="username" />'+
 												'</p>'+
 												'<p>'+
 													'<label for="emailsignup" class="youmail" data-icon="e">Indirizzo email</label>'+ 
-													'<input id="emailsignup" name="mail" required="required" type="email" placeholder="mysupermail@mail.com" />'+
+													'<input id="emailsignup" name="mail" required="required" type="email" placeholder="email" />'+
 												'</p>'+
 												'<p style="margin-top: 30px;">'+
 													'<IMG SRC="./stickyImg" style="width: 250px;height: 60px;">'+
