@@ -38,8 +38,14 @@ public class EmailSender {
 	 @Value( "${company.address}" )
 	 public   String COMPANY_EMAIL;
 	 
+
+	 @Value("${mail.smtp.port}")
+	 public   String SMTP_PORT;
+	 
 	 @Value( "${account.username}" )
 	 public   String ACCOUNT_USERNAME;
+	 
+	 
 	 
 	 @Value( "${account.password}" )
 	 public   String ACCOUNT_PASSWORD;
@@ -59,6 +65,7 @@ public class EmailSender {
 			 props = new Properties();
 			props.put("mail.smtp.host", SMTP_HOST);
 		props.put("mail.debug", "true");
+		props.put("mail.smtp.port",SMTP_PORT);
 		props.put("mail.smtp.auth",true);
 		props.put("mail.smtp.starttls.enable","true");
 		props.put("mail.smtp.ssl.trust", "*");
