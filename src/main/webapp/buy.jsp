@@ -436,8 +436,8 @@
 
 						</div>
 
-						  <div id="content-footer">
-			<a style="float: left;"><img style="margin: 10px;"src="./res_img/creditCards.png"
+						  <div id="content-footer" style="margin-top: -15px;">
+			<a style="float: left;"><img style="margin: 10px;"src="./res_img/creditCards.png">
 				
 								<!-- AddThis Button BEGIN -->
 				<div style="margin-right: 30px;margin-top: 10px;margin-left: 100px;width: 250px;display: inline-block;" class="addthis_toolbox addthis_default_style addthis_32x32_style">

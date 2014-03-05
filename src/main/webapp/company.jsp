@@ -212,7 +212,7 @@ CloudyEcommerce è il primo dei nostri progetti ma abbiamo in cantiere un gioco s
                     </ul>
 
 							    <div id="content-footer">
-			<a style="float: left;"><img style="margin: 10px;"src="./res_img/creditCards.png"
+			<a style="float: left;"><img style="margin: 10px;"src="./res_img/creditCards.png">
 				
 								<!-- AddThis Button BEGIN -->
 				<div style="margin-right: 30px;margin-top: 10px;margin-left: 100px;width: 250px;display: inline-block;" class="addthis_toolbox addthis_default_style addthis_32x32_style">
