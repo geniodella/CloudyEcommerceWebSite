@@ -154,7 +154,7 @@
 
 						<div id="content-body" style="border: 1px solid white;">
 						
-							<div style="margin-top: 20px;width:960px" class="subcolumn1-1" id="content-text">
+							<div style="margin-top: 20px;width:960px;height: 3730px;" class="subcolumn1-1" id="content-text">
                  <h1 style="color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 30px; line-height: 25px; padding: 0 50px;text-align:center;margin-bottom:60px;">
 				              Termini e condizioni del servizio CloudyEcommerce
 				              </h1> 
