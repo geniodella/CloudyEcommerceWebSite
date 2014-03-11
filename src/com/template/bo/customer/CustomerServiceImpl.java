@@ -237,6 +237,10 @@ public class CustomerServiceImpl implements CustomerService {
 		
 	}
 	
+	public CustomerVO findCustomerVOCredentials(String username){
+		return customerDao.findCustomerByCredentials(username);
+	}
+	
 	
 	public CustomerVO insertAnonymousCustomer(){
 		

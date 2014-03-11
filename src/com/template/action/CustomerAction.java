@@ -289,7 +289,11 @@ public class CustomerAction extends ActionSupport {
 			success = false;
 			return "success";
 
-		}else{
+		}else 
+			if (checkUsernameCustomerExistence(username) == 1){
+				success = false;
+				return "success";
+			}else{
 
 			customerServiceBean.insertCustomerVO(mail, username, password);
 			success = true;
@@ -371,6 +375,15 @@ public class CustomerAction extends ActionSupport {
 		UtenteVO utenteVO = customerServiceBean.findUtenteVObyEmail(email);
  
 		if(null!= utenteVO) 
+			return 1;
+		else
+			return 0;
+	}
+	
+	private int checkUsernameCustomerExistence(String username) {
+		CustomerVO customerVO = customerServiceBean.findCustomerVOCredentials(username);
+
+		if(null!= customerVO) 
 			return 1;
 		else
 			return 0;

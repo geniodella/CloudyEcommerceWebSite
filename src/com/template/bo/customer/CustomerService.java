@@ -18,6 +18,8 @@ public interface CustomerService {
 	
 	public CustomerVO insertAnonymousCustomer();
 	
+	public CustomerVO findCustomerVOCredentials(String username);
+	
 	
 	List<CustomerVO> getAllCustomerVOs();
 
