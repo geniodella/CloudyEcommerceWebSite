@@ -237,8 +237,8 @@ public class CustomerServiceImpl implements CustomerService {
 		
 	}
 	
-	public CustomerVO findCustomerVOCredentials(String username){
-		return customerDao.findCustomerByCredentials(username);
+	public CredentialsVO findCustomerVOCredentials(String username){
+		return customerDao.checkCustomerByCredentials(username);
 	}
 	
 	

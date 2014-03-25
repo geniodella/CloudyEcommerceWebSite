@@ -20,6 +20,8 @@
 			
 		
 			$("#contact-form").click(function(){
+				
+				var random = Math.floor((Math.random()*100)+1);
 				var html=
 					'<!DOCTYPE html>'+
 					
@@ -60,7 +62,7 @@
 												'<input id="emailsignup" name="mail" required="required" type="email" placeholder="email" />'+
 											'</p>'+
 											'<p style="margin-top: 30px;">'+
-												'<IMG SRC="./stickyImg" style="width: 250px;height: 60px;">'+
+												'<IMG SRC="./stickyImg?'+random+'" style="width: 250px;height: 60px;" id="captchaId">'+
 												'<span style="float: right;" src="res_img/captchaLogo.png"> Qual\'è il codice dell\'immagine?</span>'+
 												'<INPUT TYPE="text" NAME="captchaValue" VALUE="" placeholder="Captcha" class="customCaptcha" style="width: 175px;float: right;margin-top: -40px;padding: 10px 5px;">'+
 											
@@ -79,16 +81,20 @@
 						'</div>'+
 					'</body>'+
 					'</html>';
-				
-				
+					
 					$('#registerButton').live('click', function(){	
 						window.location.href="/24777_BackSite";
 					});
+				
 					
+					$('#roleForm').die('submit');
 					
-					$('#roleForm').live('submit', function(){		          
+					$('#roleForm').live('submit', function(event){	
+						
+						 $(this).find('input[type=submit]').attr('disabled', 'disabled');
+						
 						var formData = $("#roleForm").serializeArray();	
-           				if(event.handled !== true){   
+          				if(event.handled !== true){   
 					    	$.ajax({
 					            type: 'POST',
 					            url: 'Customer.action',
@@ -108,9 +114,13 @@
 					                	next();
 					          	    });
 			                      }
-              	      			  else if(data.success==false){
+              	      		  else if(data.success==false){
+              	      		   $('input[type="submit"]').removeAttr('disabled');
+              	      			  
                                     if(data.msg==1){
         			                    	  $('#error-container').html('Il captcha che hai inserito è errato!').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
+              						}else if (data.msg==2){
+              							 $('#error-container').html('Utente esistente!').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
               						}
                                     else{
               			                 $('#error-container').html('Email esistente!').append(' Inserire una nuova email.').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
@@ -119,8 +129,8 @@
                                   event.handled = true;
 			                    }	                          
 					       });
-             			  }
-           				return false;
+            			  }
+          				return false;
 					});    
 				
 					
@@ -135,6 +145,8 @@
 					},
 					overlayClose:false
 				});
+				
+				
 				
 				
 			});
@@ -166,7 +178,7 @@
 							 
             Se hai domande o se hai bisogno di aiuto, puoi contare sul nostro supporto clienti 
             il quale garantisce un servizio rapido e professionale per tutti i clienti .
-             Il modo pi&ugrave; veloce per ottenere una risposta efficace &egrave; contattarci tramite email all'indirizzo ... o skype .....
+             Il modo pi&ugrave; veloce per ottenere una risposta efficace &egrave; contattarci tramite email all'indirizzo admin@cloudyecommerce.com
              
       				</p>
 

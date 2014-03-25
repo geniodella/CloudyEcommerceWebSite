@@ -288,6 +288,10 @@
 					<groupId>com.sun</groupId>
 					<artifactId>tools</artifactId>
 				</exclusion>
+				<exclusion>
+					<artifactId>javassist</artifactId>
+					<groupId>javassist</groupId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 

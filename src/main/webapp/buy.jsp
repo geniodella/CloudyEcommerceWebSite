@@ -21,6 +21,8 @@
 			
 		
 				$("#contact-form").click(function(){
+					
+					var random = Math.floor((Math.random()*100)+1);
 					var html=
 						'<!DOCTYPE html>'+
 						
@@ -61,7 +63,7 @@
 													'<input id="emailsignup" name="mail" required="required" type="email" placeholder="email" />'+
 												'</p>'+
 												'<p style="margin-top: 30px;">'+
-													'<IMG SRC="./stickyImg" style="width: 250px;height: 60px;">'+
+													'<IMG SRC="./stickyImg?'+random+'" style="width: 250px;height: 60px;" id="captchaId">'+
 													'<span style="float: right;" src="res_img/captchaLogo.png"> Qual\'è il codice dell\'immagine?</span>'+
 													'<INPUT TYPE="text" NAME="captchaValue" VALUE="" placeholder="Captcha" class="customCaptcha" style="width: 175px;float: right;margin-top: -40px;padding: 10px 5px;">'+
 												
@@ -85,10 +87,15 @@
 							window.location.href="/24777_BackSite";
 						});
 					
-					
-						$('#roleForm').live('submit', function(){		          
+						
+						$('#roleForm').die('submit');
+						
+						$('#roleForm').live('submit', function(event){	
+							
+							 $(this).find('input[type=submit]').attr('disabled', 'disabled');
+							
 							var formData = $("#roleForm").serializeArray();	
-               				if(event.handled !== true){   
+              				if(event.handled !== true){   
 						    	$.ajax({
 						            type: 'POST',
 						            url: 'Customer.action',
@@ -108,9 +115,13 @@
 						                	next();
 						          	    });
 				                      }
-	              	      			  else if(data.success==false){
+	              	      		  else if(data.success==false){
+	              	      		   $('input[type="submit"]').removeAttr('disabled');
+	              	      			  
 	                                    if(data.msg==1){
 	        			                    	  $('#error-container').html('Il captcha che hai inserito è errato!').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
+	              						}else if (data.msg==2){
+	              							 $('#error-container').html('Utente esistente!').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
 	              						}
 	                                    else{
 	              			                 $('#error-container').html('Email esistente!').append(' Inserire una nuova email.').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
@@ -119,8 +130,8 @@
 	                                  event.handled = true;
 				                    }	                          
 						       });
-                 			  }
-               				return false;
+                			  }
+              				return false;
 						});    
 					
 						
@@ -135,6 +146,8 @@
 						},
 						overlayClose:false
 					});
+					
+					
 					
 					
 				});
@@ -273,7 +286,7 @@
 										<td
 											style="padding: 0 0 0 95px;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; background: #ECF2F6">
 										
-											<form action="https://www.sandbox.paypal.com" method="post" target="_top">
+											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
 								<input type="hidden" name="item_name" value="Cloudy Ecommerce base soluzione mensile">  	
@@ -282,7 +295,7 @@
 								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
 								 <input type="hidden" name="amount" value="30">
 								<input type="hidden" name="rm" value="2">
-								<input type="hidden" name="notify_url" value="cloudyecommerce.com/receiveNotificationPaypal.action">
+								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
 								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaBaseBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
 								
 								</form>
@@ -301,7 +314,7 @@
 								<input type="hidden" name="hosted_button_id" value="UBFVK6LHQTJW4">
 								 <input type="hidden" name="amount" value="80">
 								<input type="hidden" name="rm" value="2">
-								<input type="hidden" name="notify_url" value="cloudyecommerce.com/receiveNotificationPaypal.action">
+								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
 								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaProfessionalBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
 								
 								</form>
@@ -319,7 +332,7 @@
 								<input type="hidden" name="hosted_button_id" value="MQ4X5XXBYP4CW">
 								 <input type="hidden" name="amount" value="120">
 								<input type="hidden" name="rm" value="2">
-								<input type="hidden" name="notify_url" value="cloudyecommerce.com/receiveNotificationPaypal.action">
+								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
 								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
 								
 								</form>
@@ -389,7 +402,7 @@
 								<input type="hidden" name="hosted_button_id" value="V9NXRVAFFSSCE">
 								 <input type="hidden" name="amount" value="324">
 								<input type="hidden" name="rm" value="2">
-								<input type="hidden" name="notify_url" value="cloudyecommerce.com/receiveNotificationPaypal.action">
+								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
 								<input type="image" style="height:44;width:160" src="res_img/Seleziona1.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
 								
 								</form>
@@ -406,7 +419,7 @@
 								<input type="hidden" name="hosted_button_id" value="TJPRS3L9Z47H4">
 								 <input type="hidden" name="amount" value="612">
 								<input type="hidden" name="rm" value="2">
-								<input type="hidden" name="notify_url" value="cloudyecommerce.com/receiveNotificationPaypal.action">
+								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
 								<input type="image" style="height:44;width:160" src="res_img/Seleziona3.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
 								
 								</form>
@@ -423,7 +436,7 @@
 								<input type="hidden" name="hosted_button_id" value="WJZDGS626A89J">
 								 <input type="hidden" name="amount" value="1152">
 								<input type="hidden" name="rm" value="2">
-								<input type="hidden" name="notify_url" value="cloudyecommerce.com/receiveNotificationPaypal.action">
+								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
 								<input type="image" style="height:44;width:160" src="res_img/Seleziona4.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
 								
 								</form>

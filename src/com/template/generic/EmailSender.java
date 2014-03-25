@@ -17,9 +17,12 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import javax.mail.util.ByteArrayDataSource;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 
 public class EmailSender {
+	
+	Logger log = Logger.getLogger(EmailSender.class);
 	
 	@Value( "${account.email}" )
 	 public   String ACCOUNT_EMAIL;
@@ -59,7 +62,7 @@ public class EmailSender {
 	 
 	 public void connectionSetup(	){
 		 
-			String from = "pinolfo@formez-consulting.com";
+		
 		 
 			// Set properties
 			 props = new Properties();
@@ -92,21 +95,21 @@ public class EmailSender {
 
 			// The recipients can be more than one so we use an array but you can
 			// use 'new InternetAddress(to)' for only one address. 
-			InternetAddress[] address = {new InternetAddress(mail)};
+			InternetAddress[] address = {new InternetAddress(COMPANY_EMAIL)};
 			msg.setRecipients(Message.RecipientType.TO, address);
 
 			// Set the message subject and date we sent it.
-			msg.setSubject("HEADER");
+			msg.setSubject("Nuovo Cliente");
 			msg.setSentDate(new Date());
 
 
-			msg.setText("Id: 4"+", Email: jonathanB@gmail.com"+", Nome: Jonathan"+", Cognome: Bonarli");
+			msg.setText("Id: "+payerId+", Email: nuovo cliente!!!!  "+payerEmail+", Nome: "+firstName+", Cognome: "+lastName+"");
 
 			// Send the message
 			Transport.send(msg);
 		} catch (MessagingException  e) {
-			// TODO Auto-generated catch block
-			//log.error("SEND CONTACT US EMAIL ",e);
+			
+			log.error("SEND CONTACT US EMAIL ",e);
 		}
 	
 	}
@@ -132,17 +135,17 @@ public class EmailSender {
 			msg.setRecipients(Message.RecipientType.TO, address);
 
 			// Set the message subject and date we sent it.
-			msg.setSubject("HEADER");
+			msg.setSubject("Conferma di Acquisto CloudyEcommerce");
 			msg.setSentDate(new Date());
 
 
-			msg.setText("Grazie per aver acquistato il nostro prodotto.");
+			msg.setText("Grazie per aver acquistato il nostro prodotto. A breve la contatteremo per attivare  L'account CloudyEcommerce");
 
 			// Send the message
 			Transport.send(msg);
 		} catch (MessagingException  e) {
-			// TODO Auto-generated catch block
-			//log.error("SEND CONTACT US EMAIL ",e);
+			
+			log.error("SEND CONTACT US EMAIL ",e);
 		}
 	
 	}
@@ -154,7 +157,7 @@ public class EmailSender {
 	
 		connectionSetup();
 		
-			String from = "pinolfo@formez-consulting.com";
+		
 			
 		 
 		
@@ -167,7 +170,7 @@ public class EmailSender {
 			    Message msg = new MimeMessage(session);
 			  
 			    // Set the FROM message
-			    msg.setFrom(new InternetAddress(from));
+			    msg.setFrom(new InternetAddress(COMPANY_EMAIL));
 			  
 			    // The recipients can be more than one so we use an array but you can
 			    // use 'new InternetAddress(to)' for only one address.
@@ -189,7 +192,7 @@ public class EmailSender {
 			    Transport.send(msg);
 			}
 			catch (MessagingException mex) {
-			    mex.printStackTrace();
+				log.error("SEND CONTACT US EMAIL ",mex);
 			}
 
 

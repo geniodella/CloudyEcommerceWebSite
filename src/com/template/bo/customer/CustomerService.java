@@ -3,6 +3,7 @@ package com.template.bo.customer;
 import java.util.List;
 
 import com.template.form.LoginFormVO;
+import com.template.vo.CredentialsVO;
 import com.template.vo.CustomerVO;
 import com.template.vo.UtenteVO;
 
@@ -18,7 +19,7 @@ public interface CustomerService {
 	
 	public CustomerVO insertAnonymousCustomer();
 	
-	public CustomerVO findCustomerVOCredentials(String username);
+	public CredentialsVO findCustomerVOCredentials(String username);
 	
 	
 	List<CustomerVO> getAllCustomerVOs();

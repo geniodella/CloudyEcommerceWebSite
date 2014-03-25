@@ -1,9 +1,8 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 
 
-<html  
+<html  xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml"
 >
@@ -13,8 +12,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Cloudy Ecommerce</title>
-
-
+ <meta name="Description" content="Cloudy Ecommerce è un ecommerce SaaS versatile e completamente personalizzabile su richiesta,
+basato su java e ajax molto veloce e per qualsiasi tipo di negozio.">
+<meta name="Keywords" content="ecommerce,saas,vendere,negozio,personalizzabile">
 	
 	<script type="text/javascript" src="./res_js/jquery/jquery-1.3.1.min.js"></script>
 	<script type="text/javascript" src="./res_js/jquery/jquery.ui.all.js"></script>
@@ -64,7 +64,8 @@
 <link rel="stylesheet" type="text/css" href="./res_js/highslide/highslide.css" />
 
 <meta property="og:title" content="Il primo ecommerce SaaS completamente personalizzabile" />
-<meta property="og:description" content="PIPELLA DESCRIPTION" />
+<meta property="og:description" content="Cloudy Ecommerce è un ecommerce SaaS versatile e completamente personalizzabile su richiesta,
+basato su java e ajax molto veloce e per qualsiasi tipo di negozio."/>
 <meta property="og:url" content="http://www.cloudyecommerce.com"/>
 <meta property="og:image" content="./res_img/logoSito.jpg" />
 
@@ -82,7 +83,8 @@
 <!-- Twitter card -->
   	<meta property="twitter:card" content="summary">
   	<meta property="twitter:title" content="Il primo ecommerce SaaS completamente personalizzabile">
-  	<meta property="twitter:description" content="PIPELLA DESCRIPTION">
+  	<meta property="twitter:description" content="Cloudy Ecommerce è un ecommerce SaaS versatile e completamente personalizzabile su richiesta,
+basato su java e ajax molto veloce e per qualsiasi tipo di negozio.">
   	<meta property="twitter:image" content="./res_img/logoSito.jpg">
   	<meta property="twitter:url" content="http://www.cloudyecommerce.com">
   	<meta property="twitter:site" content="@Geniodella">

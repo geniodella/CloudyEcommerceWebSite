@@ -15,6 +15,7 @@ import com.template.bo.order.OrderService;
 import com.template.form.LoginFormVO;
 import com.template.form.OrderForm;
 import com.template.form.ShippingForm;
+import com.template.vo.CredentialsVO;
 import com.template.vo.CustomerVO;
 import com.template.vo.OrderStatus;
 import com.template.vo.UtenteVO;
@@ -292,6 +293,7 @@ public class CustomerAction extends ActionSupport {
 		}else 
 			if (checkUsernameCustomerExistence(username) == 1){
 				success = false;
+				msg =2;
 				return "success";
 			}else{
 
@@ -381,7 +383,7 @@ public class CustomerAction extends ActionSupport {
 	}
 	
 	private int checkUsernameCustomerExistence(String username) {
-		CustomerVO customerVO = customerServiceBean.findCustomerVOCredentials(username);
+		CredentialsVO customerVO = customerServiceBean.findCustomerVOCredentials(username);
 
 		if(null!= customerVO) 
 			return 1;
