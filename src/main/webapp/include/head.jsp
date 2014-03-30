@@ -17,7 +17,7 @@ basato su java e ajax molto veloce e per qualsiasi tipo di negozio.">
 <meta name="Keywords" content="ecommerce,saas,vendere,negozio,personalizzabile">
 	
 	<script type="text/javascript" src="./res_js/jquery/jquery-1.3.1.min.js"></script>
-	<script type="text/javascript" src="./js/jquery.i18n.properties-min-1.0.9.js"></script>
+	<script type="text/javascript" src="./res_js/jquery/jquery.i18n.properties-min-1.0.9.js"></script>
 	<script type="text/javascript" src="./res_js/jquery/jquery.ui.all.js"></script>
 	<script type="text/javascript" src="./res_js/jquery/jquery.tooltip.js"></script>
 	<script type="text/javascript" src="./res_js/jquery/jquery.autocomplete.js"></script>
@@ -58,6 +58,22 @@ basato su java e ajax molto veloce e per qualsiasi tipo di negozio.">
  <!-- ColorBox -->
  <link href="./res_css/colorbox/colorbox.css" rel="stylesheet">
  <script src="./res_js/jquery/jquery.colorbox-min.js"></script>
+ 
+  <script type="text/javascript">
+
+
+	
+	
+	jQuery.i18n.properties({
+	    name:'Application', 
+	    path:'./resources/', 
+	    mode:'both',
+	    language:'it_IT'
+	  
+	  
+	});
+	
+	</script>
 
                                                                           
 <!-- highslide --> 

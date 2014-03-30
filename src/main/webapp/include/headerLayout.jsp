@@ -4,7 +4,7 @@
 		<td
 			style="margin-bottom: 30px; margin-top: 20px; width: 50%; background: white">
 			<a style="float: left; margin-left: 20px;"
-			href="./main/index.action"><h1>
+			href="./index.jsp"><h1>
 					<img height="110" width="380"
 						src="./res_img/logo.jpg">
 				</h1></a>
