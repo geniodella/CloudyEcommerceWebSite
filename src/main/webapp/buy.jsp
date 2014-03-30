@@ -1,6 +1,7 @@
 
 <%@ include file="/include/head.jsp"%>
 <%@ include file="/include/header.jsp"%>
+<link rel="stylesheet" href="./css/custom-cloudyecommerce.css" media="screen">
 
 <body>
 	<%@ include file="/include/headerLayout.jsp"%>
@@ -453,8 +454,10 @@
 			<a style="float: left;"><img style="margin: 10px;"src="./res_img/creditCards.png">
 				
 								<!-- AddThis Button BEGIN -->
-				<div style="margin-right: 30px;margin-top: 10px;margin-left: 100px;width: 250px;display: inline-block;" class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<!--  			<div style="margin-right: 30px;margin-top: 10px;margin-left: 100px;width: 250px;display: inline-block;" class="addthis_toolbox addthis_default_style addthis_32x32_style">-->
 				
+				<div id="customAddThis" class="addthis_toolbox addthis_default_style addthis_32x32_style">
+								
 				<p style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;">Condividi</p>
 				 <a class="addthis_button_facebook"></a>
 	    					   <a class="addthis_button_twitter"></a>

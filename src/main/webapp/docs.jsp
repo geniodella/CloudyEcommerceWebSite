@@ -1,6 +1,7 @@
 
 <%@ include file="/include/head.jsp"%>
 <%@ include file="/include/header.jsp"%>
+<link rel="stylesheet" href="./css/custom-cloudyecommerce.css" media="screen">
 
 
 
@@ -213,9 +214,7 @@
 
 									<li>
 										<div class="textSlide">
-											<img
-												src="./res_img/template.jpg"
-												style="float: left; width: 200px; height: 200px; padding: 10px 0; margin: 0px 100px 0px 0; position: relative;">
+											<img src="./res_img/template.jpg" id="customTemplateGrafici">
 											<h3>Template grafici personalizzati</h3>
 											<br>
 											<ul>
@@ -230,8 +229,8 @@
 											</ul>
 										</div>
 										<div class="textSlide">
-											<img src="./res_img/clientMobile.jpg"
-												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; padding: 25px 0 0; position: relative;">
+											<img src="./res_img/clientMobile.jpg" id="customClientCellulari"/>
+												<!--  style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; padding: 25px 0 0; position: relative;">-->
 											<h3>Client per cellulari</h3>
 											<br>
 											<ul>
@@ -250,8 +249,8 @@
 									
 									<li>										
 										<div class="textSlide">
-											<img src="./res_img/graph&stats.jpg"
-												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
+											<img src="./res_img/graph&stats.jpg" id="customGraphStats"/>
+												<!--  style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">-->
 											<h3>Grafici e statistiche</h3>
 											<br>
 											<ul>Un set di grafici personalizzabili verr&agrave; reso
@@ -264,8 +263,8 @@
 											</ul>
 										</div>
 										<div class="textSlide">
-											<img src="./res_img/newsletter.jpg"
-												style="float: left; width: 200px; height: 200px; margin: 35px 100px 0px 0; padding: 15px 0; position: relative;">
+											<img src="./res_img/newsletter.jpg" id="customNewsletter"/>
+												<!--  style="float: left; width: 200px; height: 200px; margin: 35px 100px 0px 0; padding: 15px 0; position: relative;">-->
 											<h3>Campagne e newsletter</h3>
 											<br>
 											<ul>
@@ -288,8 +287,8 @@
 									
 									<li>
 										<div class="textSlide">
-											<img src="./res_img/cdn.png"
-												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
+											<img src="./res_img/cdn.png" id="customCDN"/>
+												<!-- style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">-->
 											<h3>Integrazione con CDN</h3>
 											<br>
 											<ul>
@@ -314,8 +313,10 @@
 			<a style="float: left;"><img style="margin: 10px;"src="./res_img/creditCards.png">
 				
 								<!-- AddThis Button BEGIN -->
-				<div style="margin-right: 30px;margin-top: 10px;margin-left: 100px;width: 250px;display: inline-block;" class="addthis_toolbox addthis_default_style addthis_32x32_style">
+				<!--  			<div style="margin-right: 30px;margin-top: 10px;margin-left: 100px;width: 250px;display: inline-block;" class="addthis_toolbox addthis_default_style addthis_32x32_style">-->
 				
+				<div id="customAddThis" class="addthis_toolbox addthis_default_style addthis_32x32_style">
+
 				<p style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;">Condividi</p>
 				 <a class="addthis_button_facebook"></a>
 	    					   <a class="addthis_button_twitter"></a>

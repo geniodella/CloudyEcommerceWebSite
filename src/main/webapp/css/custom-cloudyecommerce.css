@@ -1,0 +1,57 @@
+#customAddThis{
+	margin-right: 30px;
+	margin-top: 10px;
+	margin-left: 100px;
+	display: inline-block;
+}
+
+#customTemplateGrafici{
+	float: left; 
+	width: 200px; 
+	height: 200px; 
+	padding: 10px 0; 
+	margin: 0px 100px 0px 0; 
+	position: relative;
+}
+
+#customClientCellulari{
+	float: left; 
+	width: 200px; 
+	height: 200px; 
+	margin: 0px 100px 0px 0; 
+	padding: 25px 0 0; 
+	position: relative;
+}
+
+#customGraphStats{
+	float: left; 
+	width: 200px; 
+	height: 200px; 
+	margin: 0px 100px 0px 0; 
+	position: relative;
+}
+
+#customNewsletter{
+	float: left; 
+	width: 200px; 
+	height: 200px; 
+	margin: 35px 100px 0px 0; 
+	padding: 15px 0; 
+	position: relative;
+}
+
+#customCDN{
+	float: left; 
+	width: 200px; 
+	height: 200px; 
+	margin: 0px 100px 0px 0; 
+	position: relative;
+}
+
+
+
+
+
+
+
+
