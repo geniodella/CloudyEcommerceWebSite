@@ -202,7 +202,7 @@ CloudyEcommerce è il primo dei nostri progetti ma abbiamo in cantiere un gioco s
                          <li style="list-style: disc outside none;font-size: 13px;">Struts 2</li>
                          <li style="list-style: disc outside none;font-size: 13px;">Spring</li>
                          <li style="list-style: disc outside none;font-size: 13px;">Spring Security</li>
-                         <li style="list-style: disc outside none;font-size: 13px;">Quartz scheduling framework</li>
+                         <li style="list-style: disc outside none;font-size: 13px;">Quartz Scheduling framework</li>
                          <li style="list-style: disc outside none;font-size: 13px;">OSGI</li>
                       </ul>
                       <ul style="font-weight:normal;display: inline-block;padding:0 90px 0 120px;line-height: 2.39;">   
