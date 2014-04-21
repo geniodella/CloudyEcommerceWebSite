@@ -215,7 +215,7 @@
 				              3.Modalit&agrave; d'acquisto
 				              </h1>
 				                <p style="float: left;color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;margin-bottom: 20px;padding: 0 0px 0 50px;">
-							3.1 Per poter utilizzare la piattaforma CloudyEcommerce, il Cliente deve selezionare un profilo mensile o annuale tra quelli disponibili sul Sito, successivamente ricever&agrave; una email dove risponder&agrave; a un' email dove indicher&agrave; il nome a dominio su cui installare la piattaforma CloudyEcommerce. Il Cliente pu&ograve; decidere di installare la piattaforma CloudyEcommerce su un nome a dominio gi&agrave; in suo possesso.
+							3.1 Per poter utilizzare la piattaforma CloudyEcommerce, il Cliente deve selezionare un profilo mensile o annuale tra quelli disponibili sul Sito, successivamente ricever&agrave; una email  dove indicher&agrave; il nome a dominio su cui installare la piattaforma CloudyEcommerce. Il Cliente pu&ograve; decidere di installare la piattaforma CloudyEcommerce su un nome a dominio gi&agrave; in suo possesso.
 
 								 </p>
                  
@@ -274,7 +274,6 @@
 </br>10.3 CloudyEcommerce non potr&agrave; essere ritenuta responsabile per l'uso dei domini prescelti dal Cliente ai fini dell'installazione di una piattaforma CloudyEcommerce. Il Cliente si impegna a tenere indenne CloudyEcommerce da qualunque pretesa di terzi in relazione a tali domini, anche dopo la disattivazione di un account Cliente o successivamente al recesso del Cliente.
 </br>10.4 L'utilizzo di un account Cliente come uno spazio di storage online per l'archiviazione di file elettronici &egrave; vietato e comporta la disattivazione dell'account Cliente senza alcun preavviso. Formez & Consulting non ha l'obbligo di monitorare i contenuti immessi dal Cliente sulla piattaforma CloudyEcommerce. Tuttavia, Formez & Consulting potr&agrave; rimuovere tali contenuti o vietare qualsiasi utilizzo dei Servizi che ritiene sia (o possa essere) in violazione delle Condizioni Generali o di diritti di propriet&agrave; intellettuale di terze parti.
 </br>10.5 Formez & Consulting non ha alcun obbligo di intervento per la risoluzione di problemi segnalati dal cliente. La piattaforma viene fornita cosi' com' &egrave;. I termini dell'assistenza tecnica sono approfonditi nella pagina Assistenza Tecnica 
-</br>10.5 Formez & Consulting non ha alcun obbligo di intervento per la risoluzione di problemi segnalati dal cliente. La piattaforma viene fornita cos&igrave; com' &egrave;. I termini dell'assistenza tecnica sono approfonditi nella pagina Assistenza Tecnica 
 								 </p>
                  
                     <h1 style="width: 500px;color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 24px; line-height: 25px; padding: 0 50px;text-align:left">
