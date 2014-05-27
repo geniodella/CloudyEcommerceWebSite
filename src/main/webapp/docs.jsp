@@ -96,44 +96,44 @@
 					 $(this).find('input[type=submit]').attr('disabled', 'disabled');
 					
 					var formData = $("#roleForm").serializeArray();	
-      				if(event.handled !== true){   
+     				if(event.handled !== true){   
 				    	$.ajax({
 				            type: 'POST',
 				            url: 'Customer.action',
 				            data:formData,
 				            dataType: 'json', 
 				            success: function(data){  
-                  
-          	      			  if(data.success==true){                  								                                    
+                 
+         	      			  if(data.success==true){                  								                                    
 								var msg = $('#register');                
-            					$('#register').html('Caricamento...');
+           					$('#register').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.loading'));
 				         	    $('#register').animate({
 									height: '50px'
 							    }); 
 				         	    
 				         	    $('#register').append("<img id='theImg' src='res_img/loading.gif' style='margin: 0 200px;display: block;'/>").delay(1000).queue(function (next) {
-									$('#register').html('Grazie!').append(' Ti arriverà un\'email coi dati di accesso.').css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif").css("line-height","5");
+									$('#register').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.thanks')).append(jQuery.i18n.prop('org.commercialsite.subscriptionform.confirmalmessage')).css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif").css("line-height","5");
 				                	next();
 				          	    });
 		                      }
-          	      		  else if(data.success==false){
-          	      		   $('input[type="submit"]').removeAttr('disabled');
-          	      			  
-                                if(data.msg==1){
-    			                    	  $('#error-container').html('Il captcha che hai inserito è errato!').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
-          						}else if (data.msg==2){
-          							 $('#error-container').html('Utente esistente!').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
-          						}
-                                else{
-          			                 $('#error-container').html('Email esistente!').append(' Inserire una nuova email.').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
-          						}
-                              }
-                              event.handled = true;
+         	      		  else if(data.success==false){
+         	      		   $('input[type="submit"]').removeAttr('disabled');
+         	      			  
+                               if(data.msg==1){
+   			                    	  $('#error-container').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.wrongcaptcha')).css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
+         						}else if (data.msg==2){
+         							 $('#error-container').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.existinguser')).css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
+         						}
+                               else{
+         			                 $('#error-container').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.existingemail')).append(jQuery.i18n.prop('org.commercialsite.subscriptionform.insertnewemail')).css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
+         						}
+                             }
+                             event.handled = true;
 		                    }	                          
 				       });
-        			  }
-      				return false;
-				});    
+       			  }
+     				return false;
+				});     
 			
 				
 			$(html).modal( {
@@ -155,6 +155,30 @@
 	
 
 			var randomSlide = Math.floor(Math.random() * 7);
+			
+			jQuery(document).ready(function() {
+					jQuery.i18n.properties({
+						    name:'Application', 
+						    path:'./resources/', 
+						    mode:'both',
+						    language:'it_IT',
+						    	  callback: function() {
+								  
+								  $('#moreToComeCustomTemplateTitleInternalDivId').append("<h3>"+jQuery.i18n.prop('org.commercialsite.moretocome.customtemplate.title')+"</h3>");
+								  $('#moreToComeCustomTemplateDescrInternalDivId').append(jQuery.i18n.prop('org.commercialsite.moretocome.customtemplate.descr'));
+								  
+								  $('#moreToComeCdnIntegrationTitleInternalDivId').append("<h3>"+jQuery.i18n.prop('org.commercialsite.moretocome.cdnintegration.title')+"</h3>");
+								  $('#moreToComeCdnIntegrationDescrInternalDivId').append(jQuery.i18n.prop('org.commercialsite.moretocome.cdnintegration.descr'));
+								  
+								  $('#moreToComeMobileClientTitleInternalDivId').append("<h3>"+jQuery.i18n.prop('org.commercialsite.moretocome.mobileclient.title')+"</h3>");
+								  $('#moreToComeMobileClientDescrInternalDivId').append(jQuery.i18n.prop('org.commercialsite.moretocome.mobileclient.descr'));
+								  
+								  $('#moreToComeStatisticsTitleInternalDivId').append("<h3>"+jQuery.i18n.prop('org.commercialsite.moretocome.statistics.title')+"</h3>");
+								  $('#moreToComeStatisticsDescrInternalDivId').append(jQuery.i18n.prop('org.commercialsite.moretocome.statistics.descr'));
+								  
+								  $('#moreToComeNewsletterTitleInternalDivId').append("<h3>"+jQuery.i18n.prop('org.commercialsite.moretocome.newsletter.title')+"</h3>");
+								  $('#moreToComeNewsletterDescrInternalDivId').append(jQuery.i18n.prop('org.commercialsite.moretocome.newsletter.descr'));
+								  
 
 			$('#slider1')
 					.anythingSlider(
@@ -183,6 +207,15 @@
 									// alert('Welcome to Slide #' + slider.currentPage);
 								}
 							});
+							
+							$('#featuresCommercialSiteShareInternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.share')+"</p>");
+										
+							$('#featuresCommercialSiteTermsAndConditionsInternalDivId').append("<a>"+jQuery.i18n.prop('org.commercialsite.termsandconditions')+"</a>");
+										
+							}
+						  
+						});
+				    });
 
 			// tooltips for first demo
 			$.jatt();
@@ -216,32 +249,20 @@
 											<img
 												src="./res_img/template.jpg"
 												style="float: left; width: 200px; height: 200px; padding: 10px 0; margin: 0px 100px 0px 0; position: relative;">
-											<h3>Template grafici personalizzati</h3>
+											<h3  style="margin-bottom:-30px;" id="moreToComeCustomTemplateTitleInternalDivId"></h3>
 											<br>
-											<ul>
-												Una serie di template grafici personalizzati verranno creati
-												per permettervi di scegliere che veste grafica dare al sito,
-												ci siamo presi un p&ograve; di tempo per agire su questa
-												caratteristica perch&egrave; vogliamo offrire una reale
-												differenza tra una veste grafica e l'altra e non solo un
-												mero cambiamento di immagini e di colori come spesso succede
-												nelle altre soluzioni in commercio.
+											<ul id="moreToComeCustomTemplateDescrInternalDivId">
+												
 												</br>
 											</ul>
 										</div>
 										<div class="textSlide">
 											<img src="./res_img/clientMobile.jpg"
 												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; padding: 25px 0 0; position: relative;">
-											<h3>Client per cellulari</h3>
+											<h3 style="margin-bottom:-30px;" id="moreToComeMobileClientTitleInternalDivId"></h3>
 											<br>
-											<ul>
-												&Egrave; attualmente in sviluppo una versione ridotta del
-												backoffice per cellulari android e iphone che permette di
-												controllare le informazioni principali relative
-												all'attivit&agrave; commerciale, inoltre tramite il
-												meccanismo di notifica push, il gestore del negozio viene
-												avvisato qualora ci siano prodotti in scadenza o ordini che
-												aspettano di essere processati con una certa urgenza.
+											<ul id="moreToComeMobileClientDescrInternalDivId">
+												
 												</br>
 											</ul>
 										</div>
@@ -252,35 +273,18 @@
 										<div class="textSlide">
 											<img src="./res_img/graph&stats.jpg"
 												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
-											<h3>Grafici e statistiche</h3>
+											<h3 id="moreToComeStatisticsTitleInternalDivId"></h3>
 											<br>
-											<ul>Un set di grafici personalizzabili verr&agrave; reso
-												disponibile per monitorare tutte le attivit&agrave;, i
-												grafici saranno altamente personalizzabili scegliendo le
-												variabili da monitorare, inoltre un sistema di notifiche
-												aiuter&agrave; il gestore del magazzino a monitorare in
-												maniera proattiva le urgenze come la scadenza di prodotti o
-												gli ordini che attendono di essere processati.
+											<ul id="moreToComeStatisticsDescrInternalDivId">
 											</ul>
 										</div>
 										<div class="textSlide">
 											<img src="./res_img/newsletter.jpg"
 												style="float: left; width: 200px; height: 200px; margin: 35px 100px 0px 0; padding: 15px 0; position: relative;">
-											<h3>Campagne e newsletter</h3>
+											<h3 style="margin-bottom:-30px;" id="moreToComeNewsletterTitleInternalDivId"></h3>
 											<br>
-											<ul>
-												Verr&agrave; potenziata la funzionalit&agrave; di sconto gia
-												esistente, con la possibilit&agrave; di creare delle vere e
-												proprie campagne pubblicitarie che raggruppino una serie di
-												prodotti e la possibilit&agrave; di creare una serie di
-												sconti con scadenza o relativi a una fascia particolare di
-												clientela, modulando gli sconti per quantit&agrave; di
-												prodotti per tempistiche particolari (saldi natalizi o
-												estivi). Inoltre verr&agrave; resa disponibile la
-												funzionalit&agrave; di newsletter per cui sar&agrave;
-												possibile inviare ai clienti delle newsletter a scadenza
-												prefissata o in qualsivoglia momento decidendone la
-												tipologia di contenuti.
+											<ul id="moreToComeNewsletterDescrInternalDivId">
+												
 												</br>
 											</ul>
 										</div>
@@ -290,14 +294,10 @@
 										<div class="textSlide">
 											<img src="./res_img/cdn.png"
 												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
-											<h3>Integrazione con CDN</h3>
+											<h3 style="margin-bottom:-30px;" id="moreToComeCdnIntegrationTitleInternalDivId"></h3>
 											<br>
-											<ul>
-												A breve implementeremo l'integrazione con una infrattura di
-												CDN (content delivery network) dove verranno immagazzinate
-												tutte le immagini dei prodotti cosi da garantire una
-												maggiore velocit&agrave; nella visualizzazione delle pagine
-												in maniera trasparente alla locazione degli utenti del sito.
+											<ul id="moreToComeCdnIntegrationDescrInternalDivId">
+												
 												</br>
 											</ul>
 										</div>										
@@ -316,7 +316,7 @@
 								<!-- AddThis Button BEGIN -->
 				<div style="margin-right: 30px;margin-top: 10px;margin-left: 100px;width: 250px;display: inline-block;" class="addthis_toolbox addthis_default_style addthis_32x32_style">
 				
-				<p style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;">Condividi</p>
+				<p id="featuresCommercialSiteShareInternalDivId"  style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;"></p>
 				 <a class="addthis_button_facebook"></a>
 	    					   <a class="addthis_button_twitter"></a>
 	    					   <a class="addthis_button_pinterest_share"></a>
@@ -325,7 +325,7 @@
 				</div>
 				
 				
-					<a style="float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br>Termini e condizioni di vendita</a>
+					<a id="featuresCommercialSiteTermsAndConditionsInternalDivId"  style="float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br></a>
 				
 				
 				
