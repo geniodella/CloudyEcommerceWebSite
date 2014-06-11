@@ -305,15 +305,14 @@
 					   <h1 id="termsAndConditions3-TitleInternalDivId" style="margin-top: 30px;width: 300px;color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 24px; line-height: 25px; padding: 0 50px;text-align:left">
 				              
 				              </h1>
-<<<<<<< HEAD
+
 				                <p id="termsAndConditions3-1InternalDivId" style="float: left;color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;margin-bottom: 20px;padding: 0 0px 0 50px;">
 							</p>
-=======
+
 				                <p style="float: left;color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;margin-bottom: 20px;padding: 0 0px 0 50px;">
 							3.1 Per poter utilizzare la piattaforma CloudyEcommerce, il Cliente deve selezionare un profilo mensile o annuale tra quelli disponibili sul Sito, successivamente ricever&agrave; una email  dove indicher&agrave; il nome a dominio su cui installare la piattaforma CloudyEcommerce. Il Cliente pu&ograve; decidere di installare la piattaforma CloudyEcommerce su un nome a dominio gi&agrave; in suo possesso.
 
 								 </p>
->>>>>>> 1ce55365878fd9aebdb7ad8071823c168660ab0d
                  
                <h1 id="termsAndConditions4-TitleInternalDivId" style="width: 350px;color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 24px; line-height: 25px; padding: 0 50px;text-align:left">
 				              
@@ -361,21 +360,21 @@
                   <h1 id="termsAndConditions10-TitleInternalDivId" style="width: 300px;color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 24px; line-height: 25px; padding: 0 50px;text-align:left">
 				              
 				              </h1>
-<<<<<<< HEAD
+
 				               <p  style="margin-bottom: 20px;float: left;color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 50px;">
 							<span id="termsAndConditions10-1InternalDivId" ></span>
 								</br><span id="termsAndConditions10-2InternalDivId" ></span>
 								</br><span id="termsAndConditions10-3InternalDivId" ></span>
 								</br><span id="termsAndConditions10-4InternalDivId" ></span>
 								</br><span id="termsAndConditions10-5InternalDivId" ></span>
-=======
+
 				               <p style="margin-bottom: 20px;float: left;color:black;text-align: left;font-weight:normal;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px; line-height: 25px; margin-top: 15px;padding: 0 0px 0 50px;">
 							10.1 Il Cliente si impegna ad utilizzare i Servizi nel rispetto della normativa vigente ed &egrave; pienamente responsabile dei contenuti dei propri siti web. Il Cliente si impegna a farsi carico di tutti i rischi connessi all'utilizzo o mancato utilizzo dei Servizi, nonch&egrave; al contenuto dei propri siti web, e ad assumersi la piena responsabilit&agrave; dell'eventuale pregiudizio causato a terzi dall'utilizzo dei Servizi, o dal contenuto dei propri siti web, anche dopo la disattivazione di un account Cliente o successivamente al recesso del Cliente. Il Cliente si impegna pertanto a non ritenere CloudyEcommerce responsabile in alcun modo di eventuali danni derivanti o causati dall'utilizzo dei Servizi o dal contenuto dei propri siti web, nei limiti consentiti dalla legge.
 </br>10.2 In nessun caso e in nessuna circostanza CloudyEcommerce potr&agrave; essere ritenuta responsabile per perdite di dati o di files dei Clienti ospitati sui propri server.
 </br>10.3 CloudyEcommerce non potr&agrave; essere ritenuta responsabile per l'uso dei domini prescelti dal Cliente ai fini dell'installazione di una piattaforma CloudyEcommerce. Il Cliente si impegna a tenere indenne CloudyEcommerce da qualunque pretesa di terzi in relazione a tali domini, anche dopo la disattivazione di un account Cliente o successivamente al recesso del Cliente.
 </br>10.4 L'utilizzo di un account Cliente come uno spazio di storage online per l'archiviazione di file elettronici &egrave; vietato e comporta la disattivazione dell'account Cliente senza alcun preavviso. Formez & Consulting non ha l'obbligo di monitorare i contenuti immessi dal Cliente sulla piattaforma CloudyEcommerce. Tuttavia, Formez & Consulting potr&agrave; rimuovere tali contenuti o vietare qualsiasi utilizzo dei Servizi che ritiene sia (o possa essere) in violazione delle Condizioni Generali o di diritti di propriet&agrave; intellettuale di terze parti.
 </br>10.5 Formez & Consulting non ha alcun obbligo di intervento per la risoluzione di problemi segnalati dal cliente. La piattaforma viene fornita cosi' com' &egrave;. I termini dell'assistenza tecnica sono approfonditi nella pagina Assistenza Tecnica 
->>>>>>> 1ce55365878fd9aebdb7ad8071823c168660ab0d
+
 								 </p>
                  
                     <h1 id="termsAndConditions11-TitleInternalDivId" style="width: 500px;color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 24px; line-height: 25px; padding: 0 50px;text-align:left">

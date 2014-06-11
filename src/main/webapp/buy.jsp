@@ -197,8 +197,24 @@
 						});
 				    });
 		});
+		
+		//metodo usato per l'i18n dei bottoni
+		$(document).ready(function() {
+		    var known = { en: true, it: true};
+		    var lang  = (navigator.language || navigator.userLanguage || 'it').substr(0, 2);
+		    if(!known[lang])
+		        lang = 'it';
+		    // Find all <div>s with a class of "wrapper" and lang attribute equal to `lang`
+		    // and make them visibile.
+		    $('div.wrapper[lang='  + lang + ']').show();
+		    // Find all <div>s with a class of "wrapper" and lang attribute not equal
+		    // to `lang` and make them invisibile.
+		    $('div.wrapper[lang!=' + lang + ']').hide();
+		});
 				
 				</script>
+				
+				
 				
 	
 	<div id="content-container">
@@ -325,15 +341,16 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="item_name" value="Cloudy Ecommerce base soluzione mensile">  	
-                <input type="hidden" name="business" value="geniodella@gmail.com"> 									
+								<input type="hidden" name="item_name" value="+org.commercialsite.buy.basesolution.descrPaypal+" >  	
+                				<input type="hidden" name="business" value="geniodella@gmail.com"> 									
  								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
-								 <input type="hidden" name="amount" value="30">
+								<input type="hidden" name="amount" value="30">
 								<input type="hidden" name="rm" value="2">
 								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
-								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaBaseBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
-								
+								<div lang="it" class="wrapper"><input type="image" border="0" name="submit" src="res_img/bottoneAcquistaBaseBlu.png" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+								<div lang="en" class="wrapper"><input type="image" border="0" name="submit" src="res_img/bottoneAcquistaBaseBlu_en_EN.png"  alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+																
 								</form>
 											
 										</td>
@@ -344,14 +361,15 @@
 												<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-                <input type="hidden" name="item_name" value="Cloudy Ecommerce professionale soluzione mensile">
+                <input type="hidden" name="item_name" value="+org.commercialsite.buy.professionalsolution.descrPaypal+">
 								<input type="hidden" name="business" value="geniodella@gmail.com">
 								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="UBFVK6LHQTJW4">
 								 <input type="hidden" name="amount" value="80">
 								<input type="hidden" name="rm" value="2">
 								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
-								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaProfessionalBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								<div lang="it" class="wrapper"><input type="image" border="0" name="submit" src="res_img/bottoneAcquistaBaseBlu.png" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+								<div lang="en" class="wrapper"><input type="image" border="0" name="submit" src="res_img/bottoneAcquistaBaseBlu_en_EN.png"  alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
 								
 								</form>
 										</td>
@@ -362,14 +380,15 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-                				<input type="hidden" name="item_name" value="Cloudy Ecommerce illimitato soluzione mensile">
+                				<input type="hidden" name="item_name" value="+org.commercialsite.buy.completesolution.descrPaypal+">
 								<input type="hidden" name="business" value="geniodella@gmail.com"> 
 								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="MQ4X5XXBYP4CW">
 								 <input type="hidden" name="amount" value="120">
 								<input type="hidden" name="rm" value="2">
 								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
-								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								<div lang="it" class="wrapper"><input type="image" border="0" name="submit" src="res_img/bottoneAcquistaBaseBlu.png" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+								<div lang="en" class="wrapper"><input type="image" border="0" name="submit" src="res_img/bottoneAcquistaBaseBlu_en_EN.png"  alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
 								
 								</form>
 										</td>
@@ -402,18 +421,18 @@
 									<tr>
 										<td
 											style="border-radius: 5px 0 0 0;padding: 0 0 0 85px;  background: white">
-											<img style="border-radius: 5px;"
-											src="res_img/sconto1.png"></img>
+											<div lang="it" class="wrapper"><img style="border-radius: 5px;" src="res_img/sconto1_it.png"></img></div>
+											<div lang="en" class="wrapper"><img style="border-radius: 5px;" src="res_img/sconto1_en.png"></img></div>
 										</td> 										
 										<td
 											style="padding: 0 0 0 85px; background: white">
-											<img style="border-radius: 5px;"
-											src="res_img/sconto3.png"></img>
+											<div lang="it" class="wrapper"><img style="border-radius: 5px;" src="res_img/sconto3_it.png"></img></div>
+											<div lang="en" class="wrapper"><img style="border-radius: 5px;" src="res_img/sconto3_en.png"></img></div>
 										</td>
 										<td
 											style="border-radius: 0 5px 0 0;padding: 0 0 0 85px; background: white">
-											<img style="border-radius: 5px;"
-											src="res_img/sconto4.png"></img>
+											<div lang="it" class="wrapper"><img style="border-radius: 5px;" src="res_img/sconto4_it.png"></img></div>
+											<div lang="en" class="wrapper"><img style="border-radius: 5px;" src="res_img/sconto4_en.png"></img></div>
 										</td>
 									</tr>
 									<tr>
@@ -439,7 +458,8 @@
 								 <input type="hidden" name="amount" value="324">
 								<input type="hidden" name="rm" value="2">
 								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
-								<input type="image" style="height:44;width:160" src="res_img/Seleziona1.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								<div lang="it" class="wrapper"><input type="image" style="height:44;width:160" src="res_img/Seleziona1_ita.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+								<div lang="en" class="wrapper"><input type="image" style="height:44;width:160" src="res_img/Seleziona1_eng.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
 								
 								</form>
 										</td>										
@@ -456,7 +476,8 @@
 								 <input type="hidden" name="amount" value="612">
 								<input type="hidden" name="rm" value="2">
 								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
-								<input type="image" style="height:44;width:160" src="res_img/Seleziona3.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								<div lang="it" class="wrapper"><input type="image" style="height:44;width:160" src="res_img/Seleziona3_ita.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+								<div lang="en" class="wrapper"><input type="image" style="height:44;width:160" src="res_img/Seleziona3_eng.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
 								
 								</form>
 										</td>
@@ -473,7 +494,8 @@
 								 <input type="hidden" name="amount" value="1152">
 								<input type="hidden" name="rm" value="2">
 								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
-								<input type="image" style="height:44;width:160" src="res_img/Seleziona4.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								<div lang="it" class="wrapper"><input type="image" style="height:44;width:160" src="res_img/Seleziona4_ita.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+								<div lang="en" class="wrapper"><input type="image" style="height:44;width:160" src="res_img/Seleziona4_eng.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
 								
 								</form>
 										</td>
