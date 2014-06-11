@@ -158,7 +158,7 @@
 						    name:'Application', 
 						    path:'./resources/', 
 						    mode:'both',
-						    language:'it_IT',
+						    language:'en_EN',
 						    	  callback: function() {
 								  
 									$('#featuresCommercialSiteBuyTitleInternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.buy.title')+"</p>");
@@ -193,6 +193,9 @@
 										
 									$('#featuresCommercialSiteTermsAndConditionsInternalDivId').append("<a>"+jQuery.i18n.prop('org.commercialsite.termsandconditions')+"</a>");
 									
+									$('#basesolution.descrPaypal').attr('value',jQuery.i18n.prop('org.commercialsite.buy.basesolution.descrPaypal'));
+									$('#professionalsolution.descrPaypal').attr('value',jQuery.i18n.prop('org.commercialsite.buy.professionalsolution.descrPaypal'));
+									$('#completesolution.descrPaypal').attr('value',jQuery.i18n.prop('org.commercialsite.buy.completesolution.descrPaypal'));
 								  }						  
 						});
 				    });
@@ -341,7 +344,7 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="item_name" value="+org.commercialsite.buy.basesolution.descrPaypal+" >  	
+								<input id="basesolution.descrPaypal" type="hidden" name="item_name">  	
                 				<input type="hidden" name="business" value="geniodella@gmail.com"> 									
  								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
@@ -361,7 +364,7 @@
 												<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-                <input type="hidden" name="item_name" value="+org.commercialsite.buy.professionalsolution.descrPaypal+">
+								<input id="professionalsolution.descrPaypal" type="hidden" name="item_name" />
 								<input type="hidden" name="business" value="geniodella@gmail.com">
 								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="UBFVK6LHQTJW4">
@@ -380,7 +383,7 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-                				<input type="hidden" name="item_name" value="+org.commercialsite.buy.completesolution.descrPaypal+">
+                				<input id="completesolution.descrPaypal" type="hidden" name="item_name">
 								<input type="hidden" name="business" value="geniodella@gmail.com"> 
 								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="MQ4X5XXBYP4CW">
@@ -451,7 +454,7 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="item_name" value="Cloudy Ecommerce base soluzione annuale">
+								<input id="basesolution.descrPaypal" type="hidden" name="item_name">
 								<input type="hidden" name="business" value="geniodella@gmail.com">
 								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="V9NXRVAFFSSCE">
@@ -469,7 +472,7 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="item_name" value="Cloudy Ecommerce professionale soluzione annuale">
+								<input id="professionalsolution.descrPaypal" type="hidden" name="item_name">
 								<input type="hidden" name="business" value="geniodella@gmail.com"> 
 								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="TJPRS3L9Z47H4">
@@ -487,7 +490,7 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="item_name" value="Cloudy Ecommerce illimitato soluzione annuale">
+								<input id="completesolution.descrPaypal" type="hidden" name="item_name">
 								<input type="hidden" name="business" value="geniodella@gmail.com">
 								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="WJZDGS626A89J">
