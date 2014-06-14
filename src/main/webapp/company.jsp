@@ -156,7 +156,6 @@
 						    name:'Application', 
 						    path:'./resources/', 
 						    mode:'both',
-						    language:'it_IT',
 						    	  callback: function() {
 								  
 									$('#companyPageCommercialSiteTitleInternalDivId').append(jQuery.i18n.prop('org.commercialsite.companypage.title'));

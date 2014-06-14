@@ -161,7 +161,6 @@
 						    name:'Application', 
 						    path:'./resources/', 
 						    mode:'both',
-						    language:'it_IT',
 						    	  callback: function() {
 								  
 								  $('#moreToComeCustomTemplateTitleInternalDivId').append("<h3>"+jQuery.i18n.prop('org.commercialsite.moretocome.customtemplate.title')+"</h3>");

@@ -207,7 +207,6 @@
 						    name:'Application', 
 						    path:'./resources/', 
 						    mode:'both',
-						    language:'it_IT',
 						    	  callback: function() {
 								  
 									  $('#headTitleSlider').append("<h1 style='font-size: 30px; line-height: 30px; margin-top: 15px;'>"+jQuery.i18n.prop('org.commercialsite.headSlider.title')+"</h1>");

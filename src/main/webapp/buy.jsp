@@ -158,7 +158,6 @@
 						    name:'Application', 
 						    path:'./resources/', 
 						    mode:'both',
-						    language:'en_EN',
 						    	  callback: function() {
 								  
 									$('#featuresCommercialSiteBuyTitleInternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.buy.title')+"</p>");

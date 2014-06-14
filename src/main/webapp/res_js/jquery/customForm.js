@@ -96,7 +96,6 @@ $(document).ready(function(){
 						    name:'Application', 
 						    path:'./resources/', 
 						    mode:'both',
-						    language:'it_IT',
 						    	  callback: function() {
 						    		  $('#subscriptionFormUsername').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.username'));
 						    		  $('#subscriptionFormEmail').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.emailaddress'));

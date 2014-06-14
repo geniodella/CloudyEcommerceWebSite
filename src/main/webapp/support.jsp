@@ -153,7 +153,6 @@
 						    name:'Application', 
 						    path:'./resources/', 
 						    mode:'both',
-						    language:'it_IT',
 						    	  callback: function() {
 								  
 									$('#supportTechnicalSupportTitleInternalDivId').append(jQuery.i18n.prop('org.commercialsite.support.technicalsupport.title'));
