@@ -22,6 +22,8 @@
 
 <body>
 
+ 
+
 <style type="text/css"> 
 	#simplemodal-container a.modalCloseImg {
 	    display:inline;
@@ -131,7 +133,7 @@
 					'</html>';
 					
 					$('#registerButton').live('click', function(){	
-						window.location.href="/24777_BackSite";
+						window.location.href="/24333_BackSite";
 					});
 				
 					
@@ -152,13 +154,13 @@
                       
               	      			  if(data.success==true){                  								                                    
 									var msg = $('#register');                
-                					$('#register').html('Caricamento...');
+                					$('#register').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.loading'));
 					         	    $('#register').animate({
 										height: '50px'
 								    }); 
 					         	    
 					         	    $('#register').append("<img id='theImg' src='res_img/loading.gif' style='margin: 0 200px;display: block;'/>").delay(1000).queue(function (next) {
-										$('#register').html('Grazie!').append(' Ti arriverà un\'email coi dati di accesso.').css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif").css("line-height","5");
+										$('#register').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.thanks')).append(jQuery.i18n.prop('org.commercialsite.subscriptionform.confirmalmessage')).css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif").css("line-height","5");
 					                	next();
 					          	    });
 			                      }
@@ -166,12 +168,12 @@
               	      		   $('input[type="submit"]').removeAttr('disabled');
               	      			  
                                     if(data.msg==1){
-        			                    	  $('#error-container').html('Il captcha che hai inserito è errato!').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
+        			                    	  $('#error-container').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.wrongcaptcha')).css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
               						}else if (data.msg==2){
-              							 $('#error-container').html('Utente esistente!').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
+              							 $('#error-container').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.existinguser')).css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
               						}
                                     else{
-              			                 $('#error-container').html('Email esistente!').append(' Inserire una nuova email.').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
+              			                 $('#error-container').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.existingemail')).append(jQuery.i18n.prop('org.commercialsite.subscriptionform.insertnewemail')).css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
               						}
                                   }
                                   event.handled = true;
@@ -201,41 +203,111 @@
 		
 
 			var randomSlide = Math.floor(Math.random() * 7);
-
-			$('#slider1')
-					.anythingSlider(
-							{
-								theme : 'metallic',
-								easing : 'easeInOutBack',//tipo d'animazione
-								startPanel : randomSlide,
-								buildArrows : true, // If true, builds the forwards and backwards buttons
-								autoPlay : true, // If true, the slideshow will start running; replaces "startStopped" option
-								autoPlayLocked      : true, // If true, user changing slides will not stop the slideshow
-								resumeDelay         : 6000,     // Resume slideshow after user interaction, only if autoplayLocked is true (in milliseconds). 
-								buildNavigation : false, // If true, builds a list of anchor links to link to each panel
-								buildStartStop : false, // If true, builds the start/stop button
-								mode : "orizzontal", // Set mode to "horizontal", "vertical" or "fade" (only first letter needed); replaces vertical option
-								enableKeyboard : false, // if false, keyboard arrow keys will not work for this slider.
-								stopAtEnd : false, // If true & the slideshow is active, the slideshow will stop on the last page. This also stops the rewind effect when infiniteSlides is false.
-								delay : 6000, // How long between slideshow transitions in AutoPlay mode (in milliseconds)
-								animationTime : 1500, // How long the slideshow transition takes (in milliseconds)
-								pauseOnHover: false,
-								hashTags:false,
-								navigationFormatter : function(index, panel) {
-									return [ 'Slab', 'Parking Lot', 'Drive',
-											'Glorius Dawn', 'Bjork?',
-											'Traffic Circle' ][index - 1];
-								},
-								onSlideComplete : function(slider) {
-									// alert('Welcome to Slide #' + slider.currentPage);
-								}
-							});
-
-			// tooltips for first demo
-			$.jatt();
-
+			  jQuery(document).ready(function() {
+					jQuery.i18n.properties({
+						    name:'Application', 
+						    path:'./resources/', 
+						    mode:'both',
+						    	  callback: function() {
+								  
+									  $('#headTitleSlider').append("<h1 style='font-size: 30px; line-height: 30px; margin-top: 15px;'>"+jQuery.i18n.prop('org.commercialsite.headSlider.title')+"</h1>");
+						    		
+									  $('#productNavigationFeaturesTitleInternalDivId').append("<h3 style='margin-bottom: 0px;'>"+jQuery.i18n.prop('org.commercialsite.productnavigation.title')+"</h3>");
+									  $('#productNavigationFeaturesInternalDivId').append("<li style='list-style: disc outside none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.productnavigation.descr1')+"</li>");
+									  $('#productNavigationFeaturesInternalDivId').append("<li style='list-style: disc outside none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.productnavigation.descr2')+"</li>");
+									  $('#productNavigationFeaturesInternalDivId').append("<li style='list-style: disc outside none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.productnavigation.descr3')+"</li>");
+									  $('#productNavigationFeaturesInternalDivId').append("<li style='list-style: disc outside none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.productnavigation.descr4')+"</li>");
+									  $('#productNavigationFeaturesInternalDivId').append("<li style='list-style: disc outside none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.productnavigation.descr5')+"</li>");
+									  
+									  $('#productCartFeaturesTitleInternalDivId').append("<h3 style='margin-bottom: 0px;'>"+jQuery.i18n.prop('org.commercialsite.cartfeatures.title')+"</h3>");
+									  $('#productCartFeaturesInternalDivId').append("<li style='list-style: disc outside none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.cartfeatures.descr1')+"</li>");
+									  $('#productCartFeaturesInternalDivId').append("<li style='list-style: disc outside none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.cartfeatures.descr2')+"</li>");
+									  $('#productCartFeaturesInternalDivId').append("<li style='list-style: disc outside none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.cartfeatures.descr3')+"</li>");
+									  $('#productCartFeaturesInternalDivId').append("<li style='list-style: disc outside none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.cartfeatures.descr4')+"</li>");
+									  $('#productCartFeaturesInternalDivId').append("<li style='list-style: disc outside none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.cartfeatures.descr5')+"</li>");
+									  $('#productCartFeaturesInternalDivId').append("<li style='list-style: disc outside none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.cartfeatures.descr6')+"</li>");
+									  $('#productCartFeaturesInternalDivId').append("<li style='list-style: disc outside none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.cartfeatures.descr7')+"</li>");
+									 
+									  $('#productPurchaseFeaturesTitleInternalDivId').append("<h3 style='margin-bottom: 0px;'>"+jQuery.i18n.prop('org.commercialsite.purchasefeatures.title')+"</h3>");
+									  $('#productPurchaseFeaturesInternalDivId').append("<li style='list-style: none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.purchasefeatures.descr1')+"</li>");
+									  
+									  $('#productTagFeaturesTitleInternalDivId').append("<h3 style='margin-bottom: 0px;'>"+jQuery.i18n.prop('org.commercialsite.tagfeatures.title')+"</h3>");
+									  $('#productTagFeaturesInternalDivId').append("<li style='list-style: none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.tagfeatures.descr1')+"</li>");
+									  
+									  $('#productCustomerManagementFeaturesTitleInternalDivId').append("<h3 style='margin-bottom: 0px;'>"+jQuery.i18n.prop('org.commercialsite.customermanagement.title')+"</h3>");
+									  $('#productCustomerManagementFeaturesInternalDivId').append("<li style='list-style: none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.customermanagement.descr1')+"</li>");
+									  
+									  $('#productAjaxTechnologyFeaturesTitleInternalDivId').append("<h3 style='margin-bottom: 0px;'>"+jQuery.i18n.prop('org.commercialsite.ajaxtechnology.title')+"</h3>");
+									  $('#productAjaxTechnologyFeaturesInternalDivId').append("<li style='list-style: none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.ajaxtechnology.descr1')+"</li>");
+									  
+									  $('#productJavaEnterpriseFeaturesTitleInternalDivId').append("<h3 style='margin-bottom: 0px;'>"+jQuery.i18n.prop('org.commercialsite.javaenterprise.title')+"</h3>");
+									  $('#productJavaEnterpriseFeaturesInternalDivId').append("<li style='list-style: none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.javaenterprise.descr1')+"</li>");
+									  
+									  $('#productFlexibilityFeaturesTitleInternalDivId').append("<h3 style='margin-bottom: 0px;'>"+jQuery.i18n.prop('org.commercialsite.flexibility.title')+"</h3>");
+									  $('#productFlexibilityFeaturesInternalDivId').append("<li style='list-style: none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.flexibility.descr1')+"</li>");
+									  
+									  $('#productSupportFeaturesTitleInternalDivId').append("<h3 style='margin-bottom: 0px;'>"+jQuery.i18n.prop('org.commercialsite.support.title')+"</h3>");
+									  $('#productSupportFeaturesInternalDivId').append("<li style='list-style: none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.support.descr1')+"</li>");
+									  
+									  $('#productIaasFeaturesTitleInternalDivId').append("<h3 style='margin-bottom: 0px;'>"+jQuery.i18n.prop('org.commercialsite.iaas.title')+"</h3>");
+									  $('#productIaasFeaturesInternalDivId').append("<li style='list-style: none;font-size: 13px;'>"+jQuery.i18n.prop('org.commercialsite.iaas.descr1')+"</li>");
+						    		  
+						    		  $('#slider1')
+										.anythingSlider(
+												{
+													theme : 'metallic',
+													easing : 'easeInOutBack',//tipo d'animazione
+													startPanel : randomSlide,
+													buildArrows : true, // If true, builds the forwards and backwards buttons
+													autoPlay : true, // If true, the slideshow will start running; replaces "startStopped" option
+													autoPlayLocked      : true, // If true, user changing slides will not stop the slideshow
+													resumeDelay         : 6000,     // Resume slideshow after user interaction, only if autoplayLocked is true (in milliseconds). 
+													buildNavigation : false, // If true, builds a list of anchor links to link to each panel
+													buildStartStop : false, // If true, builds the start/stop button
+													mode : "orizzontal", // Set mode to "horizontal", "vertical" or "fade" (only first letter needed); replaces vertical option
+													enableKeyboard : false, // if false, keyboard arrow keys will not work for this slider.
+													stopAtEnd : false, // If true & the slideshow is active, the slideshow will stop on the last page. This also stops the rewind effect when infiniteSlides is false.
+													delay : 6000, // How long between slideshow transitions in AutoPlay mode (in milliseconds)
+													animationTime : 1500, // How long the slideshow transition takes (in milliseconds)
+													pauseOnHover: false,
+													hashTags:false,
+													navigationFormatter : function(index, panel) {
+														return [ 'Slab', 'Parking Lot', 'Drive',
+																'Glorius Dawn', 'Bjork?',
+																'Traffic Circle' ][index - 1];
+													},
+													onSlideComplete : function(slider) {
+														// alert('Welcome to Slide #' + slider.currentPage);
+													}
+												});
+												
+										$('#featuresPreviewTitleInternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.featurespreview.title')+"</p>");
+										
+										$('#featuresPreview1InternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.featurespreview.descr1')+"</p>");
+										$('#featuresPreview2InternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.featurespreview.descr2')+"</p>");
+										$('#featuresPreview3InternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.featurespreview.descr3')+"</p>");
+										$('#featuresPreview4InternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.featurespreview.descr4')+"</p>");
+										$('#featuresPreview5InternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.featurespreview.descr5')+"</p>");
+										$('#featuresPreview6InternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.featurespreview.descr6')+"</p>");
+										$('#featuresPreview7InternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.featurespreview.descr7')+"</p>");
+										
+										$('#featuresCommercialSiteShareInternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.share')+"</p>");
+										
+										$('#featuresCommercialSiteTermsAndConditionsInternalDivId').append("<a>"+jQuery.i18n.prop('org.commercialsite.termsandconditions')+"</a>");
+								    }
+						  
+						});
+				    });
 		});
 	</script>
+	
+
+
+
+
+	
+	
+	
 
 		<%@ include file="/include/headerLayout.jsp"%>	
 
@@ -260,8 +332,7 @@
 			<div id="content-body">
 			
 			<div style="background: white;margin: 0px 60px;" id="home-message-text" class="subcolumn1-1">
-					<h1 style="font-size: 30px; line-height: 30px; margin-top: 15px;">
-					Il software è <b>completamente personalizzabile</b> in base alle tue esigenze!
+					<h1 id="headTitleSlider" style="font-size: 30px; line-height: 30px; margin-top: 15px;">
 					</h1>
 				</div>
 			
@@ -272,30 +343,18 @@
 						<li>
 							<div class="textSlide" style="height: 190px;padding:10px 0">
               				<img src="./res_img/productsNavigation.jpg" style="float:left;width:200px; height:230px;padding: 0px 0; margin: 0px 100px 0px 0;position:relative;">
-								<h3 style="margin-top: 30px;">Funzionalit&agrave; complete della navigazione prodotti</h3>
+								<h3 id="productNavigationFeaturesTitleInternalDivId" style="margin-top: 30px;"></h3>
 								<br>
-								<ul style="margin-left:157px">
-										<li style="list-style: disc outside none;font-size: 13px;">Immagini multiple per prodotto.
-									Possibilit&agrave; di zoommare sull'immagine del
-										prodotto.</li>
-									<li style="list-style: disc outside none;font-size: 13px;">Prodotti correlati.</li>
-									<li style="list-style: disc outside none;font-size: 13px;">Disponibilit&agrave; di stock.</li>
-									<li style="list-style: disc outside none;font-size: 13px;">Prezzi multistrato per grandi vendite.</li>
-									<li style="list-style: disc outside none;font-size: 13px;">Selezione delle opzioni del prodotto.</li>
+								<ul id="productNavigationFeaturesInternalDivId"  style="list-style-type: none;margin-left: 157px;padding: 0 160px;font-family: Verdana, Arial, Helvetica, sans-serif !important;font-size: 13px!important;font-weight: normal!important;line-height: 1.5;">
+																		
 								</ul>
 							</div>
 							<div class="textSlide" style="padding: 30px 0;">
 							<img src="./res_img/cart.png" style="float:left;width:200px; height:200px; margin: 30px 100px 0px 0;padding: 25px 0 10px;position:relative;">
-								<h3 style="margin-top: 30px;">Funzionalit&agrave; complete del carrello</h3>
+								<h3 id="productCartFeaturesTitleInternalDivId"  style="margin-top: 30px;"></h3>
 								<br>
-								<ul style="padding: 0 110px;margin-left:206px">
-									<li style="list-style: disc outside none;font-size: 13px;">Checkout in una pagina.</li>
-									<li style="list-style: disc outside none;font-size: 13px;">Utilizzo degli SSL per la sicurezza degli ordini, sia sul frontend che sul backend.</li>
-									<li style="list-style: disc outside none;font-size: 13px;">Spedizioni a indirizzi diversi in un solo ordine.</li>
-									<li style="list-style: disc outside none;font-size: 13px;">Checkout senza account in modalit&agrave; Guest	Checkout.</li>
-									<li style="list-style: disc outside none;font-size: 13px;">Carrello con stima di spese fiscali e di spese di spedizione.</li>
-									<li style="list-style: disc outside none;font-size: 13px;">Opzione per creare un account all'inizio del checkout.</li>
-									<li style="list-style: disc outside none;font-size: 13px;">Salvataggio dei carrelli con tempo di scadenza configurabile.</li>
+								<ul id="productCartFeaturesInternalDivId" style="list-style-type: none;margin-left: 206px;padding: 0 110px;font-family: Verdana, Arial, Helvetica, sans-serif !important;font-size: 13px!important;font-weight: normal!important;line-height: 1.5;">
+								
 								</ul>
 							</div>							
 						</li>
@@ -303,32 +362,30 @@
 						<li>
 							<div style="padding:20px 0;height:190px" class="textSlide">
 							<img src="./res_img/funzionalitaAcquisto.jpg" style="float:left;width:250px; height:200px;margin: 0px 50px 0px 0;position:relative;">
-								<h3 style="margin-top: 10px;">Funzionalit&agrave; di acquisto</h3>
+								<h3 id="productPurchaseFeaturesTitleInternalDivId" style="margin-top: 10px;"></h3>
 								<br>
-								<ul>
-									Permetter&agrave; ai tuoi clienti di acquistare anche
-										senza essere preventivamente registrati.Questa infatti
-										&egrave; una delle caratteristiche pi&ugrave; importanti di un
-										ecommerce. Non bloccando il flusso di acquisto al checkout il
-										cliente potr&agrave; decidere se acquistare senza registrarsi
-										oppure registrarsi durante l'acquisto semplicemente scegliendo
-										la propria password.
+								<ul id="productPurchaseFeaturesInternalDivId" style="list-style-type: none;
+											margin: 0;
+											padding: 0 160px;
+											font-family: Verdana, Arial, Helvetica, sans-serif !important;
+											font-size: 13px!important;
+											font-weight: normal!important;
+											line-height: 1.5;">
+									
 								</ul>
 							</div>
 							<div class="textSlide">
 							<img src="./res_img/tag.jpg" style="float:left;width:200px; height:200px; margin: 30px 100px 0px 0;position:relative;">
-								<h3 style="margin-top: 30px;">Funzionalit&agrave; di ricerca per tag</h3>
+								<h3 id="productTagFeaturesTitleInternalDivId" style="margin-top: 30px;"></h3>
 								<br>
-								<ul>
-									Possibilit&agrave; di etichettare i prodotti con un
-										numero illimitato di etichette cosi da potenziare la
-										funzionalita di ricerca che non viene fatta solo per nome.
-									Un algoritmo ricalcola periodicamente il punteggio dei
-										tag per mettere in risalto nella barra di ricerca i risultati
-										relativi a etichette con punteggio piu alto.
-									Possibilit&agrave; di scremare la ricerca per
-										categoria o per un numero illimitato di caratteristiche
-										relative a un prodotto.</br>
+								<ul  id="productTagFeaturesInternalDivId" style="list-style-type: none;
+											margin: 0;
+											padding: 0 160px;
+											font-family: Verdana, Arial, Helvetica, sans-serif !important;
+											font-size: 13px!important;
+											font-weight: normal!important;
+											line-height: 1.5;">
+									
 								</ul>
 							</div>
 						</li>
@@ -338,32 +395,30 @@
 							
 							<div class="textSlide" style="height: 190px;">
 							<img src="./res_img/customers.jpg" style="float:left;width:200px; height:200px; margin: 0px 100px 0px 0;position:relative;">
-								<h3>Gestione clienti</h3>
+								<h3 id="productCustomerManagementFeaturesTitleInternalDivId" ></h3>
 								<br>
-								<ul>
-									Ogni cliente ha la possibilit&agrave; di rivedere gli
-										ordini fatti e scendere fino al dettaglio della singola
-										spedizione analizzandone lo stato in qualsiasi momento.
+								<ul id="productCustomerManagementFeaturesInternalDivId" style="list-style-type: none;
+											margin: 0;
+											padding: 0 160px;
+											font-family: Verdana, Arial, Helvetica, sans-serif !important;
+											font-size: 13px!important;
+											font-weight: normal!important;
+											line-height: 1.5;">
+									
 								</ul>
 							</div>
 							<div class="textSlide">
 							<img src="./res_img/ajax.jpg" style="float:left;width:200px; height:250px; margin:-40px 100px 20px 0;padding: 35px 0;position:relative;">
-								<h3 style="margin-top: 20px;">Utilizzo della tecnologia Ajax</h3>
+								<h3 id="productAjaxTechnologyFeaturesTitleInternalDivId" style="margin-top: 20px;"></h3>
 								<br>
-								<ul>
-									CloudyEcommerce f&agrave; uso della nuovissima
-										tecnologia Ajax per velocizzare e migliorare alcune delle
-										funzionalit&agrave; pi&ugrave; usate come l'aggiunta al
-										carrello. Lo stesso procedimento avviene per
-										l'ordinamento dei prodotti in base ad un particolare
-										attributo.
-									Inoltre la tecnologia ajax viene utilizzata anche
-										nella gestione del magazzino, offrendo una esperienza desktop
-										like, questo porta grandi vantaggi, soprattutto se ci si trova
-										a dover inserire molti prodotti e con periodicit&agrave;
-										stringenti perch&egrave; non si &egrave; costretti ad
-										aspettare il caricamento di tutta la pagina per
-										l&grave;utilizzo di ogni funzionalit&agrave;.
+								<ul id="productAjaxTechnologyFeaturesInternalDivId" style="list-style-type: none;
+											margin: 0;
+											padding: 0 160px;
+											font-family: Verdana, Arial, Helvetica, sans-serif !important;
+											font-size: 13px!important;
+											font-weight: normal!important;
+											line-height: 1.5;">
+									
 								</ul>
 							</div>
 						</li>
@@ -372,33 +427,24 @@
 						<li>
 							<div class="textSlide" style="height: 190px;">
 							<img src="./res_img/java.png" style="float:left;width:200px; height:200px; margin: 10px 100px 0px 0;position:relative;">
-								<h3>Java Enterprise</h3>
+								<h3 id="productJavaEnterpriseFeaturesTitleInternalDivId" ></h3>
 								<br>
-								<ul>
-									Il cuore dell&acute;applicativo &egrave; sviluppato
-										con tecnologia Java enterprise questo garantisce che il sito
-										di ecommerce sia scalabile a tutti i livelli e fino a volumi
-										di utenza molto alti, in contrapposizione ad architetture php
-										che incontrano dei colli di bottiglia consistenti riguardo
-										alla scalabilit&agrave;, l&acute;utilizzo di tecnologia java
-										fa si che CloudyEcommerce si integri perfettamente con
-										l&acute;infrastruttura SAAS.
+								<ul id="productJavaEnterpriseFeaturesInternalDivId">
+									
 								</ul>
 							</div>
 							<div class="textSlide">
 							<img src="./res_img/customizerIcon.png" style="padding: 10px 0;float:left;width:200px; height:200px; margin: 20px 100px 0px 0;position:relative;">
-								<h3 style="margin-top: 30px;">Flessibilit&agrave;</h3>
+								<h3 id="productFlexibilityFeaturesTitleInternalDivId" style="margin-top: 30px;"></h3>
 								<br>
-								<ul  style="padding: 0 170px;">
-									CloudyEcommerce &egrave; completamente sviluppato da
-										noi, non &egrave; una personalizzazione di un altro prodotto,
-										ci&ograve; implica che qualsiasi modifica di qualsiasi genere
-										&egrave; possibile, basta mettersi in contatto con noi e
-										implementeremo le modifiche desiderate dal cliente, questo
-										oltre alle modifiche che di volta in volta vengono apportate,
-										parliamo di una serie di funzionalit&agrave; aggiuntive che
-										vengono installate nell&acute;ecommerce man mano che vengono
-										sviluppate.
+								<ul id="productFlexibilityFeaturesInternalDivId" style="list-style-type: none;
+											margin: 0;
+											padding: 0 170px;
+											font-family: Verdana, Arial, Helvetica, sans-serif !important;
+											font-size: 13px!important;
+											font-weight: normal!important;
+											line-height: 1.5;">
+									
 								</ul>
 							</div>
 						</li>
@@ -406,30 +452,31 @@
 						<li>
 							<div class="textSlide" style="height: 190px;">
 							<img src="./res_img/24hours.jpg" style="float:left;width:200px; height:200px; margin: 20px 100px 0px 0;position:relative;">
-								<h3 style="margin-top: 30px;">Supporto 24h</h3>
+								<h3 id="productSupportFeaturesTitleInternalDivId" style="margin-top: 30px;"></h3>
 								<br>
-								<ul>
-									Tutte le installazioni dell&acute;ecommerce vengono
-										monitorate 24h da software di Application performance
-
-										management, cosi da individuare eventuali problemi o cali
-										delle prestazioni prima che vengano individuate dai clienti,
-										questa forma di prevenzione limita i danni enormemente,
-										inoltre per qualsiasi domanda o richiesta di aiuto &egrave;
-										attivo un servizio tutti i giorni per aiutare i clienti.
+								<ul id="productSupportFeaturesInternalDivId" style="list-style-type: none;
+											margin: 0;
+											padding: 0 160px;
+											font-family: Verdana, Arial, Helvetica, sans-serif !important;
+											font-size: 13px!important;
+											font-weight: normal!important;
+											line-height: 1.5;">
+									
 								</ul>
 							</div>
 						
 							<div class="textSlide" style="height: 190px;">
 							<img src="./res_img/iaas.jpg" style="float:left;width:200px; height:200px; margin: 20px 100px 0px 0;position:relative;">
-								<h3 style="margin-top: 30px;">Infrastructure as a Service</h3>
+								<h3 id="productIaasFeaturesTitleInternalDivId" style="margin-top: 30px;"></h3>
 								<br>
-								<ul>
-									CloudyEcommerce &egrave; un servizio, i vantaggi di questa scelta sono evidenti perch&egrave;
-									chi usufruisce di questo servizio non ha bisogno di installare nei propri uffici un' architettura hardware 
-									comprensiva di uno o piu server, gruppi di continuit&agrave;, 
-									abbonamenti luce e internet	aziendali, sistemi di sicurezza, sistemi di ridondanza e salvataggio dei dati poich&egrave;
-									viene gestito tutto da noi.
+								<ul id="productIaasFeaturesInternalDivId" style="list-style-type: none;
+											margin: 0;
+											padding: 0 160px;
+											font-family: Verdana, Arial, Helvetica, sans-serif !important;
+											font-size: 13px!important;
+											font-weight: normal!important;
+											line-height: 1.5;">
+									
 								</ul>
 							</div>
 						</li>
@@ -441,7 +488,7 @@
 				
 			</div>
       
-      <p style="font-size:20px;color:#36aad8;font-family: arial;font-weight: normal;margin-left: 10px;line-height: 3;">ANTEPRIMA DI ALCUNE FUNZIONALITA'</p>
+      <p id="featuresPreviewTitleInternalDivId" style="font-size:20px;color:#36aad8;font-family: arial;font-weight: normal;margin-left: 10px;line-height: 3;"></p>
       
 				<div style="background: white;width: 900px;margin-bottom: 10px;">
 					 <a class="highslide" style="margin-left: 30px;" href="./res_img/shotCart.png" onclick="return hs.expand(this)">
@@ -467,13 +514,13 @@
 		      </a>
      
      
-      <span style="display: inline-block;padding-left: 130px; width: 63px;"> carrello</span>
-      <span style="margin-left: 35px;display: inline-block;height: 40px;width: 95px;vertical-align: top;"> prodotti più venduti</span>
-      <span style="display: inline-block;width: 90px;vertical-align: top;margin-left: 20px;"> riassunto ordini</span> 
-      <span style="display: inline-block;width: 74px;vertical-align: top;margin-left: 25px;">ordini nel checkout</span> 
-      <span style="display: inline-block;width: 70px;vertical-align: top;margin-left: 45px;"> ricerca</span> 
-      <span style="display: inline-block;width: 86px;vertical-align: top;margin-left: 28px;"> prodotti in esaurimento</span> 
-      <span style="display: inline-block;width: 80px;vertical-align: top;margin-left: 23px;"> strategia di spedizione</span>       
+      <span id="featuresPreview1InternalDivId" style="display: inline-block;padding-left: 130px; width: 63px;"></span>
+      <span id="featuresPreview2InternalDivId" style="margin-left: 35px;display: inline-block;height: 40px;width: 95px;vertical-align: top;"></span>
+      <span id="featuresPreview3InternalDivId" style="display: inline-block;width: 90px;vertical-align: top;margin-left: 20px;"></span> 
+      <span id="featuresPreview4InternalDivId" style="display: inline-block;width: 74px;vertical-align: top;margin-left: 25px;"></span> 
+      <span id="featuresPreview5InternalDivId" style="display: inline-block;width: 70px;vertical-align: top;margin-left: 45px;"></span> 
+      <span id="featuresPreview6InternalDivId" style="display: inline-block;width: 86px;vertical-align: top;margin-left: 28px;"></span> 
+      <span id="featuresPreview7InternalDivId" style="display: inline-block;width: 80px;vertical-align: top;margin-left: 23px;"></span>       
        
 
 				</div>
@@ -484,9 +531,13 @@
 								<!-- AddThis Button BEGIN -->
 				<!--  			<div style="margin-right: 30px;margin-top: 10px;margin-left: 100px;width: 250px;display: inline-block;" class="addthis_toolbox addthis_default_style addthis_32x32_style">-->
 				
+
 				<div id="customAddThis" class="addthis_toolbox addthis_default_style addthis_32x32_style">
 
 				<p style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;">Condividi</p>
+
+				<p id="featuresCommercialSiteShareInternalDivId" style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;"></p>
+
 				 <a class="addthis_button_facebook"></a>
 	    					   <a class="addthis_button_twitter"></a>
 	    					   <a class="addthis_button_pinterest_share"></a>
@@ -495,7 +546,7 @@
 				</div>
 				
 				
-					<a style="float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br>Termini e condizioni di vendita</a>
+					<a id="featuresCommercialSiteTermsAndConditionsInternalDivId" style="float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br></a>
 				
 				
 				

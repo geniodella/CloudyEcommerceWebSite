@@ -15,8 +15,11 @@
  <meta name="Description" content="Cloudy Ecommerce è un ecommerce SaaS versatile e completamente personalizzabile su richiesta,
 basato su java e ajax molto veloce e per qualsiasi tipo di negozio.">
 <meta name="Keywords" content="ecommerce,saas,vendere,negozio,personalizzabile">
+
+	<script type="text/javascript" src="./res_js/jquery/jquery-1.8.0.js"></script>
 	
-	<script type="text/javascript" src="./res_js/jquery/jquery-1.3.1.min.js"></script>
+<!-- 	<script type="text/javascript" src="./res_js/jquery/jquery-1.3.1.min.js"></script> -->
+	<script type="text/javascript" src="./res_js/jquery/jquery.i18n.properties-min-1.0.9.js"></script>
 	<script type="text/javascript" src="./res_js/jquery/jquery.ui.all.js"></script>
 	<script type="text/javascript" src="./res_js/jquery/jquery.tooltip.js"></script>
 	<script type="text/javascript" src="./res_js/jquery/jquery.autocomplete.js"></script>
@@ -29,9 +32,8 @@ basato su java e ajax molto veloce e per qualsiasi tipo di negozio.">
 <script type="text/javascript" src="./res_js/jquery/jquery.simplemodal.js"></script>
 
 
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-<script>window.jQuery|| document.write('<script src="../res_js/jquery.min.js"><\/script>')</script>
+<!-- <script	src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script> -->
+<!-- <script>window.jQuery|| document.write('<script src="../res_js/jquery.min.js"><\/script>')</script> -->
 
 <!-- Anything Slider optional plugins -->
 <script src="./res_js/jquery/jquery.easing.1.2.js"></script>
@@ -57,7 +59,8 @@ basato su java e ajax molto veloce e per qualsiasi tipo di negozio.">
  <!-- ColorBox -->
  <link href="./res_css/colorbox/colorbox.css" rel="stylesheet">
  <script src="./res_js/jquery/jquery.colorbox-min.js"></script>
-
+ 
+ 
                                                                           
 <!-- highslide --> 
 <script type="text/javascript" src="./res_js/highslide/highslide-with-gallery.js"></script>

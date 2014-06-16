@@ -279,6 +279,8 @@ p.change_link{
 	-o-transition: all 0.4s linear;
 	-ms-transition: all 0.4s  linear;
 	transition: all 0.4s  linear;
+	float: right;
+	margin-top: -4px;
 }
 #wrapper p.change_link a:hover {
 	color: rgb(57, 191, 215);
@@ -296,7 +298,7 @@ p.change_link{
 	top: 0px;
 	width: 88%;	
 /* 	height: 385px !important; */
-	padding: 18px 6% 60px 6%;
+	padding: 18px 30px 60px 30px;
 	margin: 0 -5px 35px;
 	background: rgb(247, 247, 247);
 	border: 1px solid rgba(147, 184, 189,0.8);

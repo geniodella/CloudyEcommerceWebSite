@@ -13,9 +13,9 @@ $(document).ready(function(){
 				'content="html5, css3, form, switch, animation, :target, pseudo-class" />'+
 			'<meta name="author" content="Codrops" />'+
 			'<link rel="shortcut icon" href="../favicon.ico">'+
-			'<link rel="stylesheet" type="text/css" href="../css/demo.css" />'+
-			'<link rel="stylesheet" type="text/css" href="../css/style.css" />'+
-			'<link rel="stylesheet" type="text/css" href="../css/animate-custom.css" />'+
+			'<link rel="stylesheet" type="text/css" href="./css/demo.css" />'+
+			'<link rel="stylesheet" type="text/css" href="./css/style.css" />'+
+			'<link rel="stylesheet" type="text/css" href="./css/animate-custom.css" />'+
 			'</head>'+
 			'<body>'+
 				'<div class="container">'+
@@ -28,25 +28,26 @@ $(document).ready(function(){
 							'<div id="wrapper">'+
 
 							'<form action="./../Customer.action" id="roleForm">'+  
-								'<div id="register" class="animate form">'+
+								'<div id="register" class="animate form" style="height:390px">'+
 
-									'<h1>Registrati</h1>'+
+									'<h1 id="subscriptionFormSignup" style="padding: 10px;"></h1>'+
+									'<div id="error-container"></div>'+
 									'<p>'+
-										'<label for="usernamesignup" class="uname" data-icon="u">Nome Utente</label>'+ 
+										'<label id="subscriptionFormUsername" for="usernamesignup" class="uname" data-icon="u"></label>'+ 
 										'<input id="usernamesignup" name="username" required="required" type="text" placeholder="mysuperusername690" />'+
 									'</p>'+
 									'<p>'+
-										'<label for="emailsignup" class="youmail" data-icon="e">Indirizzo email</label>'+ 
+										'<label id="subscriptionFormEmail" for="emailsignup" class="youmail" data-icon="e"></label>'+ 
 										'<input id="emailsignup" name="mail" required="required" type="email" placeholder="mysupermail@mail.com" />'+
 									'</p>'+
-									'<p>'+
-										'<IMG SRC="./../stickyImg" ><P><INPUT TYPE="text" NAME="captchaValue" VALUE="">'+
-										'<label>Captcha</label><INPUT TYPE="hidden" NAME="lafessadimammata" value="2Hehu4i2dh4KU6">'+
+									'<p style="margin-top: 30px;"><img src="./stickyImg?46" style="width: 250px;height: 60px;" id="captchaId">'+
+									'<span id="subscriptionFormCaptchaEmailQuestion" style="float: right;" src="res_img/captchaLogo.png"></span>'+
+									'<input type="text" name="captchaValue" value="" placeholder="Captcha" class="customCaptcha" style="width: 175px;float: right;margin-top: -40px;padding: 10px 5px;">'+
 									'</p>'+
 									'<p class="signin button">'+
-										'<input id="submitForm" type="submit" value="Registrati" />'+
+										'<input id="submitForm" style="margin-top: 20px;" type="submit" value="'+org.commercialsite.subscriptionform.signup+'" />'+
 									'</p>'+
-									'<p class="change_link">Sei già registrato ?<a href="#tologin" id="registerButton" class="to_register"> Vai alla login </a>'+
+									'<p id="subscriptionFormSignupQuestion" class="change_link" style="margin-top: 30px;"><a href="#tologin" id="registerButton" class="to_register"></a>'+
 									'</p>'+
 								'</div>'+
 
@@ -80,7 +81,7 @@ $(document).ready(function(){
 		});  
 			
 		$(html).modal( {
-			closeHTML:"",
+			closeHTML:"<a class='modalCloseImg'>X</a>",
 			containerCss:{
 				backgroundColor:"#fff", 
 				borderColor:"#fff", 
@@ -90,5 +91,21 @@ $(document).ready(function(){
 			},
 			overlayClose:false
 		});
+		jQuery(document).ready(function() {
+					jQuery.i18n.properties({
+						    name:'Application', 
+						    path:'./resources/', 
+						    mode:'both',
+						    	  callback: function() {
+						    		  $('#subscriptionFormUsername').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.username'));
+						    		  $('#subscriptionFormEmail').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.emailaddress'));
+						    		  $('#subscriptionFormCaptchaEmailQuestion').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.captchaemailquestion'));
+									  $('#subscriptionFormSignup').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.signup'));
+									  $('#subscriptionFormSignupQuestion').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.signupquestion'));
+									  $('#registerButton').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.gotologin'));
+								  }
+					})
+		});
 	});
+	
 });

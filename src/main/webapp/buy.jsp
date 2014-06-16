@@ -85,7 +85,7 @@
 						'</html>';
 						
 						$('#registerButton').live('click', function(){	
-							window.location.href="/24777_BackSite";
+							window.location.href="/24333_BackSite";
 						});
 					
 						
@@ -96,7 +96,7 @@
 							 $(this).find('input[type=submit]').attr('disabled', 'disabled');
 							
 							var formData = $("#roleForm").serializeArray();	
-              				if(event.handled !== true){   
+	          				if(event.handled !== true){   
 						    	$.ajax({
 						            type: 'POST',
 						            url: 'Customer.action',
@@ -106,13 +106,13 @@
 	                      
 	              	      			  if(data.success==true){                  								                                    
 										var msg = $('#register');                
-	                					$('#register').html('Caricamento...');
+	                					$('#register').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.loading'));
 						         	    $('#register').animate({
 											height: '50px'
 									    }); 
 						         	    
 						         	    $('#register').append("<img id='theImg' src='res_img/loading.gif' style='margin: 0 200px;display: block;'/>").delay(1000).queue(function (next) {
-											$('#register').html('Grazie!').append(' Ti arriverà un\'email coi dati di accesso.').css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif").css("line-height","5");
+											$('#register').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.thanks')).append(jQuery.i18n.prop('org.commercialsite.subscriptionform.confirmalmessage')).css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif").css("line-height","5");
 						                	next();
 						          	    });
 				                      }
@@ -120,20 +120,20 @@
 	              	      		   $('input[type="submit"]').removeAttr('disabled');
 	              	      			  
 	                                    if(data.msg==1){
-	        			                    	  $('#error-container').html('Il captcha che hai inserito è errato!').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
+	        			                    	  $('#error-container').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.wrongcaptcha')).css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
 	              						}else if (data.msg==2){
-	              							 $('#error-container').html('Utente esistente!').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
+	              							 $('#error-container').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.existinguser')).css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
 	              						}
 	                                    else{
-	              			                 $('#error-container').html('Email esistente!').append(' Inserire una nuova email.').css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
+	              			                 $('#error-container').html(jQuery.i18n.prop('org.commercialsite.subscriptionform.existingemail')).append(jQuery.i18n.prop('org.commercialsite.subscriptionform.insertnewemail')).css("background","#4AB3C6").css("line-height","2").css("margin","10px 0").css("color","white").css("border","2px solid #ccc").css("height", "30px").css("text-align", "center").css("font-size","16px").css("font-family","arial,verdana,sans-serif");
 	              						}
 	                                  }
 	                                  event.handled = true;
 				                    }	                          
 						       });
-                			  }
-              				return false;
-						});    
+	            			  }
+	          				return false;
+						});   
 					
 						
 					$(html).modal( {
@@ -152,9 +152,72 @@
 					
 					
 				});
+				
+				
+				jQuery(document).ready(function() {
+					jQuery.i18n.properties({
+						    name:'Application', 
+						    path:'./resources/', 
+						    mode:'both',
+						    	  callback: function() {
+								  
+									$('#featuresCommercialSiteBuyTitleInternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.buy.title')+"</p>");
+									
+									$('#featuresCommercialSiteBuyMonth1InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.month'));
+									$('#featuresCommercialSiteBuyMonth2InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.month'));
+									$('#featuresCommercialSiteBuyMonth3InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.month'));
+									
+									$('#featuresCommercialSiteBuyBaseSolutionTitleInternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.basesolution.title'));
+									$('#featuresCommercialSiteBuyProfessionalSolutionTitleInternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.professionalsolution.title'));
+									$('#featuresCommercialSiteBuyCompleteSolutionTitleInternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.completesolution.title'));
+									
+									$('#featuresCommercialSiteBuyBaseSolutionDescr1InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.basesolution.descr1'));
+									$('#featuresCommercialSiteBuyProfessionalSolutionDescr1InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.professionalsolution.descr1'));
+									$('#featuresCommercialSiteBuyCompleteSolutionDescr1InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.completesolution.descr1'));
+								  
+									$('#featuresCommercialSiteBuyBaseSolutionDescr2InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.basesolution.descr2'));
+									$('#featuresCommercialSiteBuyProfessionalSolutionDescr2InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.professionalsolution.descr2'));
+									$('#featuresCommercialSiteBuyCompleteSolutionDescr2InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.completesolution.descr2'));
+									
+									$('#featuresCommercialSiteBuyBaseSolutionDescr3InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.basesolution.descr3'));
+									$('#featuresCommercialSiteBuyProfessionalSolutionDescr3InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.professionalsolution.descr3'));
+									$('#featuresCommercialSiteBuyCompleteSolutionDescr3InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.completesolution.descr3'));
+									
+									$('#featuresCommercialSiteBuySpecialOfferInternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.specialoffer'));
+									
+									$('#featuresCommercialSiteBuyYear1InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.yearly'));
+									$('#featuresCommercialSiteBuyYear2InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.yearly'));
+									$('#featuresCommercialSiteBuyYear3InternalDivId').append(jQuery.i18n.prop('org.commercialsite.buy.yearly'));
+									
+									$('#featuresCommercialSiteShareInternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.share')+"</p>");
+										
+									$('#featuresCommercialSiteTermsAndConditionsInternalDivId').append("<a>"+jQuery.i18n.prop('org.commercialsite.termsandconditions')+"</a>");
+									
+									$('#basesolution.descrPaypal').attr('value',jQuery.i18n.prop('org.commercialsite.buy.basesolution.descrPaypal'));
+									$('#professionalsolution.descrPaypal').attr('value',jQuery.i18n.prop('org.commercialsite.buy.professionalsolution.descrPaypal'));
+									$('#completesolution.descrPaypal').attr('value',jQuery.i18n.prop('org.commercialsite.buy.completesolution.descrPaypal'));
+								  }						  
+						});
+				    });
+		});
+		
+		//metodo usato per l'i18n dei bottoni
+		$(document).ready(function() {
+		    var known = { en: true, it: true};
+		    var lang  = (navigator.language || navigator.userLanguage || 'it').substr(0, 2);
+		    if(!known[lang])
+		        lang = 'it';
+		    // Find all <div>s with a class of "wrapper" and lang attribute equal to `lang`
+		    // and make them visibile.
+		    $('div.wrapper[lang='  + lang + ']').show();
+		    // Find all <div>s with a class of "wrapper" and lang attribute not equal
+		    // to `lang` and make them invisibile.
+		    $('div.wrapper[lang!=' + lang + ']').hide();
 		});
 				
 				</script>
+				
+				
 				
 	
 	<div id="content-container">
@@ -172,7 +235,7 @@
 
 						<div id="content-body" style="border:none; margin:0px;background: white;">
             
-            <p style="font-size:35px;color:black;font-family: 'Della Respira',serif;font-weight: normal;line-height: 2;margin:30px 150px 40px;text-align: center;">Scegli la soluzione migliore per le tue esigenze e i tuoi volumi d'affari.</p>
+            <p id="featuresCommercialSiteBuyTitleInternalDivId" style="font-size:35px;color:black;font-family: 'Della Respira',serif;font-weight: normal;line-height: 2;margin:30px 150px 40px;text-align: center;"></p>
 
 							<div class="pricing-tabel" id="content-text" style="background: transparent;margin: 0px;padding: 0px">
 
@@ -196,24 +259,24 @@
                   </tr>
 
 									<tr>
-										<th width="30%"
-											style="border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: #ECF2F6; font-size: 20px;"><span style="font-size: 40px;">30</span>&#128;/Mese</th>
+										<th id="featuresCommercialSiteBuyMonth1InternalDivId" width="30%"
+											style="border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: #ECF2F6; font-size: 20px;"><span style="font-size: 40px;">30</span>&#128;/</th>
 										<th width="2%"></th>
-                    <th width="30%"
-											style="border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: white; font-size: 20px;"><span style="font-size: 40px;">80</span>&#128;/Mese</th>
+                    <th id="featuresCommercialSiteBuyMonth2InternalDivId" width="30%"
+											style="border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: white; font-size: 20px;"><span style="font-size: 40px;">80</span>&#128;/</th>
 										<th width="2%"></th>
-                    <th width="30%"
-											style="border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: #ECF2F6; font-size: 20px;"><span style="font-size: 40px;">120</span>&#128;/Mese</th>
+                    <th id="featuresCommercialSiteBuyMonth3InternalDivId" width="30%"
+											style="border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; color: #479CCF; background: #ECF2F6; font-size: 20px;"><span style="font-size: 40px;">120</span>&#128;/</th>
 									</tr>
 									<tr>
-										<td
-											style="font-size: 16px !important; text-align: center; background: #ECF2F6; border-left: 1px solid #D9DEE1; border-right: 1px solid #D9DEE1; border-color: #D9DEE1; border-style: solid solid solid solid; border-width: 0 1px 1px 1px">BASE</td>
+										<td id="featuresCommercialSiteBuyBaseSolutionTitleInternalDivId" 
+											style="font-size: 16px !important; text-align: center; background: #ECF2F6; border-left: 1px solid #D9DEE1; border-right: 1px solid #D9DEE1; border-color: #D9DEE1; border-style: solid solid solid solid; border-width: 0 1px 1px 1px"></td>
 										<td></td>
-                    <td
-											style="font-size: 16px !important; text-align: center; background: white;border-color: #D9DEE1; border-style: solid solid solid solid; border-left: 1px solid #D9DEE1; border-right: 1px solid #D9DEE1; border-width: 0 1px 1px 1px">PROFESSIONALE</td>
+                    <td id="featuresCommercialSiteBuyProfessionalSolutionTitleInternalDivId" 
+											style="font-size: 16px !important; text-align: center; background: white;border-color: #D9DEE1; border-style: solid solid solid solid; border-left: 1px solid #D9DEE1; border-right: 1px solid #D9DEE1; border-width: 0 1px 1px 1px"></td>
 										<td></td>
-                    <td
-											style="font-size: 16px !important; text-align: center; background: #ECF2F6; border-color: #D9DEE1; border-style: solid solid solid solid; border-right: 1px solid #D9DEE1; border-width: 0 1px 1px 1px">ILLIMITATO</td>
+                    <td id="featuresCommercialSiteBuyCompleteSolutionTitleInternalDivId" 
+											style="font-size: 16px !important; text-align: center; background: #ECF2F6; border-color: #D9DEE1; border-style: solid solid solid solid; border-right: 1px solid #D9DEE1; border-width: 0 1px 1px 1px"></td>
 										</tr>
                     
                     	<tr>
@@ -229,45 +292,36 @@
 									</tr>
                   
 									<tr>
-										<td
-											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">500
-											Prodotti</td>
+										<td id="featuresCommercialSiteBuyBaseSolutionDescr1InternalDivId"
+											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6"></td>
                       <td></td>
-										<td
-											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1;background: white;">3000
-											Prodotti</td>
+										<td id="featuresCommercialSiteBuyProfessionalSolutionDescr1InternalDivId"
+											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1;background: white;"></td>
                       <td></td>
-										<td
-											style="font-weight: normal;font-size: 14px;padding: 0 0 0 0px; text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">Prodotti
-											illimitati</td>
+										<td id="featuresCommercialSiteBuyCompleteSolutionDescr1InternalDivId"
+											style="font-weight: normal;font-size: 14px;padding: 0 0 0 0px; text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6"></td>
 									
 									</tr>
 									<tr>
-										<td
-											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">Spazio
-											d'archiviazione 1GB</td>
+										<td id="featuresCommercialSiteBuyBaseSolutionDescr2InternalDivId"
+											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6"></td>
                       <td></td>
-										<td
-											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1;background: white;">Spazio
-											d'archiviazione 5GB</td>
+										<td id="featuresCommercialSiteBuyProfessionalSolutionDescr2InternalDivId"
+											style="font-weight: normal;font-size: 14px;text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1;background: white;"></td>
                       <td></td>
-										<td
-											style="font-weight: normal;font-size: 14px;padding: 0; text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6">Spazio
-											d'archiviazione illimitato</td>
+										<td id="featuresCommercialSiteBuyCompleteSolutionDescr2InternalDivId"
+											style="font-weight: normal;font-size: 14px;padding: 0; text-align: center; border-right: 1px solid #D9DEE1;border-left: 1px solid #D9DEE1; background: #ECF2F6"></td>
 									
 									</tr>
 									<tr>
-										<td
-											style="font-weight: normal;font-size: 14px;text-align: center;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; background: #ECF2F6">Larghezza
-											di banda illimitata</td>
+										<td id="featuresCommercialSiteBuyBaseSolutionDescr3InternalDivId"
+											style="font-weight: normal;font-size: 14px;text-align: center;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; background: #ECF2F6"></td>
                       <td></td>
-										<td
-											style="font-weight: normal;font-size: 14px;text-align: center;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1;background: white;">Larghezza
-											di banda illimitata</td>
+										<td id="featuresCommercialSiteBuyProfessionalSolutionDescr3InternalDivId"
+											style="font-weight: normal;font-size: 14px;text-align: center;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1;background: white;"></td>
                       <td></td>
-										<td
-											style="font-weight: normal;font-size: 14px;padding: 0; text-align: center;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; background: #ECF2F6">Larghezza
-											di banda illimitata</td>
+										<td id="featuresCommercialSiteBuyCompleteSolutionDescr3InternalDivId"
+											style="font-weight: normal;font-size: 14px;padding: 0; text-align: center;border-right: 1px solid #D9DEE1; border-left: 1px solid #D9DEE1; background: #ECF2F6"></td>
 									
 									</tr>
 
@@ -290,15 +344,16 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="item_name" value="Cloudy Ecommerce base soluzione mensile">  	
-                <input type="hidden" name="business" value="geniodella@gmail.com"> 									
+								<input id="basesolution.descrPaypal" type="hidden" name="item_name">  	
+                				<input type="hidden" name="business" value="geniodella@gmail.com"> 									
  								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="AR48NTJLZMBJJ">
-								 <input type="hidden" name="amount" value="30">
+								<input type="hidden" name="amount" value="30">
 								<input type="hidden" name="rm" value="2">
 								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
-								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaBaseBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
-								
+								<div lang="it" class="wrapper"><input type="image" border="0" name="submit" src="res_img/bottoneAcquistaBaseBlu.png" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+								<div lang="en" class="wrapper"><input type="image" border="0" name="submit" src="res_img/bottoneAcquistaBaseBlu_en_EN.png"  alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+																
 								</form>
 											
 										</td>
@@ -309,14 +364,15 @@
 												<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-                <input type="hidden" name="item_name" value="Cloudy Ecommerce professionale soluzione mensile">
+								<input id="professionalsolution.descrPaypal" type="hidden" name="item_name" />
 								<input type="hidden" name="business" value="geniodella@gmail.com">
 								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="UBFVK6LHQTJW4">
 								 <input type="hidden" name="amount" value="80">
 								<input type="hidden" name="rm" value="2">
 								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
-								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaProfessionalBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								<div lang="it" class="wrapper"><input type="image" border="0" name="submit" src="res_img/bottoneAcquistaBaseBlu.png" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+								<div lang="en" class="wrapper"><input type="image" border="0" name="submit" src="res_img/bottoneAcquistaBaseBlu_en_EN.png"  alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
 								
 								</form>
 										</td>
@@ -327,14 +383,15 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-                				<input type="hidden" name="item_name" value="Cloudy Ecommerce illimitato soluzione mensile">
+                				<input id="completesolution.descrPaypal" type="hidden" name="item_name">
 								<input type="hidden" name="business" value="geniodella@gmail.com"> 
 								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="MQ4X5XXBYP4CW">
 								 <input type="hidden" name="amount" value="120">
 								<input type="hidden" name="rm" value="2">
 								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
-								<input type="image" style="height:44;width:160" src="res_img/bottoneAcquistaBlu.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								<div lang="it" class="wrapper"><input type="image" border="0" name="submit" src="res_img/bottoneAcquistaBaseBlu.png" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+								<div lang="en" class="wrapper"><input type="image" border="0" name="submit" src="res_img/bottoneAcquistaBaseBlu_en_EN.png"  alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
 								
 								</form>
 										</td>
@@ -355,7 +412,7 @@
 
 							</div>
               
-              <p style="font-size:35px;color:black;font-family: 'Della Respira',serif;font-weight: normal;text-align:center;margin-left: 10px;line-height: 3;">Offerta speciale</p>
+              <p id="featuresCommercialSiteBuySpecialOfferInternalDivId" style="font-size:35px;color:black;font-family: 'Della Respira',serif;font-weight: normal;text-align:center;margin-left: 10px;line-height: 3;"></p>
               
               <div class="discount-tabel" id="content-text" style="background: transparent;margin: 20px 0 20px 0;padding: 0px">
 
@@ -367,27 +424,27 @@
 									<tr>
 										<td
 											style="border-radius: 5px 0 0 0;padding: 0 0 0 85px;  background: white">
-											<img style="border-radius: 5px;"
-											src="res_img/sconto1.png"></img>
+											<div lang="it" class="wrapper"><img style="border-radius: 5px;" src="res_img/sconto1_it.png"></img></div>
+											<div lang="en" class="wrapper"><img style="border-radius: 5px;" src="res_img/sconto1_en.png"></img></div>
 										</td> 										
 										<td
 											style="padding: 0 0 0 85px; background: white">
-											<img style="border-radius: 5px;"
-											src="res_img/sconto3.png"></img>
+											<div lang="it" class="wrapper"><img style="border-radius: 5px;" src="res_img/sconto3_it.png"></img></div>
+											<div lang="en" class="wrapper"><img style="border-radius: 5px;" src="res_img/sconto3_en.png"></img></div>
 										</td>
 										<td
 											style="border-radius: 0 5px 0 0;padding: 0 0 0 85px; background: white">
-											<img style="border-radius: 5px;"
-											src="res_img/sconto4.png"></img>
+											<div lang="it" class="wrapper"><img style="border-radius: 5px;" src="res_img/sconto4_it.png"></img></div>
+											<div lang="en" class="wrapper"><img style="border-radius: 5px;" src="res_img/sconto4_en.png"></img></div>
 										</td>
 									</tr>
 									<tr>
-										<td
-											style="font-size: 16px !important; text-align: center; background: white;">ANNUALE</td>
-										<td
-											style="font-size: 16px !important; text-align: center; background: white;">ANNUALE</td>										
-										<td
-											style="font-size: 16px !important; text-align: center; background: white;">ANNUALE</td>
+										<td id="featuresCommercialSiteBuyYear1InternalDivId"
+											style="font-size: 16px !important; text-align: center; background: white;"></td>
+										<td id="featuresCommercialSiteBuyYear2InternalDivId"
+											style="font-size: 16px !important; text-align: center; background: white;"></td>										
+										<td id="featuresCommercialSiteBuyYear3InternalDivId"
+											style="font-size: 16px !important; text-align: center; background: white;"></td>
 									</tr>
 								
 									<tr>
@@ -397,14 +454,15 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="item_name" value="Cloudy Ecommerce base soluzione annuale">
+								<input id="basesolution.descrPaypal" type="hidden" name="item_name">
 								<input type="hidden" name="business" value="geniodella@gmail.com">
 								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="V9NXRVAFFSSCE">
 								 <input type="hidden" name="amount" value="324">
 								<input type="hidden" name="rm" value="2">
 								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
-								<input type="image" style="height:44;width:160" src="res_img/Seleziona1.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								<div lang="it" class="wrapper"><input type="image" style="height:44;width:160" src="res_img/Seleziona1_ita.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+								<div lang="en" class="wrapper"><input type="image" style="height:44;width:160" src="res_img/Seleziona1_eng.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
 								
 								</form>
 										</td>										
@@ -414,14 +472,15 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="item_name" value="Cloudy Ecommerce professionale soluzione annuale">
+								<input id="professionalsolution.descrPaypal" type="hidden" name="item_name">
 								<input type="hidden" name="business" value="geniodella@gmail.com"> 
 								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="TJPRS3L9Z47H4">
 								 <input type="hidden" name="amount" value="612">
 								<input type="hidden" name="rm" value="2">
 								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
-								<input type="image" style="height:44;width:160" src="res_img/Seleziona3.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								<div lang="it" class="wrapper"><input type="image" style="height:44;width:160" src="res_img/Seleziona3_ita.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+								<div lang="en" class="wrapper"><input type="image" style="height:44;width:160" src="res_img/Seleziona3_eng.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
 								
 								</form>
 										</td>
@@ -431,14 +490,15 @@
 											<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_xclick">
 								<input type="hidden" name="currency_code" value="EUR">
-								<input type="hidden" name="item_name" value="Cloudy Ecommerce illimitato soluzione annuale">
+								<input id="completesolution.descrPaypal" type="hidden" name="item_name">
 								<input type="hidden" name="business" value="geniodella@gmail.com">
 								<input type="hidden" name="cancel_return" id="cancel_return" value="www.cloudyecommerce.com">
 								<input type="hidden" name="hosted_button_id" value="WJZDGS626A89J">
 								 <input type="hidden" name="amount" value="1152">
 								<input type="hidden" name="rm" value="2">
 								<input type="hidden" name="notify_url" value="http://www.cloudyecommerce.com/receiveNotificationPaypal.action">
-								<input type="image" style="height:44;width:160" src="res_img/Seleziona4.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.">
+								<div lang="it" class="wrapper"><input type="image" style="height:44;width:160" src="res_img/Seleziona4_ita.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
+								<div lang="en" class="wrapper"><input type="image" style="height:44;width:160" src="res_img/Seleziona4_eng.png" border="0" name="submit" alt="PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare."></div>
 								
 								</form>
 										</td>
@@ -456,9 +516,13 @@
 								<!-- AddThis Button BEGIN -->
 <!--  			<div style="margin-right: 30px;margin-top: 10px;margin-left: 100px;width: 250px;display: inline-block;" class="addthis_toolbox addthis_default_style addthis_32x32_style">-->
 				
+<<<<<<< HEAD
 				<div id="customAddThis" class="addthis_toolbox addthis_default_style addthis_32x32_style">
 								
 				<p style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;">Condividi</p>
+=======
+				<p  id="featuresCommercialSiteShareInternalDivId" style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;"></p>
+>>>>>>> EnglishTranslation
 				 <a class="addthis_button_facebook"></a>
 	    					   <a class="addthis_button_twitter"></a>
 	    					   <a class="addthis_button_pinterest_share"></a>
@@ -467,7 +531,7 @@
 				</div>
 				
 				
-					<a style="float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br>Termini e condizioni di vendita</a>
+					<a id="featuresCommercialSiteTermsAndConditionsInternalDivId"  style="float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br></a>
 				
 				
 				
