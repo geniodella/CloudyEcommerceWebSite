@@ -74,7 +74,7 @@
 						class="rollover"
 						src="./res_img/support_off.png"><span id="headerSupport" /><br></a>
 				</div>
-				<div id="contact-form">
+				<div id="contact-form" style="width: 100px;">
 				
 					<img height="67" width="90" style="margin-bottom: 5px;margin-top: 14px"
 						class="rollover"

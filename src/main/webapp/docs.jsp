@@ -247,7 +247,7 @@
 										<div class="textSlide">
 											<img
 												src="./res_img/template.jpg"
-												style="float: left; width: 200px; height: 200px; padding: 10px 0; margin: 0px 100px 0px 0; position: relative;">
+												style="float: left; width: 200px; height: 200px; margin: 0px 100px 0px 0; position: relative;">
 											<h3  style="margin-bottom:-30px;" id="moreToComeCustomTemplateTitleInternalDivId"></h3>
 											<br>
 											<ul id="moreToComeCustomTemplateDescrInternalDivId">
@@ -315,9 +315,8 @@
 								<!-- AddThis Button BEGIN -->
 				<div id="customAddThis" >
 
-				<p style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;">Condividi</p>
-
-				<p id="featuresCommercialSiteShareInternalDivId" style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;"></p>
+				
+<!-- 				<p id="featuresCommercialSiteShareInternalDivId" style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;"></p> -->
 
 				<div class="addthis_horizontal_follow_toolbox"></div>
 				</div>

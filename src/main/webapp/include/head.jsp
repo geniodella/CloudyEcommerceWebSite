@@ -144,7 +144,7 @@ basato su java e ajax molto veloce e per qualsiasi tipo di negozio.">
   	<meta property="twitter:url" content="http://www.cloudyecommerce.com">
   	<meta property="twitter:site" content="@Geniodella">
   	
-  	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  	
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -154,7 +154,7 @@ basato su java e ajax molto veloce e per qualsiasi tipo di negozio.">
   ga('create', 'UA-45388829-1', 'cloudyecommerce.com');
 ga('require', 'displayfeatures');
   ga('send', 'pageview');
-  	
+  </script>  	
 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
