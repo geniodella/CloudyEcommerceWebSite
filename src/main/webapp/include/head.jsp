@@ -10,6 +10,58 @@
 
 
 <head>
+
+<meta name="test" content="<%= request.getRequestURI() %>" />
+<% if(request.getRequestURI().equals("/")){ %>
+<title>soluzioni e-commerce | creazione ecommerce | software per e commerce</title>
+<meta name="keywords" content="soluzioni e-commerce, creazione ecommerce, software per e commerce, soluzioni per e commerce" />
+<meta name="description" content="Cloudy Ecommerce è un ecommerce SaaS versatile e completamente personalizzabile su richiesta,
+basato su java e ajax molto veloce e per qualsiasi tipo di negozio. Venite a trovarci oggi stesso!" />
+<% } %>
+
+<% if(request.getRequestURI().equals("/index.jsp")){ %>
+<title>soluzioni e-commerce | creazione ecommerce | software per e commerce</title>
+<meta name="keywords" content="soluzioni e-commerce, creazione ecommerce, software per e commerce, soluzioni per e commerce" />
+<meta name="description" content="Cloudy Ecommerce è un ecommerce SaaS versatile e completamente personalizzabile su richiesta,
+basato su java e ajax molto veloce e per qualsiasi tipo di negozio.  Venite a trovarci oggi stesso!" />
+<link rel="canonical" href="http://www.cloudyecommerce.com/" />
+
+<% } %>
+
+
+<% if(request.getRequestURI().equals("/company.jsp")){ %>
+<title>supporto applicativo | sito di e-commerce | gestione di progetti</title>
+<meta name="keywords" content="supporto applicativo, sito di e-commerce, gestione di progetti, gestione ecommerce" />
+<meta name="description" content="La nostra azienda vi offre la migliore gestione del progetto e supporto per le applicazioni Java e Ajax per i siti di e-commerce veloce. Per maggiori dettagli visitare oggi!" />
+<link rel="canonical" href="http://www.cloudyecommerce.com/company.jsp" />
+<% } %>
+
+<% if(request.getRequestURI().equals("/buy.jsp")){ %>
+<title>software gestione aziendale | java e-commerce</title>
+<meta name="keywords" content="software ecommerce, software gestione aziendale, java e-commerce" />
+<meta name="description" content="Scegliere la migliore gestione aziendale e Java soluzioni e-commerce, software per le vostre esigenze e volumi di attività. Per acquistarlo visitare oggi!" />
+<link rel="canonical" href="http://www.cloudyecommerce.com/buy.jsp" />
+<% } %>
+
+
+<% if(request.getRequestURI().equals("/docs.jsp")){ %>
+<title>grafici in statistica | soluzioni ecommerce | piattaforma e commerce</title>
+<meta name="keywords" content="grafici in statistica, soluzioni ecommerce, piattaforma e commerce" />
+<meta name="description" content="Vi offriamo le migliori soluzioni e-commerce e la piattaforma con i modelli grafici delle statistiche di personalizzazione. Per maggiori dettagli visitare oggi!" />
+<link rel="canonical" href="http://www.cloudyecommerce.com/docs.jsp" />
+<% } %>
+
+
+<% if(request.getRequestURI().equals("/support.jsp")){ %>
+<title>ssl certificato | supporto tecnico</title>
+<meta name="keywords" content="ssl certificate, supporto tecnico, certificato ssl" />
+<meta name="description" content="Forniamo supporto tecnico e certificato SSL che garantisce un rapido e professionale per tutti i nostri clienti. Venite a trovarci oggi stesso!" />
+<link rel="canonical" href="http://www.cloudyecommerce.com/support.jsp" />
+<% } %>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Cloudy Ecommerce</title>
  <meta name="Description" content="Cloudy Ecommerce è un ecommerce SaaS versatile e completamente personalizzabile su richiesta,
@@ -91,6 +143,17 @@ basato su java e ajax molto veloce e per qualsiasi tipo di negozio.">
   	<meta property="twitter:image" content="./res_img/logoSito.jpg">
   	<meta property="twitter:url" content="http://www.cloudyecommerce.com">
   	<meta property="twitter:site" content="@Geniodella">
+  	
+  	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45388829-1', 'cloudyecommerce.com');
+ga('require', 'displayfeatures');
+  ga('send', 'pageview');
   	
 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />

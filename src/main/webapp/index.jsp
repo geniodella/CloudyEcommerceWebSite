@@ -5,21 +5,6 @@
 <link rel="stylesheet" href="./css/custom-cloudyecommerce.css" media="screen">
 
 
-<head>
-
-
-<!-- jQuery (required) -->
-
-
-
-
-         
-
-<!-- Ideally, add the stylesheet(s) you are going to use here,
-	 otherwise they are loaded and appended to the <head> automatically and will over-ride the IE stylesheet below -->
-
-</head>
-
 <body>
 
  
@@ -532,17 +517,13 @@
 				<!--  			<div style="margin-right: 30px;margin-top: 10px;margin-left: 100px;width: 250px;display: inline-block;" class="addthis_toolbox addthis_default_style addthis_32x32_style">-->
 				
 
-				<div id="customAddThis" class="addthis_toolbox addthis_default_style addthis_32x32_style">
+				<div id="customAddThis" >
 
 				<p style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;">Condividi</p>
 
 				<p id="featuresCommercialSiteShareInternalDivId" style="font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-right: 10px;line-height: 0.3;"></p>
 
-				 <a class="addthis_button_facebook"></a>
-	    					   <a class="addthis_button_twitter"></a>
-	    					   <a class="addthis_button_pinterest_share"></a>
-	    					   <a class="addthis_button_linkedin"></a>
-	    					   <a class="addthis_button_google_plusone_share"></a>
+				<div class="addthis_horizontal_follow_toolbox"></div>
 				</div>
 				
 				
@@ -551,7 +532,7 @@
 				
 				
 				<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-525d1d5f0490962c"></script>
+				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5182d50a1862ddb1"></script>
 				
 				<!-- per rimuovere hash dall'url -->
 				<script type="text/javascript">
