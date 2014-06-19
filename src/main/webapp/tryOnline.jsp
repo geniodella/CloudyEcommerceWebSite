@@ -201,7 +201,7 @@
 				</div>
 			</div>
 			    <div id="content-footer">
-			<a style="float: left;"><img style="margin: 10px;"src="./res_img/creditCards.png">
+			<a style="float: left;"><img style="margin: 15px 10px 10px 10px"src="./res_img/creditCards.png">
 				
 								<!-- AddThis Button BEGIN -->
 				<div style="margin-right: 30px;margin-top: 10px;margin-left: 100px;width: 250px;display: inline-block;" class="addthis_toolbox addthis_default_style addthis_32x32_style">
@@ -215,7 +215,7 @@
 				</div>
 				
 				
-					<a style="float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br>Termini e condizioni di vendita</a>
+					<a style="line-height: 1.2;float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br>Termini e condizioni di vendita</a>
 				
 				
 				

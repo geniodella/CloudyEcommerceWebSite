@@ -249,7 +249,7 @@
 
 						<div id="content-body" style="border: 1px solid white;">
 						
-							<div style="margin-top: 20px;width:960px;height: 4340px;" class="subcolumn1-1" id="content-text">
+							<div style="margin-top: 20px;width:960px;height: 3550px;" class="subcolumn1-1" id="content-text">
                  <h1 id="termsAndConditionsTitleInternalDivId" style="color:#46565F;font-family:'Della Respira',serif;font-weight:bold;font-size: 30px; line-height: 25px; padding: 0 50px;text-align:center;margin-bottom:30px;">
 				              
 				              </h1> 
@@ -416,7 +416,7 @@
               
 
 							  <div id="content-footer">
-			<a style="float: left;"><img style="margin: 10px;"src="./res_img/creditCards.png">
+			<a style="float: left;"><img style="margin: 15px 10px 10px 10px"src="./res_img/creditCards.png">
 				
 							<!-- AddThis Button BEGIN -->
 				<!--  			<div style="margin-right: 30px;margin-top: 10px;margin-left: 100px;width: 250px;display: inline-block;" class="addthis_toolbox addthis_default_style addthis_32x32_style">-->
@@ -431,7 +431,7 @@
 				</div>
 				
 				
-					<a id="featuresCommercialSiteTermsAndConditionsInternalDivId" style="float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br></a>
+					<a id="featuresCommercialSiteTermsAndConditionsInternalDivId" style="line-height: 1.2;float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br></a>
 				
 				
 				

@@ -1,8 +1,9 @@
 #customAddThis{
 	margin-right: 30px;
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-left: 100px;
 	display: inline-block;
+	vertical-align: top;
 }
 
 #customTemplateGrafici{

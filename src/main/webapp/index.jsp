@@ -266,7 +266,8 @@
 													}
 												});
 												
-										$('#featuresPreviewTitleInternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.featurespreview.title')+"</p>");
+										$('#featuresPreviewTitleInternalDivId').append(jQuery.i18n.prop('org.commercialsite.featurespreview.title'));
+										$('#featuresPreviewClickToZoomInternalDivId').append(jQuery.i18n.prop('org.commercialsite.featurespreview.clickToZoom'));
 										
 										$('#featuresPreview1InternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.featurespreview.descr1')+"</p>");
 										$('#featuresPreview2InternalDivId').append("<p>"+jQuery.i18n.prop('org.commercialsite.featurespreview.descr2')+"</p>");
@@ -473,7 +474,10 @@
 				
 			</div>
       
-      <p id="featuresPreviewTitleInternalDivId" style="font-size:20px;color:#36aad8;font-family: arial;font-weight: normal;margin-left: 10px;line-height: 3;"></p>
+      <span id="featuresPreviewTitleInternalDivId" style="display: inline;font-size:20px;color:#36aad8;font-family: arial;font-weight: normal;margin-left: 10px;line-height: 3;">
+      </span> 
+      <span id="featuresPreviewClickToZoomInternalDivId" style="background:yellow;color:0600b5;display: inline;font-size:15px;color:#36aad8;font-family: arial;font-weight: normal;margin-left: 10px;line-height: 3;"></span>
+     
       
 				<div style="background: white;width: 900px;margin-bottom: 10px;">
 					 <a class="highslide" style="margin-left: 30px;" href="./res_img/shotCart.png" onclick="return hs.expand(this)">
@@ -511,7 +515,7 @@
 				</div>
 				
 				   <div id="content-footer">
-			<a style="float: left;"><img style="margin: 10px;"src="./res_img/creditCards.png">
+			<a style="float: left;"><img style="margin: 15px 10px 10px 10px"src="./res_img/creditCards.png">
 				
 								<!-- AddThis Button BEGIN -->
 				<!--  			<div style="margin-right: 30px;margin-top: 10px;margin-left: 100px;width: 250px;display: inline-block;" class="addthis_toolbox addthis_default_style addthis_32x32_style">-->
@@ -526,7 +530,7 @@
 				</div>
 				
 				
-					<a id="featuresCommercialSiteTermsAndConditionsInternalDivId" style="float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br></a>
+					<a id="featuresCommercialSiteTermsAndConditionsInternalDivId" style="line-height: 1.2;float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br></a>
 				
 				
 				

@@ -1,7 +1,7 @@
 
 <%@ include file="/include/head.jsp"%>
 <%@ include file="/include/header.jsp"%>
-
+<link rel="stylesheet" href="./css/custom-cloudyecommerce.css" media="screen">
 
 
 <body>
@@ -310,7 +310,7 @@
 						</div>
 
 						   <div id="content-footer">
-			<a style="float: left;"><img style="margin: 10px;"src="./res_img/creditCards.png">
+			<a style="float: left;"><img style="margin: 15px 10px 10px 10px"src="./res_img/creditCards.png">
 				
 								<!-- AddThis Button BEGIN -->
 				<div id="customAddThis" >
@@ -322,7 +322,7 @@
 				</div>
 				
 				
-					<a id="featuresCommercialSiteTermsAndConditionsInternalDivId" style="float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br></a>
+					<a id="featuresCommercialSiteTermsAndConditionsInternalDivId" style="line-height: 1.2;float: right;margin-right: 30px;font-size: 15px;color: #36aad8;font-family: arial;font-weight: normal;" href="./termsAndConditions.jsp"><br></a>
 				
 				
 				
