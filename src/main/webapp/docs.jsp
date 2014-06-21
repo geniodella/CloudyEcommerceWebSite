@@ -178,6 +178,13 @@
 								  $('#moreToComeNewsletterTitleInternalDivId').append("<h3>"+jQuery.i18n.prop('org.commercialsite.moretocome.newsletter.title')+"</h3>");
 								  $('#moreToComeNewsletterDescrInternalDivId').append(jQuery.i18n.prop('org.commercialsite.moretocome.newsletter.descr'));
 								  
+								  $('#subscriptionFormUsername').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.username'));
+					    		  $('#subscriptionFormEmail').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.emailaddress'));
+					    		  $('#subscriptionFormCaptchaEmailQuestion').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.captchaemailquestion'));
+								  $('#subscriptionFormSignup').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.signup'));
+								  $('#subscriptionFormSignupQuestion').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.signupquestion'));
+								  $('#registerButton').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.gotologin'));
+								  
 
 			$('#slider1')
 					.anythingSlider(
