@@ -80,7 +80,7 @@ basato su java e ajax molto veloce e per qualsiasi tipo di negozio.">
 	
 	<script type="text/javascript" src="./res_js/ecommerce/jquery/admin.jquery.js"></script>
 
-<script type="text/javascript" src="./res_js/jquery/customForm.js"></script>
+<!-- <script type="text/javascript" src="./res_js/jquery/customForm.js"></script> -->
 <script type="text/javascript" src="./res_js/jquery/jquery.simplemodal.js"></script>
 
 

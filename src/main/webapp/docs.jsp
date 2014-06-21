@@ -52,32 +52,31 @@
 
 								'<form action="Customer.action" id="roleForm">'+  
 									'<div id="register" class="animate form" style="height:390px">'+
-                
-										'<h1 style="padding: 10px;">Registrati</h1>'+
-                						'<div id="error-container"></div>'+
+				
+										'<h1 id="subscriptionFormSignup" style="padding: 10px;">'+org.commercialsite.subscriptionform.signup+'</h1>'+
+										'<div id="error-container"></div>'+
 										'<p>'+
-											'<label for="usernamesignup" class="uname" data-icon="u">Nome Utente</label>'+ 
+											'<label id="subscriptionFormUsername" for="usernamesignup" class="uname" data-icon="u">'+org.commercialsite.subscriptionform.username+'</label>'+ 
 											'<input id="usernamesignup" name="username" required="required" type="text" placeholder="username" />'+
 										'</p>'+
 										'<p>'+
-											'<label for="emailsignup" class="youmail" data-icon="e">Indirizzo email</label>'+ 
+											'<label id="subscriptionFormEmail" for="emailsignup" class="youmail" data-icon="e">'+org.commercialsite.subscriptionform.emailaddress+'</label>'+ 
 											'<input id="emailsignup" name="mail" required="required" type="email" placeholder="email" />'+
 										'</p>'+
 										'<p style="margin-top: 30px;">'+
 											'<IMG SRC="./stickyImg?'+random+'" style="width: 250px;height: 60px;" id="captchaId">'+
-											'<span style="float: right;" src="res_img/captchaLogo.png"> Qual\'è il codice dell\'immagine?</span>'+
+											'<span id="subscriptionFormCaptchaEmailQuestion"style="float: right;" src="res_img/captchaLogo.png">'+org.commercialsite.subscriptionform.captchaemailquestion+'</span>'+
 											'<INPUT TYPE="text" NAME="captchaValue" VALUE="" placeholder="Captcha" class="customCaptcha" style="width: 175px;float: right;margin-top: -40px;padding: 10px 5px;">'+
 										
 										'</p>'+
 										'<p class="signin button">'+
-											'<input id="submitForm" style="margin-top: 20px;" type="submit" value="Registrati" />'+
+											'<input id="submitForm" style="margin-top: 20px;" type="submit" value="'+org.commercialsite.subscriptionform.signup+'"  />'+
 										'</p>'+
-										'<p class="change_link" style="margin-top: 30px;">Sei già registrato ?<a href="#tologin" id="registerButton" class="to_register"> Vai alla login </a>'+
+										'<p id="subscriptionFormSignupQuestion" class="change_link" style="margin-top: 30px;">'+org.commercialsite.subscriptionform.signupquestion+'<a href="#tologin" id="registerButton" class="to_register">'+org.commercialsite.subscriptionform.gotologin+'</a>'+
 										'</p>'+
-									'</div>'+
-
-								'</div>'+
-								'</form>'+ 
+									'</div>'+										
+								'</form>'+
+							'</div>'+
 							'</div>'+
 						'</section>'+
 					'</div>'+
@@ -177,6 +176,13 @@
 								  
 								  $('#moreToComeNewsletterTitleInternalDivId').append("<h3>"+jQuery.i18n.prop('org.commercialsite.moretocome.newsletter.title')+"</h3>");
 								  $('#moreToComeNewsletterDescrInternalDivId').append(jQuery.i18n.prop('org.commercialsite.moretocome.newsletter.descr'));
+								  
+								  $('#subscriptionFormUsername').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.username'));
+					    		  $('#subscriptionFormEmail').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.emailaddress'));
+					    		  $('#subscriptionFormCaptchaEmailQuestion').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.captchaemailquestion'));
+								  $('#subscriptionFormSignup').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.signup'));
+								  $('#subscriptionFormSignupQuestion').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.signupquestion'));
+								  $('#registerButton').append(jQuery.i18n.prop('org.commercialsite.subscriptionform.gotologin'));
 								  
 
 			$('#slider1')
