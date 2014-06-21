@@ -14,14 +14,14 @@
 <meta name="test" content="<%= request.getRequestURI() %>" />
 <% if(request.getRequestURI().equals("/")){ %>
 <title>soluzioni e-commerce | creazione ecommerce | software per e commerce</title>
-<meta name="keywords" content="soluzioni e-commerce, creazione ecommerce, software per e commerce, soluzioni per e commerce" />
+<meta name="keywords" content="soluzioni e-commerce, creazione ecommerce, software per e commerce, soluzioni per e commerce, ecommerce cloud, e-commerce cloud" />
 <meta name="description" content="Cloudy Ecommerce è un ecommerce SaaS versatile e completamente personalizzabile su richiesta,
 basato su java e ajax molto veloce e per qualsiasi tipo di negozio. Venite a trovarci oggi stesso!" />
 <% } %>
 
 <% if(request.getRequestURI().equals("/index.jsp")){ %>
 <title>soluzioni e-commerce | creazione ecommerce | software per e commerce</title>
-<meta name="keywords" content="soluzioni e-commerce, creazione ecommerce, software per e commerce, soluzioni per e commerce" />
+<meta name="keywords" content="soluzioni e-commerce, creazione ecommerce, software per e commerce, soluzioni per e commerce, ecommerce cloud, e-commerce cloud" />
 <meta name="description" content="Cloudy Ecommerce è un ecommerce SaaS versatile e completamente personalizzabile su richiesta,
 basato su java e ajax molto veloce e per qualsiasi tipo di negozio.  Venite a trovarci oggi stesso!" />
 <link rel="canonical" href="http://www.cloudyecommerce.com/" />
@@ -58,15 +58,8 @@ basato su java e ajax molto veloce e per qualsiasi tipo di negozio.  Venite a tr
 <meta name="description" content="Forniamo supporto tecnico e certificato SSL che garantisce un rapido e professionale per tutti i nostri clienti. Venite a trovarci oggi stesso!" />
 <link rel="canonical" href="http://www.cloudyecommerce.com/support.jsp" />
 <% } %>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
-
-
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
 	<title>Cloudy Ecommerce</title>
- <meta name="Description" content="Cloudy Ecommerce è un ecommerce SaaS versatile e completamente personalizzabile su richiesta,
-basato su java e ajax molto veloce e per qualsiasi tipo di negozio.">
-<meta name="Keywords" content="ecommerce,saas,vendere,negozio,personalizzabile">
 
 	<script type="text/javascript" src="./res_js/jquery/jquery-1.8.0.js"></script>
 	
@@ -80,7 +73,7 @@ basato su java e ajax molto veloce e per qualsiasi tipo di negozio.">
 	
 	<script type="text/javascript" src="./res_js/ecommerce/jquery/admin.jquery.js"></script>
 
-<!-- <script type="text/javascript" src="./res_js/jquery/customForm.js"></script> -->
+<script type="text/javascript" src="./res_js/jquery/customForm.js"></script>
 <script type="text/javascript" src="./res_js/jquery/jquery.simplemodal.js"></script>
 
 

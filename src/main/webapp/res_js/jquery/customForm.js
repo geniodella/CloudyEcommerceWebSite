@@ -34,11 +34,11 @@ $(document).ready(function(){
 									'<div id="error-container"></div>'+
 									'<p>'+
 										'<label id="subscriptionFormUsername" for="usernamesignup" class="uname" data-icon="u"></label>'+ 
-										'<input id="usernamesignup" name="username" required="required" type="text" placeholder="mysuperusername690" />'+
+										'<input id="usernamesignup" name="username" required="required" type="text" placeholder="username" />'+
 									'</p>'+
 									'<p>'+
 										'<label id="subscriptionFormEmail" for="emailsignup" class="youmail" data-icon="e"></label>'+ 
-										'<input id="emailsignup" name="mail" required="required" type="email" placeholder="mysupermail@mail.com" />'+
+										'<input id="emailsignup" name="mail" required="required" type="email" placeholder="email" />'+
 									'</p>'+
 									'<p style="margin-top: 30px;"><img src="./stickyImg?46" style="width: 250px;height: 60px;" id="captchaId">'+
 									'<span id="subscriptionFormCaptchaEmailQuestion" style="float: right;" src="res_img/captchaLogo.png"></span>'+
